@@ -1,0 +1,7 @@
+C:\Users\Facu\source\repos\Clase1_Progra\Clase1_Progra\bin\Debug\Clase1_Progra.exe.config
+C:\Users\Facu\source\repos\Clase1_Progra\Clase1_Progra\bin\Debug\Clase1_Progra.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Clase1_Progra\bin\Debug\Clase1_Progra.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\Clase1_Progra\obj\Debug\Clase1_Progra.csprojAssemblyReference.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Clase1_Progra\obj\Debug\Clase1_Progra.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Clase1_Progra\obj\Debug\Clase1_Progra.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Clase1_Progra\obj\Debug\Clase1_Progra.pdb

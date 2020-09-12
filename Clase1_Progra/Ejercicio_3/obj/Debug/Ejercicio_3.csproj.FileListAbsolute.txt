@@ -1,0 +1,7 @@
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_3\bin\Debug\Ejercicio_3.exe.config
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_3\bin\Debug\Ejercicio_3.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_3\bin\Debug\Ejercicio_3.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_3\obj\Debug\Ejercicio_3.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_3\obj\Debug\Ejercicio_3.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_3\obj\Debug\Ejercicio_3.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_3\obj\Debug\Ejercicio_3.csprojAssemblyReference.cache

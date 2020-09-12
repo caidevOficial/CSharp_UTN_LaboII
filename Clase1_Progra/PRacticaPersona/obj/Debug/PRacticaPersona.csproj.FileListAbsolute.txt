@@ -1,0 +1,7 @@
+C:\Users\Facu\source\repos\Clase1_Progra\PRacticaPersona\bin\Debug\PRacticaPersona.exe.config
+C:\Users\Facu\source\repos\Clase1_Progra\PRacticaPersona\bin\Debug\PRacticaPersona.exe
+C:\Users\Facu\source\repos\Clase1_Progra\PRacticaPersona\bin\Debug\PRacticaPersona.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\PRacticaPersona\obj\Debug\PRacticaPersona.csprojAssemblyReference.cache
+C:\Users\Facu\source\repos\Clase1_Progra\PRacticaPersona\obj\Debug\PRacticaPersona.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Clase1_Progra\PRacticaPersona\obj\Debug\PRacticaPersona.exe
+C:\Users\Facu\source\repos\Clase1_Progra\PRacticaPersona\obj\Debug\PRacticaPersona.pdb

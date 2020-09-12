@@ -1,0 +1,11 @@
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\bin\Debug\Ejercicio__11.exe.config
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\bin\Debug\Ejercicio__11.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\bin\Debug\Ejercicio__11.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\bin\Debug\Ejercicio_11.dll
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\bin\Debug\Ejercicio_11.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\bin\Debug\Ejercicio_11.dll.config
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\obj\Debug\Ejercicio__11.csprojAssemblyReference.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\obj\Debug\Ejercicio__11.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\obj\Debug\Ejercicio__11.csproj.CopyComplete
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\obj\Debug\Ejercicio__11.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio__11\obj\Debug\Ejercicio__11.pdb

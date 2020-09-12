@@ -1,0 +1,7 @@
+C:\Users\Facu\source\repos\Clase1_Progra\sarasa\bin\Debug\sarasa.exe.config
+C:\Users\Facu\source\repos\Clase1_Progra\sarasa\bin\Debug\sarasa.exe
+C:\Users\Facu\source\repos\Clase1_Progra\sarasa\bin\Debug\sarasa.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\sarasa\obj\Debug\sarasa.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Clase1_Progra\sarasa\obj\Debug\sarasa.exe
+C:\Users\Facu\source\repos\Clase1_Progra\sarasa\obj\Debug\sarasa.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\sarasa\obj\Debug\sarasa.csprojAssemblyReference.cache

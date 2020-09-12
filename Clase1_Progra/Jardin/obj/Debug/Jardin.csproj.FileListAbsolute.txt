@@ -1,0 +1,6 @@
+C:\Users\Facu\Source\Repos\caidevOficial\Ejercicios_Labo2\Clase1_Progra\Jardin\bin\Debug\Jardin.exe.config
+C:\Users\Facu\Source\Repos\caidevOficial\Ejercicios_Labo2\Clase1_Progra\Jardin\bin\Debug\Jardin.exe
+C:\Users\Facu\Source\Repos\caidevOficial\Ejercicios_Labo2\Clase1_Progra\Jardin\bin\Debug\Jardin.pdb
+C:\Users\Facu\Source\Repos\caidevOficial\Ejercicios_Labo2\Clase1_Progra\Jardin\obj\Debug\Jardin.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Source\Repos\caidevOficial\Ejercicios_Labo2\Clase1_Progra\Jardin\obj\Debug\Jardin.exe
+C:\Users\Facu\Source\Repos\caidevOficial\Ejercicios_Labo2\Clase1_Progra\Jardin\obj\Debug\Jardin.pdb

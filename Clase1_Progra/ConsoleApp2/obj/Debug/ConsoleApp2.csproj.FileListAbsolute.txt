@@ -1,0 +1,11 @@
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\obj\Debug\ConsoleApp2.csprojAssemblyReference.cache
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CopyComplete
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\bin\Debug\Entidades.dll
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\bin\Debug\Entidades.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp2\bin\Debug\Entidades.dll.config

@@ -1,0 +1,7 @@
+C:\Users\Facu\source\repos\Clase1_Progra\Practica_array\bin\Debug\Practica_array.exe.config
+C:\Users\Facu\source\repos\Clase1_Progra\Practica_array\bin\Debug\Practica_array.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Practica_array\bin\Debug\Practica_array.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\Practica_array\obj\Debug\Practica_array.csprojAssemblyReference.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Practica_array\obj\Debug\Practica_array.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Practica_array\obj\Debug\Practica_array.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Practica_array\obj\Debug\Practica_array.pdb

@@ -1,0 +1,7 @@
+C:\Users\Facu\source\repos\Clase1_Progra\Biblioteca\bin\Debug\Biblioteca.exe.config
+C:\Users\Facu\source\repos\Clase1_Progra\Biblioteca\bin\Debug\Biblioteca.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\Facu\source\repos\Clase1_Progra\Biblioteca\obj\Debug\Ejercicio_14.csprojAssemblyReference.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Biblioteca\obj\Debug\Ejercicio_14.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Clase1_Progra\Biblioteca\obj\Debug\Biblioteca.exe
+C:\Users\Facu\source\repos\Clase1_Progra\Biblioteca\obj\Debug\Biblioteca.pdb
