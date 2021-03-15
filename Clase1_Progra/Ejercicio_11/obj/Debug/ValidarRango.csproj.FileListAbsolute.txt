@@ -1,7 +1,0 @@
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_11\bin\Debug\Ejercicio_11.dll.config
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_11\bin\Debug\Ejercicio_11.dll
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_11\bin\Debug\Ejercicio_11.pdb
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_11\obj\Debug\ValidarRango.csprojAssemblyReference.cache
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_11\obj\Debug\ValidarRango.csproj.CoreCompileInputs.cache
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_11\obj\Debug\Ejercicio_11.dll
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_11\obj\Debug\Ejercicio_11.pdb

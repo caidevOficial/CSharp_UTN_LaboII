@@ -1,7 +1,0 @@
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_17\bin\Debug\Ejercicio_17.exe.config
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_17\bin\Debug\Ejercicio_17.exe
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_17\bin\Debug\Ejercicio_17.pdb
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_17\obj\Debug\Ejercicio_17.csprojAssemblyReference.cache
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_17\obj\Debug\Ejercicio_17.csproj.CoreCompileInputs.cache
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_17\obj\Debug\Ejercicio_17.exe
-C:\Users\Facu\source\repos\Clase1_Progra\Ejercicio_17\obj\Debug\Ejercicio_17.pdb

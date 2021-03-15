@@ -1,7 +1,0 @@
-C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp1\obj\Debug\Entidades.csprojAssemblyReference.cache
-C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp1\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp1\bin\Debug\Entidades.dll.config
-C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp1\bin\Debug\Entidades.dll
-C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp1\bin\Debug\Entidades.pdb
-C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp1\obj\Debug\Entidades.dll
-C:\Users\Facu\source\repos\Clase1_Progra\ConsoleApp1\obj\Debug\Entidades.pdb
