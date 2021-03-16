@@ -28,7 +28,7 @@ static string UpgradeFunction(){
 
     
 ## License 📄
-This project is under license [MIT License] - read the file [LICENSE.md](LICENSE) for details.
+This project is under license \[MIT License\] - read the file [LICENSE.md](LICENSE) for details.
 
 ## Where to find me: 🌎
 |<img class="circular" alt="Facu" src="https://avatars1.githubusercontent.com/u/12877139?s=400&u=d369ee24466653d9bbeeb9654930e3ff1c67b76a&v=4" width="80px" height="80px" />||
