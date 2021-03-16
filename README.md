@@ -1,5 +1,7 @@
 <td><a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/" target="_blank"><img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/logo-utn.png" height="150px" /></td></br>
 
+---
+
 # C# exercises from UTN. 👨‍💻
 ---
 
@@ -21,14 +23,18 @@ static string UpgradeFunction(){
     return message;
 }
 ```
+---
 
 ## Technologies used. 📌
 |<a href="https://docs.microsoft.com/es-es/dotnet/csharp/"><img align="center" alt="C#" src="https://github.com/devicons/devicon/raw/master/icons/csharp/csharp-original.svg" width="50px" height="50px" />|<h3>C#</h3>|
 |--------|----------|
 
-    
+---
+
 ## License 📄
 This project is under license \[MIT License\] - read the file [LICENSE.md](LICENSE) for details.
+
+---
 
 ## Where to find me: 🌎
 |<img class="circular" alt="Facu" src="https://avatars1.githubusercontent.com/u/12877139?s=400&u=d369ee24466653d9bbeeb9654930e3ff1c67b76a&v=4" width="80px" height="80px" />||
