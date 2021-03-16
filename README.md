@@ -4,17 +4,13 @@
 ---
 
 <details>
-    <summary>:zap: Most Used Languages</summary>
-    <a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/">
-        <img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api/top-langs/?username=caidevOficial&layout=compact&theme=chartreuse-dark&langs_count=10&exclude_repo=Front_CuadraticApp,Front_TaiWeb&hide=html"/>
-    </a>
+  <summary>:zap: GitHub Stats</summary>
+    <img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api?username=caidevOficial&show_icons=true&theme=chartreuse-dark&count_private=true&show_owner=true&include_all_commits=true" /><br><br>
 </details>
 
 <details>
-    <summary>:zap: GitHub Stats</summary>
-    <a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/">
-        <img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api?username=caidevOficial&show_icons=true&theme=chartreuse-dark&count_private=true&show_owner=true&include_all_commits=true" />
-    </a>
+    <summary>:zap: Most Used Languages</summary>
+    <img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api/top-langs/?username=caidevOficial&layout=compact&theme=chartreuse-dark&langs_count=10&exclude_repo=Front_CuadraticApp,Front_TaiWeb&hide=html"/><br>
 </details>
 
 ---
@@ -32,7 +28,7 @@ static string UpgradeFunction(){
 
     
 ## License 📄
-This project is under license [MIT] - read the file [LICENSE.md](LICENSE) for details.
+This project is under license [MIT License] - read the file [LICENSE.md](LICENSE) for details.
 
 ## Where to find me: 🌎
 |<img class="circular" alt="Facu" src="https://avatars1.githubusercontent.com/u/12877139?s=400&u=d369ee24466653d9bbeeb9654930e3ff1c67b76a&v=4" width="80px" height="80px" />||
