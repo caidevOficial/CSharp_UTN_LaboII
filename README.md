@@ -4,13 +4,15 @@
 ---
 
 <details>
-  <summary>:zap: Most Used Languages</summary>
+<summary>:zap: Most Used Languages</summary>
 <a href="https://github.com/caidevOficial/caidevOficial"><img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api/top-langs/?username=caidevOficial&layout=compact&theme=chartreuse-dark&langs_count=10&exclude_repo=Front_CuadraticApp,Front_TaiWeb&hide=html"/> </a>
 </details>
 
+<details>
 <summary>:zap: GitHub Stats</summary>
-  <a href="https://github.com/caidevOficial/caidevOficial">
-  <img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api?username=caidevOficial&show_icons=true&theme=chartreuse-dark&count_private=true&show_owner=true&include_all_commits=true" /></a>
+<a href="https://github.com/caidevOficial/caidevOficial">
+<img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api?username=caidevOficial&show_icons=true&theme=chartreuse-dark&count_private=true&show_owner=true&include_all_commits=true" /></a>
+</details>
 
 ---
 
