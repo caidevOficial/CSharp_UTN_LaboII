@@ -23,14 +23,10 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ejercicio_11
 {
-    class Validacion
+    public class Validacion
     {
         /// <summary>
         /// Validates if the number 'valor' is between the range [min:max]
@@ -39,10 +35,10 @@ namespace Ejercicio_11
         /// <param name="min">minimun number of the range to validate</param>
         /// <param name="max">maximun number of the range to validate</param>
         /// <returns>true if the value is inside the range, otherwise returns false.</returns>
-        static bool Validar(int valor, int min, int max)
+        private static bool Validar(int valor, int min, int max)
         {
             bool isValid = false;
-            if(valor<max && valor > min)
+            if (valor < max && valor > min)
             {
                 isValid = true;
             }
@@ -55,7 +51,7 @@ namespace Ejercicio_11
         /// </summary>
         /// <param name="min">Minimun number of the range.</param>
         /// <param name="max">Maximun number of the range.</param>
-        static void Validate10Numbers(int min, int max)
+        public static void Validate10Numbers(int min, int max)
         {
             int minimun = int.MaxValue;
             int maximun = int.MinValue;
@@ -68,12 +64,12 @@ namespace Ejercicio_11
 
                 if (Validar(actualValue, min, max))
                 {
-                    if(amountTries==0 || actualValue < minimun)
+                    if (amountTries == 0 || actualValue < minimun)
                     {
                         minimun = actualValue;
                     }
 
-                    else if(amountTries == 0 || actualValue > maximun)
+                    else if (amountTries == 0 || actualValue > maximun)
                     {
                         maximun = actualValue;
                     }
@@ -83,17 +79,9 @@ namespace Ejercicio_11
                     Console.WriteLine("The number {0} is out of range! It should be more than {1} and less than {2}", actualValue, min, max);
                 }
                 amountTries++;
-            } while (amountTries<10);
+            } while (amountTries < 10);
 
-            Console.WriteLine("Minimun Number: {0}.\nMaximun Number: {1}.",minimun, maximun);
-        }
-
-        static void Main(string[] args)
-        {
-            int min = -100;
-            int max = 100;
-            Validate10Numbers(min, max);
-            Console.ReadKey();
+            Console.WriteLine("Minimun Number: {0}.\nMaximun Number: {1}.", minimun, maximun);
         }
     }
 }
