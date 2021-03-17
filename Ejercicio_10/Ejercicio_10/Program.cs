@@ -23,10 +23,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ejercicio_10
 {
@@ -46,7 +42,7 @@ namespace Ejercicio_10
                 for (int height = 0; height <= size; height++)
                 {
                     //for write the spaces
-                    for (int i = 1; i <= (size-height); i++)
+                    for (int i = 1; i <= (size - height); i++)
                     {
                         Console.Write(" ");
                     }
