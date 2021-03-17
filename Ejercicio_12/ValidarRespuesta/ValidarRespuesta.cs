@@ -26,14 +26,14 @@ using System;
 
 namespace Ejercicio_12
 {
-    class Program
+    public class ValidarRespuesta
     {
         /// <summary>
         /// Validates if the input is a 'S' or another value.
         /// </summary>
         /// <param name="c">Char to evaluate.</param>
         /// <returns>True if the input is a 'S', otherwise false.</returns>
-        static bool ValidaS_N(char c)
+        public static bool ValidaS_N(char c)
         {
             c = Char.ToUpper(c);
             if (c.Equals('S'))
@@ -48,7 +48,7 @@ namespace Ejercicio_12
         /// then returns the entire sum.
         /// </summary>
         /// <returns>The final sum of numbers.</returns>
-        static int SumIntegerNumbers()
+        public static int SumIntegerNumbers()
         {
             int sum = 0;
             char answer = 'S';
@@ -64,14 +64,8 @@ namespace Ejercicio_12
                 answer = Char.ToUpper(answer);
 
             } while (ValidaS_N(answer));
-            
-            return sum;
-        }
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine("\nThe final sum is: {0}", SumIntegerNumbers());
-            Console.ReadKey();
+            return sum;
         }
     }
 }
