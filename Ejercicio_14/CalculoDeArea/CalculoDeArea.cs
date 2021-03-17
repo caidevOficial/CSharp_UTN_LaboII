@@ -26,7 +26,7 @@ using System;
 
 namespace Ejercicio_14
 {
-    class CalculoDeArea
+    public class CalculoDeArea
     {
         /// <summary>
         /// Calculates the area of a square.
