@@ -1,0 +1,6 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_17\Boligrafo\bin\Debug\Boligrafo.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_17\Boligrafo\bin\Debug\Boligrafo.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_17\Boligrafo\obj\Debug\Boligrafo.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_17\Boligrafo\obj\Debug\Boligrafo.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_17\Boligrafo\obj\Debug\Boligrafo.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_17\Boligrafo\obj\Debug\Boligrafo.pdb
