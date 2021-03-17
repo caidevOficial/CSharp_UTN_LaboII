@@ -44,7 +44,7 @@ namespace Ejercicio_13
                 reverseBinaryNumber += integerNumber % 2;
                 integerNumber /= 2;
 
-            } while (integerNumber>0);
+            } while (integerNumber > 0);
 
             listReverseBinaryNumber = reverseBinaryNumber.ToCharArray();
             Array.Reverse(listReverseBinaryNumber);

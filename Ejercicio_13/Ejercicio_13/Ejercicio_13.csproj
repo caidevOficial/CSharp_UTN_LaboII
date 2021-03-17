@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DD25B63-0092-486E-91A2-3E9D43025819}</ProjectGuid>
+    <ProjectGuid>{1D6E8637-090E-4BDA-8C9B-2F1441C38809}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Ejercicio_13</RootNamespace>
     <AssemblyName>Ejercicio_13</AssemblyName>
@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conversor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Conversor\Conversor.csproj">
+      <Project>{fa92eac8-81a8-4b4d-912d-9604e5310fb2}</Project>
+      <Name>Conversor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
