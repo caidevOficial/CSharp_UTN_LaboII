@@ -23,9 +23,9 @@
 ---
 
 ```C#
-static string UpgradeFunction(){
+public static void ShowNewSkill(){
     string message = "Upgrading my skills [C# Version!]";
-    return message;
+    Console.WriteLine(message);
 }
 ```
 ---
