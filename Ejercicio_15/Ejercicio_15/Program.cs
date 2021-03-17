@@ -39,7 +39,7 @@ namespace Ejercicio_15
             char.TryParse(Console.ReadLine(), out char sign);
 
             double result = Calculadora.Calcular(firstN, secondN, sign);
-            
+
             // Messages
             Console.WriteLine($"The result of {firstN} {sign} {secondN} is {result}");
             Console.ReadKey();
