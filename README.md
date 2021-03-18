@@ -1,4 +1,9 @@
-<td><a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/" target="_blank"><img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/logo-utn.png" height="150px" /></td></br>
+<table>
+  <tr>
+  <td><a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/" target="_blank"><img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/logo-utn_blanco.png" height="150px" /></td>
+  <td><img align="center" alt="C#" src="https://github.com/devicons/devicon/raw/master/icons/csharp/csharp-original.svg" width="150px" height="150px" /></td>
+  </tr>
+</table></br>
 
 ---
 
@@ -18,9 +23,9 @@
 ---
 
 ```C#
-static string UpgradeFunction(){
+public static void ShowNewSkill(){
     string message = "Upgrading my skills [C# Version!]";
-    return message;
+    Console.WriteLine(message);
 }
 ```
 ---
