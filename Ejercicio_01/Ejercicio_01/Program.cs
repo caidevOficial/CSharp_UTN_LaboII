@@ -22,7 +22,6 @@
  * SOFTWARE.
  */
 
-using System;
 using AL = AuxiliarLib;
 
 namespace Ejercicio_01
