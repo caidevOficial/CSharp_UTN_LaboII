@@ -1,0 +1,6 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_08\Receipt\bin\Debug\Receipt.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_08\Receipt\bin\Debug\Receipt.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_08\Receipt\obj\Debug\Receipt.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_08\Receipt\obj\Debug\Receipt.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_08\Receipt\obj\Debug\Receipt.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_08\Receipt\obj\Debug\Receipt.pdb
