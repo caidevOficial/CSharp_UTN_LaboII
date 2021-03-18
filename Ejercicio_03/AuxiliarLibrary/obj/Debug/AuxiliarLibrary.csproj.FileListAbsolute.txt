@@ -1,0 +1,6 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_03\AuxiliarLibrary\bin\Debug\AuxiliarLibrary.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_03\AuxiliarLibrary\bin\Debug\AuxiliarLibrary.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_03\AuxiliarLibrary\obj\Debug\AuxiliarLibrary.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_03\AuxiliarLibrary\obj\Debug\AuxiliarLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_03\AuxiliarLibrary\obj\Debug\AuxiliarLibrary.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_03\AuxiliarLibrary\obj\Debug\AuxiliarLibrary.pdb
