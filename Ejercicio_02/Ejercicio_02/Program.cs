@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+
 using AL = AuxiliarLibrary;
 
 namespace Ejercicio_02
