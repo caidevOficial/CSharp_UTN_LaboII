@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\bin\Debug\Ejercicio_04.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\bin\Debug\Ejercicio_04.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\bin\Debug\Ejercicio_04.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\bin\Debug\PerfectNumber.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\bin\Debug\PerfectNumber.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\obj\Debug\Ejercicio_04.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\obj\Debug\Ejercicio_04.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\obj\Debug\Ejercicio_04.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\obj\Debug\Ejercicio_04.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\Ejercicio_04\obj\Debug\Ejercicio_04.pdb
