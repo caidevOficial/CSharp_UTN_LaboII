@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\bin\Debug\Practica_OOP_2.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\bin\Debug\Practica_OOP_2.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\bin\Debug\Practica_OOP_2.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\bin\Debug\ClassLibrary.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\bin\Debug\ClassLibrary.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\obj\Debug\Practica_OOP_2.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\obj\Debug\Practica_OOP_2.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\obj\Debug\Practica_OOP_2.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\obj\Debug\Practica_OOP_2.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP_2\Practica_OOP_2\obj\Debug\Practica_OOP_2.pdb
