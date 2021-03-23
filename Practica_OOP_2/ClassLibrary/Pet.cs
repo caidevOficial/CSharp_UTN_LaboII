@@ -118,7 +118,7 @@ namespace ClassLibrary
                 {
                     if (vaccine != null)
                     {
-                        vaccines += vaccine.GetName() + " ";
+                        vaccines += vaccine.GetName() + "\n";
                     }
                 }
                 return petInfo + vaccines;

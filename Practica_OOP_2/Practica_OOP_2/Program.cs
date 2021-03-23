@@ -35,9 +35,9 @@ namespace Practica_OOP_2
 
             Pet fatiga = new Pet("Pulgoso", "Fatiga", new DateTime(2020,02,24));
             Pet salem = new Pet("Black", "Salem", new DateTime(2020, 02, 25));
-            salem.SetVaccine(new Vaccination("Triple Felina"));
             Pet garfield = new Pet("Orange", "Garfield", new DateTime(2020, 02, 20));
             Pet scooby = new Pet("Pulgoso", "Scooby doo", new DateTime(2020, 02, 26));
+            salem.SetVaccine(new Vaccination("Triple Felina"));
             scooby.SetVaccine(new Vaccination("Rabia"));
             
             Customer person1 = new Customer("Pepe", "Argento", "CABA", "11222333");
