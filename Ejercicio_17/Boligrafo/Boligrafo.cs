@@ -32,11 +32,34 @@ namespace Boligrafo
         const short cantidadTintaMaxima = 100;
         ConsoleColor color;
         short tinta;
-
+        
         //##### Builders #####
-        public Boligrafo(short tinta, ConsoleColor color)
+
+        /// <summary>
+        /// Builds the entity with default params.
+        /// </summary>
+        public Boligrafo()
+        {
+            this.color = ConsoleColor.Black;
+            this.tinta = cantidadTintaMaxima;
+        }
+
+        /// <summary>
+        /// Builds the entity with ink level.
+        /// </summary>
+        /// <param name="tinta">The ink level.</param>
+        public Boligrafo(short tinta):this()
         {
             this.tinta = tinta;
+        }
+
+        /// <summary>
+        /// Builds the entity with all its params.
+        /// </summary>
+        /// <param name="tinta">The ink level.</param>
+        /// <param name="color">The color of the ink.</param>
+        public Boligrafo(short tinta, ConsoleColor color):this(tinta)
+        {
             this.color = color;
         }
 
