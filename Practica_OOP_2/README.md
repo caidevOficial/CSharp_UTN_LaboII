@@ -21,6 +21,14 @@
 </details>
 
 ---
+## Exercise 1
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/caidevOficial/CSharp_UTN_LaboII/blob/master/Practica_OOP_2/Enunciado.png">
+    </td>
+  </tr>
+</table>
 
 ## Technologies used. 📌
 |<a href="https://docs.microsoft.com/es-es/dotnet/csharp/"><img align="center" alt="C#" src="https://github.com/devicons/devicon/raw/master/icons/csharp/csharp-original.svg" width="50px" height="50px" />|<h3>C#</h3>|
