@@ -26,12 +26,13 @@ using System;
 
 namespace Currency
 {
-    class Dolar
+    public class Dolar
     {
         private double cantidad;
         private static double cotizRespectoDolar;
 
         #region Builders
+        
         /// <summary>
         /// Builds the entity withthe static value.
         /// </summary>
@@ -62,6 +63,7 @@ namespace Currency
         #endregion
 
         #region Getters
+        
         /// <summary>
         /// Gets the amount of the entity.
         /// </summary>
@@ -85,10 +87,20 @@ namespace Currency
         #region Operators
 
         #region Cast_Operators
+        
         /// <summary>
-        /// Explicitly casts an object of type Dolar to an object of type Euro.
+        /// Explicitly casts an object of type double to an object of type Dolar.
         /// </summary>
-        /// <param name="dolarCurrency">Dolar object to cast to Euro</param>
+        /// <param name="d">Amount to cast to Dolar.</param>
+        public static implicit operator Dolar(double d)
+        {
+            return new Dolar(d);
+        }
+        
+        /// <summary>
+         /// Explicitly casts an object of type Dolar to an object of type Euro.
+         /// </summary>
+         /// <param name="dolarCurrency">Dolar object to cast to Euro</param>
         public static explicit operator Euro(Dolar dolarCurrency)
         {
             return new Euro(dolarCurrency.GetCantidad() * Dolar.GetCotizacion());
@@ -139,6 +151,7 @@ namespace Currency
         {
             return d.GetCantidad() == e.GetCantidad();
         }
+        
         #endregion
 
         #region Inequality
