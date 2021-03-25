@@ -157,7 +157,7 @@ namespace Currency
         /// <returns>True if are differents, otherwise returns False.</returns>
         public static bool operator !=(Peso p, Dolar d)
         {
-            return !(p.GetCantidad() == d.GetCantidad());
+            return !(p == d);
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace Currency
         /// <returns>True if are differents, otherwise returns False.</returns>
         public static bool operator !=(Peso p, Euro e)
         {
-            return !(p.GetCantidad() == e.GetCantidad());
+            return !(p == e);
         }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace Currency
         /// <returns>True if are differents, otherwise returns False.</returns>
         public static bool operator !=(Peso p, Peso e)
         {
-            return !(p.GetCantidad() == e.GetCantidad());
+            return !(p == e);
         }
 
         #endregion
