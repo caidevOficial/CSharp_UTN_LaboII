@@ -26,12 +26,13 @@ using System;
 
 namespace Currency
 {
-    class Peso
+    public class Peso
     {
         private double cantidad;
         private static double cotizRespectoDolar;
 
         #region Builders
+        
         /// <summary>
         /// Builds the entity withthe static value.
         /// </summary>
@@ -58,9 +59,11 @@ namespace Currency
         {
             Peso.cotizRespectoDolar = cotizacion;
         }
+        
         #endregion
 
         #region Getters
+        
         /// <summary>
         /// Gets the amount of the entity.
         /// </summary>
@@ -78,15 +81,26 @@ namespace Currency
         {
             return Peso.cotizRespectoDolar;
         }
+        
         #endregion
 
         #region Operators
 
         #region Cast_Operators
+
         /// <summary>
-        /// Explicitly casts an object of type Peso to an object of type Dolar.
+        /// Explicitly casts an object of type double to an object of type Peso.
         /// </summary>
-        /// <param name="thisCurrency">Peso object to cast.</param>
+        /// <param name="amount">Amount to cast to Peso.</param>
+        public static implicit operator Peso(double amount)
+        {
+            return new Peso(amount);
+        }
+        
+        /// <summary>
+         /// Explicitly casts an object of type Peso to an object of type Dolar.
+         /// </summary>
+         /// <param name="thisCurrency">Peso object to cast.</param>
         public static explicit operator Dolar(Peso thisCurrency)
         {
             return new Dolar(thisCurrency.GetCantidad() / Peso.GetCotizacion());
@@ -101,18 +115,10 @@ namespace Currency
             return (Euro)(Dolar)pesoCurrency;
         }
 
-        /// <summary>
-        /// Explicitly casts an object of type double to an object of type Peso.
-        /// </summary>
-        /// <param name="amount">Amount to cast to Peso.</param>
-        public static implicit operator Peso(double amount)
-        {
-            return new Peso(amount);
-        }
-
         #endregion
 
         #region Equality
+        
         /// <summary>
         /// Compares if the amount of Peso and Dolar are equals.
         /// </summary>
@@ -149,6 +155,7 @@ namespace Currency
         #endregion
 
         #region Inequality
+        
         /// <summary>
         /// Compares if the amount of Peso and Dolar are differents.
         /// </summary>
