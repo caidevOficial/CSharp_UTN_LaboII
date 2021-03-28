@@ -1,0 +1,6 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Currency\obj\Debug\Currency.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Currency\obj\Debug\Currency.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Currency\bin\Debug\Currency.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Currency\bin\Debug\Currency.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Currency\obj\Debug\Currency.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Currency\obj\Debug\Currency.pdb

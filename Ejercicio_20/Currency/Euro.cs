@@ -44,6 +44,14 @@ namespace Currency
         /// <summary>
         /// 
         /// </summary>
+        public Euro()
+        {
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="cantidad"></param>
         public Euro(double cantidad)
         {
@@ -103,7 +111,8 @@ namespace Currency
         /// <param name="euroCurrency">Euro object to cast to Dolar</param>
         public static explicit operator Dolar(Euro euroCurrency)
         {
-            return (Dolar)(Peso)euroCurrency;
+            Dolar dolarCurrency = new Dolar(euroCurrency.GetCantidad() * Euro.GetCotizacion());
+            return dolarCurrency;
         }
 
         /// <summary>
@@ -112,7 +121,8 @@ namespace Currency
         /// <param name="euroCurrency">Euro object to cast to Peso</param>
         public static explicit operator Peso(Euro euroCurrency)
         {
-            return (Peso)(Dolar)euroCurrency;
+            Peso pesoCurrency = new Peso(((Dolar)euroCurrency).GetCantidad() * Peso.GetCotizacion());
+            return pesoCurrency;
         }
         
         #endregion
@@ -127,7 +137,7 @@ namespace Currency
         /// <returns>True if are equals, otherwise returns False</returns>
         public static bool operator ==(Euro e, Dolar d )
         {
-            return d.GetCantidad() == ((Euro)e).GetCantidad();
+            return e.GetCantidad() == ((Euro)d).GetCantidad();
         }
 
         /// <summary>
@@ -136,9 +146,9 @@ namespace Currency
         /// <param name="d">Euro to compare.</param>
         /// <param name="e">Peso to compare.</param>
         /// <returns>True if are equals, otherwise returns False</returns>
-        public static bool operator ==(Euro d, Peso e)
+        public static bool operator ==(Euro e, Peso p)
         {
-            return d.GetCantidad() == ((Euro)e).GetCantidad();
+            return e.GetCantidad() == ((Euro)p).GetCantidad();
         }
 
         /// <summary>
@@ -147,9 +157,9 @@ namespace Currency
         /// <param name="d">Euro to compare.</param>
         /// <param name="e">Euro to compare.</param>
         /// <returns>True if are equals, otherwise returns False</returns>
-        public static bool operator ==(Euro d, Euro e)
+        public static bool operator ==(Euro e, Euro ee)
         {
-            return d.GetCantidad() == e.GetCantidad();
+            return e.GetCantidad() == ee.GetCantidad();
         }
         
         #endregion
@@ -162,7 +172,7 @@ namespace Currency
         /// <param name="d">Dolar to Compare.</param>
         /// <param name="e">Euro to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Dolar d, Euro e)
+        public static bool operator !=(Euro e, Dolar d)
         {
             return !(d == e);
         }
@@ -173,9 +183,9 @@ namespace Currency
         /// <param name="d">Euro to Compare.</param>
         /// <param name="e">Peso to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Euro d, Peso e)
+        public static bool operator !=(Euro e, Peso p)
         {
-            return !(d == e);
+            return !(e == p);
         }
 
         /// <summary>
@@ -184,9 +194,9 @@ namespace Currency
         /// <param name="d">Euro to Compare.</param>
         /// <param name="e">Euro to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Euro d, Euro e)
+        public static bool operator !=(Euro e, Euro ee)
         {
-            return !(d == e);
+            return !(e == ee);
         }
 
         #endregion

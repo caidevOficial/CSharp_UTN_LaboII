@@ -42,6 +42,14 @@ namespace Currency
         }
 
         /// <summary>
+        /// Builds the entity.
+        /// </summary>
+        public Dolar()
+        {
+
+        }
+
+        /// <summary>
         /// Builds the entity with amount parameter.
         /// </summary>
         /// <param name="cantidad">Amount to set to the entity.</param>
@@ -103,7 +111,8 @@ namespace Currency
          /// <param name="dolarCurrency">Dolar object to cast to Euro</param>
         public static explicit operator Euro(Dolar dolarCurrency)
         {
-            return new Euro(dolarCurrency.GetCantidad() * Dolar.GetCotizacion());
+            Euro euroCurrency = new Euro(dolarCurrency.GetCantidad() / Euro.GetCotizacion());
+            return euroCurrency;
         }
 
         /// <summary>
@@ -112,7 +121,8 @@ namespace Currency
         /// <param name="dolarCurrency">Dolar object to cast to Peso</param>
         public static explicit operator Peso(Dolar dolarCurrency)
         {
-            return (Peso)(Euro)dolarCurrency;
+            Peso pesoCurrency = new Peso(dolarCurrency.GetCantidad() * Peso.GetCotizacion());
+            return pesoCurrency;
         }
 
         #endregion
@@ -212,7 +222,7 @@ namespace Currency
         /// <returns>An object type Dolar with The sum of the equivalent in Dolar of an object Peso-type.</returns>
         public static Dolar operator +(Dolar d, Peso e)
         {
-            return new Dolar(d.GetCantidad() + ((Peso)e).GetCantidad());
+            return new Dolar(d.GetCantidad() + ((Dolar)e).GetCantidad());
         }
 
         #endregion

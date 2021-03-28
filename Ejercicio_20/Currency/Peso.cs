@@ -32,13 +32,21 @@ namespace Currency
         private static double cotizRespectoDolar;
 
         #region Builders
-        
+
         /// <summary>
-        /// Builds the entity withthe static value.
+        /// Builds the entity with the static value.
         /// </summary>
         static Peso()
         {
             Peso.cotizRespectoDolar = 66;
+        }
+
+        /// <summary>
+        /// Builds the entity.
+        /// </summary>
+        public Peso()
+        {
+
         }
 
         /// <summary>
@@ -101,9 +109,9 @@ namespace Currency
          /// Explicitly casts an object of type Peso to an object of type Dolar.
          /// </summary>
          /// <param name="thisCurrency">Peso object to cast.</param>
-        public static explicit operator Dolar(Peso thisCurrency)
+        public static explicit operator Dolar(Peso pesoCurrency)
         {
-            return new Dolar(thisCurrency.GetCantidad() / Peso.GetCotizacion());
+            return new Dolar(pesoCurrency.GetCantidad() / Peso.GetCotizacion());
         }
 
         /// <summary>
@@ -112,7 +120,8 @@ namespace Currency
         /// <param name="pesoCurrency">Peso object to cast.</param>
         public static explicit operator Euro(Peso pesoCurrency)
         {
-            return (Euro)(Dolar)pesoCurrency;
+            Euro euroCurrency = new Euro(((Dolar)pesoCurrency).GetCantidad() / Euro.GetCotizacion());
+            return euroCurrency;
         }
 
         #endregion
@@ -127,7 +136,7 @@ namespace Currency
         /// <returns>True if are equals, otherwise returns False.</returns>
         public static bool operator ==(Peso p, Dolar d)
         {
-            return p.GetCantidad() == d.GetCantidad();
+            return p.GetCantidad() == ((Peso)d).GetCantidad();
         }
 
         /// <summary>
@@ -138,7 +147,7 @@ namespace Currency
         /// <returns>True if are equals, otherwise returns False.</returns>
         public static bool operator ==(Peso p, Euro e)
         {
-            return p.GetCantidad() == e.GetCantidad();
+            return p.GetCantidad() == ((Peso)e).GetCantidad();
         }
 
         /// <summary>
