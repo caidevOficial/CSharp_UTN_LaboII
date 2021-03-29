@@ -34,14 +34,6 @@ namespace Number
         #region Builders
 
         /// <summary>
-        /// Builds the entity without parameters.
-        /// </summary>
-        public NumeroDecimal()
-        {
-
-        }
-
-        /// <summary>
         /// Builds the entity with one param.
         /// </summary>
         /// <param name="number">Number for the entity.</param>
@@ -63,18 +55,18 @@ namespace Number
             return this.numero;
         }
 
-        /// <summary>
-        /// Sets a number to the entity.
-        /// </summary>
-        /// <param name="number">Number to set.</param>
-        public void SetDecimalNumber(double number)
-        {
-            this.numero = number;
-        }
-
         #endregion
 
         #region Operators_Cast
+
+        /// <summary>
+        /// Explicitly casts an object of type double to an object of type NumeroDecimal.
+        /// </summary>
+        /// <param name="number">double to cast to NumeroDecimal</param>
+        public static implicit operator NumeroDecimal(double number)
+        {
+            return new NumeroDecimal(number);
+        }
 
         /// <summary>
         /// Explicitly casts an object of type NumeroBinario to an object of type NumeroDecimal.

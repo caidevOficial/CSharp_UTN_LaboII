@@ -31,11 +31,9 @@ namespace Ejercicio_22
     {
         static void Main(string[] args)
         {
-            NumeroDecimal decimalNumber = new NumeroDecimal();
-            NumeroBinario binaryNumber = new NumeroBinario();
-            decimalNumber.SetDecimalNumber(30);
-            binaryNumber.SetBinaryNumber("111001");
-
+            NumeroDecimal decimalNumber = (NumeroDecimal)30;
+            NumeroBinario binaryNumber = (NumeroBinario)"111001";
+            
             Console.WriteLine("########## Convert ##########");
             NumeroDecimal decimalNumber2 = (NumeroDecimal)binaryNumber;
             NumeroBinario binaryNumber2 = (NumeroBinario)decimalNumber;
@@ -44,15 +42,16 @@ namespace Ejercicio_22
             Console.WriteLine($"Decimal: {decimalNumber.GetDecimalNumber()} -> {binaryNumber2.GetBinaryNumber()}");
 
             Console.WriteLine("\n########## Adition ##########");
-            decimalNumber2.SetDecimalNumber((decimalNumber + binaryNumber).GetDecimalNumber());
-            binaryNumber2.SetBinaryNumber((binaryNumber + decimalNumber).GetBinaryNumber());
+            
+            decimalNumber2 = (NumeroDecimal)((decimalNumber + binaryNumber).GetDecimalNumber());
+            binaryNumber2 = (NumeroBinario)((binaryNumber + decimalNumber).GetBinaryNumber());
             Console.WriteLine($"D: {decimalNumber.GetDecimalNumber()} + B: {binaryNumber.GetBinaryNumber()} = {decimalNumber2.GetDecimalNumber()}");
             Console.WriteLine($"B: {binaryNumber.GetBinaryNumber()} + D: {decimalNumber.GetDecimalNumber()} = {binaryNumber2.GetBinaryNumber()}");
 
 
             Console.WriteLine("\n########## Subtraction ##########");
-            decimalNumber2.SetDecimalNumber((decimalNumber - binaryNumber).GetDecimalNumber());
-            binaryNumber2.SetBinaryNumber((binaryNumber - decimalNumber).GetBinaryNumber());
+            decimalNumber2 = (NumeroDecimal)((decimalNumber - binaryNumber).GetDecimalNumber());
+            binaryNumber2 = (NumeroBinario)((binaryNumber - decimalNumber).GetBinaryNumber());
             Console.WriteLine($"D: {decimalNumber.GetDecimalNumber()} - B: {binaryNumber.GetBinaryNumber()} = {decimalNumber2.GetDecimalNumber()}");
             Console.WriteLine($"B: {binaryNumber.GetBinaryNumber()} - D: {decimalNumber.GetDecimalNumber()} = {binaryNumber2.GetBinaryNumber()}");
 

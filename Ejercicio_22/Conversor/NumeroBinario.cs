@@ -34,14 +34,6 @@ namespace Number
         #region Builders
 
         /// <summary>
-        /// Builds the entity whitout parameters.
-        /// </summary>
-        public NumeroBinario()
-        {
-
-        }
-
-        /// <summary>
         /// Builds the entity with one param.
         /// </summary>
         /// <param name="number">String to add</param>
@@ -63,23 +55,23 @@ namespace Number
             return this.number;
         }
 
-        /// <summary>
-        /// Sets a binary to the entity.
-        /// </summary>
-        /// <param name="number">Binary to set.</param>
-        public void SetBinaryNumber(string number)
-        {
-            this.number = number;
-        }
-
         #endregion
 
         #region Operators_Cast
 
         /// <summary>
-        /// 
+        /// Explicitly casts an object of type string to an object of type NumeroBinario.
         /// </summary>
-        /// <param name="n"></param>
+        /// <param name="number">string to cast</param>
+        public static implicit operator NumeroBinario(string number)
+        {
+            return new NumeroBinario(number);
+        }
+
+        /// <summary>
+        /// Explicitly casts an object of type NumeroDecimal to an object of type NumeroBinario.
+        /// </summary>
+        /// <param name="n">NumeroDecimal object to cast to NumeroBinario</param>
         public static explicit operator NumeroBinario(NumeroDecimal n)
         {
             NumeroBinario binary = new NumeroBinario(C.Conversor.IntegerToBinary((int)n.GetDecimalNumber()));
