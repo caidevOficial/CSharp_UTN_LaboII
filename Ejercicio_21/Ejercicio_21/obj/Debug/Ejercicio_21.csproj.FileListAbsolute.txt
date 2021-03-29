@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\bin\Debug\Ejercicio_21.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\bin\Debug\Ejercicio_21.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\bin\Debug\Ejercicio_21.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\bin\Debug\Temperaturas.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\bin\Debug\Temperaturas.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\obj\Debug\Ejercicio_21.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\obj\Debug\Ejercicio_21.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\obj\Debug\Ejercicio_21.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\obj\Debug\Ejercicio_21.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_21\Ejercicio_21\obj\Debug\Ejercicio_21.pdb
