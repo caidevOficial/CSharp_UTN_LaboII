@@ -33,13 +33,16 @@ namespace Practica_OOP_2
         {
             Customer[] customers = new Customer[3];
 
+            // Pets
             Pet fatiga = new Pet("Pulgoso", "Fatiga", new DateTime(2020,02,24));
             Pet salem = new Pet("Black", "Salem", new DateTime(2020, 02, 25));
             Pet garfield = new Pet("Orange", "Garfield", new DateTime(2020, 02, 20));
             Pet scooby = new Pet("Pulgoso", "Scooby doo", new DateTime(2020, 02, 26));
+            // Vaccines
             salem.SetVaccine(new Vaccination("Triple Felina"));
             scooby.SetVaccine(new Vaccination("Rabia"));
             
+            // Customers
             Customer person1 = new Customer("Pepe", "Argento", "CABA", "11222333");
             Customer person2 = new Customer("Moni", "Argento", "CABA", "11222333");
             Customer person3 = new Customer("Paola", "Argento", "CABA", "11222333");
