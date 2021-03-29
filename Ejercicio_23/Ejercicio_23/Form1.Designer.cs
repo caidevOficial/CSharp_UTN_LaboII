@@ -51,13 +51,13 @@ namespace Ejercicio_23
             this.labelDolar = new System.Windows.Forms.Label();
             this.labelPeso = new System.Windows.Forms.Label();
             this.btnCotizacion = new System.Windows.Forms.Button();
+            this.Candados = new System.Windows.Forms.ImageList(this.components);
             this.lblEuro = new System.Windows.Forms.Label();
             this.lblDolar = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
             this.btnConvertEuro = new System.Windows.Forms.Button();
             this.btnConvertDolar = new System.Windows.Forms.Button();
             this.btnConvertPeso = new System.Windows.Forms.Button();
-            this.Candados = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // txtBoxPeso
@@ -254,15 +254,21 @@ namespace Ejercicio_23
             this.btnCotizacion.UseVisualStyleBackColor = true;
             this.btnCotizacion.Click += new System.EventHandler(this.btnCotizacion_Click);
             // 
+            // Candados
+            // 
+            this.Candados.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Candados.ImageStream")));
+            this.Candados.TransparentColor = System.Drawing.Color.Transparent;
+            this.Candados.Images.SetKeyName(0, "padlock.png");
+            this.Candados.Images.SetKeyName(1, "lock.png");
+            // 
             // lblEuro
             // 
-            this.lblEuro.AutoSize = true;
             this.lblEuro.BackColor = System.Drawing.SystemColors.WindowText;
             this.lblEuro.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEuro.ForeColor = System.Drawing.Color.Cyan;
-            this.lblEuro.Location = new System.Drawing.Point(55, 112);
+            this.lblEuro.Location = new System.Drawing.Point(48, 112);
             this.lblEuro.Name = "lblEuro";
-            this.lblEuro.Size = new System.Drawing.Size(62, 50);
+            this.lblEuro.Size = new System.Drawing.Size(69, 50);
             this.lblEuro.TabIndex = 20;
             this.lblEuro.Text = "Euro";
             // 
@@ -280,13 +286,12 @@ namespace Ejercicio_23
             // 
             // lblPeso
             // 
-            this.lblPeso.AutoSize = true;
             this.lblPeso.BackColor = System.Drawing.SystemColors.WindowText;
             this.lblPeso.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPeso.ForeColor = System.Drawing.Color.Cyan;
-            this.lblPeso.Location = new System.Drawing.Point(55, 204);
+            this.lblPeso.Location = new System.Drawing.Point(46, 204);
             this.lblPeso.Name = "lblPeso";
-            this.lblPeso.Size = new System.Drawing.Size(58, 50);
+            this.lblPeso.Size = new System.Drawing.Size(67, 50);
             this.lblPeso.TabIndex = 22;
             this.lblPeso.Text = "Peso";
             // 
@@ -326,13 +331,6 @@ namespace Ejercicio_23
             this.btnConvertPeso.TabIndex = 25;
             this.btnConvertPeso.Text = "CONVERT";
             this.btnConvertPeso.UseVisualStyleBackColor = true;
-            // 
-            // Candados
-            // 
-            this.Candados.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("Candados.ImageStream")));
-            this.Candados.TransparentColor = System.Drawing.Color.Transparent;
-            this.Candados.Images.SetKeyName(0, "padlock.png");
-            this.Candados.Images.SetKeyName(1, "lock.png");
             // 
             // Conversor
             // 
