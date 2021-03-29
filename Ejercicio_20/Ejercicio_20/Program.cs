@@ -36,7 +36,7 @@ namespace Ejercicio_20
             Dolar dCurrency = new Dolar(10);
             Peso pCurrency = new Peso(15, 97); //BNA value
             Euro eCurrency = new Euro(7, 1.17); //Oficial Taxes
-
+            
             /*cotizations done*/
             Peso pSalary = new Peso();
             Euro eSalary = new Euro();
