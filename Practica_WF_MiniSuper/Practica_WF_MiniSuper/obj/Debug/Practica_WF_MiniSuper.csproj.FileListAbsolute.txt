@@ -1,0 +1,14 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\bin\Debug\Practica_WF_MiniSuper.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\bin\Debug\Practica_WF_MiniSuper.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\bin\Debug\Practica_WF_MiniSuper.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.FrmAltaUsuario.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.FrmMain.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\bin\Debug\Usuario.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\bin\Debug\Usuario.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Practica_WF_MiniSuper\obj\Debug\Practica_WF_MiniSuper.csproj.CopyComplete
