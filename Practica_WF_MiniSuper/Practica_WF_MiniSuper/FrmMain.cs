@@ -46,13 +46,37 @@ namespace Practica_WF_MiniSuper
         {
             FrmAltaUsuario frmAltaUsuario = new FrmAltaUsuario();
             frmAltaUsuario.Location = this.Location;
-            frmAltaUsuario.ShowDialog(); // Solo te deja interactuar con esa ventana - manera modal
-            
-            // Agrego el usuario a la lista
-            MiniSuper.MiniSuper.AddUsuarios(frmAltaUsuario.GetUsuario());
+            // Solo te deja interactuar con esa ventana - manera modal
+            if(frmAltaUsuario.ShowDialog() == DialogResult.OK)
+            {
+                // Agrego el usuario a la lista
+                MiniSuper.MiniSuper.AddUsuarios(frmAltaUsuario.GetUsuario());
+            }
 
             // listo los usuarios del market
-            MiniSuper.MiniSuper.GetUsuarios();
+            comboBoxUsuarios.DataSource = null;
+            comboBoxUsuarios.DataSource = MiniSuper.MiniSuper.GetUsuarios();
+        }
+
+        /// <summary>
+        /// Aca se maneja el contexto previo al formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Si cancela el alert, no sale del form.
+            if(MessageBox.Show("Seguro que desea Salir?", "Cerrando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            
+            
         }
     }
 }

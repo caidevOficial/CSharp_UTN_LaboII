@@ -53,5 +53,26 @@ namespace NewUser
             this.tipoPago = tipoPago;
             this.provincia = provincia;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private string MostrarNombre()
+        {
+            StringBuilder data = new StringBuilder();
+            data.AppendLine($"Name: {this.name}");
+            data.AppendLine($"Surname: {this.surname}");
+            return data.ToString();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return this.MostrarNombre();
+        }
     }
 }

@@ -85,6 +85,7 @@ namespace Practica_WF_MiniSuper
             string surname = this.txtApellido.Text;
             decimal.TryParse(this.numDNI.Value.ToString(), out decimal dni);
             user = new Usuario(name, surname, dni.ToString(), formasPago, tipoPago, provincia);
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

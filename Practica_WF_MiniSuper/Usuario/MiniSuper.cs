@@ -33,6 +33,9 @@ namespace MiniSuper
                     return false;
                 }
             }
+
+            Array.Resize<Usuario>(ref usuarios, usuarios.Length + 1);
+            usuarios[usuarios.Length - 1] = user;
             // Crear la sobrecarga del +
             //usuarios += user;
 
