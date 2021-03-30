@@ -13,7 +13,7 @@
 <table>
   <tr>
     <td>
-      <img alt="Alta" src="Practica_WF_MiniSuper/Resources/Alta.png">
+      <img alt="Alta" src="https://github.com/caidevOficial/CSharp_UTN_LaboII/blob/master/Practica_WF_MiniSuper/Resources/Alta.png">
     </td>
   </tr>
 </table>
