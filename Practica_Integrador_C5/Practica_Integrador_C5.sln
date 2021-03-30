@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica_Integrador_C5", "Practica_Integrador_C5\Practica_Integrador_C5.csproj", "{50CA3255-9738-4700-976D-3F0359FC7D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{D76321EF-E21A-4A69-A479-7098D41D0D16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50CA3255-9738-4700-976D-3F0359FC7D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50CA3255-9738-4700-976D-3F0359FC7D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50CA3255-9738-4700-976D-3F0359FC7D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50CA3255-9738-4700-976D-3F0359FC7D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76321EF-E21A-4A69-A479-7098D41D0D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76321EF-E21A-4A69-A479-7098D41D0D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76321EF-E21A-4A69-A479-7098D41D0D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76321EF-E21A-4A69-A479-7098D41D0D16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BADD55C-AA46-4566-B158-1AF133C47AA5}
+	EndGlobalSection
+EndGlobal
