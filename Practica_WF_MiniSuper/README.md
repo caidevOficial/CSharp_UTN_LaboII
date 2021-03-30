@@ -7,8 +7,17 @@
 
 ---
 
-# C# exercises from UTN. 👨‍💻
+# C# Practica Windows Forms. 👨‍💻
 ---
+
+<table>
+  <tr>
+    <td>
+      <img alt="Alta" src="Practica_WF_MiniSuper/Resources/Alta.png">
+    </td>
+  </tr>
+</table>
+
 
 <details>
   <summary>:zap: GitHub Stats</summary>
@@ -24,7 +33,7 @@
 
 ```C#
 public static void ShowNewSkill(){
-    string message = "Upgrading my skills [C# Version!]";
+    string message = "Learning C# !";
     Console.WriteLine(message);
 }
 ```
