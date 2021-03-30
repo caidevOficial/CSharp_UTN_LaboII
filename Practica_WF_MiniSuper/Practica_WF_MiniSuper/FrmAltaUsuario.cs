@@ -106,5 +106,10 @@ namespace Practica_WF_MiniSuper
         {
             this.btnAceptar.Enabled = true;
         }
+
+        public Usuario GetUsuario()
+        {
+            return this.user;
+        }
     }
 }

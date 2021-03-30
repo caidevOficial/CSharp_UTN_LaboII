@@ -31,6 +31,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MiniSuper;
 
 namespace Practica_WF_MiniSuper
 {
@@ -44,8 +45,14 @@ namespace Practica_WF_MiniSuper
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             FrmAltaUsuario frmAltaUsuario = new FrmAltaUsuario();
-            frmAltaUsuario.Show();
+            frmAltaUsuario.Location = this.Location;
+            frmAltaUsuario.ShowDialog(); // Solo te deja interactuar con esa ventana - manera modal
             
+            // Agrego el usuario a la lista
+            MiniSuper.MiniSuper.AddUsuarios(frmAltaUsuario.GetUsuario());
+
+            // listo los usuarios del market
+            MiniSuper.MiniSuper.GetUsuarios();
         }
     }
 }
