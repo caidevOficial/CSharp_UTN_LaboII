@@ -87,5 +87,24 @@ namespace Practica_WF_MiniSuper
             user = new Usuario(name, surname, dni.ToString(), formasPago, tipoPago, provincia);
             this.Close();
         }
+
+        private void cbxEfectivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (((CheckBox)sender).Checked)
+            {
+                this.groupBox1.Visible = true;
+                this.groupBox_TipoPago.Visible = true;
+            }
+            else
+            {
+                this.groupBox1.Visible = false;
+                this.groupBox_TipoPago.Visible = false;
+            }
+        }
+
+        private void comboBoxProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.btnAceptar.Enabled = true;
+        }
     }
 }

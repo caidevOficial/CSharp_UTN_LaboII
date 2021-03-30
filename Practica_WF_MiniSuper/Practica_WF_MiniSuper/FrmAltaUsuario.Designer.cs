@@ -123,6 +123,7 @@ namespace Practica_WF_MiniSuper
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.SystemColors.InfoText;
+            this.btnAceptar.Enabled = false;
             this.btnAceptar.ForeColor = System.Drawing.Color.LimeGreen;
             this.btnAceptar.Location = new System.Drawing.Point(66, 273);
             this.btnAceptar.Name = "btnAceptar";
@@ -152,6 +153,7 @@ namespace Practica_WF_MiniSuper
             this.cbxEfectivo.TabIndex = 10;
             this.cbxEfectivo.Text = "Efectivo";
             this.cbxEfectivo.UseVisualStyleBackColor = true;
+            this.cbxEfectivo.CheckedChanged += new System.EventHandler(this.cbxEfectivo_CheckedChanged);
             // 
             // cbxTarjeta
             // 
@@ -244,6 +246,7 @@ namespace Practica_WF_MiniSuper
             this.comboBoxProvincia.Name = "comboBoxProvincia";
             this.comboBoxProvincia.Size = new System.Drawing.Size(97, 21);
             this.comboBoxProvincia.TabIndex = 0;
+            this.comboBoxProvincia.SelectedIndexChanged += new System.EventHandler(this.comboBoxProvincia_SelectedIndexChanged);
             // 
             // FrmAltaUsuario
             // 
