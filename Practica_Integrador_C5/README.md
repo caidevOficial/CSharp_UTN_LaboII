@@ -13,7 +13,7 @@
 <table>
   <tr>
     <td>
-      <img alt="Sample" src="https://github.com/caidevOficial/CSharp_UTN_LaboII/tree/master/Practica_Integrador_C5/Resources/sample.png">
+      <img alt="Sample" src="https://github.com/caidevOficial/CSharp_UTN_LaboII/blob/master/Practica_Integrador_C5/Resources/sample.png">
     </td>
   </tr>
 </table>
