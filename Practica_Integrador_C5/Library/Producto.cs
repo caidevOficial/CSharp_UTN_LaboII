@@ -22,9 +22,7 @@
  * SOFTWARE.
  */
 
-using System;
 using System.Text;
-
 
 namespace Library
 {
@@ -57,7 +55,7 @@ namespace Library
         /// </summary>
         /// <param name="codigoDeBarra">Barcode to set.</param>
         /// <param name="marca">Brand to set.</param>
-        public Producto(string codigoDeBarra, string marca) : this(codigoDeBarra)
+        public Producto(string marca, string codigoDeBarra) : this(codigoDeBarra)
         {
             this.marca = marca;
         }
@@ -68,7 +66,7 @@ namespace Library
         /// <param name="codigoDeBarra">Barcode to set.</param>
         /// <param name="marca">Brand to set.</param>
         /// <param name="precio">Price to set.</param>
-        public Producto(string codigoDeBarra, string marca, float precio) : this(codigoDeBarra, marca)
+        public Producto(string marca, string codigoDeBarra, float precio) : this(marca, codigoDeBarra)
         {
             this.precio = precio;
         }
@@ -105,6 +103,11 @@ namespace Library
         /// <param name="product">Product type object to cast.</param>
         public static explicit operator string(Producto product)
         {
+            if(product is null)
+            {
+                return " ";
+            }        
+            
             return product.codigoDeBarra;
         }
 
@@ -172,9 +175,9 @@ namespace Library
         public static string MostrarProducto(Producto product)
         {
             StringBuilder message = new StringBuilder();
-            message.AppendLine($"Barcode: {((string)product)}");
-            message.AppendLine($"Brand: {product.GetMarca()}");
-            message.AppendLine($"Price: ${product.GetPrecio()}");
+            message.AppendLine($"Barcode: {((string)product)}.");
+            message.AppendLine($"Brand: {product.GetMarca()}.");
+            message.AppendLine($"Price: ${product.GetPrecio()}.\n");
 
             return message.ToString();
         }
