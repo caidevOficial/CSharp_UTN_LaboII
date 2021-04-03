@@ -22,55 +22,182 @@
  * SOFTWARE.
  */
 
+using Currency;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ejercicio_23
 {
     public partial class Conversor : Form
     {
-        private bool candado;
+        private bool locked;
+        private bool lockedOK;
         public Conversor()
         {
             InitializeComponent();
-            candado = false;
+            locked = false;
+            lockedOK = false;
+            btnConvertEuro.Enabled = false;
+            btnConvertDolar.Enabled = false;
+            btnConvertPeso.Enabled = false;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Toggles the lock / unlock state of the button and boxes.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCotizacion_Click(object sender, EventArgs e)
         {
-            if (!candado)
+            if (!(String.IsNullOrWhiteSpace(txtBoxEuro.Text)) && !(String.IsNullOrWhiteSpace(txtBoxPeso.Text)) && !locked)
             {
-                btnCotizacion.ImageIndex = 1;
+                btnCotizacion.ImageIndex = 1; //Unlocked
                 txtBoxPeso.Enabled = false;
-                txtBoxDolar.Enabled = false;
                 txtBoxEuro.Enabled = false;
 
+                btnConvertEuro.Enabled = true;
+                btnConvertDolar.Enabled = true;
+                btnConvertPeso.Enabled = true;
+                groupBoxCurrency.Enabled = true;
+                lockedOK = true;
             }
             else
             {
-                btnCotizacion.ImageIndex = 0;
+                btnCotizacion.ImageIndex = 0; //Locked
                 txtBoxPeso.Enabled = true;
-                txtBoxDolar.Enabled = true;
                 txtBoxEuro.Enabled = true;
+                btnConvertEuro.Enabled = false;
+                btnConvertDolar.Enabled = false;
+                btnConvertPeso.Enabled = false;
+                groupBoxCurrency.Enabled = false;
+                lockedOK = false;
             }
-            candado = !candado;
+            locked = !locked;
+        }
+
+        private static void MessageError(string errorMessage, string typeError)
+        {
+            MessageBox.Show(errorMessage, typeError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        /// <summary>
+        /// At the beggining of the app, it charges the dolar's cotization and blocks its txtBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Conversor_Load(object sender, EventArgs e)
+        {
+            txtBoxDolar.Text = Dolar.GetCotizacion().ToString();
+            txtBoxDolar.Enabled = false;
+            groupBoxConvertions.Enabled = false;
+            groupBoxCurrency.Enabled = false;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConvertEuro_Click(object sender, EventArgs e)
+        {
+            
+            if(!lockedOK)
+            {
+                MessageError("You need to complete al the cotizations boxes", "Error");
+            }
+            else
+            {
+                
+                if (Double.TryParse(txtEuro.Text, out double equivalentEuro))
+                {
+                    Euro myEuro = new Euro(equivalentEuro);
+                    txtEuroAEuro.Text = myEuro.GetCantidad().ToString();
+                    txtEuroADolar.Text = ((Dolar)myEuro).GetCantidad().ToString();
+                    txtEuroAPeso.Text = ((Peso)myEuro).GetCantidad().ToString();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConvertDolar_Click(object sender, EventArgs e)
+        {
+            if (!lockedOK)
+            {
+                MessageError("You need to complete al the cotizations boxes", "Error");
+            }
+            else
+            {
+                if (Double.TryParse(txtDolar.Text, out double equivalentDolar))
+                {
+                    Dolar myDolar = new Dolar(equivalentDolar);
+                    txtDolarADolar.Text = myDolar.GetCantidad().ToString();
+                    txtDolarAEuro.Text = ((Euro)myDolar).GetCantidad().ToString();
+                    txtDolarAPeso.Text = ((Peso)myDolar).GetCantidad().ToString();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConvertPeso_Click(object sender, EventArgs e)
+        {
+            if (!lockedOK)
+            {
+                MessageError("You need to complete al the cotizations boxes", "Error");
+            }
+            else
+            {
+                if (Double.TryParse(txtPeso.Text, out double equivalentPeso))
+                {
+                    Peso myPeso = new Peso(equivalentPeso);
+                    txtPesosAEuro.Text = ((Euro)myPeso).GetCantidad().ToString();
+                    txtPesosADolar.Text = ((Dolar)myPeso).GetCantidad().ToString();
+                    txtPesosAPesos.Text = myPeso.GetCantidad().ToString();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Checks that the box isn't empty or null, then tries to convert its content to Double-type and sets the cotizacion of Euro, Otherwise sets the cotization in 1.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtBoxEuro_MouseLeave(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(txtBoxEuro.Text) && Double.TryParse(txtBoxEuro.Text, out double equivalentEuro))
+            {
+                Euro.SetCotizacion(equivalentEuro);
+            }
+            else
+            {
+                txtBoxEuro.Focus();
+                MessageError("Monto en Euros Invalido", "Error");
+            }
+        }
+
+        /// <summary>
+        /// Checks that the box isn't empty or null, then tries to convert its content to Double-type and sets the cotizacion of Peso, Otherwise sets the cotization in 1.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtBoxPeso_MouseLeave(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(txtBoxPeso.Text) && Double.TryParse(txtBoxPeso.Text, out double equivalentPeso))
+            {
+                Peso.SetCotizacion(equivalentPeso);
+            }
+            else
+            {
+                txtBoxPeso.Focus();
+                MessageError("Monto en Pesos Invalido", "Error");
+            }
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Currency
         #region Builders
 
         /// <summary>
-        /// 
+        /// Builds the entity and sets the cotization.
         /// </summary>
         static Euro()
         {
@@ -42,7 +42,7 @@ namespace Currency
         }
 
         /// <summary>
-        /// 
+        /// Builds the entity without parameters.
         /// </summary>
         public Euro()
         {
@@ -50,9 +50,9 @@ namespace Currency
         }
 
         /// <summary>
-        /// 
+        /// Builds the entity with a double value to set the amount.
         /// </summary>
-        /// <param name="cantidad"></param>
+        /// <param name="cantidad">Amount of the entity.</param>
         public Euro(double cantidad)
         {
             this.cantidad = cantidad;
@@ -82,12 +82,21 @@ namespace Currency
         }
 
         /// <summary>
-        /// 
+        /// Gets the cotization of the Euro respecto the Dolar.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The cotization.</returns>
         public static double GetCotizacion()
         {
             return Euro.cotizRespectoDolar;
+        }
+
+        /// <summary>
+        /// Sets the cotization of the Euro respecto the Dolar.
+        /// </summary>
+        /// <param name="amount"></param>
+        public static void SetCotizacion(double amount)
+        {
+            Euro.cotizRespectoDolar = amount;
         }
 
         #endregion
@@ -111,7 +120,7 @@ namespace Currency
         /// <param name="euroCurrency">Euro object to cast to Dolar</param>
         public static explicit operator Dolar(Euro euroCurrency)
         {
-            Dolar dolarCurrency = new Dolar(euroCurrency.GetCantidad() * Euro.GetCotizacion());
+            Dolar dolarCurrency = new Dolar(euroCurrency.GetCantidad() / Euro.GetCotizacion());
             return dolarCurrency;
         }
 

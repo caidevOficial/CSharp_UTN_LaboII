@@ -111,7 +111,7 @@ namespace Currency
         /// <param name="dolarCurrency">Dolar object to cast to Euro</param>
         public static explicit operator Euro(Dolar dolarCurrency)
         {
-            Euro euroCurrency = new Euro(dolarCurrency.GetCantidad() / Euro.GetCotizacion());
+            Euro euroCurrency = new Euro(dolarCurrency.GetCantidad() * Euro.GetCotizacion());
             return euroCurrency;
         }
 

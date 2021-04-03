@@ -90,6 +90,14 @@ namespace Currency
             return Peso.cotizRespectoDolar;
         }
 
+        /// <summary>
+        /// Sets the cotization of the Peso respecto the Dolar.
+        /// </summary>
+        /// <param name="amount"></param>
+        public static void SetCotizacion(double amount)
+        {
+            Peso.cotizRespectoDolar = amount;
+        }
         #endregion
 
         #region Operators
@@ -120,7 +128,7 @@ namespace Currency
         /// <param name="pesoCurrency">Peso object to cast.</param>
         public static explicit operator Euro(Peso pesoCurrency)
         {
-            Euro euroCurrency = new Euro(((Dolar)pesoCurrency).GetCantidad() / Euro.GetCotizacion());
+            Euro euroCurrency = new Euro(((Dolar)pesoCurrency).GetCantidad() * Euro.GetCotizacion());
             return euroCurrency;
         }
 
