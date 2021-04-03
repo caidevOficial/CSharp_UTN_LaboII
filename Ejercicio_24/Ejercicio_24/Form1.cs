@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+using Temperaturas;
 using System;
 using System.Windows.Forms;
 
@@ -43,5 +44,125 @@ namespace Ejercicio_24
         {
             grpTemperatures.Enabled = false;
         }
+
+        /// <summary>
+        /// Shows an error message with its icon and setted messages.
+        /// </summary>
+        /// <param name="errorMessage">Large string with the description of the message.</param>
+        /// <param name="typeError">Short string with the tipe of the mesage.</param>
+        private static void MessageError(string errorMessage, string typeError)
+        {
+            MessageBox.Show(errorMessage, typeError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        #region Buttons_Actions
+
+        /// <summary>
+        /// Converts the Temperature from F to C and K.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConvertF_Click(object sender, EventArgs e)
+        {
+            if(Double.TryParse(txtFahrenheit.Text, out double grades))
+            {
+                Fahrenheit tempF = new Fahrenheit(grades);
+                txtFtoF.Text = tempF.GetAmount().ToString() + "°F";
+                txtFtoC.Text = ((Celsius)tempF).GetAmount().ToString() + "°C";
+                txtFtoK.Text = ((Kelvin)tempF).GetAmount().ToString() + "°K";
+            }
+            else
+            {
+                MessageBox.Show("Olvidaste colocar la temperatura a convertir!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Converts the Temperature from C to F and K.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConvertC_Click(object sender, EventArgs e)
+        {
+            if (Double.TryParse(txtCelsius.Text, out double grades))
+            {
+                Celsius tempC = new Celsius(grades);
+                txtCtoF.Text = ((Fahrenheit)tempC).GetAmount().ToString() + "°F";
+                txtCtoC.Text = tempC.GetAmount().ToString() + "°C";
+                txtCtoK.Text = ((Kelvin)tempC).GetAmount().ToString() + "°K";
+            }
+            else
+            {
+                MessageBox.Show("Olvidaste colocar la temperatura a convertir!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Converts the Temperature from K to C and F.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnConvertK_Click(object sender, EventArgs e)
+        {
+            if (Double.TryParse(txtKelvin.Text, out double grades))
+            {
+                Kelvin tempK = new Kelvin(grades);
+                txtKtoF.Text = ((Fahrenheit)tempK).GetAmount().ToString() + "°F";
+                txtKtoC.Text = ((Celsius)tempK).GetAmount().ToString() + "°C";
+                txtKtoK.Text = tempK.GetAmount().ToString() + "°K";
+            }
+            else
+            {
+                MessageBox.Show("Olvidaste colocar la temperatura a convertir!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        #endregion
+
+        #region MouseLeave
+
+        /// <summary>
+        /// When the mouse leaves the box, if the values in it is wrong, shows an Error Message.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtFahrenheit_MouseLeave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtFahrenheit.Text) || !Double.TryParse(txtFahrenheit.Text, out double temperature))
+            {
+                txtFahrenheit.Focus();
+                MessageError("Temperatura invalida!", "Error: Fahrenheit");
+            }
+        }
+
+        /// <summary>
+        /// When the mouse leaves the box, if the values in it is wrong, shows an Error Message.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtCelsius_MouseLeave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtCelsius.Text) || !Double.TryParse(txtCelsius.Text, out double temperature))
+            {
+                txtCelsius.Focus();
+                MessageError("Temperatura invalida!", "Error: Celsius");
+            }
+        }
+
+        /// <summary>
+        /// When the mouse leaves the box, if the values in it is wrong, shows an Error Message.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtKelvin_MouseLeave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtKelvin.Text) || !Double.TryParse(txtKelvin.Text, out double temperature))
+            {
+                txtKelvin.Focus();
+                MessageError("Temperatura invalida!", "Error: Kelvin");
+            }
+        }
+
+        #endregion
     }
 }

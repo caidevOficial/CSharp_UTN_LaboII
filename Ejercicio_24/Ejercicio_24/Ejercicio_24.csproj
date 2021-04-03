@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Temperaturas\Temperaturas.csproj">
+      <Project>{4afe108b-9adf-4068-8de5-01ca6fd2ac1b}</Project>
+      <Name>Temperaturas</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

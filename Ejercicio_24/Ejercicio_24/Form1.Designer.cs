@@ -88,6 +88,7 @@ namespace Ejercicio_24
             this.btnConvertF.TabIndex = 1;
             this.btnConvertF.Text = ">";
             this.btnConvertF.UseVisualStyleBackColor = false;
+            this.btnConvertF.Click += new System.EventHandler(this.btnConvertF_Click);
             // 
             // btnConvertC
             // 
@@ -99,6 +100,7 @@ namespace Ejercicio_24
             this.btnConvertC.TabIndex = 3;
             this.btnConvertC.Text = ">";
             this.btnConvertC.UseVisualStyleBackColor = false;
+            this.btnConvertC.Click += new System.EventHandler(this.btnConvertC_Click);
             // 
             // btnConvertK
             // 
@@ -110,95 +112,96 @@ namespace Ejercicio_24
             this.btnConvertK.TabIndex = 5;
             this.btnConvertK.Text = ">";
             this.btnConvertK.UseVisualStyleBackColor = false;
+            this.btnConvertK.Click += new System.EventHandler(this.btnConvertK_Click);
             // 
             // txtFtoF
             // 
             this.txtFtoF.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtFtoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFtoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFtoF.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtFtoF.Location = new System.Drawing.Point(29, 28);
             this.txtFtoF.Name = "txtFtoF";
-            this.txtFtoF.Size = new System.Drawing.Size(82, 44);
+            this.txtFtoF.Size = new System.Drawing.Size(82, 31);
             this.txtFtoF.TabIndex = 3;
             // 
             // txtCtoF
             // 
             this.txtCtoF.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtCtoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCtoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCtoF.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtCtoF.Location = new System.Drawing.Point(29, 82);
             this.txtCtoF.Name = "txtCtoF";
-            this.txtCtoF.Size = new System.Drawing.Size(82, 44);
+            this.txtCtoF.Size = new System.Drawing.Size(82, 31);
             this.txtCtoF.TabIndex = 4;
             // 
             // txtKtoF
             // 
             this.txtKtoF.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtKtoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKtoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKtoF.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtKtoF.Location = new System.Drawing.Point(29, 134);
             this.txtKtoF.Name = "txtKtoF";
-            this.txtKtoF.Size = new System.Drawing.Size(82, 44);
+            this.txtKtoF.Size = new System.Drawing.Size(82, 31);
             this.txtKtoF.TabIndex = 5;
             // 
             // txtKtoC
             // 
             this.txtKtoC.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtKtoC.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKtoC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKtoC.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtKtoC.Location = new System.Drawing.Point(151, 134);
             this.txtKtoC.Name = "txtKtoC";
-            this.txtKtoC.Size = new System.Drawing.Size(82, 44);
+            this.txtKtoC.Size = new System.Drawing.Size(82, 31);
             this.txtKtoC.TabIndex = 8;
             // 
             // txtCtoC
             // 
             this.txtCtoC.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtCtoC.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCtoC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCtoC.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtCtoC.Location = new System.Drawing.Point(151, 82);
             this.txtCtoC.Name = "txtCtoC";
-            this.txtCtoC.Size = new System.Drawing.Size(82, 44);
+            this.txtCtoC.Size = new System.Drawing.Size(82, 31);
             this.txtCtoC.TabIndex = 7;
             // 
             // txtFtoC
             // 
             this.txtFtoC.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtFtoC.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFtoC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFtoC.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtFtoC.Location = new System.Drawing.Point(151, 28);
             this.txtFtoC.Name = "txtFtoC";
-            this.txtFtoC.Size = new System.Drawing.Size(82, 44);
+            this.txtFtoC.Size = new System.Drawing.Size(82, 31);
             this.txtFtoC.TabIndex = 6;
             // 
             // txtKtoK
             // 
             this.txtKtoK.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtKtoK.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKtoK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKtoK.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtKtoK.Location = new System.Drawing.Point(249, 134);
             this.txtKtoK.Name = "txtKtoK";
-            this.txtKtoK.Size = new System.Drawing.Size(82, 44);
+            this.txtKtoK.Size = new System.Drawing.Size(82, 31);
             this.txtKtoK.TabIndex = 11;
             // 
             // txtCtoK
             // 
             this.txtCtoK.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtCtoK.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCtoK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCtoK.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtCtoK.Location = new System.Drawing.Point(249, 82);
             this.txtCtoK.Name = "txtCtoK";
-            this.txtCtoK.Size = new System.Drawing.Size(82, 44);
+            this.txtCtoK.Size = new System.Drawing.Size(82, 31);
             this.txtCtoK.TabIndex = 10;
             // 
             // txtFtoK
             // 
             this.txtFtoK.BackColor = System.Drawing.SystemColors.WindowText;
-            this.txtFtoK.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFtoK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFtoK.ForeColor = System.Drawing.Color.SpringGreen;
             this.txtFtoK.Location = new System.Drawing.Point(249, 28);
             this.txtFtoK.Name = "txtFtoK";
-            this.txtFtoK.Size = new System.Drawing.Size(82, 44);
+            this.txtFtoK.Size = new System.Drawing.Size(82, 31);
             this.txtFtoK.TabIndex = 9;
             // 
             // txtKelvin
@@ -210,6 +213,7 @@ namespace Ejercicio_24
             this.txtKelvin.Name = "txtKelvin";
             this.txtKelvin.Size = new System.Drawing.Size(82, 44);
             this.txtKelvin.TabIndex = 4;
+            this.txtKelvin.MouseLeave += new System.EventHandler(this.txtKelvin_MouseLeave);
             // 
             // txtCelsius
             // 
@@ -220,6 +224,7 @@ namespace Ejercicio_24
             this.txtCelsius.Name = "txtCelsius";
             this.txtCelsius.Size = new System.Drawing.Size(82, 44);
             this.txtCelsius.TabIndex = 2;
+            this.txtCelsius.MouseLeave += new System.EventHandler(this.txtCelsius_MouseLeave);
             // 
             // txtFahrenheit
             // 
@@ -230,6 +235,7 @@ namespace Ejercicio_24
             this.txtFahrenheit.Name = "txtFahrenheit";
             this.txtFahrenheit.Size = new System.Drawing.Size(82, 44);
             this.txtFahrenheit.TabIndex = 0;
+            this.txtFahrenheit.MouseLeave += new System.EventHandler(this.txtFahrenheit_MouseLeave);
             // 
             // lblFahrenheit
             // 

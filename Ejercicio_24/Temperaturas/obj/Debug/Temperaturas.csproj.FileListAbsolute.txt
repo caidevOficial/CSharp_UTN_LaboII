@@ -1,0 +1,5 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_24\Temperaturas\bin\Debug\Temperaturas.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_24\Temperaturas\bin\Debug\Temperaturas.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_24\Temperaturas\obj\Debug\Temperaturas.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_24\Temperaturas\obj\Debug\Temperaturas.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_24\Temperaturas\obj\Debug\Temperaturas.pdb
