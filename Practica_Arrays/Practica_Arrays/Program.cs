@@ -42,7 +42,7 @@ namespace Practica_Arrays
                     nombres[i] = "Nombre " + (i+1).ToString();
                 }
             }
-            
+
             // Mostrar posiciones
             foreach (string nombre in nombres)
             {
@@ -67,7 +67,12 @@ namespace Practica_Arrays
             Console.WriteLine($"Posiciones Personas: {personas.Length}");
             // resize
             Array.Resize(ref nombres, nombres.Length + 1);
-            
+
+            // Jagged Array
+            string[][] arrayDeArray = new string[2][];
+            arrayDeArray[0] = nombres;
+            arrayDeArray[1] = new string[1] {"casa" };
+
             Console.ReadKey();
         }
     }
