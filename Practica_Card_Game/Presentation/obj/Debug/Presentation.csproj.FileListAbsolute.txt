@@ -1,0 +1,10 @@
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\bin\Debug\Presentation.exe.config
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\bin\Debug\Presentation.exe
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\bin\Debug\Presentation.pdb
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\bin\Debug\Business.dll
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\bin\Debug\Business.pdb
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\obj\Debug\Presentation.exe
+C:\Repositories\programacion-laboratorio-II\Clase_07\07_Card_Game\Presentation\obj\Debug\Presentation.pdb
