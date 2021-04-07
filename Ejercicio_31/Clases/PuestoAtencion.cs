@@ -23,14 +23,75 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Clases
 {
     public class PuestoAtencion
     {
+        private static int numeroActual;
+        private Puesto puestoAsignado;
+
+        #region Enumerators
+
+        public enum Puesto
+        {
+            Caja1,
+            Caja2
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Incrementa en 1 el numero actual y lo retorna.
+        /// </summary>
+        public static int NumeroActual
+        {
+            get
+            {
+                numeroActual += 1;
+                return numeroActual;
+            }
+        }
+
+        #endregion
+
+        #region Builders
+
+        static PuestoAtencion()
+        {
+            numeroActual = 0;
+        }
+
+        /// <summary>
+        /// Crea la entidad con el puesto asignado para atencion.
+        /// </summary>
+        /// <param name="puesto">Enumerador del puesto.</param>
+        public PuestoAtencion(Puesto puesto)
+        {
+            this.puestoAsignado = puesto;
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Simulará un tiempo de atención a un cliente.
+        /// </summary>
+        /// <param name="cli">Cliente que sera atendido.</param>
+        /// <returns>True al terminar el tiempo.</returns>
+        public bool Atender(Cliente cli)
+        {
+            int siguiente = PuestoAtencion.NumeroActual;
+            Console.WriteLine(siguiente);
+            Thread.Sleep(500);
+
+            return true;
+        }
+
+        #endregion
     }
 }
