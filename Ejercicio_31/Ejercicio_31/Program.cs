@@ -24,10 +24,6 @@
 
 using Clases;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ejercicio_31
 {
@@ -73,7 +69,7 @@ namespace Ejercicio_31
             {
                 Console.WriteLine("No se agrego");
             }
-            
+
             if (tienda + second)
             {
                 Console.WriteLine("Se agrego");

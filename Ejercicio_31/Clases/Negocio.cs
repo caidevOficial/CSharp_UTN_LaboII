@@ -22,11 +22,7 @@
  * SOFTWARE.
  */
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Clases
 {
@@ -64,7 +60,7 @@ namespace Clases
         /// 
         /// </summary>
         /// <param name="nombre"></param>
-        public Negocio(string nombre):this()
+        public Negocio(string nombre) : this()
         {
             this.nombre = nombre;
         }

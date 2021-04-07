@@ -46,7 +46,7 @@ namespace Clases
         /// </summary>
         /// <param name="nombre">Nombre que llevara el cliente.</param>
         /// <param name="numero">Numero de orden que llevara el cliente.</param>
-        public Cliente(string nombre, int numero):this(numero)
+        public Cliente(string nombre, int numero) : this(numero)
         {
             this.Nombre = nombre;
         }
@@ -58,12 +58,12 @@ namespace Clases
         /// <summary>
         /// Retorna el numero de orden del cliente.
         /// </summary>
-        public int Numero 
+        public int Numero
         {
             get
             {
                 return this.numero;
-            } 
+            }
         }
 
         /// <summary>
