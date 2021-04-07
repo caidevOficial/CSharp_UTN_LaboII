@@ -32,5 +32,107 @@ namespace Clases
 {
     public class Negocio
     {
+        private PuestoAtencion caja;
+        private Queue<Cliente> clientes;
+        private string nombre;
+
+        #region Enumerators
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Cliente Clientes
+        {
+            get { return clientes.Dequeue(); }
+            set { bool rtn = this + value; }
+        }
+
+        #endregion
+
+        #region Builders
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private Negocio()
+        {
+            clientes = new Queue<Cliente>();
+            this.caja = new PuestoAtencion(PuestoAtencion.Puesto.Caja1);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nombre"></param>
+        public Negocio(string nombre):this()
+        {
+            this.nombre = nombre;
+        }
+
+        #endregion
+
+        #region Operators
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        public static bool operator +(Negocio n, Cliente c)
+        {
+            if (n != c)
+            {
+                n.clientes.Enqueue(c);
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        public static bool operator ==(Negocio n, Cliente c)
+        {
+            if (n.clientes.Count > 0)
+            {
+                foreach (Cliente cliente in n.clientes)
+                {
+                    if (cliente == c)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        public static bool operator !=(Negocio n, Cliente c)
+        {
+            return !(n == c);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static bool operator ~(Negocio n)
+        {
+            return n.caja.Atender(n.clientes.Dequeue());
+        }
+
+        #endregion
     }
 }

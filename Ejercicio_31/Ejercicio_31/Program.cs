@@ -35,7 +35,95 @@ namespace Ejercicio_31
     {
         static void Main(string[] args)
         {
+            Cliente first = new Cliente("Fatiga", 007);
+            Cliente firstError = new Cliente("Pepe", 007);
+            Cliente second = new Cliente("Moni", 008);
+            Cliente third = new Cliente("Paola", 009);
+            string status = "Diferente";
 
+
+            if (first == firstError) // Comparo con un cliente con el mismo numero
+            {
+                status = "Igual";
+            }
+            else
+            {
+                status = "Direfente";
+            }
+            Console.WriteLine($"{first.Nombre} - {firstError.Nombre}: Tienen el {status} numero");
+
+            if (first == third) // Comparo con un cliente diferente
+            {
+                status = "Igual";
+            }
+            else
+            {
+                status = "Direfente";
+            }
+            Console.WriteLine($"{first.Nombre} - {third.Nombre}: Tienen el {status} numero");
+
+
+            Negocio tienda = new Negocio("Los Argento");
+
+            if (tienda + first)
+            {
+                Console.WriteLine("Se agrego");
+            }
+            else
+            {
+                Console.WriteLine("No se agrego");
+            }
+            
+            if (tienda + second)
+            {
+                Console.WriteLine("Se agrego");
+            }
+            else
+            {
+                Console.WriteLine("No se agrego");
+            }
+
+            if (tienda + third)
+            {
+                Console.WriteLine("Se agrego");
+            }
+            else
+            {
+                Console.WriteLine("No se agrego");
+            }
+
+            if (tienda + firstError)//no se puede agregar
+            {
+                Console.WriteLine("Se agrego");
+            }
+            else
+            {
+                Console.WriteLine("No se agrego");
+            }
+
+            if (tienda == first)
+            {
+                Console.WriteLine("Está");
+            }
+            else
+            {
+                Console.WriteLine("No Está");
+            }
+
+            if (~tienda)
+            {
+                Console.WriteLine($"Atendido cliente {first.Numero}");
+            }
+            if (~tienda)
+            {
+                Console.WriteLine($"Atendido cliente {second.Numero}");
+            }
+            if (~tienda)
+            {
+                Console.WriteLine($"Atendido cliente {third.Numero}");
+            }
+
+            Console.ReadKey();
         }
     }
 }

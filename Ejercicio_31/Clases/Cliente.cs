@@ -82,8 +82,6 @@ namespace Clases
             }
         }
 
-
-
         #endregion
 
         #region Operators
