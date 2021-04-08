@@ -61,6 +61,7 @@ namespace Entities
         /// <returns>True if can add the car, otherwise returns false.</returns>
         public static bool operator +(Competencia c, AutoF1 a)
         {
+            Random rdm = new Random();
             if(!(c is null) && !(a is null))
             {
                 if(c.competidores.Count < c.cantidadCompetidores)
@@ -69,6 +70,7 @@ namespace Entities
                     {
                         a.EnCompetencia = true;
                         a.VueltasRestantes = c.cantidadVueltas;
+                        a.CantidadCombustible = (short)rdm.Next(15, 100);
                         c.competidores.Add(a);
                         return true;
                     }
