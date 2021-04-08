@@ -37,6 +37,7 @@ namespace Ejercicio_31
             Cliente third = new Cliente("Paola", 009);
             string status = "Diferente";
 
+            #region CompareCustomers
 
             if (first == firstError) // Comparo con un cliente con el mismo numero
             {
@@ -58,66 +59,84 @@ namespace Ejercicio_31
             }
             Console.WriteLine($"{first.Nombre} - {third.Nombre}: Tienen el {status} numero");
 
+            #endregion
+
+            #region AddingCustomers
 
             Negocio tienda = new Negocio("Los Argento");
 
             if (tienda + first)
             {
-                Console.WriteLine("Se agrego");
+                status = "Se agrego";
             }
             else
             {
-                Console.WriteLine("No se agrego");
+                status = "No se agrego";
             }
+            Console.WriteLine($"{first.Nombre} : {status} a la fila");
 
             if (tienda + second)
             {
-                Console.WriteLine("Se agrego");
+                status = "Se agrego";
             }
             else
             {
-                Console.WriteLine("No se agrego");
+                status = "No se agrego";
             }
+            Console.WriteLine($"{second.Nombre} : {status} a la fila");
 
             if (tienda + third)
             {
-                Console.WriteLine("Se agrego");
+                status = "Se agrego";
             }
             else
             {
-                Console.WriteLine("No se agrego");
+                status = "No se agrego";
             }
+            Console.WriteLine($"{third.Nombre} : {status} a la fila");
 
             if (tienda + firstError)//no se puede agregar
             {
-                Console.WriteLine("Se agrego");
+                status = "Se agrego";
             }
             else
             {
-                Console.WriteLine("No se agrego");
+                status = "No se agrego";
             }
+            Console.WriteLine($"{firstError.Nombre} : {status} a la fila");
+
+            #endregion
+
+            #region CompareCustomersInQueue
 
             if (tienda == first)
             {
-                Console.WriteLine("Está");
+                status = "Existe en la fila";
             }
             else
             {
-                Console.WriteLine("No Está");
+                status = "No existe en la fila";
             }
+            Console.WriteLine($"{first.Nombre} : {status}");
+
+            #endregion
+
+            #region Store
 
             if (~tienda)
             {
-                Console.WriteLine($"Atendido cliente {first.Numero}");
+                Console.WriteLine($"Nro de cliente atendido: {first.Numero}");
             }
             if (~tienda)
             {
-                Console.WriteLine($"Atendido cliente {second.Numero}");
+                Console.WriteLine($"Nro de cliente atendido: {second.Numero}");
             }
             if (~tienda)
             {
-                Console.WriteLine($"Atendido cliente {third.Numero}");
+                Console.WriteLine($"Nro de cliente atendido: {third.Numero}");
             }
+
+            #endregion
 
             Console.ReadKey();
         }

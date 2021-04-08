@@ -70,11 +70,11 @@ namespace Clases
         #region Operators
 
         /// <summary>
-        /// 
+        /// Trata de Agregar un cliente a la cola de la tienda.
         /// </summary>
         /// <param name="n"></param>
         /// <param name="c"></param>
-        /// <returns></returns>
+        /// <returns>True si puede agregarlo, sino false.</returns>
         public static bool operator +(Negocio n, Cliente c)
         {
             if (n != c)
@@ -87,11 +87,11 @@ namespace Clases
         }
 
         /// <summary>
-        /// 
+        /// Compara si un cliente ya esta agregado a la fila de la tienda (según su numero).
         /// </summary>
         /// <param name="n"></param>
         /// <param name="c"></param>
-        /// <returns></returns>
+        /// <returns>True si ya existe en la fila, sino false.</returns>
         public static bool operator ==(Negocio n, Cliente c)
         {
             if (n.clientes.Count > 0)
@@ -109,21 +109,21 @@ namespace Clases
         }
 
         /// <summary>
-        /// 
+        /// Compara si un cliente no esta agregado a la fila de la tienda (según su numero).
         /// </summary>
         /// <param name="n"></param>
         /// <param name="c"></param>
-        /// <returns></returns>
+        /// <returns>True si no existe en la fila, sino false.</returns>
         public static bool operator !=(Negocio n, Cliente c)
         {
             return !(n == c);
         }
 
         /// <summary>
-        /// 
+        /// Atiende un cliente y los aca de la fila.
         /// </summary>
         /// <param name="n"></param>
-        /// <returns></returns>
+        /// <returns>True al terminar el tiempo.</returns>
         public static bool operator ~(Negocio n)
         {
             return n.caja.Atender(n.clientes.Dequeue());

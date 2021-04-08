@@ -60,6 +60,9 @@ namespace Clases
 
         #region Builders
 
+        /// <summary>
+        /// Crea la entidad inicializando el atributo 'numeroActual' en 0.
+        /// </summary>
         static PuestoAtencion()
         {
             numeroActual = 0;
