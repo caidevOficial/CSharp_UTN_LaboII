@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\bin\Debug\Practica_03_OOP.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\bin\Debug\Practica_03_OOP.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\bin\Debug\Practica_03_OOP.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\bin\Debug\Models.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\bin\Debug\Models.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\obj\Debug\Practica_03_OOP.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\obj\Debug\Practica_03_OOP.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\obj\Debug\Practica_03_OOP.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\obj\Debug\Practica_03_OOP.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Practica_03_OOP\obj\Debug\Practica_03_OOP.pdb
