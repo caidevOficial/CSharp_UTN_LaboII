@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\bin\Debug\Practica_01_Integrador_C5.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\bin\Debug\Practica_01_Integrador_C5.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\bin\Debug\Practica_01_Integrador_C5.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\bin\Debug\Library.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\bin\Debug\Library.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\obj\Debug\Practica_01_Integrador_C5.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\obj\Debug\Practica_01_Integrador_C5.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\obj\Debug\Practica_01_Integrador_C5.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\obj\Debug\Practica_01_Integrador_C5.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_01_Integrador_C5\Practica_01_Integrador_C5\obj\Debug\Practica_01_Integrador_C5.pdb
