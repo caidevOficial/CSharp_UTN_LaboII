@@ -1,6 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_05\NumericCenter\obj\Debug\NumericCenter.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_05\NumericCenter\obj\Debug\NumericCenter.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_05\NumericCenter\bin\Debug\NumericCenter.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_05\NumericCenter\bin\Debug\NumericCenter.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_05\NumericCenter\obj\Debug\NumericCenter.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_05\NumericCenter\obj\Debug\NumericCenter.pdb

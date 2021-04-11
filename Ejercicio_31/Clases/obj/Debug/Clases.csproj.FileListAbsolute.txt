@@ -1,6 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_31\Clases\bin\Debug\Clases.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_31\Clases\bin\Debug\Clases.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_31\Clases\obj\Debug\Clases.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_31\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_31\Clases\obj\Debug\Clases.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_31\Clases\obj\Debug\Clases.pdb
