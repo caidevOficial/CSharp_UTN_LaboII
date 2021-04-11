@@ -43,7 +43,7 @@ namespace Entities
             competidores = new List<AutoF1>();
         }
 
-        public Competencia(short cantidadCompetidores, short cantidadVueltas)
+        public Competencia(short cantidadCompetidores, short cantidadVueltas):this()
         {
             this.cantidadCompetidores = cantidadCompetidores;
             this.cantidadVueltas = cantidadVueltas;
@@ -108,7 +108,7 @@ namespace Entities
         /// <returns>True if the car is inside the competence, otherwise returns false.</returns>
         public static bool operator ==(Competencia c, AutoF1 a)
         {
-            if (!(c is null) && !(a is null) && !(c.competidores is null))
+            if (!(c is null) && !(a is null))
             {
                 foreach (AutoF1 autoF1 in c.competidores)
                 {
