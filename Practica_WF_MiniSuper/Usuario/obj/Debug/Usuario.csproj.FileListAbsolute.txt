@@ -1,6 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Usuario\bin\Debug\Usuario.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Usuario\bin\Debug\Usuario.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Usuario\obj\Debug\Usuario.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Usuario\obj\Debug\Usuario.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Usuario\obj\Debug\Usuario.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_WF_MiniSuper\Usuario\obj\Debug\Usuario.pdb

@@ -1,7 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Arrays\Practica_Arrays\bin\Debug\Practica_Arrays.exe.config
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Arrays\Practica_Arrays\bin\Debug\Practica_Arrays.exe
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Arrays\Practica_Arrays\bin\Debug\Practica_Arrays.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Arrays\Practica_Arrays\obj\Debug\Practica_Arrays.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Arrays\Practica_Arrays\obj\Debug\Practica_Arrays.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Arrays\Practica_Arrays\obj\Debug\Practica_Arrays.exe
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Arrays\Practica_Arrays\obj\Debug\Practica_Arrays.pdb

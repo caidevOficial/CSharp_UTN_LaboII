@@ -1,6 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Integrador_C5\Library\bin\Debug\Library.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Integrador_C5\Library\bin\Debug\Library.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Integrador_C5\Library\obj\Debug\Library.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Integrador_C5\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Integrador_C5\Library\obj\Debug\Library.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Integrador_C5\Library\obj\Debug\Library.pdb

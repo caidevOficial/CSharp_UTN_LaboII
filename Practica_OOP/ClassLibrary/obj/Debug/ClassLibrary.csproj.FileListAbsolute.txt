@@ -1,6 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP\ClassLibrary\bin\Debug\ClassLibrary.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP\ClassLibrary\bin\Debug\ClassLibrary.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP\ClassLibrary\obj\Debug\ClassLibrary.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_OOP\ClassLibrary\obj\Debug\ClassLibrary.pdb
