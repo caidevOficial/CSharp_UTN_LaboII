@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\obj\Debug\Ejercicio_20.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\bin\Debug\Ejercicio_20.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\bin\Debug\Ejercicio_20.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\bin\Debug\Ejercicio_20.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\bin\Debug\Currency.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\bin\Debug\Currency.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\obj\Debug\Ejercicio_20.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\obj\Debug\Ejercicio_20.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\obj\Debug\Ejercicio_20.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_20\Ejercicio_20\obj\Debug\Ejercicio_20.pdb

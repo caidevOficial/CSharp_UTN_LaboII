@@ -1,0 +1,6 @@
+C:\Users\Facu\source\repos\Ejercicio_19\Sumador\bin\Debug\Sumador.dll
+C:\Users\Facu\source\repos\Ejercicio_19\Sumador\bin\Debug\Sumador.pdb
+C:\Users\Facu\source\repos\Ejercicio_19\Sumador\obj\Debug\Sumador.csprojAssemblyReference.cache
+C:\Users\Facu\source\repos\Ejercicio_19\Sumador\obj\Debug\Sumador.csproj.CoreCompileInputs.cache
+C:\Users\Facu\source\repos\Ejercicio_19\Sumador\obj\Debug\Sumador.dll
+C:\Users\Facu\source\repos\Ejercicio_19\Sumador\obj\Debug\Sumador.pdb
