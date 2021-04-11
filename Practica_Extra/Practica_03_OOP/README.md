@@ -25,7 +25,7 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/caidevOficial/CSharp_UTN_LaboII/blob/master/Practica_OOP_2/Enunciado.png">
+      <img src="https://github.com/caidevOficial/CSharp_UTN_LaboII/blob/master/Practica_Extra/Practica_03_OOP/Enunciado.png">
     </td>
   </tr>
 </table>
