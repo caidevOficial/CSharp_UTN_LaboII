@@ -1,0 +1,5 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_04_MiniSuper\Models\bin\Debug\Models.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_04_MiniSuper\Models\bin\Debug\Models.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_04_MiniSuper\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_04_MiniSuper\Models\obj\Debug\Models.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_04_MiniSuper\Models\obj\Debug\Models.pdb
