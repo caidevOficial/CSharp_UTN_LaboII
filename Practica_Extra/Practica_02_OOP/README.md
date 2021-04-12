@@ -1,6 +1,6 @@
 <table>
   <tr>
-  <td><a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/" target="_blank"><img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/blob/master/Instituciones/logo-utn_blanco.png" height="150px" /></td>
+  <td><a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/" target="_blank"><img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/raw/master/Instituciones/logo-utn_black_white.png?raw=true" height="150px" /></td>
   <td><img align="center" alt="C#" src="https://github.com/devicons/devicon/raw/master/icons/csharp/csharp-original.svg" width="150px" height="150px" /></td>
   </tr>
 </table></br>
@@ -17,7 +17,7 @@
 
 <details>
     <summary>:zap: Most Used Languages</summary>
-    <img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api/top-langs/?username=caidevOficial&layout=compact&theme=chartreuse-dark&langs_count=10&exclude_repo=Front_CuadraticApp,Front_TaiWeb&hide=html"/><br>
+    <img align="center" src="https://github-readme-stats-caidevposeidon.vercel.app/api/top-langs/?username=caidevOficial&layout=compact&theme=chartreuse-dark&langs_count=10&exclude_repo=Java_Lineage2_aCis_From_345&hide=html,css"/><br>
 </details>
 
 ---
@@ -25,7 +25,7 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/caidevOficial/CSharp_UTN_LaboII/blob/master/Practica_OOP_2/Enunciado.png">
+      <img src="https://github.com/caidevOficial/CSharp_UTN_LaboII/blob/master/Practica_Extra/Practica_02_OOP/Enunciado.png">
     </td>
   </tr>
 </table>
