@@ -77,6 +77,16 @@ namespace Ejercicio_29
             }
             Console.WriteLine($"{j1.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
+            if (losArgento + j1)
+            {
+                status = "Jugador agregado";
+            }
+            else
+            {
+                status = "Jugador existente o Equipo lleno.";
+            }
+            Console.WriteLine($"{j1.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
+
             if (losArgento + j2)
             {
                 status = "Jugador agregado";

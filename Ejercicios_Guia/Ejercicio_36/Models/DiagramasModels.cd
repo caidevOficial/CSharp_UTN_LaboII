@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Models.AutoF1">
+    <Position X="6.25" Y="0.5" Width="2.75" />
+    <InheritanceLine Type="Models.VehiculoCarrera" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.75" Y="0.5" />
+        <Point X="1.75" Y="0.26" />
+        <Point X="6.01" Y="0.26" />
+        <Point X="6.01" Y="1.812" />
+        <Point X="6.25" Y="1.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAEAAAABAAAAAAAAiA=</HashCode>
+      <FileName>AutoF1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.Competencia">
+    <Position X="9.25" Y="0.5" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="Models.Competencia.TipoCompetencia" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Competencia.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAIBgAyAEYAAAAAAAAAAAAAAAAAAAAAiQ=</HashCode>
+      <FileName>Competencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.MotoCross">
+    <Position X="3.25" Y="1.25" Width="2.5" />
+    <InheritanceLine Type="Models.VehiculoCarrera" ManuallyRouted="true">
+      <Path>
+        <Point X="3" Y="2.703" />
+        <Point X="3.25" Y="2.703" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAiAAQAAAAEAAAAAAAAAAAAAAAAiA=</HashCode>
+      <FileName>MotoCross.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Models.VehiculoCarrera">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAABAAAAAAAAAAEAQEEEAEBBBAA=</HashCode>
+      <FileName>VehiculoCarrera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

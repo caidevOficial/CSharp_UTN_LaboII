@@ -53,20 +53,24 @@ namespace Ejercicio_30
 
             if (car1 == car2)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 status = "Iguales";
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 status = "Diferentes";
             }
             Console.WriteLine($"{car1.MostrarDatos()} \n{car2.MostrarDatos()} \n##########\nStatus: {status}\n##########\n");
 
             if (car1 == car3)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 status = "Iguales";
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 status = "Diferentes";
             }
             Console.WriteLine($"{car1.MostrarDatos()} \n{car3.MostrarDatos()} \n##########\nStatus: {status}\n##########\n");
@@ -77,20 +81,24 @@ namespace Ejercicio_30
 
             if (granTurismo + car1)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 status = "Agregado a la competencia";
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 status = "Auto existente";
             }
             Console.WriteLine($"{granTurismo.MostrarDatos()} \n{car1.MostrarDatos()} \n##########\nStatus: {status}\n##########\n");
 
             if (granTurismo + car2)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 status = "Agregado a la competencia";
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 status = "Auto existente";
             }
             Console.WriteLine($"{granTurismo.MostrarDatos()} \n{car2.MostrarDatos()} \n##########\nStatus: {status}\n##########\n");

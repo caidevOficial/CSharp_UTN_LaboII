@@ -4,3 +4,9 @@ C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_29\Clases\obj\Debug\Cla
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_29\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_29\Clases\obj\Debug\Clases.dll
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_29\Clases\obj\Debug\Clases.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_29\Clases\bin\Debug\Clases.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_29\Clases\bin\Debug\Clases.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_29\Clases\obj\Debug\Clases.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_29\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_29\Clases\obj\Debug\Clases.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_29\Clases\obj\Debug\Clases.pdb
