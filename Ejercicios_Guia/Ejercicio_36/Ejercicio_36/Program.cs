@@ -17,13 +17,13 @@ namespace Ejercicio_36
             Competencia granTurismo = new Competencia(5, 20, Competencia.TipoCompetencia.F1);
             Competencia motoDakar = new Competencia(8, 10, Competencia.TipoCompetencia.MotoCross);
 
-            AutoF1 f1 = new AutoF1(1, "Ferrari");
-            AutoF1 f2 = new AutoF1(1, "Ferrari");
-            AutoF1 f3 = new AutoF1(7, "McLaren");
+            AutoF1 f1 = new AutoF1(1, "Ferrari", 500);
+            AutoF1 f2 = new AutoF1(1, "Ferrari", 500);
+            AutoF1 f3 = new AutoF1(7, "McLaren", 510);
 
-            MotoCross m1 = new MotoCross(1, "Honda");
-            MotoCross m2 = new MotoCross(1, "Honda");
-            MotoCross m3 = new MotoCross(69, "Yamaha");
+            MotoCross m1 = new MotoCross(1, "Honda", 160);
+            MotoCross m2 = new MotoCross(1, "Honda", 160);
+            MotoCross m3 = new MotoCross(69, "Yamaha", 159);
 
             string status;
 

@@ -156,7 +156,7 @@ namespace Models
         #region Operators
 
         /// <summary>
-        /// Tries to add the Vehicle to the competence.
+        /// Tries to add a Vehicle to the competence.
         /// </summary>
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Vehicle to add into the competence.</param>
@@ -170,29 +170,14 @@ namespace Models
                 {
                     if (!(c == a))
                     {
-                        a.EnCompetencia = true;
-                        a.VueltasRestantes = c.CantidadVueltas;
-                        a.CantidadCombustible = (short)rdm.Next(15, 100);
-
-                        if (c.Tipo == Competencia.TipoCompetencia.F1)
+                        if ((c.Tipo == Competencia.TipoCompetencia.F1 && a is AutoF1) || 
+                            (c.Tipo == Competencia.TipoCompetencia.MotoCross && a is MotoCross))
                         {
-                            if(a is AutoF1)
-                            {
-                                AutoF1 competitor = (AutoF1)a;
-                                competitor.CaballosFuerza = 500;
-                                c.competidores.Add(competitor);
-                                return true;
-                            }
-                        }
-                        else if (c.Tipo == Competencia.TipoCompetencia.MotoCross)
-                        {
-                            if(a is MotoCross)
-                            {
-                                MotoCross competitor = (MotoCross)a;
-                                competitor.Cilindradas = 150;
-                                c.competidores.Add(competitor);
-                                return true;
-                            }
+                            a.EnCompetencia = true;
+                            a.VueltasRestantes = c.CantidadVueltas;
+                            a.CantidadCombustible = (short)rdm.Next(15, 100);
+                            c.competidores.Add(a);
+                            return true;
                         }
                     }
                 }
