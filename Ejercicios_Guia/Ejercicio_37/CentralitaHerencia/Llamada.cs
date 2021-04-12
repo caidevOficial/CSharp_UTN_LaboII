@@ -22,16 +22,73 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public abstract class Llamada
+    public class Llamada
     {
+        protected float duracion;
+        protected string nroOrigen;
+        protected string nroDestino;
 
+        #region Properties
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public float Duracion { get => duracion; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string NroOrigen { get => nroOrigen; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string NroDestino { get => nroDestino; }
+
+        #endregion
+
+        #region Builders
+
+        public Llamada(float duracion, string nroOrigen, string nroDestino)
+        {
+            this.duracion = duracion;
+            this.nroOrigen = nroOrigen;
+            this.nroDestino = nroDestino;
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Compares the duration of both calls.
+        /// </summary>
+        /// <param name="call1">First call to compare.</param>
+        /// <param name="call2">Second call to compare.</param>
+        /// <returns></returns>
+        public int OrdenarPorDuracion(Llamada call1, Llamada call2)
+        {
+            return call1.Duracion.CompareTo(call2.Duracion);
+        }
+
+        /// <summary>
+        /// Shows the data of the call.
+        /// </summary>
+        /// <returns>The data of the call as a string.</returns>
+        public virtual string Mostrar()
+        {
+            StringBuilder data = new StringBuilder();
+            data.Append($"Origen {this.NroOrigen}.\n");
+            data.Append($"Destino {this.NroDestino}.\n");
+            data.Append($"Duracion {this.Duracion}.\n");
+
+            return data.ToString();
+        }
+
+        #endregion
     }
 }

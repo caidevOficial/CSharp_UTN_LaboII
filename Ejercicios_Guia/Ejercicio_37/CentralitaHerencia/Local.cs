@@ -22,16 +22,74 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public class Local
+    public class Local : Llamada
     {
+        private float costo;
 
+        #region Properties
+
+        /// <summary>
+        /// Get: Gets the price of the call.
+        /// </summary>
+        public float CostoLlamada { get => CalcularCostos(); }
+
+        #endregion
+
+        #region Builders
+
+        /// <summary>
+        /// Builds the entity with all its parameters.
+        /// </summary>
+        /// <param name="call">Object Llamada-type.</param>
+        /// <param name="costo">Price of the call.</param>
+        public Local(Llamada call, float costo) : base(call.Duracion, call.NroOrigen, call.NroDestino)
+        {
+            this.costo = costo;
+        }
+
+        /// <summary>
+        /// Builds the entity with all its parameters.
+        /// </summary>
+        /// <param name="origen">Origin of the call.</param>
+        /// <param name="destino">Destiny of the call.</param>
+        /// <param name="duracion">Duration of the call.</param>
+        /// <param name="costo">Price of the call.</param>
+        public Local(string origen, string destino, float duracion, float costo)
+            : this(new Llamada(duracion, origen, destino), costo)
+        {
+            this.costo = costo;
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// It will caltulate the cost of the call, based in the duration and its price.
+        /// </summary>
+        /// <returns>The cost of the call.</returns>
+        private float CalcularCostos()
+        {
+            return base.Duracion * this.costo;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string Mostrar()
+        {
+            StringBuilder data = new StringBuilder();
+            data.Append(base.Mostrar());
+            data.Append($"Costo Total: {this.CostoLlamada}\n");
+
+            return data.ToString();
+        }
+
+        #endregion
     }
 }

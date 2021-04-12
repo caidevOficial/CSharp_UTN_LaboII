@@ -30,7 +30,7 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public class Provincial
+    public class Provincial : Llamada
     {
 
     }
