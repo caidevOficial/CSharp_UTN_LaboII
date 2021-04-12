@@ -1,0 +1,5 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_37\CentralitaHerencia\bin\Debug\CentralitaHerencia.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_37\CentralitaHerencia\bin\Debug\CentralitaHerencia.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_37\CentralitaHerencia\obj\Debug\CentralitaHerencia.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_37\CentralitaHerencia\obj\Debug\CentralitaHerencia.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_37\CentralitaHerencia\obj\Debug\CentralitaHerencia.pdb
