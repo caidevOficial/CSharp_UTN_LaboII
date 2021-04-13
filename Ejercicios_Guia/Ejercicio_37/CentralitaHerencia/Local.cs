@@ -83,11 +83,10 @@ namespace CentralitaHerencia
         /// <returns>Returns the info as a string.</returns>
         public override string Mostrar()
         {
-            StringBuilder data = new StringBuilder();
-            data.Append(base.Mostrar());
-            data.Append($"Costo Total: {this.CostoLlamada}\n");
+            string data = string.Format("{0}", base.Mostrar());
+            data += string.Format("Costo: ${0,3}\n", this.CostoLlamada);
 
-            return data.ToString();
+            return data;
         }
 
         #endregion

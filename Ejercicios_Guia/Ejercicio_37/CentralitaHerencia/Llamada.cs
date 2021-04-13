@@ -88,12 +88,11 @@ namespace CentralitaHerencia
         /// <returns>The data of the call as a string.</returns>
         public virtual string Mostrar()
         {
-            StringBuilder data = new StringBuilder();
-            data.Append($"Origen {this.NroOrigen}.\n");
-            data.Append($"Destino {this.NroDestino}.\n");
-            data.Append($"Duracion {this.Duracion}.\n");
+            string data = string.Format("From: {0,-10} | ", this.NroOrigen);
+            data += string.Format("To: {0,-10} | ", this.NroDestino);
+            data += string.Format("Time: {0,3}min | ", this.Duracion);
 
-            return data.ToString();
+            return data;
         }
 
         #endregion

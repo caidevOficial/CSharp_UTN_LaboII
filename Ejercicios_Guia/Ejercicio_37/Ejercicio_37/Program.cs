@@ -73,9 +73,14 @@ namespace Test
             Console.WriteLine(c.Mostrar());
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("=======================");
-
+            
             Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine("Ordered Calls By Time");
+
             c.OrdenarLlamadas();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("=======================");
+
 
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine(c.Mostrar());

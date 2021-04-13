@@ -149,7 +149,7 @@ namespace CentralitaHerencia
             foreach (Llamada call in Llamadas)
             {
                 data.Append(call.Mostrar());
-                data.Append("________________\n");
+                data.Append("________________________________________________________________\n");
             }
 
 
