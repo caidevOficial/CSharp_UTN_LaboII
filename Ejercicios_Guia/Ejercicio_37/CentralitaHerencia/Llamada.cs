@@ -32,6 +32,13 @@ namespace CentralitaHerencia
         protected string nroOrigen;
         protected string nroDestino;
 
+        public enum TipoLlamada
+        {
+            Local,
+            Provincial,
+            Todas
+        }
+
         #region Properties
 
         /// <summary>
@@ -70,7 +77,7 @@ namespace CentralitaHerencia
         /// <param name="call1">First call to compare.</param>
         /// <param name="call2">Second call to compare.</param>
         /// <returns></returns>
-        public int OrdenarPorDuracion(Llamada call1, Llamada call2)
+        public static int OrdenarPorDuracion(Llamada call1, Llamada call2)
         {
             return call1.Duracion.CompareTo(call2.Duracion);
         }

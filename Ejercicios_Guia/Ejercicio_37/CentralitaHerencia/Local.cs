@@ -78,9 +78,9 @@ namespace CentralitaHerencia
         }
 
         /// <summary>
-        /// 
+        /// Shows the info of the call.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns the info as a string.</returns>
         public override string Mostrar()
         {
             StringBuilder data = new StringBuilder();
