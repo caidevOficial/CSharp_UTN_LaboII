@@ -34,29 +34,14 @@ using System.Windows.Forms;
 
 namespace Ejercicio_40_Forms
 {
-    public partial class frmLlamador : Form
+    public partial class frmMostrar : Form
     {
-        public frmLlamador()
+        public frmMostrar()
         {
             InitializeComponent();
         }
 
-        private void btnLlamar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmLlamador_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmMostrar_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }

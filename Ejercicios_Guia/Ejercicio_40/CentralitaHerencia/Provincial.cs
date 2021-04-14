@@ -106,7 +106,8 @@ namespace CentralitaHerencia
         protected override string Mostrar()
         {
             string data = string.Format("{0}", base.Mostrar());
-            data += string.Format("Costo: ${0,3}\n", this.CostoLlamada);
+            data += string.Format("Costo: ${0,3} | ", this.CostoLlamada);
+            data += string.Format("Franja: {0}\n", this.franjaHoraria);
 
             return data;
         }

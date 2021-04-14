@@ -34,29 +34,39 @@ using System.Windows.Forms;
 
 namespace Ejercicio_40_Forms
 {
-    public partial class frmLlamador : Form
+    public partial class frmMenu : Form
     {
-        public frmLlamador()
+        public frmMenu()
         {
             InitializeComponent();
         }
 
-        private void btnLlamar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void frmLlamador_FormClosing(object sender, FormClosingEventArgs e)
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }

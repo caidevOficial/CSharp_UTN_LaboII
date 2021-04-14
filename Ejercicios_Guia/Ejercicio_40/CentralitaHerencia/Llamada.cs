@@ -77,22 +77,22 @@ namespace CentralitaHerencia
         #region Operators
 
         /// <summary>
-        /// 
+        /// Compares if both calls are equals or not.
         /// </summary>
-        /// <param name="l1"></param>
-        /// <param name="l2"></param>
-        /// <returns></returns>
+        /// <param name="l1">First call to compare.</param>
+        /// <param name="l2">Second call to compare.</param>
+        /// <returns>True if both calls are equals, otherwise returns false.</returns>
         public static bool operator ==(Llamada l1, Llamada l2)
         {
             return l1.Equals(l2);
         }
 
         /// <summary>
-        /// 
+        /// Compares if both calls are different or not.
         /// </summary>
-        /// <param name="l1"></param>
-        /// <param name="l2"></param>
-        /// <returns></returns>
+        /// <param name="l1">First call to compare.</param>
+        /// <param name="l2">Second call to compare.</param>
+        /// <returns>True if both calls are different, otherwise returns false.</returns>
         public static bool operator !=(Llamada l1, Llamada l2)
         {
             return !(l1 == l2);
