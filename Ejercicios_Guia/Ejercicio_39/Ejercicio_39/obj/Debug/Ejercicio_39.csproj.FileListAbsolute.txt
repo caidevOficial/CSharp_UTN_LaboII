@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\bin\Debug\Ejercicio_39.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\bin\Debug\Ejercicio_39.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\bin\Debug\Ejercicio_39.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\bin\Debug\Entities.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\bin\Debug\Entities.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\obj\Debug\Ejercicio_39.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\obj\Debug\Ejercicio_39.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\obj\Debug\Ejercicio_39.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\obj\Debug\Ejercicio_39.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_39\Ejercicio_39\obj\Debug\Ejercicio_39.pdb
