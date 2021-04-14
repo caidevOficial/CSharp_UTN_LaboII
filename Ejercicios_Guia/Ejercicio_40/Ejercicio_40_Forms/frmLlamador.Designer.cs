@@ -31,24 +31,24 @@ namespace Ejercicio_40_Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLlamador));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.textNroDestino = new System.Windows.Forms.TextBox();
             this.textNroOrigen = new System.Windows.Forms.TextBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.textNroDestino = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -75,114 +75,6 @@ namespace Ejercicio_40_Forms
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Panel";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button1.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 47);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "1";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button2.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(66, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 47);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "2";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button3.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.Location = new System.Drawing.Point(126, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 47);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "3";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button4.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(126, 72);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(54, 47);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "6";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button5.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button5.Location = new System.Drawing.Point(66, 72);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(54, 47);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "5";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button6.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button6.Location = new System.Drawing.Point(6, 72);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(54, 47);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "4";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button7.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button7.Location = new System.Drawing.Point(126, 125);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(54, 47);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "9";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button8.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button8.Location = new System.Drawing.Point(66, 125);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(54, 47);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "8";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button9.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button9.Location = new System.Drawing.Point(6, 125);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(54, 47);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "7";
-            this.button9.UseVisualStyleBackColor = false;
             // 
             // button10
             // 
@@ -221,6 +113,114 @@ namespace Ejercicio_40_Forms
             this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button12.UseVisualStyleBackColor = false;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button7.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button7.Location = new System.Drawing.Point(126, 125);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(54, 47);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "9";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button8.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button8.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button8.Location = new System.Drawing.Point(66, 125);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(54, 47);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "8";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button9.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button9.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button9.Location = new System.Drawing.Point(6, 125);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(54, 47);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "7";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button4.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.Location = new System.Drawing.Point(126, 72);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(54, 47);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "6";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button5.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button5.Location = new System.Drawing.Point(66, 72);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(54, 47);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "5";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button6.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button6.Location = new System.Drawing.Point(6, 72);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(54, 47);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "4";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button3.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.Location = new System.Drawing.Point(126, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(54, 47);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "3";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button2.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.Location = new System.Drawing.Point(66, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(54, 47);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "2";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button1.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.Location = new System.Drawing.Point(6, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 47);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textNroOrigen);
@@ -235,29 +235,15 @@ namespace Ejercicio_40_Forms
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buttons";
             // 
-            // button13
+            // textNroOrigen
             // 
-            this.button13.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button13.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button13.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button13.Location = new System.Drawing.Point(15, 28);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(172, 44);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "Llamar";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.SystemColors.InfoText;
-            this.button14.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
-            this.button14.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button14.Location = new System.Drawing.Point(15, 78);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(172, 44);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "Limpiar";
-            this.button14.UseVisualStyleBackColor = false;
+            this.textNroOrigen.BackColor = System.Drawing.SystemColors.InfoText;
+            this.textNroOrigen.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textNroOrigen.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.textNroOrigen.Location = new System.Drawing.Point(15, 136);
+            this.textNroOrigen.Name = "textNroOrigen";
+            this.textNroOrigen.Size = new System.Drawing.Size(172, 33);
+            this.textNroOrigen.TabIndex = 3;
             // 
             // button15
             // 
@@ -271,6 +257,30 @@ namespace Ejercicio_40_Forms
             this.button15.Text = "Salir";
             this.button15.UseVisualStyleBackColor = false;
             // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button14.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button14.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button14.Location = new System.Drawing.Point(15, 78);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(172, 44);
+            this.button14.TabIndex = 1;
+            this.button14.Text = "Limpiar";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.SystemColors.InfoText;
+            this.button13.Font = new System.Drawing.Font("Ink Free", 21.75F, System.Drawing.FontStyle.Bold);
+            this.button13.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button13.Location = new System.Drawing.Point(15, 28);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(172, 44);
+            this.button13.TabIndex = 0;
+            this.button13.Text = "Llamar";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
             // textNroDestino
             // 
             this.textNroDestino.BackColor = System.Drawing.SystemColors.InfoText;
@@ -280,16 +290,6 @@ namespace Ejercicio_40_Forms
             this.textNroDestino.Name = "textNroDestino";
             this.textNroDestino.Size = new System.Drawing.Size(421, 33);
             this.textNroDestino.TabIndex = 2;
-            // 
-            // textNroOrigen
-            // 
-            this.textNroOrigen.BackColor = System.Drawing.SystemColors.InfoText;
-            this.textNroOrigen.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNroOrigen.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textNroOrigen.Location = new System.Drawing.Point(15, 136);
-            this.textNroOrigen.Name = "textNroOrigen";
-            this.textNroOrigen.Size = new System.Drawing.Size(172, 33);
-            this.textNroOrigen.TabIndex = 3;
             // 
             // comboBox1
             // 
@@ -319,7 +319,10 @@ namespace Ejercicio_40_Forms
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLlamador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Llamador";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
