@@ -41,6 +41,42 @@ namespace Ejercicio_40_Forms
             InitializeComponent();
         }
 
+        #region CloseEvents
+
+        /// <summary>
+        /// It asks the user if he wants to close the form, if he clicks on '' YES '', 
+        /// it closes, if not, he returns to the execution of the form. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Dispose();
+            }
+        }
+
+        /// <summary>
+        /// It asks the user if he wants to close the form, if he clicks on '' YES '', 
+        /// it closes, if not, he returns to the execution of the form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmLlamador_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Dispose();
+            }
+        }
+
+        #endregion
+
         private void btnLlamar_Click(object sender, EventArgs e)
         {
 
@@ -51,14 +87,5 @@ namespace Ejercicio_40_Forms
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmLlamador_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
     }
 }

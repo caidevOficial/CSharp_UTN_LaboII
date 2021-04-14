@@ -41,9 +41,27 @@ namespace Ejercicio_40_Forms
             InitializeComponent();
         }
 
+        #region CloseEvents
+
+        /// <summary>
+        /// It asks the user if he wants to close the form, if he clicks on '' YES '', 
+        /// it closes, if not, he returns to the execution of the form. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmMostrar_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Dispose();
+            }
         }
+
+        #endregion
+
     }
 }

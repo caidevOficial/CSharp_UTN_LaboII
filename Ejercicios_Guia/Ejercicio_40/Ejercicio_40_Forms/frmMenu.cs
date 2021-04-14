@@ -41,34 +41,66 @@ namespace Ejercicio_40_Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        #region CloseEvents
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// It asks the user if he wants to close the form, if he clicks on '' YES '', 
+        /// it closes, if not, he returns to the execution of the form. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Dispose();
+            }
+        }
 
+        /// <summary>
+        /// It asks the user if he wants to close the form, if he clicks on '' YES '', 
+        /// it closes, if not, he returns to the execution of the form. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnGenerarLlamada_Click(object sender, EventArgs e)
+        {
+            frmLlamador callForm = new frmLlamador();
+            callForm.Location = this.Location;
+            if (callForm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        #endregion
+
+
+        private void btnFacturacionTotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFacturacionLocal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFacturacionProvincial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Dispose();
+            }
         }
     }
 }

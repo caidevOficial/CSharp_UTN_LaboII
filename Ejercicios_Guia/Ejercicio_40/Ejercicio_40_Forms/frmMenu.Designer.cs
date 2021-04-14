@@ -66,7 +66,7 @@ namespace Ejercicio_40_Forms
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.button4_Click);
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnFacturacionProvincial
             // 
@@ -79,7 +79,7 @@ namespace Ejercicio_40_Forms
             this.btnFacturacionProvincial.TabIndex = 3;
             this.btnFacturacionProvincial.Text = "Facturacion Provincial";
             this.btnFacturacionProvincial.UseVisualStyleBackColor = false;
-            this.btnFacturacionProvincial.Click += new System.EventHandler(this.button5_Click);
+            this.btnFacturacionProvincial.Click += new System.EventHandler(this.btnFacturacionProvincial_Click);
             // 
             // btnFacturacionLocal
             // 
@@ -92,7 +92,7 @@ namespace Ejercicio_40_Forms
             this.btnFacturacionLocal.TabIndex = 2;
             this.btnFacturacionLocal.Text = "Facturacion Local";
             this.btnFacturacionLocal.UseVisualStyleBackColor = false;
-            this.btnFacturacionLocal.Click += new System.EventHandler(this.button3_Click);
+            this.btnFacturacionLocal.Click += new System.EventHandler(this.btnFacturacionLocal_Click);
             // 
             // btnFacturacionTotal
             // 
@@ -105,7 +105,7 @@ namespace Ejercicio_40_Forms
             this.btnFacturacionTotal.TabIndex = 1;
             this.btnFacturacionTotal.Text = "Facturacion Total";
             this.btnFacturacionTotal.UseVisualStyleBackColor = false;
-            this.btnFacturacionTotal.Click += new System.EventHandler(this.button2_Click);
+            this.btnFacturacionTotal.Click += new System.EventHandler(this.btnFacturacionTotal_Click);
             // 
             // btnGenerarLlamada
             // 
@@ -118,7 +118,7 @@ namespace Ejercicio_40_Forms
             this.btnGenerarLlamada.TabIndex = 0;
             this.btnGenerarLlamada.Text = "Generar Llamada";
             this.btnGenerarLlamada.UseVisualStyleBackColor = false;
-            this.btnGenerarLlamada.Click += new System.EventHandler(this.button1_Click);
+            this.btnGenerarLlamada.Click += new System.EventHandler(this.btnGenerarLlamada_Click);
             // 
             // frmMenu
             // 
