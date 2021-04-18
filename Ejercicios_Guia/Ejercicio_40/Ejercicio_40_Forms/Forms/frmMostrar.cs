@@ -32,6 +32,7 @@ namespace Ejercicio_40_Forms
     {
 
         private Llamada.TipoLlamada callType;
+        private Centralita myCentral;
 
         #region Builders
 
@@ -48,20 +49,9 @@ namespace Ejercicio_40_Forms
         /// of the Phone company.
         /// </summary>
         /// <param name="frmMenuCentralita"></param>
-        public frmMostrar(Centralita frmMenuCentralita):this()
+        public frmMostrar(Centralita frmMenuCentralita):this() 
         {
-            if (callType is Llamada.TipoLlamada.Local)
-            {
-                richTextBox.Text = "Local: $ " + (Math.Round(frmMenuCentralita.GananciasPorLocal, 2)).ToString();
-            }
-            else if (callType is Llamada.TipoLlamada.Provincial)
-            {
-                richTextBox.Text = "Prov: $ " + (Math.Round(frmMenuCentralita.GananciasPorProvincial, 2)).ToString();
-            }
-            else
-            {
-                richTextBox.Text = "All: $ " + (Math.Round(frmMenuCentralita.GananciasPorTotal, 2)).ToString();
-            }
+            myCentral = frmMenuCentralita;
         }
 
         #endregion
@@ -81,6 +71,31 @@ namespace Ejercicio_40_Forms
 
         #endregion
 
+        #region LoadEvents
+
+        /// <summary>
+        /// Loads the form and shows the info that need to show.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmMostrar_Load(object sender, EventArgs e)
+        {
+            if (callType is Llamada.TipoLlamada.Local)
+            {
+                richTextBox.Text = "Local: $ " + (Math.Round(myCentral.GananciasPorLocal, 2)).ToString();
+            }
+            else if (callType is Llamada.TipoLlamada.Provincial)
+            {
+                richTextBox.Text = "Prov: $ " + (Math.Round(myCentral.GananciasPorProvincial, 2)).ToString();
+            }
+            else
+            {
+                richTextBox.Text = "All: $ " + (Math.Round(myCentral.GananciasPorTotal, 2)).ToString();
+            }
+        }
+
+        #endregion
+
         #region CloseEvents
 
         /// <summary>
@@ -91,7 +106,7 @@ namespace Ejercicio_40_Forms
         /// <param name="e"></param>
         private void frmMostrar_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Do you want to quit the Billing Screen?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
             }

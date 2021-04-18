@@ -26,7 +26,7 @@ using System.Text;
 
 namespace CentralitaHerencia
 {
-    public class Provincial : Llamada
+    public sealed class Provincial : Llamada
     {
         private Franja franjaHoraria;
 

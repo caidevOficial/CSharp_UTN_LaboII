@@ -26,7 +26,7 @@ using System.Text;
 
 namespace CentralitaHerencia
 {
-    public class Local : Llamada
+    public sealed class Local : Llamada
     {
         private float costo;
 

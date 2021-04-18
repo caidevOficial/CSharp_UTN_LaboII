@@ -70,8 +70,10 @@ namespace Ejercicio_40_Forms
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMostrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Centralita Data";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMostrar_FormClosing);
+            this.Load += new System.EventHandler(this.frmMostrar_Load);
             this.grpText.ResumeLayout(false);
             this.ResumeLayout(false);
 

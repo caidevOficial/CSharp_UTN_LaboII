@@ -48,7 +48,7 @@
     <Compile Include="Entities\SubClasses\Provincial.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="Entities\Diagrams_UML\Entities.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

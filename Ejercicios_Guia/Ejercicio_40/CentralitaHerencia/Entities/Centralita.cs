@@ -27,7 +27,7 @@ using System.Text;
 
 namespace CentralitaHerencia
 {
-    public class Centralita
+    public sealed class Centralita
     {
         private List<Llamada> listaDeLlamadas;
         protected string razonSocial;

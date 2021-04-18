@@ -40,7 +40,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         public frmMenu()
         {
-            myCentralita = new Centralita("Ejercicio_40");
+            myCentralita = new Centralita("CentralitApp");
             InitializeComponent();
         }
 
@@ -56,7 +56,7 @@ namespace Ejercicio_40_Forms
         /// <param name="e"></param>
         private void frmMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show($"Do you want to quit the CentralitApp?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
             }
@@ -74,7 +74,7 @@ namespace Ejercicio_40_Forms
         /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Do you want to quit the CentralitApp?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Dispose();
             }
@@ -108,10 +108,9 @@ namespace Ejercicio_40_Forms
         /// <param name="e"></param>
         private void btnFacturacionTotal_Click(object sender, EventArgs e)
         {
-            frmMostrar showForm = new frmMostrar();
+            frmMostrar showForm = new frmMostrar(myCentralita);
             showForm.SetCallType = Llamada.TipoLlamada.Todas;
-            showForm = new frmMostrar(myCentralita);
-
+            
             showForm.Location = this.Location;
             showForm.ShowDialog();
             
@@ -124,10 +123,9 @@ namespace Ejercicio_40_Forms
         /// <param name="e"></param>
         private void btnFacturacionLocal_Click(object sender, EventArgs e)
         {
-            frmMostrar showForm = new frmMostrar();
+            frmMostrar showForm = new frmMostrar(myCentralita);
             showForm.SetCallType = Llamada.TipoLlamada.Local;
-            showForm = new frmMostrar(myCentralita);
-
+            
             showForm.Location = this.Location;
             showForm.ShowDialog();
         }
@@ -139,9 +137,9 @@ namespace Ejercicio_40_Forms
         /// <param name="e"></param>
         private void btnFacturacionProvincial_Click(object sender, EventArgs e)
         {
-            frmMostrar showForm = new frmMostrar();
+            frmMostrar showForm = new frmMostrar(myCentralita);
             showForm.SetCallType = Llamada.TipoLlamada.Provincial;
-            showForm = new frmMostrar(myCentralita);
+            
             showForm.Location = this.Location;
             showForm.ShowDialog();
         }
