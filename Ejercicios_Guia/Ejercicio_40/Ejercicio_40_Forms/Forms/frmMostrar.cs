@@ -22,24 +22,64 @@
  * SOFTWARE.
  */
 
+using CentralitaHerencia;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ejercicio_40_Forms
 {
     public partial class frmMostrar : Form
     {
+
+        private Llamada.TipoLlamada callType;
+
+        #region Builders
+
+        /// <summary>
+        /// Builds the entity and initialize it's components.
+        /// </summary>
         public frmMostrar()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Builds the entity and shows in the form the info about the billings 
+        /// of the Phone company.
+        /// </summary>
+        /// <param name="frmMenuCentralita"></param>
+        public frmMostrar(Centralita frmMenuCentralita):this()
+        {
+            if (callType is Llamada.TipoLlamada.Local)
+            {
+                richTextBox.Text = "Local: $ " + (Math.Round(frmMenuCentralita.GananciasPorLocal, 2)).ToString();
+            }
+            else if (callType is Llamada.TipoLlamada.Provincial)
+            {
+                richTextBox.Text = "Prov: $ " + (Math.Round(frmMenuCentralita.GananciasPorProvincial, 2)).ToString();
+            }
+            else
+            {
+                richTextBox.Text = "All: $ " + (Math.Round(frmMenuCentralita.GananciasPorTotal, 2)).ToString();
+            }
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Set: Sets the type of the call.
+        /// </summary>
+        public Llamada.TipoLlamada SetCallType
+        {
+            set
+            {
+                callType = value;
+            }
+        }
+
+        #endregion
 
         #region CloseEvents
 

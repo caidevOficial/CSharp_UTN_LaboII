@@ -41,7 +41,7 @@ namespace Ejercicio_40_Forms
             this.grpText.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.grpText.Location = new System.Drawing.Point(12, 12);
             this.grpText.Name = "grpText";
-            this.grpText.Size = new System.Drawing.Size(594, 424);
+            this.grpText.Size = new System.Drawing.Size(289, 247);
             this.grpText.TabIndex = 0;
             this.grpText.TabStop = false;
             this.grpText.Text = "Info";
@@ -49,10 +49,13 @@ namespace Ejercicio_40_Forms
             // richTextBox
             // 
             this.richTextBox.BackColor = System.Drawing.SystemColors.InfoText;
+            this.richTextBox.Font = new System.Drawing.Font("Javanese Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.richTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.richTextBox.Location = new System.Drawing.Point(6, 19);
             this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(582, 392);
+            this.richTextBox.ReadOnly = true;
+            this.richTextBox.Size = new System.Drawing.Size(277, 218);
             this.richTextBox.TabIndex = 0;
             this.richTextBox.Text = "";
             // 
@@ -61,7 +64,7 @@ namespace Ejercicio_40_Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(617, 450);
+            this.ClientSize = new System.Drawing.Size(317, 272);
             this.Controls.Add(this.grpText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

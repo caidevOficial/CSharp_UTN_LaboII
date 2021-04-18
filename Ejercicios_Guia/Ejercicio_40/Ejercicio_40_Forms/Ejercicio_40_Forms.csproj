@@ -46,33 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLlamador.cs">
+    <Compile Include="Forms\frmLlamador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLlamador.Designer.cs">
+    <Compile Include="Forms\frmLlamador.Designer.cs">
       <DependentUpon>frmLlamador.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenu.cs">
+    <Compile Include="Forms\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMenu.Designer.cs">
+    <Compile Include="Forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMostrar.cs">
+    <Compile Include="Forms\frmMostrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMostrar.Designer.cs">
+    <Compile Include="Forms\frmMostrar.Designer.cs">
       <DependentUpon>frmMostrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmLlamador.resx">
+    <EmbeddedResource Include="Forms\frmLlamador.resx">
       <DependentUpon>frmLlamador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
+    <EmbeddedResource Include="Forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMostrar.resx">
+    <EmbeddedResource Include="Forms\frmMostrar.resx">
       <DependentUpon>frmMostrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -96,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CentralitaHerencia\CentralitaHerencia.csproj">
+      <Project>{b9b502f8-db4c-4c0b-9c5e-7e7da8c972e3}</Project>
+      <Name>CentralitaHerencia</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

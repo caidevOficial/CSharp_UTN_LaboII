@@ -44,11 +44,11 @@ namespace Ejercicio_40_Forms
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.grpButtons = new System.Windows.Forms.GroupBox();
-            this.textNroOrigen = new System.Windows.Forms.TextBox();
+            this.txtNroOrigen = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnLlamar = new System.Windows.Forms.Button();
-            this.textNroDestino = new System.Windows.Forms.TextBox();
+            this.txtNroDestino = new System.Windows.Forms.TextBox();
             this.cmbFranja = new System.Windows.Forms.ComboBox();
             this.grpPanel.SuspendLayout();
             this.grpButtons.SuspendLayout();
@@ -87,6 +87,7 @@ namespace Ejercicio_40_Forms
             this.btnHashtag.TabIndex = 11;
             this.btnHashtag.Text = "#";
             this.btnHashtag.UseVisualStyleBackColor = false;
+            this.btnHashtag.Click += new System.EventHandler(this.btnHashtag_Click);
             // 
             // btn0
             // 
@@ -99,6 +100,7 @@ namespace Ejercicio_40_Forms
             this.btn0.TabIndex = 10;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
+            this.btn0.Click += new System.EventHandler(this.btn0_Click);
             // 
             // btnAsterisc
             // 
@@ -112,6 +114,7 @@ namespace Ejercicio_40_Forms
             this.btnAsterisc.Text = "*";
             this.btnAsterisc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAsterisc.UseVisualStyleBackColor = false;
+            this.btnAsterisc.Click += new System.EventHandler(this.btnAsterisc_Click);
             // 
             // btn9
             // 
@@ -124,6 +127,7 @@ namespace Ejercicio_40_Forms
             this.btn9.TabIndex = 8;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
+            this.btn9.Click += new System.EventHandler(this.btn9_Click);
             // 
             // btn8
             // 
@@ -136,6 +140,7 @@ namespace Ejercicio_40_Forms
             this.btn8.TabIndex = 7;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
+            this.btn8.Click += new System.EventHandler(this.btn8_Click);
             // 
             // btn7
             // 
@@ -148,6 +153,7 @@ namespace Ejercicio_40_Forms
             this.btn7.TabIndex = 6;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
             // 
             // btn6
             // 
@@ -160,6 +166,7 @@ namespace Ejercicio_40_Forms
             this.btn6.TabIndex = 5;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
             // btn5
             // 
@@ -172,6 +179,7 @@ namespace Ejercicio_40_Forms
             this.btn5.TabIndex = 4;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
             // btn4
             // 
@@ -184,6 +192,7 @@ namespace Ejercicio_40_Forms
             this.btn4.TabIndex = 3;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
             // btn3
             // 
@@ -196,6 +205,7 @@ namespace Ejercicio_40_Forms
             this.btn3.TabIndex = 2;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.btn3_Click);
             // 
             // btn2
             // 
@@ -208,6 +218,7 @@ namespace Ejercicio_40_Forms
             this.btn2.TabIndex = 1;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // btn1
             // 
@@ -220,10 +231,11 @@ namespace Ejercicio_40_Forms
             this.btn1.TabIndex = 0;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // grpButtons
             // 
-            this.grpButtons.Controls.Add(this.textNroOrigen);
+            this.grpButtons.Controls.Add(this.txtNroOrigen);
             this.grpButtons.Controls.Add(this.btnSalir);
             this.grpButtons.Controls.Add(this.btnLimpiar);
             this.grpButtons.Controls.Add(this.btnLlamar);
@@ -235,15 +247,15 @@ namespace Ejercicio_40_Forms
             this.grpButtons.TabStop = false;
             this.grpButtons.Text = "Buttons";
             // 
-            // textNroOrigen
+            // txtNroOrigen
             // 
-            this.textNroOrigen.BackColor = System.Drawing.SystemColors.InfoText;
-            this.textNroOrigen.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNroOrigen.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textNroOrigen.Location = new System.Drawing.Point(15, 136);
-            this.textNroOrigen.Name = "textNroOrigen";
-            this.textNroOrigen.Size = new System.Drawing.Size(172, 33);
-            this.textNroOrigen.TabIndex = 14;
+            this.txtNroOrigen.BackColor = System.Drawing.SystemColors.InfoText;
+            this.txtNroOrigen.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNroOrigen.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtNroOrigen.Location = new System.Drawing.Point(15, 136);
+            this.txtNroOrigen.Name = "txtNroOrigen";
+            this.txtNroOrigen.Size = new System.Drawing.Size(172, 33);
+            this.txtNroOrigen.TabIndex = 14;
             // 
             // btnSalir
             // 
@@ -284,15 +296,15 @@ namespace Ejercicio_40_Forms
             this.btnLlamar.UseVisualStyleBackColor = false;
             this.btnLlamar.Click += new System.EventHandler(this.btnLlamar_Click);
             // 
-            // textNroDestino
+            // txtNroDestino
             // 
-            this.textNroDestino.BackColor = System.Drawing.SystemColors.InfoText;
-            this.textNroDestino.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNroDestino.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textNroDestino.Location = new System.Drawing.Point(12, 12);
-            this.textNroDestino.Name = "textNroDestino";
-            this.textNroDestino.Size = new System.Drawing.Size(421, 33);
-            this.textNroDestino.TabIndex = 2;
+            this.txtNroDestino.BackColor = System.Drawing.SystemColors.InfoText;
+            this.txtNroDestino.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNroDestino.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtNroDestino.Location = new System.Drawing.Point(12, 12);
+            this.txtNroDestino.Name = "txtNroDestino";
+            this.txtNroDestino.Size = new System.Drawing.Size(421, 33);
+            this.txtNroDestino.TabIndex = 2;
             // 
             // cmbFranja
             // 
@@ -302,10 +314,6 @@ namespace Ejercicio_40_Forms
             this.cmbFranja.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.cmbFranja.FormattingEnabled = true;
             this.cmbFranja.ItemHeight = 26;
-            this.cmbFranja.Items.AddRange(new object[] {
-            "Franja_01",
-            "Franja_02",
-            "Franja_03"});
             this.cmbFranja.Location = new System.Drawing.Point(12, 303);
             this.cmbFranja.Name = "cmbFranja";
             this.cmbFranja.Size = new System.Drawing.Size(421, 34);
@@ -318,7 +326,7 @@ namespace Ejercicio_40_Forms
             this.BackColor = System.Drawing.SystemColors.WindowText;
             this.ClientSize = new System.Drawing.Size(460, 355);
             this.Controls.Add(this.cmbFranja);
-            this.Controls.Add(this.textNroDestino);
+            this.Controls.Add(this.txtNroDestino);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.grpPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -356,8 +364,8 @@ namespace Ejercicio_40_Forms
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnLlamar;
-        private System.Windows.Forms.TextBox textNroDestino;
-        private System.Windows.Forms.TextBox textNroOrigen;
+        private System.Windows.Forms.TextBox txtNroDestino;
+        private System.Windows.Forms.TextBox txtNroOrigen;
         private System.Windows.Forms.ComboBox cmbFranja;
     }
 }
