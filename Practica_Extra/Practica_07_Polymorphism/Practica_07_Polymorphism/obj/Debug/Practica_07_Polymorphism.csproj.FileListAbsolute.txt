@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\bin\Debug\Practica_07_Polymorphism.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\bin\Debug\Practica_07_Polymorphism.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\bin\Debug\Practica_07_Polymorphism.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\bin\Debug\Entities.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\bin\Debug\Entities.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\obj\Debug\Practica_07_Polymorphism.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\obj\Debug\Practica_07_Polymorphism.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\obj\Debug\Practica_07_Polymorphism.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\obj\Debug\Practica_07_Polymorphism.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_07_Polymorphism\Practica_07_Polymorphism\obj\Debug\Practica_07_Polymorphism.pdb
