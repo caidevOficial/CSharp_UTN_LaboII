@@ -30,7 +30,7 @@ namespace CentralitaHerencia
     public sealed class Centralita
     {
         private List<Llamada> listaDeLlamadas;
-        protected string razonSocial;
+        private string razonSocial;
 
         #region Properties
 

@@ -47,9 +47,9 @@ namespace CentralitaHerencia
         /// <param name="call">Object Llamada-type.</param>
         /// <param name="costo">Price of the call.</param>
         public Local(Llamada call, float costo) 
-            : base(call.Duracion, call.NroOrigen, call.NroDestino)
+            : this(call.NroOrigen, call.NroDestino, call.Duracion, costo)
         {
-            this.costo = costo;
+
         }
 
         /// <summary>

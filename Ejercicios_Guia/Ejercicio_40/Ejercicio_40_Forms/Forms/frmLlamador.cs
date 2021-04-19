@@ -24,14 +24,17 @@
 
 using CentralitaHerencia;
 using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace Ejercicio_40_Forms
 {
     public partial class frmLlamador : Form
     {
-        Centralita myCentral;
-
+        private Centralita myCentral;
+        private readonly string pathToMusic = Environment.CurrentDirectory;
+        private readonly SoundPlayer myPlayer = new SoundPlayer();
+        
         #region Builder
 
         /// <summary>
@@ -78,6 +81,7 @@ namespace Ejercicio_40_Forms
                 {
                     Provincial myProvinceCall = new Provincial(duration, txtNroOrigen.Text, txtNroDestino.Text, (Provincial.Franja)cmbFranja.SelectedIndex);
                     myCentral = myCentral + myProvinceCall;
+                    Notification(myPlayer, "Provincial");
                     MessageBox.Show("Llamada Provincial Generada con exito!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 else
@@ -85,6 +89,7 @@ namespace Ejercicio_40_Forms
                     billing = (float)(randomNumber.NextDouble() + randomNumber.Next(0,5) + 0.5);
                     Local myLocalCall = new Local(txtNroOrigen.Text, txtNroDestino.Text, duration, billing);
                     myCentral = myCentral + myLocalCall;
+                    Notification(myPlayer, "Local");
                     MessageBox.Show("Llamada Local Generada con exito!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 btnLimpiar_Click(sender, e);
@@ -277,6 +282,27 @@ namespace Ejercicio_40_Forms
                 frmMenu.myCentralita = FrmLlamadorCentralita;
                 Dispose();
             }
+        }
+
+        #endregion
+
+        #region ExtraMethods
+
+        /// <summary>
+        /// Plays an 8-bit audio of Dragon Ball Z in '.wav' format.
+        /// </summary>
+        private void Notification(SoundPlayer myPlayer, string typeCall)
+        {
+            if (typeCall.Equals("Provincial"))
+            {
+                myPlayer.SoundLocation = this.pathToMusic + "/Media/Hello_Moto_N.wav";
+            }
+            else
+            {
+                myPlayer.SoundLocation = this.pathToMusic + "/Media/Hello_Moto.wav";
+            }
+            myPlayer.Play();
+            
         }
 
         #endregion

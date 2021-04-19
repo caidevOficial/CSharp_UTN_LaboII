@@ -77,6 +77,7 @@ namespace Ejercicio_40_Forms
             if (MessageBox.Show("Do you want to quit the CentralitApp?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Dispose();
+                Close();
             }
         }
 
