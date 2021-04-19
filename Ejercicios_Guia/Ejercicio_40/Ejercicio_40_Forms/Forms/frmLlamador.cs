@@ -86,7 +86,7 @@ namespace Ejercicio_40_Forms
                 }
                 else
                 {
-                    billing = (float)(randomNumber.NextDouble() + randomNumber.Next(0,5) + 0.5);
+                    billing = (randomNumber.Next(5,56) / 10);
                     Local myLocalCall = new Local(txtNroOrigen.Text, txtNroDestino.Text, duration, billing);
                     myCentral = myCentral + myLocalCall;
                     Notification(myPlayer, "Local");
