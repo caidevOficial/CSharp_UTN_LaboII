@@ -76,7 +76,7 @@ namespace Entities.Classes
         /// <returns>The perimeter of the entity as a double</returns>
         public override double CalcularPerimetro()
         {
-            return Math.Round(Math.PI * this.Radio * 2, 2);
+            return Math.PI * this.Radio * 2;
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Entities.Classes
         /// <returns>The area as a double.</returns>
         public override double CalcularSuperficie()
         {
-            return Math.Round(Math.PI * Math.Pow(this.radio, 2), 2);
+            return Math.PI * Math.Pow(this.radio, 2);
         }
 
         /// <summary>

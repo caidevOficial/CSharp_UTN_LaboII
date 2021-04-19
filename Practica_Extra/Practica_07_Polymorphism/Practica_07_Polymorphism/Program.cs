@@ -56,8 +56,8 @@ namespace Practica_07_Polymorphism
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine(figure.GetType());
                 Console.WriteLine(figure.Dibujar());
-                Console.WriteLine($"Área: {figure.CalcularSuperficie()}");
-                Console.WriteLine($"Perímetro: {figure.CalcularPerimetro()}");
+                Console.WriteLine($"Área: {Math.Round(figure.CalcularSuperficie(), 2)}");
+                Console.WriteLine($"Perímetro: {Math.Round(figure.CalcularPerimetro(), 2)}");
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("=============================");
 

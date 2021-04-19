@@ -95,7 +95,7 @@ namespace Entities.Classes
         /// <returns>The perimeter of the entity as a double</returns>
         public override double CalcularPerimetro()
         {
-            return Math.Round(this.Base * 2 + this.Heigth * 2, 2);
+            return this.Base * 2 + this.Heigth * 2;
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Entities.Classes
         /// <returns>The area as a double.</returns>
         public override double CalcularSuperficie()
         {
-            return Math.Round(this.Base * this.Heigth, 2);
+            return this.Base * this.Heigth;
         }
 
         /// <summary>
