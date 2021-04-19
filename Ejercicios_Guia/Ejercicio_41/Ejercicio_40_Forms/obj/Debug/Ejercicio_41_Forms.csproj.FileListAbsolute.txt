@@ -1,0 +1,15 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\bin\Debug\Ejercicio_40_Forms.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\bin\Debug\Ejercicio_40_Forms.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\bin\Debug\Ejercicio_40_Forms.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\bin\Debug\CentralitaHerencia.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\bin\Debug\CentralitaHerencia.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_41_Forms.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_40_Forms.frmLlamador.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_40_Forms.frmMenu.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_40_Forms.frmMostrar.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_40_Forms.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_41_Forms.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_41_Forms.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_41_Forms.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_40_Forms.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_40_Forms\obj\Debug\Ejercicio_40_Forms.pdb
