@@ -201,7 +201,7 @@ namespace frmCantinaa
             this.barra1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("barra1.BackgroundImage")));
             this.barra1.Location = new System.Drawing.Point(16, 16);
             this.barra1.Name = "barra1";
-            this.barra1.Size = new System.Drawing.Size(662, 278);
+            this.barra1.Size = new System.Drawing.Size(581, 278);
             this.barra1.TabIndex = 0;
             // 
             // groupBox1
@@ -219,7 +219,7 @@ namespace frmCantinaa
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(720, 450);
+            this.ClientSize = new System.Drawing.Size(604, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label3);
@@ -234,6 +234,8 @@ namespace frmCantinaa
             this.Controls.Add(this.barra1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCantina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alumno Facu Falcone";
