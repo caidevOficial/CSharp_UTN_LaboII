@@ -14,7 +14,7 @@
 
 ---
 
-# C# Primer 2018 - Parcial Cantina. 👨‍💻
+# C# Primer Parcial 2018 -  Cantina. 👨‍💻
 ---
 
 <table>
