@@ -1,0 +1,15 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\obj\Debug\frmCantinaa.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\obj\Debug\frmCantinaa.frmCantina.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\obj\Debug\frmCantinaa.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\obj\Debug\frmCantinaa.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\obj\Debug\frmCantinaa.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\bin\Debug\frmCantinaa.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\bin\Debug\frmCantinaa.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\bin\Debug\frmCantinaa.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\bin\Debug\ControlesUsuario.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\bin\Debug\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\bin\Debug\ControlesUsuario.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\bin\Debug\Entidades.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\obj\Debug\frmCantinaa.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\obj\Debug\frmCantinaa.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\frmCantinaa\obj\Debug\frmCantinaa.pdb
