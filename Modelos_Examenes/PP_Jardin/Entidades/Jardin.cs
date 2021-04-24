@@ -32,6 +32,7 @@ namespace Entidades
 {
     public class Jardin
     {
+
         private int espacioTotal;
         private List<Planta> plantas;
         private static Tipo suelo;
@@ -125,7 +126,6 @@ namespace Entidades
 
             return false;
         }
-
 
         #endregion
 

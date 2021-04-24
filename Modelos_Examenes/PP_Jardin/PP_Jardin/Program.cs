@@ -16,7 +16,7 @@ namespace PP_Jardin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmJardin());
+            Application.Run(new frmPrincipal());
         }
     }
 }

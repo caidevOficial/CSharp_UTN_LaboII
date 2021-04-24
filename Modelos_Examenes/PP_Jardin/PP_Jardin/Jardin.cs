@@ -35,11 +35,11 @@ using System.Windows.Forms;
 
 namespace PP_Jardin
 {
-    public partial class frmJardin : Form
+    public partial class frmPrincipal : Form
     {
         Jardin garden; 
 
-        public frmJardin()
+        public frmPrincipal()
         {
             InitializeComponent();
         }

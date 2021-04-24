@@ -1,7 +1,7 @@
 ﻿
 namespace PP_Jardin
 {
-    partial class frmJardin
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,7 +29,7 @@ namespace PP_Jardin
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJardin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.rtbSalidaDeTest = new System.Windows.Forms.RichTextBox();
             this.btnVerDatos = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -52,7 +52,7 @@ namespace PP_Jardin
             this.btnVerDatos.UseVisualStyleBackColor = true;
             this.btnVerDatos.Click += new System.EventHandler(this.btnVerDatos_Click);
             // 
-            // frmJardin
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -63,7 +63,7 @@ namespace PP_Jardin
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmJardin";
+            this.Name = "frmPrincipal";
             this.Text = "Jardin";
             this.Load += new System.EventHandler(this.frmJardin_Load);
             this.ResumeLayout(false);
