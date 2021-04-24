@@ -22,11 +22,7 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
@@ -46,10 +42,10 @@ namespace Entidades
         #region Builders
 
         public Rosal(string nombre, int tamanio)
-            :base(nombre, tamanio){}
+            : base(nombre, tamanio) { }
 
         public Rosal(string nombre, int tamanio, Color color)
-            :this(nombre, tamanio)
+            : this(nombre, tamanio)
         {
             this.florColor = color;
         }

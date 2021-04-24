@@ -44,7 +44,6 @@
     <Compile Include="Arbusto.cs" />
     <Compile Include="Banano.cs" />
     <Compile Include="Jardin.cs" />
-    <Compile Include="PaloBorracho.cs" />
     <Compile Include="Planta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rosal.cs" />

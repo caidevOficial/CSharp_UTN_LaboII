@@ -22,11 +22,8 @@
  * SOFTWARE.
  */
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
@@ -56,7 +53,7 @@ namespace Entidades
         }
 
         public Jardin(int espacioTotal)
-            :this()
+            : this()
         {
             this.espacioTotal = espacioTotal;
         }
@@ -80,14 +77,14 @@ namespace Entidades
         public int EspacioOcupado()
         {
             int ocupado = 0;
-            
+
             foreach (Planta plant in this.plantas)
             {
                 ocupado += plant.Tamanio;
             }
 
             return ocupado;
-         }
+        }
 
         public int EspacioOcupado(Planta planta)
         {
@@ -114,14 +111,14 @@ namespace Entidades
 
         public static bool operator +(Jardin j, Planta p)
         {
-            if(!(j is null) && !(p is null))
+            if (!(j is null) && !(p is null))
             {
-                if(j.EspacioOcupado(p) <= j.espacioTotal)
+                if (j.EspacioOcupado(p) <= j.espacioTotal)
                 {
                     j.plantas.Add(p);
                     return true;
                 }
-                
+
             }
 
             return false;

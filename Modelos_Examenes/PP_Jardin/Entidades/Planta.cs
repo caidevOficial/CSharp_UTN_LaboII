@@ -22,11 +22,7 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
@@ -52,7 +48,7 @@ namespace Entidades
             get => this.tamanio;
         }
 
-        public abstract bool TieneFlores { get ; }
+        public abstract bool TieneFlores { get; }
 
         public abstract bool TieneFruto { get; }
 
