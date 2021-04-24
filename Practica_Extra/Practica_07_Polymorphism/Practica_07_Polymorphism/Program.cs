@@ -52,15 +52,14 @@ namespace Practica_07_Polymorphism
             foreach (Figura figure in listFigures)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"========= Figura {listFigures.IndexOf(figure) + 1} ==========");
+                Console.WriteLine($"   ========= Figura {listFigures.IndexOf(figure) + 1} ==========");
                 Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine(figure.GetType());
-                Console.WriteLine(figure.Dibujar());
-                Console.WriteLine($"Área: {Math.Round(figure.CalcularSuperficie(), 2)}");
-                Console.WriteLine($"Perímetro: {Math.Round(figure.CalcularPerimetro(), 2)}");
+                Console.WriteLine($"    {figure.GetType()}");
+                Console.WriteLine($"    {figure.Dibujar()} ");
+                Console.WriteLine($"    Área: {Math.Round(figure.CalcularSuperficie(), 2)}");
+                Console.WriteLine($"    Perímetro: {Math.Round(figure.CalcularPerimetro(), 2)}");
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("=============================");
-
+                Console.WriteLine("   =============================");
             }
 
             Console.ReadKey();

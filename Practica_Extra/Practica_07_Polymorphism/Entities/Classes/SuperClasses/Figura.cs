@@ -27,15 +27,6 @@ namespace Entities.Classes
     public abstract class Figura
     {
 
-        #region Builders
-
-        /// <summary>
-        /// Builds the entity without parameters.
-        /// </summary>
-        public Figura() { }
-
-        #endregion
-
         #region Methods
 
         /// <summary>

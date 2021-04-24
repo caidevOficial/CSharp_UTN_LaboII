@@ -33,15 +33,10 @@ namespace Entities.Classes
         #region Builders
 
         /// <summary>
-        /// Builds the entity without parameters.
-        /// </summary>
-        public Circulo() : base() { }
-
-        /// <summary>
         /// Builds the entity with all its parameters.
         /// </summary>
         /// <param name="radio">Radio of the entity.</param>
-        public Circulo(double radio) : this()
+        public Circulo(double radio) : base()
         {
             this.Radio = radio;
         }

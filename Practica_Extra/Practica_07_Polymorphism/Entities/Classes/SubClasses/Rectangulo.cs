@@ -43,7 +43,7 @@ namespace Entities.Classes
         /// </summary>
         /// <param name="figureBase">Base of the entity.</param>
         /// <param name="figureHeight">Heigth of the entity.</param>
-        public Rectangulo(double figureBase, double figureHeigth) : this()
+        public Rectangulo(double figureBase, double figureHeigth) : base()
         {
             this.Base = figureBase;
             this.Heigth = figureHeigth;

@@ -33,15 +33,10 @@ namespace Entities.Classes
         #region Builders
 
         /// <summary>
-        /// Builds the entity without parameters.
-        /// </summary>
-        public Cuadrado() : base() { }
-
-        /// <summary>
         /// Builds the entity with all its parameters.
         /// </summary>
         /// <param name="side">Side of the entity.</param>
-        public Cuadrado(double side)
+        public Cuadrado(double side):base()
         {
             this.Base = side;
             this.Heigth = this.Base;
@@ -60,7 +55,10 @@ namespace Entities.Classes
             get => base.Heigth;
             set
             {
-                base.Heigth = value;
+                if(value > 0)
+                {
+                    base.Heigth = value;
+                }
             }
         }
 
@@ -73,7 +71,10 @@ namespace Entities.Classes
             get => base.Base;
             set
             {
-                base.Base = value;
+                if (value > 0)
+                {
+                    base.Base = value;
+                }
             }
         }
 
