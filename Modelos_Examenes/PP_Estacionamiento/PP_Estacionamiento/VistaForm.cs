@@ -39,7 +39,7 @@ namespace PP_Estacionamiento
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(txtModelo.Text) && !String.IsNullOrWhiteSpace(txtPatente.Text))
+            if (!String.IsNullOrWhiteSpace(txtModelo.Text) && !String.IsNullOrWhiteSpace(txtPatente.Text) && txtPatente.Text.Length == 6)
             {
                 dodgeRam = new PickUp(txtPatente.Text, txtModelo.Text);
                 MessageBox.Show($"{dodgeRam.ConsultarDatos()}", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
