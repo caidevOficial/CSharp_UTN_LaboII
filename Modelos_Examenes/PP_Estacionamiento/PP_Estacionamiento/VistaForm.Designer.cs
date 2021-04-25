@@ -41,6 +41,7 @@ namespace PP_Estacionamiento
             // 
             this.lblModelo.AutoSize = true;
             this.lblModelo.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModelo.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblModelo.Location = new System.Drawing.Point(126, 79);
             this.lblModelo.Name = "lblModelo";
             this.lblModelo.Size = new System.Drawing.Size(81, 45);
@@ -51,6 +52,7 @@ namespace PP_Estacionamiento
             // 
             this.lblPatente.AutoSize = true;
             this.lblPatente.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPatente.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblPatente.Location = new System.Drawing.Point(126, -8);
             this.lblPatente.Name = "lblPatente";
             this.lblPatente.Size = new System.Drawing.Size(81, 45);
@@ -59,7 +61,9 @@ namespace PP_Estacionamiento
             // 
             // txtPatente
             // 
+            this.txtPatente.BackColor = System.Drawing.Color.Black;
             this.txtPatente.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold);
+            this.txtPatente.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtPatente.Location = new System.Drawing.Point(114, 28);
             this.txtPatente.Name = "txtPatente";
             this.txtPatente.Size = new System.Drawing.Size(109, 48);
@@ -68,7 +72,9 @@ namespace PP_Estacionamiento
             // 
             // txtModelo
             // 
+            this.txtModelo.BackColor = System.Drawing.Color.Black;
             this.txtModelo.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold);
+            this.txtModelo.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtModelo.Location = new System.Drawing.Point(114, 112);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(109, 48);
@@ -77,19 +83,22 @@ namespace PP_Estacionamiento
             // 
             // btnCrear
             // 
+            this.btnCrear.BackColor = System.Drawing.Color.Black;
             this.btnCrear.Font = new System.Drawing.Font("Gabriola", 18F, System.Drawing.FontStyle.Bold);
+            this.btnCrear.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnCrear.Location = new System.Drawing.Point(114, 180);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(109, 50);
             this.btnCrear.TabIndex = 5;
             this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.UseVisualStyleBackColor = false;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // frmPickUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InfoText;
             this.ClientSize = new System.Drawing.Size(365, 268);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.txtModelo);
