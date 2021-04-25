@@ -22,11 +22,7 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
@@ -35,18 +31,24 @@ namespace Entidades
 
         private int dni;
 
+        #region Builders
+        
         public Empleado(string nombre, short edad)
-            :this(nombre, edad, -1)
+            : base(nombre, edad) 
         {
-
+            this.dni = -1;
         }
 
         public Empleado(string nombre, short edad, int dni)
-            :base(nombre, edad)
+            : this(nombre, edad)
         {
             this.dni = dni;
         }
 
+        #endregion
+
+        #region Operators
+        
         public static bool operator ==(Empleado e1, Empleado e2)
         {
             return e1.Nombre == e2.Nombre && e1.Edad == e2.Edad;
@@ -57,24 +59,32 @@ namespace Entidades
             return !(e1 == e2);
         }
 
+        #endregion
+
+        #region Methods
+        
         public override bool Validar()
         {
             return this.Edad > 21 && this.Nombre.Length > 1;
         }
 
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+
         protected override string Mostrar()
         {
             StringBuilder data = new StringBuilder();
-            data.Append(base.ToString());
-            //data.Append($"Tipo: {this.GetType()}");
-            //data.Append($"Nombre: {this.Nombre}\n");
-            //data.Append($"Edad: {this.Edad}\n");
-            if(this.dni != -1)
+            data.AppendLine(base.ToString());
+            if (this.dni != -1)
             {
-                data.Append($"DNI: {this.dni}\n");
+                data.AppendLine($"DNI: {this.dni}");
             }
 
             return data.ToString();
         }
+
+        #endregion
     }
 }

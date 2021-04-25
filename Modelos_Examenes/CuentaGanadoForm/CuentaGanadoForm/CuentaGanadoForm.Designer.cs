@@ -64,6 +64,7 @@ namespace CuentaGanadoForm
             this.numEmpleados.Font = new System.Drawing.Font("Gabriola", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numEmpleados.Location = new System.Drawing.Point(193, 22);
             this.numEmpleados.Name = "numEmpleados";
+            this.numEmpleados.ReadOnly = true;
             this.numEmpleados.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.numEmpleados.Size = new System.Drawing.Size(120, 57);
             this.numEmpleados.TabIndex = 2;
@@ -109,6 +110,7 @@ namespace CuentaGanadoForm
             this.Name = "CuentaGanadoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contador de Facu";
+            this.Load += new System.EventHandler(this.CuentaGanadoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGente)).EndInit();
             this.ResumeLayout(false);

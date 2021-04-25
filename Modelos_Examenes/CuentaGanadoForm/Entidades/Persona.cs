@@ -23,10 +23,7 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
@@ -35,12 +32,18 @@ namespace Entidades
         private short edad;
         private string nombre;
 
+        #region Builders
+       
         protected Persona(string nombre, short edad)
         {
             this.nombre = nombre;
             this.edad = edad;
         }
 
+        #endregion
+
+        #region Properties
+        
         public short Edad
         {
             get => this.edad;
@@ -52,7 +55,7 @@ namespace Entidades
                 }
             }
         }
-
+        
         public string Nombre
         {
             get => this.nombre;
@@ -65,21 +68,43 @@ namespace Entidades
             }
         }
 
+        #endregion
+
+        #region Operators
+        
         public static explicit operator string(Persona persona)
         {
             return persona.Mostrar();
         }
 
+        #endregion
+
+        #region Methods
+        
         protected virtual string Mostrar()
         {
             StringBuilder data = new StringBuilder();
-            data.Append($"Tipo: {this.GetType()}\n");
-            data.Append($"Nombre: {this.Nombre}\n");
-            data.Append($"Edad: {this.Edad}\n");
+            data.AppendLine($"Tipo: {this.GetType().Name}");
+            if (!(String.IsNullOrWhiteSpace(this.Nombre)))
+            {
+                data.AppendLine($"Nombre: {this.Nombre}");
+            }
+            if (!(String.IsNullOrWhiteSpace(this.Nombre)))
+            {
+                data.AppendLine($"Edad: {this.Edad}");
+            }
+            
 
             return data.ToString();
         }
 
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+
         public abstract bool Validar();
+
+        #endregion
     }
 }

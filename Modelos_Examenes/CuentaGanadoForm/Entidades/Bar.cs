@@ -1,30 +1,37 @@
-﻿using System;
+﻿/*
+ * MIT License
+ * 
+ * Copyright (c) 2021 [FacuFalcone]
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
     public class Bar
     {
-        private  List<Empleado> empleados;
-        private  List<Gente> gente;
+        private List<Empleado> empleados;
+        private List<Gente> gente;
         private static Bar singleton;
-
-        #region Properties
-
-        public List<Empleado> Empleados
-        {
-            get => this.empleados;
-        }
-
-        public List<Gente> Gente
-        {
-            get => this.gente;
-        }
-
-        #endregion
 
         #region Builders
 
@@ -51,15 +58,29 @@ namespace Entidades
 
         #endregion
 
+        #region Properties
+
+        public List<Empleado> Empleados
+        {
+            get => this.empleados;
+        }
+
+        public List<Gente> Gente
+        {
+            get => this.gente;
+        }
+
+        #endregion
+
         #region Operators
 
         public static bool operator +(Bar bar, Empleado empleado)
         {
-            if(!(bar is null) && !(empleado is null))
+            if (!(bar is null) && !(empleado is null))
             {
-                foreach(Empleado empleadoDeBar in bar.empleados)
+                foreach (Empleado empleadoDeBar in bar.empleados)
                 {
-                    if(empleadoDeBar != empleado)
+                    if (empleadoDeBar != empleado)
                     {
                         bar.empleados.Add(empleado);
                         return true;
@@ -74,9 +95,9 @@ namespace Entidades
         {
             if (!(bar is null) && !(gente is null))
             {
-                foreach(Gente genteEnBar in bar.gente)
+                foreach (Gente genteEnBar in bar.gente)
                 {
-                    if (genteEnBar != gente && bar.gente.Count < (bar.empleados.Count *10))
+                    if (bar.gente.Count < (bar.empleados.Count * 10) && genteEnBar != gente)
                     {
                         bar.gente.Add(gente);
                         return true;
@@ -94,11 +115,11 @@ namespace Entidades
         public override string ToString()
         {
             StringBuilder data = new StringBuilder();
-            foreach(Empleado e in this.empleados)
+            foreach (Empleado e in this.empleados)
             {
                 data.Append(e.ToString());
             }
-            foreach(Gente g in this.gente)
+            foreach (Gente g in this.gente)
             {
                 data.Append(g.ToString());
             }
