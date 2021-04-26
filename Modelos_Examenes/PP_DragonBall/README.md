@@ -26,11 +26,11 @@
   </tr>
   <tr>
     <td>
-      <img src="Media/sample2.png">
+      <img src="Media/sample2_1.png">
     </td>
   </tr><tr>
     <td>
-      <img src="Media/sample3.png">
+      <img src="Media/sample2_2.png">
     </td>
   </tr>
 </table>
