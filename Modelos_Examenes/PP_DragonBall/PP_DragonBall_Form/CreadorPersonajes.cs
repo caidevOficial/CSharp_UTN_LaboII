@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-using Entities.Classes.SubClasses;
 using Entities.Classes;
+using Entities.Classes.SubClasses;
 using Entities.Enums;
 using System;
 using System.Collections.Generic;

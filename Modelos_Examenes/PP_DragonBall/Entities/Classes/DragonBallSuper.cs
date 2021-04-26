@@ -59,7 +59,7 @@ namespace Entities.Classes
             List<EHabilidades> ataquesG = new List<EHabilidades> { EHabilidades.GenkiDama, EHabilidades.Kamehameha, EHabilidades.Teletransportacion };
             List<EHabilidades> ataquesC = new List<EHabilidades> { EHabilidades.GarlikHo, EHabilidades.Kamehameha };
             listaPersonajes.Add(new Heroe("Goku", 100, ataquesG, true));
-            listaPersonajes.Add(new Villano("KidBuu", 8000, ataquesC, EOrigen.Demon, true));
+            listaPersonajes.Add(new Villano("KidBuu", 8000, ataquesC, EOrigen.Demon, false));
         }
 
         public static bool AgregarPersonaje(Personaje p)

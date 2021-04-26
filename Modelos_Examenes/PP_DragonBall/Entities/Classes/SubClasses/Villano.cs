@@ -56,6 +56,15 @@ namespace Entities.Classes.SubClasses
             get => this.Descripcion;
         }
 
+        public bool MaximoPoder
+        {
+            get => this.maximoPoder;
+            set
+            {
+                this.maximoPoder = value;
+            }
+        }
+
         public int PowerLevel
         {
             get => this.nivelPoder;
@@ -79,7 +88,7 @@ namespace Entities.Classes.SubClasses
         {
             if (!maximoPoder)
             {
-                this.nivelPoder *= (int)1.8;
+                this.nivelPoder *= 2;
                 return "Poder aumentado al máximo";
             }
 
