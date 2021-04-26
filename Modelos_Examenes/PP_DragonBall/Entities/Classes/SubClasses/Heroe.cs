@@ -68,6 +68,11 @@ namespace Entities.Classes.SubClasses
             get => esSaiyan;
         }
 
+        public int PowerLevel
+        {
+            get => this.nivelPoder;
+        }
+
         #endregion
 
         #region Methods
@@ -94,27 +99,27 @@ namespace Entities.Classes.SubClasses
                         this.mensaje = "Ya basta freezer!!";
                         break;
                     case ETransformacionSaiyan.SSJ:
-                        this.nivelPoder *= 20;
+                        this.nivelPoder *= 25;
                         this.transformacion++;
                         this.mensaje = "Este es el SSJ2, admito que es muy poderoso!";
                         break;
                     case ETransformacionSaiyan.SSJ2:
-                        this.nivelPoder *= 30;
+                        this.nivelPoder *= 20;
                         this.transformacion++;
                         this.mensaje = "Esta transformacion, supera los poderes del SSJ2!";
                         break;
                     case ETransformacionSaiyan.SSJ3:
-                        this.nivelPoder *= 50;
+                        this.nivelPoder *= 25;
                         this.transformacion++;
                         this.mensaje = "Hora de convertirse en un dios!!";
                         break;
                     case ETransformacionSaiyan.SSJG:
-                        this.nivelPoder *= 60;
+                        this.nivelPoder *= 50;
                         this.transformacion++;
                         this.mensaje = "Soy un SSJ dios que alcanzo el estado de SSJ!";
                         break;
                     case ETransformacionSaiyan.SSJGSSJ:
-                        this.nivelPoder *= 100;
+                        this.nivelPoder *= 70;
                         this.transformacion++;
                         this.mensaje = "Así que este es el ultra instinto...";
                         break;

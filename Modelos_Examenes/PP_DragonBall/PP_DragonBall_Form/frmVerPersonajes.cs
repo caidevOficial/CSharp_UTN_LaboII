@@ -38,7 +38,7 @@ namespace PP_DragonBall_Form
                 if (hero.Saiyajin)
                 {
                     btnAvatar.ImageIndex = 0;
-                    lblMensaje.Text = hero.Mensaje;
+                    lblMensaje.Text = $"Power: {hero.PowerLevel}\n{hero.Mensaje}";
                 }
                 //grpCharImage.BackgroundImage = 
             }
@@ -47,7 +47,7 @@ namespace PP_DragonBall_Form
                 btnTransformar.Enabled = false;
                 villain = ((Villano)(cmbPersonajeDeLista.SelectedItem));
                 btnAvatar.ImageIndex = 7;
-                lblMensaje.Text = villain.Mensaje;
+                lblMensaje.Text = $"Power: {villain.PowerLevel}\n{villain.Mensaje}";
             }
         }
 
@@ -61,14 +61,14 @@ namespace PP_DragonBall_Form
                     if (btnAvatar.ImageIndex < 6)
                     {
                         hero.Transformarse();
-                        lblMensaje.Text = hero.Mensaje;
+                        lblMensaje.Text = $"Power: {hero.PowerLevel}\n{hero.Mensaje}";
                         btnAvatar.ImageIndex++;
 
                     }
                     else
                     {
                         hero.Transformarse();
-                        lblMensaje.Text = hero.Mensaje;
+                        lblMensaje.Text = $"Power: {hero.PowerLevel}\n{hero.Mensaje}";
                         btnAvatar.ImageIndex = 0;
                     }
                 }

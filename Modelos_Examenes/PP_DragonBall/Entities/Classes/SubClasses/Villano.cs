@@ -56,6 +56,11 @@ namespace Entities.Classes.SubClasses
             get => this.Descripcion;
         }
 
+        public int PowerLevel
+        {
+            get => this.nivelPoder;
+        }
+
         #endregion
 
         #region Methods

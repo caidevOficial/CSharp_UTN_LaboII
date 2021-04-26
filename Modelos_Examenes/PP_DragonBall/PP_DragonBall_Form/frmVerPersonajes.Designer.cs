@@ -59,9 +59,9 @@ namespace PP_DragonBall_Form
             // 
             this.lblMensaje.BackColor = System.Drawing.Color.Black;
             this.lblMensaje.Font = new System.Drawing.Font("Gabriola", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lblMensaje.Location = new System.Drawing.Point(275, 316);
+            this.lblMensaje.Location = new System.Drawing.Point(275, 298);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(386, 58);
+            this.lblMensaje.Size = new System.Drawing.Size(386, 76);
             this.lblMensaje.TabIndex = 5;
             this.lblMensaje.Text = "Selecciona Personaje";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
