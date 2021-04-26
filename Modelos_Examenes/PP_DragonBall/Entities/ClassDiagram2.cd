@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entities.Classes.DragonBallSuper">
+    <Position X="6.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAACIAAAACAAAAAAAAQAAA=</HashCode>
+      <FileName>Classes\DragonBallSuper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entities.Classes.SubClasses.Heroe">
+    <Position X="4.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAACAAAgAAABAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Classes\SubClasses\Heroe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entities.Classes.SubClasses.Villano">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAABAAAAAAACAAEAAQAAAAA=</HashCode>
+      <FileName>Classes\SubClasses\Villano.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entities.Personaje">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAACGAAAAAAABAAAAAAAEAAAAAQAAAiA=</HashCode>
+      <FileName>Classes\Super\Personaje.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Entities.ETransformacionSaiyan">
+    <Position X="12" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAADAAAABAAAAAAAAAAQIA=</HashCode>
+      <FileName>Enums\ETransformacionSaiyan.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Entities.Enums.EHabilidades">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAADAQAAEBAAAAQAA=</HashCode>
+      <FileName>Enums\EHabilidades.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Entities.Enums.EOrigen">
+    <Position X="8.75" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIIAAgBAAAA=</HashCode>
+      <FileName>Enums\EOrigen.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

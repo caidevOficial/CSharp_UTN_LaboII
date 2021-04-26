@@ -1,0 +1,10 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\bin\Debug\PP_DragonBall.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\bin\Debug\PP_DragonBall.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\bin\Debug\PP_DragonBall.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\bin\Debug\Entities.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\bin\Debug\Entities.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\obj\Debug\PP_DragonBall.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\obj\Debug\PP_DragonBall.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\obj\Debug\PP_DragonBall.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\obj\Debug\PP_DragonBall.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall\obj\Debug\PP_DragonBall.pdb
