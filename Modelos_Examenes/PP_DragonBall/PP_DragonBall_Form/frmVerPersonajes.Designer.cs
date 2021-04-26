@@ -98,7 +98,7 @@ namespace PP_DragonBall_Form
             this.cmbPersonajeDeLista.Font = new System.Drawing.Font("Gabriola", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPersonajeDeLista.ForeColor = System.Drawing.Color.Black;
             this.cmbPersonajeDeLista.FormattingEnabled = true;
-            this.cmbPersonajeDeLista.Location = new System.Drawing.Point(33, 53);
+            this.cmbPersonajeDeLista.Location = new System.Drawing.Point(33, 82);
             this.cmbPersonajeDeLista.Name = "cmbPersonajeDeLista";
             this.cmbPersonajeDeLista.Size = new System.Drawing.Size(176, 43);
             this.cmbPersonajeDeLista.TabIndex = 1;
@@ -109,7 +109,7 @@ namespace PP_DragonBall_Form
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gabriola", 14.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(44, 15);
+            this.label1.Location = new System.Drawing.Point(44, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 35);
             this.label1.TabIndex = 2;
