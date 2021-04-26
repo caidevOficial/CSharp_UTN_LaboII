@@ -44,7 +44,7 @@ namespace Entities.Classes
 
         #region Properties
 
-        static List<Personaje> ListaPersonajes
+        public static List<Personaje> ListaPersonajes
         {
             get => listaPersonajes;
         }
@@ -58,9 +58,8 @@ namespace Entities.Classes
             List<EHabilidades> ataquesV = new List<EHabilidades> { EHabilidades.FinalFlash, EHabilidades.GarlikHo, EHabilidades.Teletransportacion, EHabilidades.BigBang_Attack };
             List<EHabilidades> ataquesG = new List<EHabilidades> { EHabilidades.GenkiDama, EHabilidades.Kamehameha, EHabilidades.Teletransportacion };
             List<EHabilidades> ataquesC = new List<EHabilidades> { EHabilidades.GarlikHo, EHabilidades.Kamehameha };
-            listaPersonajes.Add(new Heroe("Vegeta", 8000, ataquesV, true));
             listaPersonajes.Add(new Heroe("Goku", 8100, ataquesG, true));
-            listaPersonajes.Add(new Villano("Cell", 8000, ataquesC, EOrigen.Androide, true));
+            listaPersonajes.Add(new Villano("KidBuu", 8000, ataquesC, EOrigen.Demon, true));
         }
 
         public static bool AgregarPersonaje(Personaje p)

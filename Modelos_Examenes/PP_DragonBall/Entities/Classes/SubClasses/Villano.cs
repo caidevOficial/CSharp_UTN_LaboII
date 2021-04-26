@@ -48,7 +48,12 @@ namespace Entities.Classes.SubClasses
 
         protected override string Descripcion
         {
-            get => "Soy Malísimo. Diabólico. Así como los profes de labo de la noche";
+            get => "No estas a mi altura!";
+        }
+
+        public string Mensaje
+        {
+            get => this.Descripcion;
         }
 
         #endregion

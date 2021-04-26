@@ -35,10 +35,12 @@ namespace PP_DragonBall_Form
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnShowCharacters = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.grpHero = new System.Windows.Forms.GroupBox();
             this.chkSaiyan = new System.Windows.Forms.CheckBox();
             this.grpVillain = new System.Windows.Forms.GroupBox();
+            this.chkMaxPower = new System.Windows.Forms.CheckBox();
             this.grpCommon = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,7 +49,6 @@ namespace PP_DragonBall_Form
             this.grpPlayerType = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbTipoPersonaje = new System.Windows.Forms.ComboBox();
-            this.chkMaxPower = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.grpHero.SuspendLayout();
             this.grpVillain.SuspendLayout();
@@ -95,18 +96,30 @@ namespace PP_DragonBall_Form
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btnShowCharacters);
             this.groupBox1.Controls.Add(this.btnCreate);
             this.groupBox1.Controls.Add(this.grpHero);
             this.groupBox1.Controls.Add(this.grpVillain);
             this.groupBox1.Controls.Add(this.grpCommon);
             this.groupBox1.Controls.Add(this.grpPlayerType);
-            this.groupBox1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.groupBox1.ForeColor = System.Drawing.Color.Tomato;
             this.groupBox1.Location = new System.Drawing.Point(330, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(326, 380);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Setup";
+            // 
+            // btnShowCharacters
+            // 
+            this.btnShowCharacters.BackColor = System.Drawing.Color.Black;
+            this.btnShowCharacters.Location = new System.Drawing.Point(168, 318);
+            this.btnShowCharacters.Name = "btnShowCharacters";
+            this.btnShowCharacters.Size = new System.Drawing.Size(140, 40);
+            this.btnShowCharacters.TabIndex = 16;
+            this.btnShowCharacters.Text = "Show Characters";
+            this.btnShowCharacters.UseVisualStyleBackColor = false;
+            this.btnShowCharacters.Click += new System.EventHandler(this.btnShowCharacters_Click);
             // 
             // btnCreate
             // 
@@ -123,7 +136,7 @@ namespace PP_DragonBall_Form
             // 
             this.grpHero.BackColor = System.Drawing.Color.Black;
             this.grpHero.Controls.Add(this.chkSaiyan);
-            this.grpHero.ForeColor = System.Drawing.Color.OrangeRed;
+            this.grpHero.ForeColor = System.Drawing.Color.Tomato;
             this.grpHero.Location = new System.Drawing.Point(161, 193);
             this.grpHero.Name = "grpHero";
             this.grpHero.Size = new System.Drawing.Size(147, 68);
@@ -147,13 +160,23 @@ namespace PP_DragonBall_Form
             this.grpVillain.Controls.Add(this.chkMaxPower);
             this.grpVillain.Controls.Add(this.lblOrigen);
             this.grpVillain.Controls.Add(this.cmbOrigen);
-            this.grpVillain.ForeColor = System.Drawing.Color.OrangeRed;
+            this.grpVillain.ForeColor = System.Drawing.Color.Tomato;
             this.grpVillain.Location = new System.Drawing.Point(8, 193);
             this.grpVillain.Name = "grpVillain";
             this.grpVillain.Size = new System.Drawing.Size(147, 119);
             this.grpVillain.TabIndex = 13;
             this.grpVillain.TabStop = false;
             this.grpVillain.Text = "Villain Option";
+            // 
+            // chkMaxPower
+            // 
+            this.chkMaxPower.AutoSize = true;
+            this.chkMaxPower.Location = new System.Drawing.Point(32, 75);
+            this.chkMaxPower.Name = "chkMaxPower";
+            this.chkMaxPower.Size = new System.Drawing.Size(79, 17);
+            this.chkMaxPower.TabIndex = 7;
+            this.chkMaxPower.Text = "Max Power";
+            this.chkMaxPower.UseVisualStyleBackColor = true;
             // 
             // grpCommon
             // 
@@ -164,7 +187,7 @@ namespace PP_DragonBall_Form
             this.grpCommon.Controls.Add(this.label4);
             this.grpCommon.Controls.Add(this.cmbAtaques);
             this.grpCommon.Controls.Add(this.txtNivelPoder);
-            this.grpCommon.ForeColor = System.Drawing.Color.OrangeRed;
+            this.grpCommon.ForeColor = System.Drawing.Color.Tomato;
             this.grpCommon.Location = new System.Drawing.Point(9, 102);
             this.grpCommon.Name = "grpCommon";
             this.grpCommon.Size = new System.Drawing.Size(305, 78);
@@ -214,7 +237,7 @@ namespace PP_DragonBall_Form
             this.grpPlayerType.BackColor = System.Drawing.Color.Black;
             this.grpPlayerType.Controls.Add(this.label3);
             this.grpPlayerType.Controls.Add(this.cmbTipoPersonaje);
-            this.grpPlayerType.ForeColor = System.Drawing.Color.OrangeRed;
+            this.grpPlayerType.ForeColor = System.Drawing.Color.Tomato;
             this.grpPlayerType.Location = new System.Drawing.Point(9, 21);
             this.grpPlayerType.Name = "grpPlayerType";
             this.grpPlayerType.Size = new System.Drawing.Size(307, 68);
@@ -245,16 +268,6 @@ namespace PP_DragonBall_Form
             this.cmbTipoPersonaje.TabIndex = 7;
             this.cmbTipoPersonaje.SelectedIndexChanged += new System.EventHandler(this.cmbTipoPersonaje_SelectedIndexChanged);
             // 
-            // chkMaxPower
-            // 
-            this.chkMaxPower.AutoSize = true;
-            this.chkMaxPower.Location = new System.Drawing.Point(32, 75);
-            this.chkMaxPower.Name = "chkMaxPower";
-            this.chkMaxPower.Size = new System.Drawing.Size(79, 17);
-            this.chkMaxPower.TabIndex = 7;
-            this.chkMaxPower.Text = "Max Power";
-            this.chkMaxPower.UseVisualStyleBackColor = true;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,10 +277,12 @@ namespace PP_DragonBall_Form
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(668, 399);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dragon Ball Z";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
@@ -303,6 +318,7 @@ namespace PP_DragonBall_Form
         private System.Windows.Forms.GroupBox grpHero;
         private System.Windows.Forms.GroupBox grpVillain;
         private System.Windows.Forms.CheckBox chkMaxPower;
+        private System.Windows.Forms.Button btnShowCharacters;
     }
 }
 

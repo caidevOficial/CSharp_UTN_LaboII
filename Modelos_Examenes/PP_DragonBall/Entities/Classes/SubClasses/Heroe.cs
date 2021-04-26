@@ -32,12 +32,14 @@ namespace Entities.Classes.SubClasses
     {
         private bool esSaiyan;
         private ETransformacionSaiyan transformacion;
+        private string mensaje;
 
         #region Buidlers
 
         public Heroe(string nombre, int nivelPoder, List<EHabilidades> ataques, bool esSaiyan)
             : base(nombre, nivelPoder, ataques)
         {
+            this.mensaje = "Aun me falta mucho por entrenar!";
             this.esSaiyan = esSaiyan;
         }
 
@@ -54,6 +56,16 @@ namespace Entities.Classes.SubClasses
                 else
                     return "Siempre pelea junto a un Saiyan. Fiel amigo";
             }
+        }
+
+        public string Mensaje
+        {
+            get => this.mensaje;
+        }
+
+        public bool Saiyajin
+        {
+            get => esSaiyan;
         }
 
         #endregion
@@ -79,30 +91,37 @@ namespace Entities.Classes.SubClasses
                     case ETransformacionSaiyan.Base:
                         this.nivelPoder *= 10;
                         this.transformacion++;
+                        this.mensaje = "Ya basta freezer!!";
                         break;
                     case ETransformacionSaiyan.SSJ:
                         this.nivelPoder *= 20;
                         this.transformacion++;
+                        this.mensaje = "Este es el SSJ2, admito que es muy poderoso!";
                         break;
                     case ETransformacionSaiyan.SSJ2:
                         this.nivelPoder *= 30;
                         this.transformacion++;
+                        this.mensaje = "Esta transformacion, supera los poderes del SSJ2!";
                         break;
                     case ETransformacionSaiyan.SSJ3:
                         this.nivelPoder *= 50;
                         this.transformacion++;
+                        this.mensaje = "Hora de convertirse en un dios!!";
                         break;
                     case ETransformacionSaiyan.SSJG:
                         this.nivelPoder *= 60;
                         this.transformacion++;
+                        this.mensaje = "Soy un SSJ dios que alcanzo el estado de SSJ!";
                         break;
                     case ETransformacionSaiyan.SSJGSSJ:
                         this.nivelPoder *= 100;
                         this.transformacion++;
+                        this.mensaje = "Así que este es el ultra instinto...";
                         break;
                     case ETransformacionSaiyan.MigatteNoGokui:
                         this.nivelPoder = 100;
                         this.transformacion = ETransformacionSaiyan.Base;
+                        this.mensaje = "Aun me falta mucho por entrenar!";
                         break;
                 }
             }

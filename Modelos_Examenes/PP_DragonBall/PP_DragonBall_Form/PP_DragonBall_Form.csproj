@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logodbz.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,10 +55,19 @@
     <Compile Include="CreadorPersonajes.Designer.cs">
       <DependentUpon>CreadorPersonajes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerPersonajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerPersonajes.Designer.cs">
+      <DependentUpon>frmVerPersonajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreadorPersonajes.resx">
       <DependentUpon>CreadorPersonajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerPersonajes.resx">
+      <DependentUpon>frmVerPersonajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +96,9 @@
       <Project>{b3021f05-0522-4f42-87b1-26399dc576da}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logodbz.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

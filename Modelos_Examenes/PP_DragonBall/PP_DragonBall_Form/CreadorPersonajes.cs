@@ -23,6 +23,7 @@
  */
 
 using Entities.Classes.SubClasses;
+using Entities.Classes;
 using Entities.Enums;
 using System;
 using System.Collections.Generic;
@@ -79,8 +80,8 @@ namespace PP_DragonBall_Form
                 {
                     if (int.TryParse(txtNivelPoder.Text, out powerLevel))
                     {
-                        hero = new Heroe(txtNombre.Text, powerLevel, ataque, chkSaiyan.Checked);
-                        MessageBox.Show($"{hero.InfoPersonaje()}");
+                        DragonBallSuper.AgregarPersonaje(new Heroe(txtNombre.Text, powerLevel, ataque, chkSaiyan.Checked));
+                        MessageBox.Show($"Heroe Creado", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -90,11 +91,18 @@ namespace PP_DragonBall_Form
                 {
                     if (int.TryParse(txtNivelPoder.Text, out powerLevel))
                     {
-                        villain = new Villano(txtNombre.Text, powerLevel, ataque, (EOrigen)cmbOrigen.SelectedItem, chkMaxPower.Checked);
-                        MessageBox.Show($"{villain.InfoPersonaje()}");
+                        DragonBallSuper.AgregarPersonaje(new Villano(txtNombre.Text, powerLevel, ataque, (EOrigen)cmbOrigen.SelectedItem, chkMaxPower.Checked));
+                        MessageBox.Show($"Villano Creado", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
+        }
+
+        private void btnShowCharacters_Click(object sender, EventArgs e)
+        {
+            frmVerPersonajes showCharacters = new frmVerPersonajes();
+            showCharacters.Location = this.Location;
+            showCharacters.ShowDialog();
         }
     }
 }

@@ -11,3 +11,4 @@ C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.csproj.CopyComplete
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.exe
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.frmVerPersonajes.resources
