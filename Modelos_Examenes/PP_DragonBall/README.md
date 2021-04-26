@@ -28,6 +28,10 @@
     <td>
       <img src="Media/sample2.png">
     </td>
+  </tr><tr>
+    <td>
+      <img src="Media/sample3.png">
+    </td>
   </tr>
 </table>
 
