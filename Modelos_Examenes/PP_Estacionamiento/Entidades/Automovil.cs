@@ -25,29 +25,24 @@
 using System;
 using System.Text;
 
-namespace Entidades
-{
-    public class Automovil : Vehiculo
-    {
+namespace Entidades {
+    public class Automovil : Vehiculo {
         private ConsoleColor color;
         private static int valorHora;
 
         #region Buidlers
 
-        static Automovil()
-        {
+        static Automovil() {
             valorHora = 50;
         }
 
         public Automovil(string patente, ConsoleColor color)
-            : base(patente)
-        {
+            : base(patente) {
             this.color = color;
         }
 
         public Automovil(string patente, ConsoleColor color, int valorHora)
-            : this(patente, color)
-        {
+            : this(patente, color) {
             Automovil.valorHora = valorHora;
         }
 
@@ -55,24 +50,20 @@ namespace Entidades
 
         #region Methods
 
-        public override string ConsultarDatos()
-        {
+        public override string ConsultarDatos() {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Tipo: {this.GetType().Name}");
-            data.AppendLine($"Ingreso: {this.ingreso}");
-            data.AppendLine($"Patente: {this.Patente}");
+            data.AppendLine($"{base.ToString()}");
             data.AppendLine($"Color: {this.color}");
 
             return data.ToString();
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is Automovil;
+        public override bool Equals(object obj) {
+            return this.GetType() == obj.GetType();
         }
 
-        public override string ImprimirTicket()
-        {
+        public override string ImprimirTicket() {
             TimeSpan intervaloTiempo = DateTime.Now.Subtract(this.ingreso); //DateTime.Now.Hour - this.ingreso.Hour;
             int costoEstadia = (int)(Math.Round(intervaloTiempo.TotalHours) * Automovil.valorHora);
             StringBuilder data = new StringBuilder();

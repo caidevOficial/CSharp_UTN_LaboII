@@ -25,12 +25,9 @@
 using Entidades;
 using System;
 
-namespace PP_Estacionamiento_Console
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace PP_Estacionamiento_Console {
+    class Program {
+        static void Main(string[] args) {
             Estacionamiento e = new Estacionamiento("UTN", 6);
             // Creación de Vehículos
             Console.WriteLine("MOTOS");

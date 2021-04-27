@@ -25,17 +25,14 @@
 using System;
 using System.Text;
 
-namespace Entidades
-{
-    public abstract class Vehiculo
-    {
+namespace Entidades {
+    public abstract class Vehiculo {
         protected DateTime ingreso;
         private string patente;
 
         #region Builders
 
-        public Vehiculo(string patente)
-        {
+        public Vehiculo(string patente) {
             this.patente = patente;
             this.ingreso = DateTime.Now.AddHours(-3);
         }
@@ -44,13 +41,10 @@ namespace Entidades
 
         #region Properties
 
-        public string Patente
-        {
+        public string Patente {
             get => this.patente;
-            set
-            {
-                if (!String.IsNullOrWhiteSpace(value) && value.Length == 6)
-                {
+            set {
+                if (!String.IsNullOrWhiteSpace(value) && value.Length == 6) {
                     this.patente = value;
                 }
             }
@@ -60,12 +54,9 @@ namespace Entidades
 
         #region Operators
 
-        public static bool operator ==(Vehiculo v1, Vehiculo v2)
-        {
-            if (!(v1 is null) && !(v2 is null))
-            {
-                if (v1.Equals(v2) && v2.Equals(v1) && v1.Patente == v2.Patente)
-                {
+        public static bool operator ==(Vehiculo v1, Vehiculo v2) {
+            if (!(v1 is null) && !(v2 is null)) {
+                if (v1.Equals(v2) && v1.Patente == v2.Patente) {
                     return true;
                 }
             }
@@ -73,8 +64,7 @@ namespace Entidades
             return false;
         }
 
-        public static bool operator !=(Vehiculo v1, Vehiculo v2)
-        {
+        public static bool operator !=(Vehiculo v1, Vehiculo v2) {
             return !(v1 == v2);
         }
 
@@ -84,19 +74,16 @@ namespace Entidades
 
         public abstract string ConsultarDatos();
 
-        public virtual string ImprimirTicket()
-        {
+        public virtual string ImprimirTicket() {
             StringBuilder data = new StringBuilder();
             data.AppendLine(this.ToString());
-            data.AppendLine($"Patente: {this.Patente}");
             data.AppendLine($"Ingreso: {this.ingreso}");
 
             return data.ToString();
         }
 
-        public override string ToString()
-        {
-            string data = String.Format("Patente {0}", this.patente);
+        public override string ToString() {
+            string data = String.Format("Patente: {0}", this.Patente);
             return data;
         }
 

@@ -25,23 +25,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entidades
-{
-    public class Estacionamiento
-    {
+namespace Entidades {
+    public class Estacionamiento {
         private int espacioDisponible;
         private string nombre;
         private List<Vehiculo> vehiculos;
 
         #region Builders
 
-        private Estacionamiento()
-        {
+        private Estacionamiento() {
             vehiculos = new List<Vehiculo>();
         }
 
-        public Estacionamiento(string nombre, int espacioDisponible) : this()
-        {
+        public Estacionamiento(string nombre, int espacioDisponible) : this() {
             this.nombre = nombre;
             this.espacioDisponible = espacioDisponible;
         }
@@ -50,15 +46,13 @@ namespace Entidades
 
         #region Operators
 
-        public static explicit operator string(Estacionamiento e)
-        {
+        public static explicit operator string(Estacionamiento e) {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Nombre: {e.nombre}");
             data.AppendLine($"Espacio disponible: {e.espacioDisponible}");
             data.AppendLine($"Lista de vehiculos:");
             data.AppendLine("___________________");
-            foreach (Vehiculo item in e.vehiculos)
-            {
+            foreach (Vehiculo item in e.vehiculos) {
                 data.Append(item.ConsultarDatos());
                 data.AppendLine("___________________");
             }
@@ -66,14 +60,10 @@ namespace Entidades
             return data.ToString();
         }
 
-        public static bool operator ==(Estacionamiento e, Vehiculo v)
-        {
-            if (!(e is null) && !(v is null))
-            {
-                foreach (Vehiculo item in e.vehiculos)
-                {
-                    if (item == v)
-                    {
+        public static bool operator ==(Estacionamiento e, Vehiculo v) {
+            if (!(e is null) && !(v is null)) {
+                foreach (Vehiculo item in e.vehiculos) {
+                    if (item == v) {
                         return true;
                     }
                 }
@@ -81,17 +71,13 @@ namespace Entidades
             return false;
         }
 
-        public static bool operator !=(Estacionamiento e, Vehiculo v)
-        {
+        public static bool operator !=(Estacionamiento e, Vehiculo v) {
             return !(e == v);
         }
 
-        public static Estacionamiento operator +(Estacionamiento e, Vehiculo v)
-        {
-            if (e != v)
-            {
-                if (e.vehiculos.Count < e.espacioDisponible)
-                {
+        public static Estacionamiento operator +(Estacionamiento e, Vehiculo v) {
+            if (e != v) {
+                if (e.vehiculos.Count < e.espacioDisponible) {
                     e.vehiculos.Add(v);
                 }
             }
@@ -99,10 +85,8 @@ namespace Entidades
             return e;
         }
 
-        public static string operator -(Estacionamiento e, Vehiculo v)
-        {
-            if (e == v)
-            {
+        public static string operator -(Estacionamiento e, Vehiculo v) {
+            if (e == v) {
                 e.vehiculos.Remove(v);
                 return v.ImprimirTicket();
             }

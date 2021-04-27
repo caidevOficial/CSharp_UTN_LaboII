@@ -18,11 +18,10 @@
 ---
 
 <table>
-  <th><center>Cantina</center></th>
+  <th><center>Estacionamiento</center></th>
   <tr>
   <td>
     <img src="Media/sample.png">
-  </td><td>
     <img src="Media/sample2.png">
   </td>
   </tr>

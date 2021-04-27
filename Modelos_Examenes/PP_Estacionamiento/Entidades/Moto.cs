@@ -25,37 +25,31 @@
 using System;
 using System.Text;
 
-namespace Entidades
-{
-    public class Moto : Vehiculo
-    {
+namespace Entidades {
+    public class Moto : Vehiculo {
         private int cilindrada;
         private short ruedas;
         private static int valorHora;
 
         #region Buidlers
 
-        static Moto()
-        {
+        static Moto() {
             valorHora = 30;
         }
 
         public Moto(string patente, int cilindrada)
-            : base(patente)
-        {
+            : base(patente) {
             this.ruedas = 2;
             this.cilindrada = cilindrada;
         }
 
         public Moto(string patente, int cilindrada, short ruedas)
-            : this(patente, cilindrada)
-        {
+            : this(patente, cilindrada) {
             this.ruedas = ruedas;
         }
 
         public Moto(string patente, int cilindrada, short ruedas, int valorHora)
-            : this(patente, cilindrada, ruedas)
-        {
+            : this(patente, cilindrada, ruedas) {
             Moto.valorHora = valorHora;
         }
 
@@ -63,25 +57,21 @@ namespace Entidades
 
         #region Methods
 
-        public override string ConsultarDatos()
-        {
+        public override string ConsultarDatos() {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Tipo: {this.GetType().Name}");
-            data.AppendLine($"Ingreso: {this.ingreso}");
-            data.AppendLine($"Patente: {this.Patente}");
+            data.AppendLine($"{base.ToString()}");
             data.AppendLine($"Cilindradas: {this.cilindrada}");
             data.AppendLine($"Ruedas: {this.ruedas}");
 
             return data.ToString();
         }
 
-        public override bool Equals(object obj)
-        {
-            return obj is Moto;
+        public override bool Equals(object obj) {
+            return this.GetType() == obj.GetType();
         }
 
-        public override string ImprimirTicket()
-        {
+        public override string ImprimirTicket() {
             TimeSpan intervaloTiempo = DateTime.Now.Subtract(this.ingreso); //DateTime.Now.Hour - this.ingreso.Hour;
             int costoEstadia = (int)(Math.Round(intervaloTiempo.TotalHours) * Moto.valorHora);
             StringBuilder data = new StringBuilder();
