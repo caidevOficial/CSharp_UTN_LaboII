@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PP_EquipoFutbol_V2
 {
-    public partial class Form1 : Form
+    public partial class FormDT : Form
     {
-        public Form1()
+        public FormDT()
         {
             InitializeComponent();
         }

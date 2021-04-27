@@ -22,23 +22,16 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Entidades
-{
-    public class DirectorTecnico : Persona
-    {
+namespace Entidades {
+    public class DirectorTecnico : Persona {
         private int añosExperiencia;
 
         #region Builders
 
         public DirectorTecnico(string nombre, string apellido, int edad, int dni, int añosExperiencia)
-            :base(nombre, apellido, edad, dni)
-        {
+            : base(nombre, apellido, edad, dni) {
             this.añosExperiencia = añosExperiencia;
         }
 
@@ -46,13 +39,10 @@ namespace Entidades
 
         #region Properties
 
-        public int AñosExperiencia
-        {
+        public int AñosExperiencia {
             get => this.añosExperiencia;
-            set
-            {
-                if (value >= 0)
-                {
+            set {
+                if (value >= 0) {
                     this.añosExperiencia = value;
                 }
             }
@@ -62,8 +52,7 @@ namespace Entidades
 
         #region Methods
 
-        public override string Mostrar()
-        {
+        public override string Mostrar() {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Nombre: {this.Nombre}");
             data.AppendLine($"Apellido: {this.Apellido}");
@@ -74,8 +63,7 @@ namespace Entidades
             return base.Mostrar();
         }
 
-        public override bool ValidarAptitud()
-        {
+        public override bool ValidarAptitud() {
             return this.añosExperiencia > 2 && this.Edad < 65;
         }
 

@@ -23,15 +23,10 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Entidades
-{
-    public class Jugador: Persona
-    {
+namespace Entidades {
+    public class Jugador : Persona {
         private float altura;
         private float peso;
         private Posicion posicion;
@@ -39,8 +34,7 @@ namespace Entidades
         #region Builders
 
         public Jugador(string nombre, string apellido, int edad, int dni, float peso, float altura, Posicion posicion)
-            :base(nombre, apellido, edad, dni)
-        {
+            : base(nombre, apellido, edad, dni) {
             this.altura = altura;
             this.peso = peso;
             this.posicion = posicion;
@@ -50,18 +44,15 @@ namespace Entidades
 
         #region Properties
 
-        public float Altura
-        {
+        public float Altura {
             get => this.altura;
         }
 
-        public float Peso
-        {
+        public float Peso {
             get => this.peso;
         }
 
-        public Posicion Posicion
-        {
+        public Posicion Posicion {
             get => this.posicion;
         }
 
@@ -69,8 +60,7 @@ namespace Entidades
 
         #region Methods
 
-        public override string Mostrar()
-        {
+        public override string Mostrar() {
             StringBuilder data = new StringBuilder();
             data.Append(base.Mostrar());
             data.AppendLine($"Altura: {this.Altura}");
@@ -78,16 +68,14 @@ namespace Entidades
             data.AppendLine($"Posicion: {this.Posicion}");
             data.AppendLine("==================#");
 
-            return base.Mostrar();
+            return data.ToString();
         }
 
-        public override bool ValidarAptitud()
-        {
+        public override bool ValidarAptitud() {
             return this.Edad < 40;
         }
 
-        public bool ValidarEstadoFisico()
-        {
+        public bool ValidarEstadoFisico() {
             double imc = (this.peso / Math.Pow(this.altura, 2));
             return imc <= 25 && imc > 18.5;
         }

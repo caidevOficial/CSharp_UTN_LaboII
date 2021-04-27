@@ -22,16 +22,11 @@
  * SOFTWARE.
  */
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Entidades
-{
-    public class Equipo
-    {
+namespace Entidades {
+    public class Equipo {
         private const int cantidadMaximaJugadores = 6;
         private DirectorTecnico directorTecnico;
         private List<Jugador> jugadores;
@@ -39,13 +34,11 @@ namespace Entidades
 
         #region Builders
 
-        private Equipo()
-        {
+        private Equipo() {
             jugadores = new List<Jugador>();
         }
 
-        public Equipo(string nombre):this()
-        {
+        public Equipo(string nombre) : this() {
             this.nombre = nombre;
         }
 
@@ -53,19 +46,15 @@ namespace Entidades
 
         #region Properties
 
-        public DirectorTecnico DirectorTecnico
-        {
-            set
-            {
-                if(!(value is null) && value.ValidarAptitud())
-                {
+        public DirectorTecnico DirectorTecnico {
+            set {
+                if (!(value is null) && value.ValidarAptitud()) {
                     directorTecnico = value;
                 }
             }
         }
 
-        public string Nombre
-        {
+        public string Nombre {
             get => this.nombre;
         }
 
@@ -73,45 +62,35 @@ namespace Entidades
 
         #region Operators
 
-        public static explicit operator string(Equipo e)
-        {
+        public static explicit operator string(Equipo e) {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Nombre: {e.Nombre}");
-            if(!(e.directorTecnico is null))
-            {
+            if (!(e.directorTecnico is null)) {
                 data.AppendLine($"DT: {e.directorTecnico.Nombre} {e.directorTecnico.Apellido}");
-            }
-            else
-            {
+            } else {
                 data.AppendLine("Sin DT Asignado");
             }
             data.AppendLine($"Cantidad maxima de jugadores: {cantidadMaximaJugadores}");
             data.AppendLine("Jugadores:");
-            foreach (Jugador jugador in e.jugadores)
-            {
-                data.Append(jugador.Mostrar());
-                data.AppendLine("____");
+            foreach (Jugador jugador in e.jugadores) {
+                data.AppendLine(jugador.Mostrar());
+
             }
 
             return data.ToString();
         }
 
-        public static bool operator ==(Equipo e, Jugador j)
-        {
+        public static bool operator ==(Equipo e, Jugador j) {
             return e.jugadores.Contains(j);
         }
 
-        public static bool operator !=(Equipo e, Jugador j)
-        {
+        public static bool operator !=(Equipo e, Jugador j) {
             return !(e == j);
         }
 
-        public static Equipo operator +(Equipo e, Jugador j)
-        {
-            if(e != j && e.jugadores.Count < Equipo.cantidadMaximaJugadores)
-            {
-                if(j.ValidarAptitud() && j.ValidarEstadoFisico())
-                {
+        public static Equipo operator +(Equipo e, Jugador j) {
+            if (e != j && e.jugadores.Count < Equipo.cantidadMaximaJugadores) {
+                if (j.ValidarAptitud() && j.ValidarEstadoFisico()) {
                     e.jugadores.Add(j);
                 }
             }
@@ -123,20 +102,16 @@ namespace Entidades
 
         #region Methods
 
-        public static bool ValidarEquipo(Equipo e)
-        {
+        public static bool ValidarEquipo(Equipo e) {
             int defensor = 0;
             int delantero = 0;
             int arquero = 0;
             int central = 0;
 
-            if(!(e.directorTecnico is null) && 
-                e.jugadores.Count == 6)
-            {
-                foreach (Jugador item in e.jugadores)
-                {
-                    switch (item.Posicion)
-                    {
+            if (!(e.directorTecnico is null) &&
+                e.jugadores.Count == 6) {
+                foreach (Jugador item in e.jugadores) {
+                    switch (item.Posicion) {
                         case Posicion.Arquero:
                             arquero++;
                             break;
@@ -151,8 +126,7 @@ namespace Entidades
                             break;
                     }
                 }
-                if(delantero >= 1 && defensor >= 1 && arquero == 1 && central >= 1)
-                {
+                if (delantero >= 1 && defensor >= 1 && arquero == 1 && central >= 1) {
                     return true;
                 }
             }

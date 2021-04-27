@@ -29,12 +29,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VistaConsola
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace VistaConsola {
+    class Program {
+        static void Main(string[] args) {
             // Genero un equipo nuevo
             Equipo equipo = new Equipo("UTN");
             // Genero un Director Técnico y lo asigno al equipo

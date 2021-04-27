@@ -22,16 +22,10 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Entidades
-{
-    public abstract class Persona
-    {
+namespace Entidades {
+    public abstract class Persona {
         private string apellido;
         private int dni;
         private int edad;
@@ -39,8 +33,7 @@ namespace Entidades
 
         #region Builders
 
-        public Persona(string nombre, string apellido, int edad, int dni)
-        {
+        public Persona(string nombre, string apellido, int edad, int dni) {
             this.apellido = apellido;
             this.nombre = nombre;
             this.dni = dni;
@@ -51,23 +44,19 @@ namespace Entidades
 
         #region Properties
 
-        public string Apellido
-        {
+        public string Apellido {
             get => this.apellido;
         }
 
-        public string Nombre
-        {
+        public string Nombre {
             get => this.nombre;
         }
 
-        public int Edad
-        {
+        public int Edad {
             get => this.edad;
         }
 
-        public int Dni
-        {
+        public int Dni {
             get => this.dni;
         }
 
@@ -75,8 +64,7 @@ namespace Entidades
 
         #region Methods
 
-        public virtual string Mostrar()
-        {
+        public virtual string Mostrar() {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Nombre: {this.nombre}");
             data.AppendLine($"Apellido: {this.apellido}");
