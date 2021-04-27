@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Entities
-{
-    public enum ETransformacionSaiyan
-    {
+namespace Entities {
+    public enum ETransformacionSaiyan {
         Base,
         SSJ,
         SSJ2,

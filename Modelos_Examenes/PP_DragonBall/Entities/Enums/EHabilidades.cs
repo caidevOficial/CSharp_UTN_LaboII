@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Entities.Enums
-{
-    public enum EHabilidades
-    {
+namespace Entities.Enums {
+    public enum EHabilidades {
         GenkiDama,
         Kamehameha,
         Teletransportacion,

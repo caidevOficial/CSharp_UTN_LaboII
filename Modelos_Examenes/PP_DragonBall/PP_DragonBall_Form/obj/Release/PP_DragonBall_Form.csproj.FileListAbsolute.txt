@@ -1,0 +1,14 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\bin\Release\PP_DragonBall_Form.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\bin\Release\PP_DragonBall_Form.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\bin\Release\PP_DragonBall_Form.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\bin\Release\Entities.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\bin\Release\Entities.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.frmPrincipal.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.frmVerPersonajes.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_DragonBall\PP_DragonBall_Form\obj\Release\PP_DragonBall_Form.pdb

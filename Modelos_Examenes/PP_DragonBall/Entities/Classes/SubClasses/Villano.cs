@@ -26,18 +26,15 @@ using Entities.Enums;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Classes.SubClasses
-{
-    public class Villano : Personaje
-    {
+namespace Entities.Classes.SubClasses {
+    public class Villano : Personaje {
         private bool maximoPoder;
         private EOrigen origen;
 
         #region Builders
 
         public Villano(string nombre, int nivelPoder, List<EHabilidades> ataques, EOrigen origen, bool maximoPoder)
-            : base(nombre, nivelPoder, ataques)
-        {
+            : base(nombre, nivelPoder, ataques) {
             this.origen = origen;
             this.maximoPoder = maximoPoder;
         }
@@ -46,27 +43,22 @@ namespace Entities.Classes.SubClasses
 
         #region Properties
 
-        protected override string Descripcion
-        {
+        protected override string Descripcion {
             get => "No estas a mi altura!";
         }
 
-        public string Mensaje
-        {
+        public string Mensaje {
             get => this.Descripcion;
         }
 
-        public bool MaximoPoder
-        {
+        public bool MaximoPoder {
             get => this.maximoPoder;
-            set
-            {
+            set {
                 this.maximoPoder = value;
             }
         }
 
-        public int PowerLevel
-        {
+        public int PowerLevel {
             get => this.nivelPoder;
         }
 
@@ -74,8 +66,7 @@ namespace Entities.Classes.SubClasses
 
         #region Methods
 
-        public override string InfoPersonaje()
-        {
+        public override string InfoPersonaje() {
             StringBuilder data = new StringBuilder();
             data.Append(base.InfoPersonaje());
             data.AppendLine($"Al Maximo: {this.maximoPoder}");
@@ -84,10 +75,8 @@ namespace Entities.Classes.SubClasses
             return data.ToString();
         }
 
-        public override string Transformarse()
-        {
-            if (!maximoPoder)
-            {
+        public override string Transformarse() {
+            if (!maximoPoder) {
                 this.nivelPoder *= 2;
                 return "Poder aumentado al máximo";
             }

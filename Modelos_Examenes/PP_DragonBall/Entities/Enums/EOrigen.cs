@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Entities.Enums
-{
-    public enum EOrigen
-    {
+namespace Entities.Enums {
+    public enum EOrigen {
         Tierra,
         Alienigena,
         Clonacion,

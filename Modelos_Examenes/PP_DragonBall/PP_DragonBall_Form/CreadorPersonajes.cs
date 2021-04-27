@@ -29,21 +29,17 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace PP_DragonBall_Form
-{
-    public partial class frmPrincipal : Form
-    {
+namespace PP_DragonBall_Form {
+    public partial class frmPrincipal : Form {
 
         Heroe hero;
         Villano villain;
 
-        public frmPrincipal()
-        {
+        public frmPrincipal() {
             InitializeComponent();
         }
 
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
+        private void frmPrincipal_Load(object sender, EventArgs e) {
             cmbTipoPersonaje.Enabled = true;
             cmbTipoPersonaje.SelectedIndex = 0;
             cmbAtaques.DataSource = Enum.GetValues(typeof(EHabilidades));
@@ -55,42 +51,30 @@ namespace PP_DragonBall_Form
 
         }
 
-        private void cmbTipoPersonaje_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbTipoPersonaje.SelectedIndex == 0)
-            {
+        private void cmbTipoPersonaje_SelectedIndexChanged(object sender, EventArgs e) {
+            if (cmbTipoPersonaje.SelectedIndex == 0) {
                 grpVillain.Enabled = false;
                 grpHero.Enabled = true;
-            }
-            else
-            {
+            } else {
                 grpVillain.Enabled = true;
                 grpHero.Enabled = false;
             }
 
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
+        private void btnCreate_Click(object sender, EventArgs e) {
             int powerLevel = 10;
             List<EHabilidades> ataque = new List<EHabilidades>() { (EHabilidades)cmbAtaques.SelectedItem };
-            if (cmbTipoPersonaje.SelectedIndex == 0)
-            {
-                if (!String.IsNullOrWhiteSpace(txtNombre.Text) && !String.IsNullOrWhiteSpace(txtNivelPoder.Text))
-                {
-                    if (int.TryParse(txtNivelPoder.Text, out powerLevel))
-                    {
+            if (cmbTipoPersonaje.SelectedIndex == 0) {
+                if (!String.IsNullOrWhiteSpace(txtNombre.Text) && !String.IsNullOrWhiteSpace(txtNivelPoder.Text)) {
+                    if (int.TryParse(txtNivelPoder.Text, out powerLevel)) {
                         DragonBallSuper.AgregarPersonaje(new Heroe(txtNombre.Text, powerLevel, ataque, chkSaiyan.Checked));
                         MessageBox.Show($"Heroe Creado", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-            }
-            else
-            {
-                if (!String.IsNullOrWhiteSpace(txtNombre.Text) && !String.IsNullOrWhiteSpace(txtNivelPoder.Text))
-                {
-                    if (int.TryParse(txtNivelPoder.Text, out powerLevel))
-                    {
+            } else {
+                if (!String.IsNullOrWhiteSpace(txtNombre.Text) && !String.IsNullOrWhiteSpace(txtNivelPoder.Text)) {
+                    if (int.TryParse(txtNivelPoder.Text, out powerLevel)) {
                         DragonBallSuper.AgregarPersonaje(new Villano(txtNombre.Text, powerLevel, ataque, (EOrigen)cmbOrigen.SelectedItem, chkMaxPower.Checked));
                         MessageBox.Show($"Villano Creado", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -98,8 +82,7 @@ namespace PP_DragonBall_Form
             }
         }
 
-        private void btnShowCharacters_Click(object sender, EventArgs e)
-        {
+        private void btnShowCharacters_Click(object sender, EventArgs e) {
             frmVerPersonajes showCharacters = new frmVerPersonajes();
             showCharacters.Location = this.Location;
             showCharacters.ShowDialog();

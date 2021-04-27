@@ -27,8 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities
-{
+namespace Entities {
 #pragma warning disable CS0660 // El tipo define operator == or operator !=, pero no reemplaza a override Object.Equals(object o)
 #pragma warning disable CS0661 // El tipo define operator == or operator !=, pero no reemplaza a Object.GetHashCode()
     public abstract class Personaje
@@ -41,20 +40,17 @@ namespace Entities
 
         #region Builders
 
-        private Personaje()
-        {
+        private Personaje() {
             ataques = new List<EHabilidades>();
         }
 
-        protected Personaje(string nombre, int nivelPoder) : this()
-        {
+        protected Personaje(string nombre, int nivelPoder) : this() {
             this.nombre = nombre;
             this.nivelPoder = nivelPoder;
         }
 
         protected Personaje(string nombre, int nivelPoder, List<EHabilidades> ataques)
-            : this(nombre, nivelPoder)
-        {
+            : this(nombre, nivelPoder) {
             this.ataques = new List<EHabilidades>(ataques);
         }
 
@@ -68,28 +64,23 @@ namespace Entities
 
         #region Operators
 
-        public static bool operator ==(Personaje p, List<Personaje> listaPersonajes)
-        {
-            if (!(p is null) && !(listaPersonajes is null))
-            {
+        public static bool operator ==(Personaje p, List<Personaje> listaPersonajes) {
+            if (!(p is null) && !(listaPersonajes is null)) {
                 return listaPersonajes.Contains(p);
             }
 
             return false;
         }
 
-        public static bool operator !=(Personaje p, List<Personaje> listaPersonajes)
-        {
+        public static bool operator !=(Personaje p, List<Personaje> listaPersonajes) {
             return !(p == listaPersonajes);
         }
 
-        public static bool operator ==(Personaje p1, Personaje p2)
-        {
+        public static bool operator ==(Personaje p1, Personaje p2) {
             return p1.GetType().Name == p2.GetType().Name && p1.nombre == p2.nombre;
         }
 
-        public static bool operator !=(Personaje p1, Personaje p2)
-        {
+        public static bool operator !=(Personaje p1, Personaje p2) {
             return !(p1 == p2);
         }
 
@@ -97,15 +88,13 @@ namespace Entities
 
         #region Methods
 
-        public virtual string InfoPersonaje()
-        {
+        public virtual string InfoPersonaje() {
             StringBuilder data = new StringBuilder();
             data.AppendLine(String.Format("Nombre: {0}", this.nombre));
             data.AppendLine($"PowerLevel: {this.nivelPoder}");
             data.AppendLine($"Descripcion: {this.Descripcion}");
             data.AppendLine("Ataques:");
-            foreach (EHabilidades eHabilidades in ataques)
-            {
+            foreach (EHabilidades eHabilidades in ataques) {
                 data.AppendLine(eHabilidades.ToString());
             }
 
@@ -113,8 +102,7 @@ namespace Entities
         }
 
 
-        public override string ToString()
-        {
+        public override string ToString() {
             return this.nombre;
         }
         public abstract string Transformarse();

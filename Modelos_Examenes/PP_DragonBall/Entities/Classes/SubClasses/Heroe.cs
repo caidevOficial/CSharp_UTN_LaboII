@@ -26,10 +26,8 @@ using Entities.Enums;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Classes.SubClasses
-{
-    public class Heroe : Personaje
-    {
+namespace Entities.Classes.SubClasses {
+    public class Heroe : Personaje {
         private bool esSaiyan;
         private ETransformacionSaiyan transformacion;
         private string mensaje;
@@ -37,8 +35,7 @@ namespace Entities.Classes.SubClasses
         #region Buidlers
 
         public Heroe(string nombre, int nivelPoder, List<EHabilidades> ataques, bool esSaiyan)
-            : base(nombre, nivelPoder, ataques)
-        {
+            : base(nombre, nivelPoder, ataques) {
             this.mensaje = "Aun me falta mucho por entrenar!";
             this.esSaiyan = esSaiyan;
         }
@@ -47,10 +44,8 @@ namespace Entities.Classes.SubClasses
 
         #region Properties
 
-        protected override string Descripcion
-        {
-            get
-            {
+        protected override string Descripcion {
+            get {
                 if (esSaiyan)
                     return "Disfruta los combates. Su poder no tiene límite";
                 else
@@ -58,18 +53,15 @@ namespace Entities.Classes.SubClasses
             }
         }
 
-        public string Mensaje
-        {
+        public string Mensaje {
             get => this.mensaje;
         }
 
-        public bool Saiyajin
-        {
+        public bool Saiyajin {
             get => esSaiyan;
         }
 
-        public int PowerLevel
-        {
+        public int PowerLevel {
             get => this.nivelPoder;
         }
 
@@ -77,8 +69,7 @@ namespace Entities.Classes.SubClasses
 
         #region Methods
 
-        public override string InfoPersonaje()
-        {
+        public override string InfoPersonaje() {
             StringBuilder data = new StringBuilder();
             data.Append(base.InfoPersonaje());
             data.AppendLine($"Es Saiyan: {this.esSaiyan}");
@@ -87,12 +78,9 @@ namespace Entities.Classes.SubClasses
             return data.ToString();
         }
 
-        public override string Transformarse()
-        {
-            if (esSaiyan)
-            {
-                switch (this.transformacion)
-                {
+        public override string Transformarse() {
+            if (esSaiyan) {
+                switch (this.transformacion) {
                     case ETransformacionSaiyan.Base:
                         this.nivelPoder *= 10;
                         this.transformacion++;

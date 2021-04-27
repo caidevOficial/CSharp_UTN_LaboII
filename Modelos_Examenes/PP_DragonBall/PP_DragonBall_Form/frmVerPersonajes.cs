@@ -28,39 +28,30 @@ using Entities.Classes.SubClasses;
 using System;
 using System.Windows.Forms;
 
-namespace PP_DragonBall_Form
-{
-    public partial class frmVerPersonajes : Form
-    {
+namespace PP_DragonBall_Form {
+    public partial class frmVerPersonajes : Form {
         Heroe hero;
         Villano villain;
 
-        public frmVerPersonajes()
-        {
+        public frmVerPersonajes() {
             InitializeComponent();
         }
 
-        private void frmVerPersonajes_Load(object sender, EventArgs e)
-        {
+        private void frmVerPersonajes_Load(object sender, EventArgs e) {
             cmbPersonajeDeLista.DataSource = DragonBallSuper.ListaPersonajes;
 
         }
 
-        private void cmbPersonajeDeLista_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if ((Personaje)cmbPersonajeDeLista.SelectedItem is Heroe)
-            {
+        private void cmbPersonajeDeLista_SelectedIndexChanged(object sender, EventArgs e) {
+            if ((Personaje)cmbPersonajeDeLista.SelectedItem is Heroe) {
                 btnTransformar.Enabled = true;
                 hero = ((Heroe)(cmbPersonajeDeLista.SelectedItem));
-                if (hero.Saiyajin)
-                {
+                if (hero.Saiyajin) {
                     btnAvatar.ImageIndex = 0;
                     lblMensaje.Text = $"Power: {hero.PowerLevel}\n{hero.Mensaje}";
                 }
                 //grpCharImage.BackgroundImage = 
-            }
-            else
-            {
+            } else {
                 //btnTransformar.Enabled = false;
                 villain = ((Villano)(cmbPersonajeDeLista.SelectedItem));
                 btnAvatar.ImageIndex = 7;
@@ -68,30 +59,22 @@ namespace PP_DragonBall_Form
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
             //hero = ((Heroe)(cmbPersonajeDeLista.SelectedItem));
-            if ((Personaje)cmbPersonajeDeLista.SelectedItem is Heroe)
-            {
-                if (hero.Saiyajin)
-                {
-                    if (btnAvatar.ImageIndex < 6)
-                    {
+            if ((Personaje)cmbPersonajeDeLista.SelectedItem is Heroe) {
+                if (hero.Saiyajin) {
+                    if (btnAvatar.ImageIndex < 6) {
                         hero.Transformarse();
                         lblMensaje.Text = $"Power: {hero.PowerLevel}\n{hero.Mensaje}";
                         btnAvatar.ImageIndex++;
 
-                    }
-                    else
-                    {
+                    } else {
                         hero.Transformarse();
                         lblMensaje.Text = $"Power: {hero.PowerLevel}\n{hero.Mensaje}";
                         btnAvatar.ImageIndex = 0;
                     }
                 }
-            }
-            else
-            {
+            } else {
                 string message = villain.Transformarse();
                 villain.MaximoPoder = true;
                 lblMensaje.Text = $"Power: {villain.PowerLevel}\n{message}";
