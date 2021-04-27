@@ -12,3 +12,4 @@ C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\PP_CuentaGanado.csproj.CopyComplete
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.exe
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.frmCarga.resources

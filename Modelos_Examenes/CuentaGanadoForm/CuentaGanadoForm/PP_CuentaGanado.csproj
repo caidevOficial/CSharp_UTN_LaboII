@@ -52,6 +52,12 @@
     <Compile Include="CuentaGanadoForm.Designer.cs">
       <DependentUpon>CuentaGanadoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarga.Designer.cs">
+      <DependentUpon>frmCarga.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInforme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CuentaGanadoForm.resx">
       <DependentUpon>CuentaGanadoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarga.resx">
+      <DependentUpon>frmCarga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInforme.resx">
       <DependentUpon>frmInforme.cs</DependentUpon>
@@ -75,6 +84,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

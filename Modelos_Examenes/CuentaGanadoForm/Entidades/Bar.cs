@@ -34,9 +34,8 @@ namespace Entidades {
         #region Builders
 
         private Bar() {
-            this.empleados = new List<Empleado>();// { new Empleado("Facu", 31)};
-            this.gente = new List<Gente>();// { new Gente(52), new Gente(42), new Gente(56)};
-
+            this.empleados = new List<Empleado>();
+            this.gente = new List<Gente>();
         }
 
         public static Bar GetBar() {

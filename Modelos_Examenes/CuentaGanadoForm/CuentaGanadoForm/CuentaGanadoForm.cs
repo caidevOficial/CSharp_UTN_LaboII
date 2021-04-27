@@ -30,6 +30,7 @@ namespace CuentaGanadoForm {
     public partial class CuentaGanadoForm : Form {
         Random rd = new Random();
         private Bar barDeMoe;
+        private frmCarga loadData;
 
         public CuentaGanadoForm() {
             InitializeComponent();
@@ -38,13 +39,16 @@ namespace CuentaGanadoForm {
         #region Event_Num_Employee
 
         private void numEmpleados_ValueChanged(object sender, EventArgs e) {
-            if (barDeMoe.Empleados.Count <= numEmpleados.Value) // Boton Arriba
-            {
-                if (!(barDeMoe + (new Empleado("Mozo", (short)rd.Next(21, 90))))) {
-                    MessageBox.Show($"No Agregado: {barDeMoe.Empleados.Count}"); // para testear
-                } else {
-                    MessageBox.Show($"Agregado: {barDeMoe.Empleados.Count}"); // para testear
+            if (barDeMoe.Empleados.Count <= numEmpleados.Value) { // Boton Arriba
+                loadData = new frmCarga();
+                if (loadData.ShowDialog() == DialogResult.OK) {
 
+                    if (!(barDeMoe + (new Empleado(loadData.Nombre, loadData.Edad)))) {
+                        MessageBox.Show($"No Agregado: {barDeMoe.Empleados.Count}"); // para testear
+                    } else {
+                        MessageBox.Show($"Agregado: {barDeMoe.Empleados.Count}"); // para testear
+
+                    }
                 }
             } else if (barDeMoe.Empleados.Count > numEmpleados.Value &&
                  barDeMoe.Empleados.Count > 0) {
@@ -61,12 +65,14 @@ namespace CuentaGanadoForm {
 
         private void numGente_ValueChanged(object sender, EventArgs e) {
             if (barDeMoe.Gente.Count <= numGente.Value &&
-                barDeMoe.Gente.Count < (barDeMoe.Empleados.Count * 10)) // puedo agregar // Boton Arriba
-            {
-                if (!(barDeMoe + new Gente((short)rd.Next(30, 90)))) {
-                    MessageBox.Show($"No Agregado: {barDeMoe.Gente.Count}");
-                } else {
-                    MessageBox.Show($"Agregado: {barDeMoe.Gente.Count}");
+                barDeMoe.Gente.Count < (barDeMoe.Empleados.Count * 10)) { // puedo agregar // Boton Arriba
+                loadData = new frmCarga();
+                if (loadData.ShowDialog() == DialogResult.OK) {
+                    if (!(barDeMoe + new Gente(loadData.Edad))) {
+                        MessageBox.Show($"No Agregado: {barDeMoe.Gente.Count}");
+                    } else {
+                        MessageBox.Show($"Agregado: {barDeMoe.Gente.Count}");
+                    }
                 }
             } else if (barDeMoe.Gente.Count > numGente.Value &&
                  barDeMoe.Gente.Count > 0) {
