@@ -32,7 +32,7 @@ namespace Entidades
         #region Buidlers
         
         public Gente(short edad)
-            : base("", edad) { }
+            : base("Cliente", edad) { }
 
         #endregion
 

@@ -38,11 +38,12 @@ namespace CuentaGanadoForm
             InitializeComponent();
         }
 
+        #region Event_Num_Employee
+
         private void numEmpleados_ValueChanged(object sender, EventArgs e)
         {
-            if (barDeMoe.Empleados.Count < numEmpleados.Value)
+            if (barDeMoe.Empleados.Count <= numEmpleados.Value) // Boton Arriba
             {
-                //Empleado emple = new Empleado("Mozo", (short)rd.Next(21, 90));
                 if (!(barDeMoe + (new Empleado("Mozo", (short)rd.Next(21, 90)))))
                 {
                     MessageBox.Show($"No Agregado: {barDeMoe.Empleados.Count}"); // para testear
@@ -50,17 +51,50 @@ namespace CuentaGanadoForm
                 else
                 {
                     MessageBox.Show($"Agregado: {barDeMoe.Empleados.Count}"); // para testear
-                    numEmpleados.Maximum = barDeMoe.Empleados.Count + 1;
+                    
                 }
+            }else if(barDeMoe.Empleados.Count > numEmpleados.Value &&
+                barDeMoe.Empleados.Count > 0)
+            {
+                barDeMoe.Empleados.RemoveAt(barDeMoe.Empleados.Count - 1);
+                MessageBox.Show($"Borrado: {barDeMoe.Empleados.Count}");
+            }
+            numEmpleados.Maximum = barDeMoe.Empleados.Count + 1;
+            numGente.Maximum = barDeMoe.Empleados.Count * 10;
+        }
+
+        #endregion
+
+        #region Event_Num_People
+       
+        private void numGente_ValueChanged(object sender, EventArgs e)
+        {
+            if (barDeMoe.Gente.Count <= numGente.Value &&
+                barDeMoe.Gente.Count < (barDeMoe.Empleados.Count * 10)) // puedo agregar // Boton Arriba
+            {
+                if (!(barDeMoe + new Gente((short)rd.Next(30, 90))))
+                {
+                    MessageBox.Show($"No Agregado: {barDeMoe.Gente.Count}");
+                }
+                else
+                {
+                    MessageBox.Show($"Agregado: {barDeMoe.Gente.Count}");
+                }
+            }else if(barDeMoe.Gente.Count > numGente.Value && 
+                barDeMoe.Gente.Count > 0)
+            {
+                barDeMoe.Gente.RemoveAt(0);
+                MessageBox.Show($"Borrado: {barDeMoe.Gente.Count}");
+            }
+            else
+            {
+                MessageBox.Show($"No hace nada");
             }
         }
 
-        private void numGente_ValueChanged(object sender, EventArgs e)
-        {
-            
-            
+        #endregion
 
-        }
+        #region Event_Info
 
         private void btnInformes_Click(object sender, EventArgs e)
         {
@@ -68,6 +102,9 @@ namespace CuentaGanadoForm
             info.StartPosition = FormStartPosition.CenterParent;
             info.ShowDialog();
         }
+
+        #endregion
+
 
         private void CuentaGanadoForm_Load(object sender, EventArgs e)
         {

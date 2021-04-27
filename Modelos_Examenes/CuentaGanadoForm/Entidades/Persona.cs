@@ -94,11 +94,6 @@ namespace Entidades
             return data.ToString();
         }
 
-        public override string ToString()
-        {
-            return this.Mostrar();
-        }
-
         public abstract bool Validar();
 
         #endregion

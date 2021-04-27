@@ -75,7 +75,7 @@ namespace Entidades
         protected override string Mostrar()
         {
             StringBuilder data = new StringBuilder();
-            data.AppendLine(base.ToString());
+            data.AppendLine(base.Mostrar());
             if (this.dni != -1)
             {
                 data.AppendLine($"DNI: {this.dni}");

@@ -37,8 +37,8 @@ namespace Entidades
 
         private Bar()
         {
-            this.empleados = new List<Empleado>() { new Empleado("Facu", 31)};
-            this.gente = new List<Gente>() { new Gente(52), new Gente(42), new Gente(56)};
+            this.empleados = new List<Empleado>();// { new Empleado("Facu", 31)};
+            this.gente = new List<Gente>();// { new Gente(52), new Gente(42), new Gente(56)};
             
         }
 
@@ -74,12 +74,20 @@ namespace Entidades
         {
             if (!(bar is null) && !(empleado is null))
             {
-                foreach (Empleado empleadoDeBar in bar.empleados)
+                if(bar.empleados.Count == 0 && empleado.Validar())
                 {
-                    if (empleadoDeBar != empleado && empleado.Validar())
+                    bar.empleados.Add(empleado);
+                    return true;
+                }
+                else
+                {
+                    foreach (Empleado empleadoDeBar in bar.empleados)
                     {
-                        bar.empleados.Add(empleado);
-                        return true;
+                        if ((empleadoDeBar != empleado) && empleado.Validar())
+                        {
+                            bar.empleados.Add(empleado);
+                            return true;
+                        }
                     }
                 }
             }
@@ -91,15 +99,13 @@ namespace Entidades
         {
             if (!(bar is null) && !(gente is null))
             {
-                foreach (Gente genteEnBar in bar.gente)
+                if (bar.gente.Count < (bar.empleados.Count * 10) && 
+                    gente.Validar())
                 {
-                    if (bar.gente.Count < (bar.empleados.Count * 10) && 
-                        gente.Validar())
-                    {
-                        bar.gente.Add(gente);
-                        return true;
-                    }
+                    bar.gente.Add(gente);
+                    return true;
                 }
+
             }
 
             return false;
