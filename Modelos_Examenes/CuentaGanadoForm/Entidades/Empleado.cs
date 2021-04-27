@@ -34,13 +34,12 @@ namespace Entidades
         #region Builders
         
         public Empleado(string nombre, short edad)
-            : base(nombre, edad) 
+            : this(nombre, edad, -1)
         {
-            this.dni = -1;
         }
 
         public Empleado(string nombre, short edad, int dni)
-            : this(nombre, edad)
+            : base(nombre, edad) 
         {
             this.dni = dni;
         }
@@ -65,7 +64,7 @@ namespace Entidades
         
         public override bool Validar()
         {
-            return this.Edad > 21 && this.Nombre.Length > 1;
+            return this.Edad > 20 && this.Nombre.Length > 1;
         }
 
         public override string ToString()

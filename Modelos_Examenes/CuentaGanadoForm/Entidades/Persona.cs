@@ -89,11 +89,7 @@ namespace Entidades
             {
                 data.AppendLine($"Nombre: {this.Nombre}");
             }
-            if (!(String.IsNullOrWhiteSpace(this.Nombre)))
-            {
-                data.AppendLine($"Edad: {this.Edad}");
-            }
-            
+            data.AppendLine($"Edad: {this.Edad}");
 
             return data.ToString();
         }

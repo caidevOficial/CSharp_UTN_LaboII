@@ -53,7 +53,7 @@ namespace Entidades
 
         public override bool Validar()
         {
-            return this.Edad > 18;
+            return this.Edad > 17;
         }
 
         #endregion

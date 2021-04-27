@@ -30,24 +30,24 @@ namespace CuentaGanadoForm
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInforme));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbInformation = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // rtbInformation
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(17, 23);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(411, 273);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.rtbInformation.Location = new System.Drawing.Point(17, 23);
+            this.rtbInformation.Name = "rtbInformation";
+            this.rtbInformation.ReadOnly = true;
+            this.rtbInformation.Size = new System.Drawing.Size(411, 273);
+            this.rtbInformation.TabIndex = 0;
+            this.rtbInformation.Text = "";
             // 
             // frmInforme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 309);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtbInformation);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -60,6 +60,6 @@ namespace CuentaGanadoForm
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbInformation;
     }
 }

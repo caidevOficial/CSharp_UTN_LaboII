@@ -30,10 +30,8 @@ namespace CuentaGanadoForm
 {
     public partial class CuentaGanadoForm : Form
     {
-
-        decimal peopleQtty;
-        decimal employeeQtty;
-        Bar barDeMoe = new Bar();
+        Random rd = new Random();
+        private Bar barDeMoe;
 
         public CuentaGanadoForm()
         {
@@ -42,53 +40,39 @@ namespace CuentaGanadoForm
 
         private void numEmpleados_ValueChanged(object sender, EventArgs e)
         {
-            if(this.employeeQtty <= numEmpleados.Value)
+            if (barDeMoe.Empleados.Count < numEmpleados.Value)
             {
-                Random rd = new Random();
-                Empleado mulo = new Empleado("Mozo", (short)rd.Next(21,90));
-                if (barDeMoe + mulo)
+                //Empleado emple = new Empleado("Mozo", (short)rd.Next(21, 90));
+                if (!(barDeMoe + (new Empleado("Mozo", (short)rd.Next(21, 90)))))
                 {
-                    numGente.Value = barDeMoe.Empleados.Count;
-                    employeeQtty = numEmpleados.Value;
+                    MessageBox.Show($"No Agregado: {barDeMoe.Empleados.Count}"); // para testear
                 }
                 else
                 {
-                    numEmpleados.Value = barDeMoe.Empleados.Count;
+                    MessageBox.Show($"Agregado: {barDeMoe.Empleados.Count}"); // para testear
+                    numEmpleados.Maximum = barDeMoe.Empleados.Count + 1;
                 }
             }
         }
 
         private void numGente_ValueChanged(object sender, EventArgs e)
         {
-
-            decimal numeroActual = numGente.Value;
-            if (peopleQtty <= numeroActual)
-            {
-                Gente gente = new Gente(50);
-                if (barDeMoe + gente)
-                {
-                    //
-                    peopleQtty = numeroActual;
-                }
-                else
-                {
-                    numGente.Value = barDeMoe.Gente.Count;
-                }
-            }
+            
+            
 
         }
 
         private void btnInformes_Click(object sender, EventArgs e)
         {
-            frmInforme info = new frmInforme();
-            info.Location = this.Location;
-            info.Show();
+            frmInforme info = new frmInforme(barDeMoe);
+            info.StartPosition = FormStartPosition.CenterParent;
+            info.ShowDialog();
         }
 
         private void CuentaGanadoForm_Load(object sender, EventArgs e)
         {
-            peopleQtty = numGente.Value;
-            employeeQtty = numEmpleados.Value;
+            barDeMoe = Bar.GetBar();
+            numGente.Maximum = barDeMoe.Empleados.Count * 10;
         }
     }
 }

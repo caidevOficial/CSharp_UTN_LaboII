@@ -76,6 +76,7 @@ namespace CuentaGanadoForm
             this.numGente.Font = new System.Drawing.Font("Gabriola", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numGente.Location = new System.Drawing.Point(193, 85);
             this.numGente.Name = "numGente";
+            this.numGente.ReadOnly = true;
             this.numGente.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.numGente.Size = new System.Drawing.Size(120, 57);
             this.numGente.TabIndex = 3;

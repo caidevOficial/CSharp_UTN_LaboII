@@ -35,18 +35,14 @@ namespace Entidades
 
         #region Builders
 
-        static Bar()
+        private Bar()
         {
-            Bar.singleton = new Bar();
+            this.empleados = new List<Empleado>() { new Empleado("Facu", 31)};
+            this.gente = new List<Gente>() { new Gente(52), new Gente(42), new Gente(56)};
+            
         }
 
-        public Bar()
-        {
-            this.empleados = new List<Empleado>();
-            this.gente = new List<Gente>();
-        }
-
-        public Bar GetBar()
+        public static Bar GetBar()
         {
             if (Bar.singleton is null)
             {
@@ -80,7 +76,7 @@ namespace Entidades
             {
                 foreach (Empleado empleadoDeBar in bar.empleados)
                 {
-                    if (empleadoDeBar != empleado)
+                    if (empleadoDeBar != empleado && empleado.Validar())
                     {
                         bar.empleados.Add(empleado);
                         return true;
@@ -97,7 +93,8 @@ namespace Entidades
             {
                 foreach (Gente genteEnBar in bar.gente)
                 {
-                    if (bar.gente.Count < (bar.empleados.Count * 10) && genteEnBar != gente)
+                    if (bar.gente.Count < (bar.empleados.Count * 10) && 
+                        gente.Validar())
                     {
                         bar.gente.Add(gente);
                         return true;
