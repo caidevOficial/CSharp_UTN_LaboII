@@ -25,13 +25,10 @@
 using Entidades;
 using System.Windows.Forms;
 
-namespace CuentaGanadoForm
-{
-    public partial class frmInforme : Form
-    {
-        
-        public frmInforme(Bar myBar)
-        {
+namespace CuentaGanadoForm {
+    public partial class frmInforme : Form {
+
+        public frmInforme(Bar myBar) {
             InitializeComponent();
             this.rtbInformation.Text = myBar.ToString();
         }

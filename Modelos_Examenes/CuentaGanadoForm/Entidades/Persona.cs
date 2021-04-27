@@ -25,17 +25,14 @@
 using System;
 using System.Text;
 
-namespace Entidades
-{
-    public abstract class Persona
-    {
+namespace Entidades {
+    public abstract class Persona {
         private short edad;
         private string nombre;
 
         #region Builders
-       
-        protected Persona(string nombre, short edad)
-        {
+
+        protected Persona(string nombre, short edad) {
             this.nombre = nombre;
             this.edad = edad;
         }
@@ -43,26 +40,20 @@ namespace Entidades
         #endregion
 
         #region Properties
-        
-        public short Edad
-        {
+
+        public short Edad {
             get => this.edad;
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     this.edad = value;
                 }
             }
         }
-        
-        public string Nombre
-        {
+
+        public string Nombre {
             get => this.nombre;
-            set
-            {
-                if (!String.IsNullOrWhiteSpace(value))
-                {
+            set {
+                if (!String.IsNullOrWhiteSpace(value)) {
                     this.nombre = value;
                 }
             }
@@ -71,22 +62,19 @@ namespace Entidades
         #endregion
 
         #region Operators
-        
-        public static explicit operator string(Persona persona)
-        {
+
+        public static explicit operator string(Persona persona) {
             return persona.Mostrar();
         }
 
         #endregion
 
         #region Methods
-        
-        protected virtual string Mostrar()
-        {
+
+        protected virtual string Mostrar() {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Tipo: {this.GetType().Name}");
-            if (!(String.IsNullOrWhiteSpace(this.Nombre)))
-            {
+            if (!(String.IsNullOrWhiteSpace(this.Nombre))) {
                 data.AppendLine($"Nombre: {this.Nombre}");
             }
             data.AppendLine($"Edad: {this.Edad}");

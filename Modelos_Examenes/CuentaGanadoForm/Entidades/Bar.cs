@@ -25,27 +25,22 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entidades
-{
-    public class Bar
-    {
+namespace Entidades {
+    public class Bar {
         private List<Empleado> empleados;
         private List<Gente> gente;
         private static Bar singleton;
 
         #region Builders
 
-        private Bar()
-        {
+        private Bar() {
             this.empleados = new List<Empleado>();// { new Empleado("Facu", 31)};
             this.gente = new List<Gente>();// { new Gente(52), new Gente(42), new Gente(56)};
-            
+
         }
 
-        public static Bar GetBar()
-        {
-            if (Bar.singleton is null)
-            {
+        public static Bar GetBar() {
+            if (Bar.singleton is null) {
                 Bar.singleton = new Bar();
             }
 
@@ -56,13 +51,11 @@ namespace Entidades
 
         #region Properties
 
-        public List<Empleado> Empleados
-        {
+        public List<Empleado> Empleados {
             get => this.empleados;
         }
 
-        public List<Gente> Gente
-        {
+        public List<Gente> Gente {
             get => this.gente;
         }
 
@@ -70,21 +63,14 @@ namespace Entidades
 
         #region Operators
 
-        public static bool operator +(Bar bar, Empleado empleado)
-        {
-            if (!(bar is null) && !(empleado is null))
-            {
-                if(bar.empleados.Count == 0 && empleado.Validar())
-                {
+        public static bool operator +(Bar bar, Empleado empleado) {
+            if (!(bar is null) && !(empleado is null)) {
+                if (bar.empleados.Count == 0 && empleado.Validar()) {
                     bar.empleados.Add(empleado);
                     return true;
-                }
-                else
-                {
-                    foreach (Empleado empleadoDeBar in bar.empleados)
-                    {
-                        if ((empleadoDeBar != empleado) && empleado.Validar())
-                        {
+                } else {
+                    foreach (Empleado empleadoDeBar in bar.empleados) {
+                        if ((empleadoDeBar != empleado) && empleado.Validar()) {
                             bar.empleados.Add(empleado);
                             return true;
                         }
@@ -95,13 +81,10 @@ namespace Entidades
             return false;
         }
 
-        public static bool operator +(Bar bar, Gente gente)
-        {
-            if (!(bar is null) && !(gente is null))
-            {
-                if (bar.gente.Count < (bar.empleados.Count * 10) && 
-                    gente.Validar())
-                {
+        public static bool operator +(Bar bar, Gente gente) {
+            if (!(bar is null) && !(gente is null)) {
+                if (bar.gente.Count < (bar.empleados.Count * 10) &&
+                    gente.Validar()) {
                     bar.gente.Add(gente);
                     return true;
                 }
@@ -115,17 +98,17 @@ namespace Entidades
 
         #region Methods
 
-        public override string ToString()
-        {
+        public override string ToString() {
             StringBuilder data = new StringBuilder();
-            foreach (Empleado e in this.empleados)
-            {
+            data.AppendLine("=== Empleados =====#");
+            foreach (Empleado e in this.empleados) {
                 data.Append(e.ToString());
             }
-            foreach (Gente g in this.gente)
-            {
+            data.AppendLine("=== Clientes =====#");
+            foreach (Gente g in this.gente) {
                 data.Append(g.ToString());
             }
+            data.Append("========#");
 
             return data.ToString();
         }

@@ -24,35 +24,30 @@
 
 using System.Text;
 
-namespace Entidades
-{
-    public class Gente : Persona
-    {
+namespace Entidades {
+    public class Gente : Persona {
 
         #region Buidlers
-        
+
         public Gente(short edad)
             : base("Cliente", edad) { }
 
         #endregion
 
         #region Methods
-        
-        protected override string Mostrar()
-        {
+
+        protected override string Mostrar() {
             StringBuilder data = new StringBuilder();
-            data.Append(base.Mostrar());
+            data.Append($"{base.Mostrar()}\n");
 
             return data.ToString();
         }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             return this.Mostrar();
         }
 
-        public override bool Validar()
-        {
+        public override bool Validar() {
             return this.Edad > 17;
         }
 
