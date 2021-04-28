@@ -24,17 +24,19 @@
 
 using System.Text;
 
-namespace Entidades
-{
-    public abstract class Animal
-    {
+namespace Entidades {
+    public abstract class Animal {
         private int kilosAlimentos;
         private string nombre;
 
         #region Builder
 
-        public Animal(string nombre, int volumen)
-        {
+        /// <summary>
+        /// Builds the entity with the name and volume of food that eats.
+        /// </summary>
+        /// <param name="nombre">Name of the entity.</param>
+        /// <param name="volumen">Volume of food that eats</param>
+        public Animal(string nombre, int volumen) {
             this.kilosAlimentos = volumen;
             this.nombre = nombre;
         }
@@ -43,38 +45,43 @@ namespace Entidades
 
         #region Properties
 
-        public int KilosAlimento
-        {
+        /// <summary>
+        /// Gets the kilos of food that eats the entity.
+        /// </summary>
+        public int KilosAlimento {
             get => this.kilosAlimentos;
         }
 
+        /// <summary>
+        /// Gets the boolean state if eat grass or not.
+        /// </summary>
         public abstract bool ComePasto { get; }
 
+        /// <summary>
+        /// Gets the boolean state if eats balanced food or not.
+        /// </summary>
         public abstract bool ComeBalanceado { get; }
 
         #endregion
 
         #region Methods
 
-        public virtual string Datos()
-        {
+        /// <summary>
+        /// Gets the data of the entity as a string.
+        /// </summary>
+        /// <returns>The data of the entity as a string.</returns>
+        public virtual string Datos() {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"{this.nombre} come {this.KilosAlimento}kg");
-            if (this.ComeBalanceado)
-            {
+            if (this.ComeBalanceado) {
                 data.AppendLine("Consume Balanceado SI");
-            }
-            else
-            {
+            } else {
                 data.AppendLine("Consume Balanceado NO");
             }
 
-            if (this.ComePasto)
-            {
+            if (this.ComePasto) {
                 data.AppendLine("Come Pasto SI");
-            }
-            else
-            {
+            } else {
                 data.AppendLine("Come Pasto NO");
             }
 

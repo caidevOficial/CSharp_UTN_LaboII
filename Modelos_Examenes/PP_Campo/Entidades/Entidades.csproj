@@ -41,12 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Caballo.cs" />
-    <Compile Include="Campo.cs" />
-    <Compile Include="Cerdo.cs" />
+    <Compile Include="Classes\SuperClass\Animal.cs" />
+    <Compile Include="Classes\SubClasses\Caballo.cs" />
+    <Compile Include="Classes\Campo.cs" />
+    <Compile Include="Classes\SubClasses\Cerdo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vaca.cs" />
+    <Compile Include="Classes\SubClasses\Vaca.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

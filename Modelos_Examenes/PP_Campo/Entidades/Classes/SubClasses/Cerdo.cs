@@ -22,54 +22,32 @@
  * SOFTWARE.
  */
 
-using System.Text;
+namespace Entidades {
+    public sealed class Cerdo : Animal {
 
-namespace Entidades
-{
-    public class Vaca : Animal
-    {
-        private Clasificacion clasificacion;
+        #region Builder
 
-        public enum Clasificacion
-        {
-            Lechera,
-            Normando,
-            Pasiega,
-            HolandoArgentina,
-            Tudanca
-        }
-
-        #region Builders
-
-        public Vaca(string nombre, int kilosAlimento)
+        /// <summary>
+        /// Builds the entity with the name and volume of food that eats.
+        /// </summary>
+        /// <param name="nombre">Name of the entity.</param>
+        /// <param name="kilosAlimento">Volume of food that eats</param>
+        public Cerdo(string nombre, int kilosAlimento)
             : base(nombre, kilosAlimento) { }
-
-        public Vaca(string nombre, int kilosAlimento, Clasificacion clasificacion)
-            : this(nombre, kilosAlimento)
-        {
-            this.clasificacion = clasificacion;
-        }
 
         #endregion
 
         #region Properties
 
-        public override bool ComePasto { get => true; }
+        /// <summary>
+        /// Gets the boolean state if eat grass or not.
+        /// </summary>
+        public override bool ComePasto { get => false; }
 
+        /// <summary>
+        /// Gets the boolean state if eats balanced food or not.
+        /// </summary>
         public override bool ComeBalanceado { get => true; }
-
-        #endregion
-
-        #region Methods
-
-        public override string Datos()
-        {
-            StringBuilder data = new StringBuilder();
-            data.Append(base.Datos());
-            data.AppendLine($"Clasificada como: {this.clasificacion}");
-
-            return data.ToString();
-        }
 
         #endregion
 

@@ -26,19 +26,15 @@ using Entidades;
 using System;
 using System.Windows.Forms;
 
-namespace PP_Campo
-{
-    public partial class FrmPrincipal : Form
-    {
+namespace PP_Campo {
+    public partial class FrmPrincipal : Form {
         Campo campo;
 
-        public FrmPrincipal()
-        {
+        public FrmPrincipal() {
             InitializeComponent();
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
+        private void FrmPrincipal_Load(object sender, EventArgs e) {
             this.campo = new Campo(1500);
             campo.TipoServicio = Campo.Tipo.Pastoreo;
             bool pudo = this.campo + new Cerdo("Pegy", 300);
@@ -46,15 +42,13 @@ namespace PP_Campo
             pudo = this.campo + new Vaca("Rosalinda", 450, Vaca.Clasificacion.Lechera);
             pudo = this.campo + new Vaca("Lola", 325);
             pudo = this.campo + new Caballo("Secretariat", 175, true);
-            if (!(this.campo + new Caballo("BoJack", 1, false)))
-            {
+            if (!(this.campo + new Caballo("BoJack", 1, false))) {
                 MessageBox.Show("Error", "Error en carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Console.WriteLine("ERROR!"); 
             }
         }
 
-        private void btnMostrar_Click(object sender, EventArgs e)
-        {
+        private void btnMostrar_Click(object sender, EventArgs e) {
             rtbSalidaDeTest.Text = campo.ToString();
         }
     }
