@@ -22,12 +22,8 @@
  * SOFTWARE.
  */
 
-using System;
-
-namespace Entities.Classes
-{
-    public class Rectangulo : Figura
-    {
+namespace Entities.Classes {
+    public class Rectangulo : Figura {
         protected double figureBase;
         protected double figureHeigth;
 
@@ -43,8 +39,7 @@ namespace Entities.Classes
         /// </summary>
         /// <param name="figureBase">Base of the entity.</param>
         /// <param name="figureHeight">Heigth of the entity.</param>
-        public Rectangulo(double figureBase, double figureHeigth) : base()
-        {
+        public Rectangulo(double figureBase, double figureHeigth) : base() {
             this.Base = figureBase;
             this.Heigth = figureHeigth;
         }
@@ -57,13 +52,10 @@ namespace Entities.Classes
         /// Get: Gets the Heigth of the entity.
         /// Set: Sets the Heigth of the entity.
         /// </summary>
-        public double Heigth
-        {
+        public double Heigth {
             get { return this.figureHeigth; }
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     this.figureHeigth = value;
                 }
             }
@@ -73,13 +65,10 @@ namespace Entities.Classes
         /// Get: Gets the Base of the entity.
         /// Set: Sets the Base of the entity.
         /// </summary>
-        public double Base
-        {
+        public double Base {
             get { return this.figureBase; }
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     this.figureBase = value;
                 }
             }
@@ -93,8 +82,7 @@ namespace Entities.Classes
         /// Calculates the perimeter of the entity.
         /// </summary>
         /// <returns>The perimeter of the entity as a double</returns>
-        public override double CalcularPerimetro()
-        {
+        public override double CalcularPerimetro() {
             return this.Base * 2 + this.Heigth * 2;
         }
 
@@ -102,8 +90,7 @@ namespace Entities.Classes
         /// Calculates the area of the entity.
         /// </summary>
         /// <returns>The area as a double.</returns>
-        public override double CalcularSuperficie()
-        {
+        public override double CalcularSuperficie() {
             return this.Base * this.Heigth;
         }
 
@@ -111,8 +98,7 @@ namespace Entities.Classes
         /// Writes a message about draw the entity.
         /// </summary>
         /// <returns>The message as a string.</returns>
-        public override string Dibujar()
-        {
+        public override string Dibujar() {
             return "Dibujando Rectángulo...";
         }
 

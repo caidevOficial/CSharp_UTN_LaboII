@@ -25,16 +25,14 @@
 using System;
 using System.Windows.Forms;
 
-namespace Practica_WF_MiniSuper
-{
-    static class Program
-    {
+namespace Practica_WF_MiniSuper {
+    static class Program {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
-        static void Main()
-        {
+        static void Main() {
+            Console.Title = "Practica 04 - MiniSuper";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());

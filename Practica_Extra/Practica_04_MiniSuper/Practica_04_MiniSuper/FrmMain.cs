@@ -26,22 +26,17 @@ using Models;
 using System;
 using System.Windows.Forms;
 
-namespace Practica_WF_MiniSuper
-{
-    public partial class FrmMain : Form
-    {
-        public FrmMain()
-        {
+namespace Practica_WF_MiniSuper {
+    public partial class FrmMain : Form {
+        public FrmMain() {
             InitializeComponent();
         }
 
-        private void btnNuevoCliente_Click(object sender, EventArgs e)
-        {
+        private void btnNuevoCliente_Click(object sender, EventArgs e) {
             FrmAltaUsuario frmAltaUsuario = new FrmAltaUsuario();
             frmAltaUsuario.Location = this.Location;
             // Solo te deja interactuar con esa ventana - manera modal
-            if (frmAltaUsuario.ShowDialog() == DialogResult.OK)
-            {
+            if (frmAltaUsuario.ShowDialog() == DialogResult.OK) {
                 // Agrego el usuario a la lista
                 MiniSuper.AddUsuarios(frmAltaUsuario.GetUsuario());
             }
@@ -56,16 +51,13 @@ namespace Practica_WF_MiniSuper
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
+        private void FrmMain_Load(object sender, EventArgs e) {
 
         }
 
-        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e) {
             // Si cancela el alert, no sale del form.
-            if (MessageBox.Show("Seguro que desea Salir?", "Cerrando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
-            {
+            if (MessageBox.Show("Seguro que desea Salir?", "Cerrando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No) {
                 e.Cancel = true;
             }
 

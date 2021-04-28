@@ -24,10 +24,8 @@
 
 using System;
 
-namespace ClassLibrary
-{
-    public class Pet
-    {
+namespace ClassLibrary {
+    public sealed class Pet {
         private string kind;
         private string name;
         private DateTime birthdate;
@@ -38,7 +36,7 @@ namespace ClassLibrary
         /// <summary>
         /// Builds the entity without parameters.
         /// </summary>
-        public Pet(){}
+        public Pet() { }
 
         /// <summary>
         /// Builds the entity with all its parameters.
@@ -46,8 +44,7 @@ namespace ClassLibrary
         /// <param name="kind">Kind of the entity.</param>
         /// <param name="name">Name of the entity.</param>
         /// <param name="birthdate">birthdate of the entity.</param>
-        public Pet(string kind, string name, DateTime birthdate) : this()
-        {
+        public Pet(string kind, string name, DateTime birthdate) : this() {
             this.kind = kind;
             this.name = name;
             this.birthdate = birthdate;
@@ -62,8 +59,7 @@ namespace ClassLibrary
         /// Gets the kind of the pet.
         /// </summary>
         /// <returns>the kind of the pet.</returns>
-        public string GetKind()
-        {
+        public string GetKind() {
             return this.kind;
         }
 
@@ -71,8 +67,7 @@ namespace ClassLibrary
         /// Gets the name of the pet.
         /// </summary>
         /// <returns>The name of the pet.</returns>
-        public string GetName()
-        {
+        public string GetName() {
             return this.name;
         }
 
@@ -80,8 +75,7 @@ namespace ClassLibrary
         /// Gets the birthday of the pet.
         /// </summary>
         /// <returns>The birthday of the pet.</returns>
-        public DateTime GetBirthdate()
-        {
+        public DateTime GetBirthdate() {
             return this.birthdate;
         }
 
@@ -89,8 +83,7 @@ namespace ClassLibrary
         /// Gets the vaccine history of the pet.
         /// </summary>
         /// <returns>The vaccine history.</returns>
-        public Vaccination[] GetVaccineHistory()
-        {
+        public Vaccination[] GetVaccineHistory() {
             return this.history;
         }
 
@@ -103,12 +96,9 @@ namespace ClassLibrary
         /// </summary>
         /// <param name="thisVaccine">The vaccine to set.</param>
         /// <returns>true if can add, otherwise returns false.</returns>
-        public bool SetVaccine(Vaccination thisVaccine)
-        {
-            for (int i = 0; i < this.GetVaccineHistory().Length; i++)
-            {
-                if (this.GetVaccineHistory()[i] == null)
-                {
+        public bool SetVaccine(Vaccination thisVaccine) {
+            for (int i = 0; i < this.GetVaccineHistory().Length; i++) {
+                if (this.GetVaccineHistory()[i] == null) {
                     this.history[i] = thisVaccine;
                     return true;
                 }
@@ -120,26 +110,22 @@ namespace ClassLibrary
         /// Returns the info of the pet as a string.
         /// </summary>
         /// <returns>All the info of the pet as a string.</returns>
-        public string PetToString()
-        {
-            string petInfo = 
+        public string PetToString() {
+            string petInfo =
                 $"Name: {this.GetName()}.\n" +
                 $"Kind: {this.GetKind()}.\n" +
                 $"Birthdate: {this.GetBirthdate()}.\n" +
                 $"Vaccines: \n";
             string vaccines = "";
-            if (this.GetVaccineHistory() != null)
-            {
-                foreach (Vaccination vaccine in this.GetVaccineHistory())
-                {
-                    if (vaccine != null)
-                    {
+            if (this.GetVaccineHistory() != null) {
+                foreach (Vaccination vaccine in this.GetVaccineHistory()) {
+                    if (vaccine != null) {
                         vaccines += vaccine.GetName() + "\n";
                     }
                 }
                 return petInfo + vaccines;
             }
-            
+
             return petInfo;
         }
 

@@ -22,18 +22,15 @@
  * SOFTWARE.
  */
 
-using System;
 using ClassLibrary;
+using System;
 
-namespace Practica_OOP
-{
-    class Program
-    {
-        static void Main(string[] kargs)
-        {
+namespace Practica_OOP {
+    class Program {
+        static void Main(string[] kargs) {
             Console.Title = "Practica 02 - OOP";
             Customer thisCustomer = new Customer("Principe", "Vegeta");
-            Console.WriteLine(thisCustomer.GetFullName()); 
+            Console.WriteLine(thisCustomer.GetFullName());
             Console.ReadKey();
         }
     }

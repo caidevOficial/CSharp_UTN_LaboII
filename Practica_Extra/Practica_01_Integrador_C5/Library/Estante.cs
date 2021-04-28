@@ -24,10 +24,8 @@
 
 using System.Text;
 
-namespace Library
-{
-    public class Estante
-    {
+namespace Library {
+    public class Estante {
         private Producto[] productos;
         private int ubicacionEstante;
 
@@ -37,8 +35,7 @@ namespace Library
         /// Sets the capacity of the array of products.
         /// </summary>
         /// <param name="capacidad">capacity of the array.</param>
-        private Estante(int capacidad)
-        {
+        private Estante(int capacidad) {
             this.productos = new Producto[capacidad];
         }
 
@@ -47,8 +44,7 @@ namespace Library
         /// </summary>
         /// <param name="capacidad">capacity of the array.</param>
         /// <param name="ubicacionEstante">Ubication of the products.</param>
-        public Estante(int capacidad, int ubicacionEstante) : this(capacidad)
-        {
+        public Estante(int capacidad, int ubicacionEstante) : this(capacidad) {
             this.ubicacionEstante = ubicacionEstante;
         }
 
@@ -60,8 +56,7 @@ namespace Library
         /// Gets all the Products of the entity.
         /// </summary>
         /// <returns>An array with all the products of the entity.</returns>
-        public Producto[] GetProductos()
-        {
+        public Producto[] GetProductos() {
             return this.productos;
         }
 
@@ -77,12 +72,9 @@ namespace Library
         /// <param name="e">Shelf to check.</param>
         /// <param name="p">Product to check.</param>
         /// <returns>True if the product is in the Shelf, otherwise returns false.</returns>
-        public static bool operator ==(Estante e, Producto p)
-        {
-            foreach (Producto item in e.GetProductos())
-            {
-                if (item == p)
-                {
+        public static bool operator ==(Estante e, Producto p) {
+            foreach (Producto item in e.GetProductos()) {
+                if (item == p) {
                     return true;
                 }
             }
@@ -96,8 +88,7 @@ namespace Library
         /// <param name="e">Shelf to check.</param>
         /// <param name="p">Product to check.</param>
         /// <returns>True if the product isn't in the Shelf, otherwise returns false.</returns>
-        public static bool operator !=(Estante e, Producto p)
-        {
+        public static bool operator !=(Estante e, Producto p) {
             return !(e == p);
         }
 
@@ -111,14 +102,10 @@ namespace Library
         /// <param name="e">Shelf to check.</param>
         /// <param name="p">Product to add in the Shelf</param>
         /// <returns>True if can add the product, otherwise returns false.</returns>
-        public static bool operator +(Estante e, Producto p)
-        {
-            if(e != p)
-            {
-                for (int i = 0; i < e.productos.Length ; i++)
-                {
-                    if(e.GetProductos()[i] is null)
-                    {
+        public static bool operator +(Estante e, Producto p) {
+            if (e != p) {
+                for (int i = 0; i < e.productos.Length; i++) {
+                    if (e.GetProductos()[i] is null) {
                         e.productos[i] = p;
                         return true;
                     }
@@ -134,14 +121,10 @@ namespace Library
         /// <param name="e">Shelf to check.</param>
         /// <param name="p">Product to remove if is in the shelf.</param>
         /// <returns>The shelf without the product.</returns>
-        public static Estante operator -(Estante e, Producto p)
-        {
-            if (e == p)
-            {
-                for (int i = 0; i < e.GetProductos().Length; i++)
-                {
-                    if (e.GetProductos()[i] == p)
-                    {
+        public static Estante operator -(Estante e, Producto p) {
+            if (e == p) {
+                for (int i = 0; i < e.GetProductos().Length; i++) {
+                    if (e.GetProductos()[i] == p) {
                         e.GetProductos()[i] = null;
                     }
                 }
@@ -160,13 +143,10 @@ namespace Library
         /// </summary>
         /// <param name="e">Entity to return its description.</param>
         /// <returns>A message with the description of the entity.</returns>
-        public static string MostrarEstante(Estante e)
-        {
+        public static string MostrarEstante(Estante e) {
             StringBuilder message = new StringBuilder();
-            foreach (Producto item in e.GetProductos())
-            {
-                if(!(item is null))
-                {
+            foreach (Producto item in e.GetProductos()) {
+                if (!(item is null)) {
                     message.Append(Producto.MostrarProducto(item));
                 }
             }

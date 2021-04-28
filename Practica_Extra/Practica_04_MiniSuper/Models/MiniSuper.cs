@@ -24,10 +24,8 @@
 
 using System;
 
-namespace Models
-{
-    public static class MiniSuper
-    {
+namespace Models {
+    public static class MiniSuper {
         static Usuario[] usuarios;
 
         #region Builders
@@ -35,8 +33,7 @@ namespace Models
         /// <summary>
         /// Builds the entity without parameters and initializes the array.
         /// </summary>
-        static MiniSuper()
-        {
+        static MiniSuper() {
             usuarios = new Usuario[0];
         }
 
@@ -48,8 +45,7 @@ namespace Models
         /// Get: gets all the users of the entity.
         /// </summary>
         /// <returns>The list of users of the entity.</returns>
-        public static Usuario[] GetUsuarios()
-        {
+        public static Usuario[] GetUsuarios() {
             return usuarios;
         }
 
@@ -58,12 +54,9 @@ namespace Models
         /// </summary>
         /// <param name="user">User to add.</param>
         /// <returns>True if can add the User, otherwise returns false.</returns>
-        public static bool AddUsuarios(Usuario user)
-        {
-            foreach (Usuario item in usuarios)
-            {
-                if (user == item)
-                {
+        public static bool AddUsuarios(Usuario user) {
+            foreach (Usuario item in usuarios) {
+                if (user == item) {
                     return false;
                 }
             }

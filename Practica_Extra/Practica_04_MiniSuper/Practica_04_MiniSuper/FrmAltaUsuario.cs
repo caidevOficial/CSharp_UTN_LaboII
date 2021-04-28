@@ -26,34 +26,26 @@ using Models;
 using System;
 using System.Windows.Forms;
 
-namespace Practica_WF_MiniSuper
-{
-    public partial class FrmAltaUsuario : Form
-    {
+namespace Practica_WF_MiniSuper {
+    public partial class FrmAltaUsuario : Form {
         private Usuario user;
 
-        public FrmAltaUsuario()
-        {
+        public FrmAltaUsuario() {
             InitializeComponent();
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
+        private void btnAceptar_Click(object sender, EventArgs e) {
             string[] formasPago = new string[1];
-            foreach (Control miControl in this.pnlFormaPago.Controls)
-            {
-                if (miControl is CheckBox && ((CheckBox)miControl).Checked)
-                {
+            foreach (Control miControl in this.pnlFormaPago.Controls) {
+                if (miControl is CheckBox && ((CheckBox)miControl).Checked) {
                     Array.Resize<string>(ref formasPago, formasPago.Length + 1);
                     formasPago[formasPago.Length - 1] = ((CheckBox)miControl).Text;
                 }
             }
 
             string tipoPago = String.Empty;
-            foreach (Control miControl in this.groupBox_TipoPago.Controls)
-            {
-                if (miControl is RadioButton && ((RadioButton)miControl).Checked)
-                {
+            foreach (Control miControl in this.groupBox_TipoPago.Controls) {
+                if (miControl is RadioButton && ((RadioButton)miControl).Checked) {
                     tipoPago = miControl.Text;
                 }
             }
@@ -62,15 +54,11 @@ namespace Practica_WF_MiniSuper
             //this.comboBoxProvincia.DataSource = asignarle la coleccion
 
             string provincia = String.Empty;
-            if (this.comboBoxProvincia.SelectedIndex == -1)
-            {
-                if (this.comboBoxProvincia.Text != String.Empty)
-                {
+            if (this.comboBoxProvincia.SelectedIndex == -1) {
+                if (this.comboBoxProvincia.Text != String.Empty) {
                     provincia = this.comboBoxProvincia.Text;
                 }
-            }
-            else
-            {
+            } else {
                 provincia = this.comboBoxProvincia.SelectedItem.ToString();
             }
 
@@ -82,27 +70,21 @@ namespace Practica_WF_MiniSuper
             this.Close();
         }
 
-        private void cbxEfectivo_CheckedChanged(object sender, EventArgs e)
-        {
-            if (((CheckBox)sender).Checked)
-            {
+        private void cbxEfectivo_CheckedChanged(object sender, EventArgs e) {
+            if (((CheckBox)sender).Checked) {
                 this.groupBox1.Visible = true;
                 this.groupBox_TipoPago.Visible = true;
-            }
-            else
-            {
+            } else {
                 this.groupBox1.Visible = false;
                 this.groupBox_TipoPago.Visible = false;
             }
         }
 
-        private void comboBoxProvincia_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void comboBoxProvincia_SelectedIndexChanged(object sender, EventArgs e) {
             this.btnAceptar.Enabled = true;
         }
 
-        public Usuario GetUsuario()
-        {
+        public Usuario GetUsuario() {
             return this.user;
         }
     }

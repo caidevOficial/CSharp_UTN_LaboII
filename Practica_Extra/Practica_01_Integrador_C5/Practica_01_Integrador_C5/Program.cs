@@ -22,16 +22,13 @@
  * SOFTWARE.
  */
 
-using System;
 using Library;
+using System;
 
-namespace Practica_Integrador_C5
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Title = "Practica integrador";
+namespace Practica_Integrador_C5 {
+    class Program {
+        static void Main(string[] args) {
+            Console.Title = "Practica integrador 01";
             Console.ForegroundColor = ConsoleColor.Green;
 
             #region Creates Products
@@ -46,53 +43,38 @@ namespace Practica_Integrador_C5
 
             // Agrego los productos al estante
             #region Add the product to the shelf
-            if (estante + p1)
-            {
-                Console.ForegroundColor = ConsoleColor.Green; 
-                Console.WriteLine("Agregó {0} {1} {2}", p1.GetMarca(), (string)p1, p1.GetPrecio());
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("¡NO agregó {0} {1} {2}!", p1.GetMarca(), (string)p1, p1.GetPrecio());
-            }
-            if (estante + p1)
-            {
+            if (estante + p1) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Agregó {0} {1} {2}", p1.GetMarca(), (string)p1, p1.GetPrecio());
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("¡NO agregó {0} {1} {2}!", p1.GetMarca(), (string)p1, p1.GetPrecio());
             }
-            if (estante + p2)
-            {
+            if (estante + p1) {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Agregó {0} {1} {2}", p1.GetMarca(), (string)p1, p1.GetPrecio());
+            } else {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("¡NO agregó {0} {1} {2}!", p1.GetMarca(), (string)p1, p1.GetPrecio());
+            }
+            if (estante + p2) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Agregó {0} {1} {2}", p2.GetMarca(), (string)p2, p2.GetPrecio());
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("¡NO agregó {0} {1} {2}!", p2.GetMarca(), (string)p2, p2.GetPrecio());
             }
-            if (estante + p3)
-            {
+            if (estante + p3) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Agregó {0} {1} {2}", p3.GetMarca(), (string)p3, p3.GetPrecio());
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("¡NO agregó {0} {1} {2}!", p3.GetMarca(), (string)p3, p3.GetPrecio());
             }
-            if (estante + p4)
-            {
+            if (estante + p4) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Agregó {0} {1} {2}", p4.GetMarca(), (string)p4, p4.GetPrecio());
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("¡NO agregó {0} {1} {2}!", p4.GetMarca(), (string)p4, p4.GetPrecio());
             }

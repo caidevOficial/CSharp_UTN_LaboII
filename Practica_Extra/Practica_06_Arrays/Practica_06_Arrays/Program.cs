@@ -24,43 +24,37 @@
 
 using System;
 
-namespace Practica_Arrays
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Practica_Arrays {
+    class Program {
+
+        static void Main(string[] args) {
             // Declarar
             string[] nombres;
             // Instanciar
             nombres = new string[4];
             // Inicializar - asignar
-            for (int i = 0; i < nombres.Length; i++)
-            {
-                if (nombres[i] == null)
-                {
-                    nombres[i] = "Nombre " + (i+1).ToString();
+            for (int i = 0; i < nombres.Length; i++) {
+                if (nombres[i] == null) {
+                    nombres[i] = "Nombre " + (i + 1).ToString();
                 }
             }
 
             // Mostrar posiciones
-            foreach (string nombre in nombres)
-            {
+            foreach (string nombre in nombres) {
                 Console.WriteLine(nombre);
             }
             Console.WriteLine($"Dimensiones: {nombres.Rank}");
 
             // Hardcodear dos dimensiones
             string[,] personas = new string[2, 2];
-            personas[0,0] = "Facu";
+            personas[0, 0] = "Facu";
             personas[0, 1] = "007";
             personas[1, 0] = "Pepe";
             personas[1, 1] = "048";
 
             // Mostrar dos dimensiones
-            for (int i = 0; i < personas.GetLength(0); i++)
-            {
-                Console.WriteLine($"Personas: {personas[i,0]} Numero: {personas[i,1]}");
+            for (int i = 0; i < personas.GetLength(0); i++) {
+                Console.WriteLine($"Personas: {personas[i, 0]} Numero: {personas[i, 1]}");
             }
 
             Console.WriteLine($"Dimensiones Personas: {personas.Rank}");
@@ -71,7 +65,7 @@ namespace Practica_Arrays
             // Jagged Array
             string[][] arrayDeArray = new string[2][];
             arrayDeArray[0] = nombres;
-            arrayDeArray[1] = new string[1] {"casa" };
+            arrayDeArray[1] = new string[1] { "casa" };
 
             Console.ReadKey();
         }

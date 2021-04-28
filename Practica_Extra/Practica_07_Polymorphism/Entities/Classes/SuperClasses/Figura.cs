@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Entities.Classes
-{
-    public abstract class Figura
-    {
+namespace Entities.Classes {
+    public abstract class Figura {
 
         #region Methods
 
@@ -45,8 +43,7 @@ namespace Entities.Classes
         /// Writes a message about draw the entity.
         /// </summary>
         /// <returns>The message as a string.</returns>
-        public virtual string Dibujar()
-        {
+        public virtual string Dibujar() {
             return "Dibujando forma...";
         }
 

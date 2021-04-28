@@ -24,10 +24,8 @@
 
 using System;
 
-namespace ClassLibrary
-{
-    public class Vaccination
-    {
+namespace ClassLibrary {
+    public sealed class Vaccination {
         private string name;
 
         #region Builders
@@ -35,14 +33,13 @@ namespace ClassLibrary
         /// <summary>
         /// Builds the entity without params.
         /// </summary>
-        public Vaccination() {}
+        public Vaccination() { }
 
         /// <summary>
         /// Builds the entity with the name.
         /// </summary>
         /// <param name="name">Name of the entity.</param>
-        public Vaccination(string name) : this()
-        {
+        public Vaccination(string name) : this() {
             this.name = name;
         }
 
@@ -54,8 +51,7 @@ namespace ClassLibrary
         /// Gets the namethe info of the vaccine.
         /// </summary>
         /// <returns>the namethe info of the vaccine.</returns>
-        public string GetName()
-        {
+        public string GetName() {
             return this.name;
         }
 
@@ -63,8 +59,7 @@ namespace ClassLibrary
         /// Sets the name of the vaccine.
         /// </summary>
         /// <param name="name">the name to set.</param>
-        public void SetName(string name)
-        {
+        public void SetName(string name) {
             this.name = name;
         }
 
@@ -76,8 +71,7 @@ namespace ClassLibrary
         /// Returns the info of the vaccine as a string.
         /// </summary>
         /// <returns>The info of the vaccine.</returns>
-        public string VaccineToString()
-        {
+        public string VaccineToString() {
             return $"Vaccine Name: {this.GetName()}.";
         }
 

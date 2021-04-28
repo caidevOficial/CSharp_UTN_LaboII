@@ -26,12 +26,9 @@ using Business;
 using System;
 using System.Collections.Generic;
 
-namespace Presentation
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Presentation {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Practica 05 - CardGame";
 
             #region Instances

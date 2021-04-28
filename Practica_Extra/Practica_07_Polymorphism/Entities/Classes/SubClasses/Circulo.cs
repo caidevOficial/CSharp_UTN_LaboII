@@ -24,10 +24,8 @@
 
 using System;
 
-namespace Entities.Classes
-{
-    public sealed class Circulo : Figura
-    {
+namespace Entities.Classes {
+    public sealed class Circulo : Figura {
         private double radio;
 
         #region Builders
@@ -36,8 +34,7 @@ namespace Entities.Classes
         /// Builds the entity with all its parameters.
         /// </summary>
         /// <param name="radio">Radio of the entity.</param>
-        public Circulo(double radio) : base()
-        {
+        public Circulo(double radio) : base() {
             this.Radio = radio;
         }
 
@@ -49,13 +46,10 @@ namespace Entities.Classes
         /// Get: Gets the radio of the entity.
         /// Set: Sets the radio of the entity.
         /// </summary>
-        public double Radio
-        {
+        public double Radio {
             get => this.radio;
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     this.radio = value;
                 }
             }
@@ -69,8 +63,7 @@ namespace Entities.Classes
         /// Calculates the perimeter of the entity.
         /// </summary>
         /// <returns>The perimeter of the entity as a double</returns>
-        public override double CalcularPerimetro()
-        {
+        public override double CalcularPerimetro() {
             return Math.PI * this.Radio * 2;
         }
 
@@ -78,8 +71,7 @@ namespace Entities.Classes
         /// Calculates the area of the entity.
         /// </summary>
         /// <returns>The area as a double.</returns>
-        public override double CalcularSuperficie()
-        {
+        public override double CalcularSuperficie() {
             return Math.PI * Math.Pow(this.radio, 2);
         }
 
@@ -87,8 +79,7 @@ namespace Entities.Classes
         /// Writes a message about draw the entity.
         /// </summary>
         /// <returns>The message as a string.</returns>
-        public override string Dibujar()
-        {
+        public override string Dibujar() {
             return "Dibujando Círculo...";
         }
 

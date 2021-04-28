@@ -24,10 +24,8 @@
 
 using System.Text;
 
-namespace Library
-{
-    public class Producto
-    {
+namespace Library {
+    public class Producto {
         private string codigoDeBarra;
         private string marca;
         private float precio;
@@ -37,16 +35,14 @@ namespace Library
         /// <summary>
         /// Builds the entity Without params.
         /// </summary>
-        public Producto()
-        {
+        public Producto() {
         }
 
         /// <summary>
         /// Builds the entity With one param.
         /// </summary>
         /// <param name="codigoDeBarra">Barcode to set.</param>
-        public Producto(string codigoDeBarra)
-        {
+        public Producto(string codigoDeBarra) {
             this.codigoDeBarra = codigoDeBarra;
         }
 
@@ -55,8 +51,7 @@ namespace Library
         /// </summary>
         /// <param name="codigoDeBarra">Barcode to set.</param>
         /// <param name="marca">Brand to set.</param>
-        public Producto(string marca, string codigoDeBarra) : this(codigoDeBarra)
-        {
+        public Producto(string marca, string codigoDeBarra) : this(codigoDeBarra) {
             this.marca = marca;
         }
 
@@ -66,8 +61,7 @@ namespace Library
         /// <param name="codigoDeBarra">Barcode to set.</param>
         /// <param name="marca">Brand to set.</param>
         /// <param name="precio">Price to set.</param>
-        public Producto(string marca, string codigoDeBarra, float precio) : this(marca, codigoDeBarra)
-        {
+        public Producto(string marca, string codigoDeBarra, float precio) : this(marca, codigoDeBarra) {
             this.precio = precio;
         }
 
@@ -79,8 +73,7 @@ namespace Library
         /// Gets the brans of the entity.
         /// </summary>
         /// <returns>The brand.</returns>
-        public string GetMarca()
-        {
+        public string GetMarca() {
             return this.marca;
         }
 
@@ -88,8 +81,7 @@ namespace Library
         /// Gets the Price of the entity.
         /// </summary>
         /// <returns>The price of the entity.</returns>
-        public float GetPrecio()
-        {
+        public float GetPrecio() {
             return this.precio;
         }
 
@@ -101,13 +93,11 @@ namespace Library
         /// Cast a product to string to return its barcode.
         /// </summary>
         /// <param name="product">Product type object to cast.</param>
-        public static explicit operator string(Producto product)
-        {
-            if(product is null)
-            {
+        public static explicit operator string(Producto product) {
+            if (product is null) {
                 return " ";
-            }        
-            
+            }
+
             return product.codigoDeBarra;
         }
 
@@ -119,8 +109,7 @@ namespace Library
         /// <param name="product1">Product to compare.</param>
         /// <param name="marca">String of the brand to compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Producto product1, string marca)
-        {
+        public static bool operator !=(Producto product1, string marca) {
             return !(product1 == marca);
         }
 
@@ -130,8 +119,7 @@ namespace Library
         /// <param name="product1">Product to compare.</param>
         /// <param name="product2">Product to compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Producto product1, Producto product2)
-        {
+        public static bool operator !=(Producto product1, Producto product2) {
             return !(product1 == product2);
         }
 
@@ -145,8 +133,7 @@ namespace Library
         /// <param name="product1">Product to compare its brand.</param>
         /// <param name="marca">string of the brand to compare.</param>
         /// <returns>True if are equals, otherwise returns False.</returns>
-        public static bool operator ==(Producto product1, string marca)
-        {
+        public static bool operator ==(Producto product1, string marca) {
             return (product1.GetMarca() == marca);
         }
 
@@ -156,8 +143,7 @@ namespace Library
         /// <param name="product1">Product to compare its brand and barcode.</param>
         /// <param name="product2">Product to compare its brand and barcode.</param>
         /// <returns>True if are equals, otherwise returns False.</returns>
-        public static bool operator ==(Producto product1, Producto product2)
-        {
+        public static bool operator ==(Producto product1, Producto product2) {
             return (((string)product1 == (string)product2) && product1.GetMarca() == product2.GetMarca());
         }
 
@@ -172,8 +158,7 @@ namespace Library
         /// </summary>
         /// <param name="product">Entity to return its description.</param>
         /// <returns>A message with the description of the entity.</returns>
-        public static string MostrarProducto(Producto product)
-        {
+        public static string MostrarProducto(Producto product) {
             StringBuilder message = new StringBuilder();
             message.AppendLine($"Barcode: {((string)product)}.");
             message.AppendLine($"Brand: {product.GetMarca()}.");

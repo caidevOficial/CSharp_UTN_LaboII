@@ -22,12 +22,8 @@
  * SOFTWARE.
  */
 
-using System;
-
-namespace ClassLibrary
-{
-    public class Customer
-    {
+namespace ClassLibrary {
+    public sealed class Customer {
         // Attributes
         private string name;
         private string surname;
@@ -44,8 +40,7 @@ namespace ClassLibrary
         /// </summary>
         /// <param name="name">Name of the entity.</param>
         /// <param name="surname">surname of the entity.</param>
-        public Customer(string name, string surname):this()
-        {
+        public Customer(string name, string surname) : this() {
             this.name = name;
             this.surname = surname;
         }
@@ -59,8 +54,7 @@ namespace ClassLibrary
         /// Gets the name of the entity.
         /// </summary>
         /// <returns>The name of the entity.</returns>
-        public string GetName()
-        {
+        public string GetName() {
             return this.name;
         }
 
@@ -68,8 +62,7 @@ namespace ClassLibrary
         /// Gets the surname of the entity.
         /// </summary>
         /// <returns>The surname of the entity.</returns>
-        public string GetSurname()
-        {
+        public string GetSurname() {
             return this.surname;
         }
 
@@ -77,8 +70,7 @@ namespace ClassLibrary
         /// Gets the full name of the entity.
         /// </summary>
         /// <returns>The full name of the entity.</returns>
-        public string GetFullName()
-        {
+        public string GetFullName() {
             return $"{this.name} {this.surname}.";
         }
 
@@ -86,13 +78,13 @@ namespace ClassLibrary
         /// Sets the name of the entity.
         /// </summary>
         /// <param name="name">Name to set.</param>
-        public void SetName(string name)=> this.name = name;
+        public void SetName(string name) => this.name = name;
 
         /// <summary>
         /// Sets the surname of the entity.
         /// </summary>
         /// <param name="surname">Surname to set.</param>
-        public void SetSurname(string surname)=>this.surname = surname;
+        public void SetSurname(string surname) => this.surname = surname;
 
         #endregion
 

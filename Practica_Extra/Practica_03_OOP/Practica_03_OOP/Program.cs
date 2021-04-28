@@ -25,12 +25,9 @@
 using System;
 using ClassLibrary;
 
-namespace Practica_OOP_2
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Practica_OOP_2 {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Practica 03 - OOP";
             Console.ForegroundColor = ConsoleColor.Blue;
             Customer[] customers = new Customer[3];
@@ -38,7 +35,7 @@ namespace Practica_OOP_2
             #region Instances
 
             // Pets
-            Pet fatiga = new Pet("Pulgoso", "Fatiga", new DateTime(2020,02,24));
+            Pet fatiga = new Pet("Pulgoso", "Fatiga", new DateTime(2020, 02, 24));
             Pet salem = new Pet("Black", "Salem", new DateTime(2020, 02, 25));
             Pet garfield = new Pet("Orange", "Garfield", new DateTime(2020, 02, 20));
             Pet scooby = new Pet("Pulgoso", "Scooby doo", new DateTime(2020, 02, 26));
@@ -67,8 +64,7 @@ namespace Practica_OOP_2
             customers[1] = person2;
             customers[2] = person3;
 
-            foreach (Customer thisCustomer in customers)
-            {
+            foreach (Customer thisCustomer in customers) {
                 Console.WriteLine(thisCustomer.CustomerToString());
             }
 

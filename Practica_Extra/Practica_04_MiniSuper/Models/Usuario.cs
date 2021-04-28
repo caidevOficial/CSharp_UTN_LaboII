@@ -24,10 +24,8 @@
 
 using System.Text;
 
-namespace Models
-{
-    public class Usuario
-    {
+namespace Models {
+    public sealed class Usuario {
         private string name;
         private string surname;
         private string dni;
@@ -51,8 +49,7 @@ namespace Models
         /// <param name="formasPago">Payout type of the entity.</param>
         /// <param name="tipoPago">Payout of the entity.</param>
         /// <param name="provincia">Province of the entity.</param>
-        public Usuario(string name, string surname, string dni, string[] formasPago, string tipoPago, string provincia)
-        {
+        public Usuario(string name, string surname, string dni, string[] formasPago, string tipoPago, string provincia) {
             this.name = name;
             this.surname = surname;
             this.dni = dni;
@@ -69,8 +66,7 @@ namespace Models
         /// Shows the fullname of the entity.
         /// </summary>
         /// <returns>The fullname as a string.</returns>
-        private string MostrarNombre()
-        {
+        private string MostrarNombre() {
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Name: {this.name}");
             data.AppendLine($"Surname: {this.surname}");
@@ -81,8 +77,7 @@ namespace Models
         /// Cast to string.
         /// </summary>
         /// <returns></returns>
-        public override string ToString()
-        {
+        public override string ToString() {
             return this.MostrarNombre();
         }
 

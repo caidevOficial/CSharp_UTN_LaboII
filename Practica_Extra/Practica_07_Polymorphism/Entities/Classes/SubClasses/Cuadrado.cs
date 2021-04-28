@@ -22,13 +22,8 @@
  * SOFTWARE.
  */
 
-using System;
-
-namespace Entities.Classes
-{
-    public sealed class Cuadrado : Rectangulo
-    {
-
+namespace Entities.Classes {
+    public sealed class Cuadrado : Rectangulo {
 
         #region Builders
 
@@ -36,8 +31,7 @@ namespace Entities.Classes
         /// Builds the entity with all its parameters.
         /// </summary>
         /// <param name="side">Side of the entity.</param>
-        public Cuadrado(double side):base()
-        {
+        public Cuadrado(double side) : base() {
             this.Base = side;
             this.Heigth = this.Base;
         }
@@ -50,13 +44,10 @@ namespace Entities.Classes
         /// Get: Gets one Side of the Entity.
         /// Set: Sets one Side of the Entity.
         /// </summary>
-        public double Side1
-        {
+        public double Side1 {
             get => base.Heigth;
-            set
-            {
-                if(value > 0)
-                {
+            set {
+                if (value > 0) {
                     base.Heigth = value;
                 }
             }
@@ -66,13 +57,10 @@ namespace Entities.Classes
         /// Get: Gets one Side of the Entity.
         /// Set: Sets one Side of the Entity.
         /// </summary>
-        public double Side2
-        {
+        public double Side2 {
             get => base.Base;
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     base.Base = value;
                 }
             }
@@ -86,8 +74,7 @@ namespace Entities.Classes
         /// Calculates the perimeter of the entity.
         /// </summary>
         /// <returns>The perimeter of the entity as a double</returns>
-        public override double CalcularPerimetro()
-        {
+        public override double CalcularPerimetro() {
             return this.Base * 2 + this.Heigth * 2;
         }
 
@@ -95,8 +82,7 @@ namespace Entities.Classes
         /// Calculates the area of the entity.
         /// </summary>
         /// <returns>The area as a double.</returns>
-        public override double CalcularSuperficie()
-        {
+        public override double CalcularSuperficie() {
             return this.Base * this.Heigth;
         }
 
@@ -104,8 +90,7 @@ namespace Entities.Classes
         /// Writes a message about draw the entity.
         /// </summary>
         /// <returns>The message as a string.</returns>
-        public override string Dibujar()
-        {
+        public override string Dibujar() {
             return "Dibujando Cuadrado...";
         }
 

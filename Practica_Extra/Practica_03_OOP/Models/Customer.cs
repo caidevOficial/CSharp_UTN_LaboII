@@ -24,10 +24,8 @@
 
 using System;
 
-namespace ClassLibrary
-{
-    public class Customer
-    {
+namespace ClassLibrary {
+    public sealed class Customer {
         private string name;
         private string surname;
         private string address;
@@ -39,7 +37,7 @@ namespace ClassLibrary
         /// <summary>
         /// Builds the entity without parameters
         /// </summary>
-        public Customer(){}
+        public Customer() { }
 
         /// <summary>
         /// Builds the entity with all its parameters.
@@ -48,8 +46,7 @@ namespace ClassLibrary
         /// <param name="surname">Surname of the entity.</param>
         /// <param name="address">Address of the entity.</param>
         /// <param name="phone">Phone of the entity.</param>
-        public Customer(string name, string surname, string address, string phone) : this()
-        {
+        public Customer(string name, string surname, string address, string phone) : this() {
             this.name = name;
             this.surname = surname;
             this.address = address;
@@ -65,8 +62,7 @@ namespace ClassLibrary
         /// Gets the name of the customer.
         /// </summary>
         /// <returns>The name of the customer.</returns>
-        public string GetName()
-        {
+        public string GetName() {
             return this.name;
         }
 
@@ -74,8 +70,7 @@ namespace ClassLibrary
         /// Gets the surname of the customer.
         /// </summary>
         /// <returns>The surname of the customer.</returns>
-        public string GetSurname()
-        {
+        public string GetSurname() {
             return this.surname;
         }
 
@@ -83,8 +78,7 @@ namespace ClassLibrary
         /// Gets the address of the customer.
         /// </summary>
         /// <returns>The address of the customer.</returns>
-        public string GetAddress()
-        {
+        public string GetAddress() {
             return this.address;
         }
 
@@ -92,8 +86,7 @@ namespace ClassLibrary
         /// Gets the phone number of the customer.
         /// </summary>
         /// <returns>The phone number of the customer.</returns>
-        public string GetPhone()
-        {
+        public string GetPhone() {
             return this.phone;
         }
 
@@ -101,8 +94,7 @@ namespace ClassLibrary
         /// Gets the array of pets of the customer.
         /// </summary>
         /// <returns>The array of pets.</returns>
-        public Pet[] GetPet()
-        {
+        public Pet[] GetPet() {
             return this.hisPet;
         }
 
@@ -110,8 +102,7 @@ namespace ClassLibrary
         /// Sets the name of the customer.
         /// </summary>
         /// <param name="name">The name to set.</param>
-        public void SetName(string name)
-        {
+        public void SetName(string name) {
             this.name = name;
         }
 
@@ -119,8 +110,7 @@ namespace ClassLibrary
         /// Sets the surname of the customer.
         /// </summary>
         /// <param name="surname">The surname to set.</param>
-        public void SetSurname(string surname)
-        {
+        public void SetSurname(string surname) {
             this.surname = surname;
         }
 
@@ -128,8 +118,7 @@ namespace ClassLibrary
         /// Sets the address of the customer
         /// </summary>
         /// <param name="address">The address to set.</param>
-        public void SetAddress(string address)
-        {
+        public void SetAddress(string address) {
             this.address = address;
         }
 
@@ -137,8 +126,7 @@ namespace ClassLibrary
         /// Sets the phone number of the customer.
         /// </summary>
         /// <param name="phone">The fone number as a string.</param>
-        public void SetPhone(string phone)
-        {
+        public void SetPhone(string phone) {
             this.phone = phone;
         }
 
@@ -147,12 +135,9 @@ namespace ClassLibrary
         /// </summary>
         /// <param name="hisPet">The pet to add.</param>
         /// <returns>True if can add to the array, otherwise returns false.</returns>
-        public bool SetPet(Pet hisPet)
-        {
-            for (int i = 0; i < this.GetPet().Length; i++)
-            {
-                if (this.GetPet()[i] == null)
-                {
+        public bool SetPet(Pet hisPet) {
+            for (int i = 0; i < this.GetPet().Length; i++) {
+                if (this.GetPet()[i] == null) {
                     this.hisPet[i] = hisPet;
                     return true;
                 }
@@ -168,28 +153,24 @@ namespace ClassLibrary
         /// Returns all the info of the customer as a string.
         /// </summary>
         /// <returns>The info and his pet's info as a string.</returns>
-        public string CustomerToString()
-        {
-            string info = 
+        public string CustomerToString() {
+            string info =
                 $"Name: {this.GetName()}.\n" +
                 $"Surname: {this.GetSurname()}.\n" +
                 $"Address: {this.GetAddress()}.\n" +
                 $"Phone: {this.GetPhone()}.\n";
             string pets = "Pets: \n";
             string endMessage = "##############\n";
-            if (this.GetPet() != null)
-            {
-                foreach (Pet aPet in this.GetPet())
-                {
-                    if (aPet != null)
-                    {
+            if (this.GetPet() != null) {
+                foreach (Pet aPet in this.GetPet()) {
+                    if (aPet != null) {
                         pets += aPet.PetToString();
                     }
                 }
-                
+
                 return info + pets + endMessage;
             }
-            
+
             return info + endMessage;
         }
 

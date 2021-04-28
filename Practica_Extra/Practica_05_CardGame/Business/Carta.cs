@@ -22,25 +22,21 @@
  * SOFTWARE.
  */
 
-namespace Business
-{
-    public class Carta
-    {
+namespace Business {
+    public sealed class Carta {
         private Valor valor;
         private Palo palo;
 
         #region Enums
 
-        public enum Palo
-        {
+        public enum Palo {
             Copas,
             Oros,
             Bastos,
             Espadas
         }
 
-        public enum Valor
-        {
+        public enum Valor {
             As = 1,
             Dos,
             Tres,
@@ -64,8 +60,7 @@ namespace Business
         /// </summary>
         /// <param name="valor">Enum Valor-type.</param>
         /// <param name="palo">Enum Palo-type.</param>
-        public Carta(Valor valor, Palo palo)
-        {
+        public Carta(Valor valor, Palo palo) {
             this.valor = valor;
             this.palo = palo;
         }
@@ -78,8 +73,7 @@ namespace Business
         /// Obtains the name and value of a card.
         /// </summary>
         /// <returns>The name and value of a card as a string</returns>
-        public string ObtenerNombre()
-        {
+        public string ObtenerNombre() {
             return $"{this.valor} de {this.palo}";
         }
 
@@ -89,15 +83,11 @@ namespace Business
         /// <param name="c1">First Card to compare.</param>
         /// <param name="c2">Second Card To Compare.</param>
         /// <returns>Returns the subtraction of both cards.</returns>
-        public static int CompareCards(Carta c1, Carta c2)
-        {
+        public static int CompareCards(Carta c1, Carta c2) {
             int comparer = 0;
-            if (c1.palo != c2.palo)
-            {
+            if (c1.palo != c2.palo) {
                 comparer = c1.palo - c2.palo;
-            }
-            else
-            {
+            } else {
                 comparer = c1.valor - c2.valor;
             }
 

@@ -26,12 +26,11 @@ using Entities.Classes;
 using System;
 using System.Collections.Generic;
 
-namespace Practica_07_Polymorphism
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Practica_07_Polymorphism {
+    class Program {
+        static void Main(string[] args) {
+            Console.Title = "Practica 07 - Polimorfismo";
+
             #region Instances
 
             List<Figura> listFigures = new List<Figura>();
@@ -49,8 +48,7 @@ namespace Practica_07_Polymorphism
 
             #endregion
 
-            foreach (Figura figure in listFigures)
-            {
+            foreach (Figura figure in listFigures) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"   ========= Figura {listFigures.IndexOf(figure) + 1} ==========");
                 Console.ForegroundColor = ConsoleColor.Blue;
