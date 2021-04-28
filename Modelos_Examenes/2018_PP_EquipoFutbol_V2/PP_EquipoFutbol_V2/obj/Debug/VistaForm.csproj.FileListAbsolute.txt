@@ -1,0 +1,13 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\bin\Debug\PP_EquipoFutbol_V2.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\bin\Debug\PP_EquipoFutbol_V2.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\bin\Debug\PP_EquipoFutbol_V2.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\bin\Debug\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\bin\Debug\Entidades.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\obj\Debug\VistaForm.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\obj\Debug\PP_EquipoFutbol_V2.Form1.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\obj\Debug\PP_EquipoFutbol_V2.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\obj\Debug\VistaForm.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\obj\Debug\VistaForm.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\obj\Debug\VistaForm.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\obj\Debug\PP_EquipoFutbol_V2.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\PP_EquipoFutbol_V2\obj\Debug\PP_EquipoFutbol_V2.pdb
