@@ -22,14 +22,26 @@
  * SOFTWARE.
  */
 
+using Geometria;
+using System;
 
-namespace PruebaGeometria
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace PruebaGeometria {
+    class Program {
+        static void Main(string[] args) {
+            Console.Title = "Ejercicio - 18";
 
+            Point verUno = new Point(4, 3);
+            Point verTres = new Point(7, 2);
+            Rectangle rectanguloUno = new Rectangle(verUno, verTres);
+            rectanguloUno.ShowData();
+
+
+            Point verDos = new Point(12, 9);
+            Point verCuatro = new Point(3, 1);
+            Rectangle rectanguloDos = new Rectangle(verDos, verCuatro);
+            rectanguloDos.ShowData();
+
+            Console.ReadKey(true);
         }
     }
 }

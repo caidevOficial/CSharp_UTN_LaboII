@@ -24,12 +24,9 @@
 
 using System;
 
-namespace Ejercicio_15
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_15 {
+    class Program {
+        static void Main(string[] args) {
             Console.Write("Tell me the first Number: ");
             int.TryParse(Console.ReadLine(), out int firstN);
             Console.Write("Tell me the second Number: ");

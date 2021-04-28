@@ -24,12 +24,9 @@
 
 using System;
 
-namespace Ejercicio_12
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_12 {
+    class Program {
+        static void Main(string[] args) {
             Console.WriteLine("\nThe final sum is: {0}", ValidarRespuesta.SumIntegerNumbers());
             Console.ReadKey();
         }

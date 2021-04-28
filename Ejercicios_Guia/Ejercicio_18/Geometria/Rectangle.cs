@@ -22,10 +22,14 @@
  * SOFTWARE.
  */
 
+using System;
+
 namespace Geometria
 {
     public class Rectangle
     {
+        #region Attributes
+
         private float area;
         private float perimetro;
         private Point vertice1;
@@ -33,26 +37,59 @@ namespace Geometria
         private Point vertice3;
         private Point vertice4;
 
+        #endregion
+
+        #region Builder
+
+        /// <summary>
+        /// Builds the entity with all its parameters
+        /// </summary>
+        /// <param name="vertice1">First vertice of the entity</param>
+        /// <param name="vertice3">Second vertice of the entity</param>
         public Rectangle(Point vertice1, Point vertice3)
         {
             this.vertice1 = vertice1;
             this.vertice3 = vertice3;
+            this.vertice2 = Point.AssignVertice(this.vertice1, this.vertice3);
+            this.vertice4 = Point.AssignVertice(this.vertice3, this.vertice1);
+            this.area = Math.Abs(vertice1.GetX() - vertice3.GetX()) * Math.Abs(vertice1.GetY() - vertice3.GetY());
+            this.perimetro = (Math.Abs(vertice1.GetX() - vertice3.GetX()) + Math.Abs(vertice1.GetY() - vertice3.GetY())) * 2;
         }
 
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Gets the area of the entity
+        /// </summary>
+        /// <returns>The area of the entity</returns>
         public float GetArea()
         {
             return this.area;
         }
 
-        public float Area()
-        {
-            if (this.GetArea() != 0)
-            {
-
-            }
-
-            return area;
+        /// <summary>
+        /// Gets the perimeter of the entity
+        /// </summary>
+        /// <returns>The perimeter of the entity</returns>
+        public float GetPerimeter() {
+            return this.perimetro;
         }
+
+        #endregion
+
+        #region Methods
+
+        public void ShowData() {
+            Console.WriteLine($"First Vertice   x:{this.vertice1.GetX()}  y:{this.vertice1.GetY()}");
+            Console.WriteLine($"Second Vertice  x:{this.vertice2.GetX()}  y:{this.vertice2.GetY()}");
+            Console.WriteLine($"Third Vertice   x:{this.vertice3.GetX()}  y:{this.vertice3.GetY()}");
+            Console.WriteLine($"Fourth Vertice  x:{this.vertice4.GetX()}  y:{this.vertice4.GetY()}");
+            Console.WriteLine($"Area: {this.area}, Perimetro: {this.perimetro}");
+        }
+
+        #endregion
 
     }
 }

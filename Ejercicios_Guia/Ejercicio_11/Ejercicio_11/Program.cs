@@ -24,12 +24,9 @@
 
 using System;
 
-namespace Ejercicio_11
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_11 {
+    class Program {
+        static void Main(string[] args) {
             int min = -100;
             int max = 100;
             Validacion.Validate10Numbers(min, max);

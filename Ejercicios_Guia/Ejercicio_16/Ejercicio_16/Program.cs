@@ -24,12 +24,9 @@
 
 using System;
 
-namespace Ejercicio_16
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_16 {
+    class Program {
+        static void Main(string[] args) {
             // Create instances.
             Alumno pepe = new Alumno("Argento", "Pepe", 0001);
             Alumno moni = new Alumno("Argento", "Moni", 0002);
@@ -39,11 +36,11 @@ namespace Ejercicio_16
             pepe.Estudiar(4, 4);
             pepe.CalcularFinal();
             Console.WriteLine(pepe.Mostrar());
-            
+
             moni.Estudiar(1, 3);
             moni.CalcularFinal();
             Console.WriteLine(moni.Mostrar());
-            
+
             paola.Estudiar(8, 9);
             paola.CalcularFinal();
             Console.WriteLine(paola.Mostrar());

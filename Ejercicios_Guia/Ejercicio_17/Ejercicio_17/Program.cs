@@ -25,12 +25,9 @@
 using System;
 using B = Boligrafo;
 
-namespace Ejercicio_17
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_17 {
+    class Program {
+        static void Main(string[] args) {
             B.Boligrafo sharpie = new B.Boligrafo(100, ConsoleColor.Blue);
             B.Boligrafo bic = new B.Boligrafo(50, ConsoleColor.Red);
 

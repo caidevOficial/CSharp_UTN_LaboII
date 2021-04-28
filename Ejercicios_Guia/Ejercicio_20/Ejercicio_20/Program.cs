@@ -25,18 +25,15 @@
 using System;
 using Currency;
 
-namespace Ejercicio_20
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_20 {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Exercise 20°";
 
             Dolar dCurrency = new Dolar(10);
             Peso pCurrency = new Peso(15, 97); //BNA value
             Euro eCurrency = new Euro(7, 1.17); //Oficial Taxes
-            
+
             /*cotizations done*/
             Peso pSalary = new Peso();
             Euro eSalary = new Euro();
@@ -94,13 +91,13 @@ namespace Ejercicio_20
             /*Add and Substract Dolars*/
             Dolar sumDolars = new Dolar();
             sumDolars = original + sameE;
-            Console.WriteLine($"{Math.Round(sumDolars.GetCantidad(),2)}");
+            Console.WriteLine($"{Math.Round(sumDolars.GetCantidad(), 2)}");
             sumDolars = original + sameP;
-            Console.WriteLine($"{Math.Round(sumDolars.GetCantidad(),2)}");
+            Console.WriteLine($"{Math.Round(sumDolars.GetCantidad(), 2)}");
             sumDolars = original - sameE;
-            Console.WriteLine($"{Math.Round(sumDolars.GetCantidad(),2)}");
+            Console.WriteLine($"{Math.Round(sumDolars.GetCantidad(), 2)}");
             sumDolars = original - sameP;
-            Console.WriteLine($"{Math.Round(sumDolars.GetCantidad(),2)}");
+            Console.WriteLine($"{Math.Round(sumDolars.GetCantidad(), 2)}");
 
             Console.WriteLine("########## Additions ##########");
             Euro sumaEuro = eCurrency + dCurrency;
@@ -126,7 +123,7 @@ namespace Ejercicio_20
             Dolar dolarCurrency = new Dolar(1.08);
             Peso pesoCurrency = new Peso(71.29, 66);
             Euro euroCurrency = new Euro(1, 1.08);
-            Console.WriteLine($" Pesos: ${pesoCurrency.GetCantidad()} - Dolar: $ {dolarCurrency.GetCantidad()} -> Equal?: {pesoCurrency==dolarCurrency}");
+            Console.WriteLine($" Pesos: ${pesoCurrency.GetCantidad()} - Dolar: $ {dolarCurrency.GetCantidad()} -> Equal?: {pesoCurrency == dolarCurrency}");
             Console.WriteLine($" Dolar: ${dolarCurrency.GetCantidad()} - Euro: $ {euroCurrency.GetCantidad()} -> Equal?: {euroCurrency == dolarCurrency}");
             Console.WriteLine($" Pesos: ${pesoCurrency.GetCantidad()} - Euro: $ {euroCurrency.GetCantidad()} -> Equal?: {pesoCurrency == dolarCurrency}");
             Console.WriteLine($" Pesos: ${pesoCurrency.GetCantidad()} - Euro: $ {euroCurrency.GetCantidad()} -> Different?: {pesoCurrency != dolarCurrency}");

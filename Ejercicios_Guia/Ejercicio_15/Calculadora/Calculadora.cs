@@ -24,10 +24,9 @@
 
 using System;
 
-namespace Ejercicio_15
-{
-    public class Calculadora
-    {
+namespace Ejercicio_15 {
+    public class Calculadora {
+
         /// <summary>
         /// Calculates a basic math's operation between two numbers.
         /// </summary>
@@ -35,11 +34,9 @@ namespace Ejercicio_15
         /// <param name="secondNumber">Second number, MUST be integer.</param>
         /// <param name="sign">Sign to do the operation in the calculator.</param>
         /// <returns></returns>
-        public static double Calcular(int firstNumber, int secondNumber, char sign)
-        {
+        public static double Calcular(int firstNumber, int secondNumber, char sign) {
             double result = 0;
-            switch (sign)
-            {
+            switch (sign) {
                 case '+':
                     result = firstNumber + secondNumber;
                     break;
@@ -50,8 +47,7 @@ namespace Ejercicio_15
                     result = firstNumber * secondNumber;
                     break;
                 case '/':
-                    if (Validar(secondNumber))
-                    {
+                    if (Validar(secondNumber)) {
                         result = firstNumber / secondNumber;
                     }
                     break;
@@ -64,8 +60,7 @@ namespace Ejercicio_15
         /// </summary>
         /// <param name="number">Number to validate, MUST be integer.</param>
         /// <returns>True if is different to 0, otherwise returns false.</returns>
-        private static bool Validar(int number)
-        {
+        private static bool Validar(int number) {
             return number != 0;
         }
     }

@@ -24,11 +24,11 @@
 
 using System;
 
-namespace Ejercicio_16
-{
-    public class Alumno
-    {
-        //# Attributes
+namespace Ejercicio_16 {
+    public class Alumno {
+
+        #region Attributes
+
         private byte nota1;
         private byte nota2;
         private float notaFinal;
@@ -36,20 +36,26 @@ namespace Ejercicio_16
         public string nombre;
         public int legajo;
 
-        public Alumno(string apellido, string nombre, int legajo)
-        {
+        #endregion
+
+        #region Builder
+
+        public Alumno(string apellido, string nombre, int legajo) {
             this.apellido = apellido;
             this.nombre = nombre;
             this.legajo = legajo;
         }
+
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// Sets the both scores of the student.
         /// </summary>
         /// <param name="score1">First score of the student.</param>
         /// <param name="score2">Second score of the student.</param>
-        public void Estudiar(byte score1, byte score2)
-        {
+        public void Estudiar(byte score1, byte score2) {
             this.nota1 = score1;
             this.nota2 = score2;
         }
@@ -58,14 +64,12 @@ namespace Ejercicio_16
         /// Calculates the final score of the student, if both scores are highers than 3, 
         /// sets a random score between 4 and 10, otherwise -1.
         /// </summary>
-        public void CalcularFinal()
-        {
+        public void CalcularFinal() {
             int finalScore = -1;
 
-            if(this.nota1>3 && this.nota2 > 3)
-            {
+            if (this.nota1 > 3 && this.nota2 > 3) {
                 Random score = new Random();
-                finalScore = score.Next(4,10);
+                finalScore = score.Next(4, 10);
             }
 
             this.notaFinal = finalScore;
@@ -75,8 +79,7 @@ namespace Ejercicio_16
         /// Creates the info of the student as a message.
         /// </summary>
         /// <returns>The info of the student as a message.</returns>
-        public String Mostrar()
-        {
+        public String Mostrar() {
             string nombre = this.nombre;
             string apellido = this.apellido;
             int legajo = this.legajo;
@@ -89,16 +92,15 @@ namespace Ejercicio_16
                 $"Exam Score 1: {nota1}.\n" +
                 $"Exam Score 2: {nota2}.\n";
 
-            if (notaFinal > -1)
-            {
+            if (notaFinal > -1) {
                 message += $"Final Score: {notaFinal}.\n";
-            }
-            else
-            {
+            } else {
                 message += "Student disapproved.\n";
             }
 
             return message;
         }
+
+        #endregion
     }
 }

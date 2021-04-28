@@ -22,30 +22,65 @@
  * SOFTWARE.
  */
 
-namespace Geometria
-{
-    public class Point
-    {
-        // Attributes
+namespace Geometria {
+    public class Point {
+
+        #region Attributes
+
         private int x;
         private int y;
 
-        // Builder
-        public Point(int x, int y)
-        {
+        #endregion
+
+        #region Builder
+
+        /// <summary>
+        /// Builds the entity with its points x and y.
+        /// </summary>
+        /// <param name="x">Point of the entity.</param>
+        /// <param name="y">Point of the entity.</param>
+        public Point(int x, int y) {
             this.x = x;
             this.y = y;
         }
 
-        // Properties
-        public int GetX()
-        {
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Gets the axis point.
+        /// </summary>
+        /// <returns>The axis point.</returns>
+        public int GetX() {
             return this.x;
         }
 
-        public int GetY()
-        {
+        /// <summary>
+        /// Gets the Y point.
+        /// </summary>
+        /// <returns>The Y point.</returns>
+        public int GetY() {
             return this.y;
         }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Assign the vertices of the entity.
+        /// </summary>
+        /// <param name="x">X vertice to assign.</param>
+        /// <param name="y">Y vertice to assign.</param>
+        /// <returns>The entity with its vertices assigned.</returns>
+        public static Point AssignVertice(Point x, Point y) {
+            int axis = x.GetX();
+            int yi = y.GetY();
+            Point auxiliar = new Point(axis, yi);
+            return auxiliar;
+        }
+
+        #endregion
     }
 }

@@ -24,17 +24,15 @@
 
 using System;
 
-namespace Ejercicio_14
-{
-    public class CalculoDeArea
-    {
+namespace Ejercicio_14 {
+    public class CalculoDeArea {
+
         /// <summary>
         /// Calculates the area of a square.
         /// </summary>
         /// <param name="side">The side of the square.</param>
         /// <returns>The area of the square.</returns>
-        public static double CalcularCuadrado(double side)
-        {
+        public static double CalcularCuadrado(double side) {
             double area = 0;
             area = Math.Pow(side, 2);
             return area;
@@ -46,8 +44,7 @@ namespace Ejercicio_14
         /// <param name="baseT">The base of the rectangle.</param>
         /// <param name="heightT">The height of the rectangle.</param>
         /// <returns>The area of the rectangle</returns>
-        public static double CalcularTriangulo(double baseT, double heightT)
-        {
+        public static double CalcularTriangulo(double baseT, double heightT) {
             double area = 0;
             area = baseT * heightT;
             return area;
@@ -58,8 +55,7 @@ namespace Ejercicio_14
         /// </summary>
         /// <param name="radio">Radio of the circle</param>
         /// <returns>The area of the circle.</returns>
-        public static double CalcularCirculo(double radio)
-        {
+        public static double CalcularCirculo(double radio) {
             double area = 0;
             area = Math.PI * Math.Pow(radio, 2);
             return area;

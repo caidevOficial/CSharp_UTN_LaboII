@@ -24,19 +24,16 @@
 
 using System;
 
-namespace Suma
-{
-    public class Sumador
-    {
+namespace Suma {
+    public class Sumador {
         private int cantidadSumas;
 
-        // Builders
+        #region Buidlers
 
         /// <summary>
         /// Initializates the entity with 0.
         /// </summary>
-        public Sumador():this(0)
-        {
+        public Sumador() : this(0) {
 
         }
 
@@ -44,19 +41,19 @@ namespace Suma
         /// Builds the entity with 'cantidadSumas'.
         /// </summary>
         /// <param name="cantidadSumas">Amount to set.</param>
-        public Sumador(int cantidadSumas)
-        {
+        public Sumador(int cantidadSumas) {
             this.cantidadSumas = cantidadSumas;
         }
 
-        // Operators
+        #endregion
+
+        #region Operators
 
         /// <summary>
-        /// 
+        /// Overloads the operator int .
         /// </summary>
-        /// <param name="s1"></param>
-        public static explicit operator int(Sumador s1)
-        {
+        /// <param name="s1">An isntance of Sum</param>
+        public static explicit operator int(Sumador s1) {
             int result = s1.cantidadSumas;
             return result;
         }
@@ -67,8 +64,7 @@ namespace Suma
         /// <param name="s1">An object for sum</param>
         /// <param name="s2">Another object for sum</param>
         /// <returns></returns>
-        public static long operator +(Sumador s1, Sumador s2)
-        {
+        public static long operator +(Sumador s1, Sumador s2) {
             return (int)s1 + (int)s2;
         }
 
@@ -78,10 +74,13 @@ namespace Suma
         /// <param name="s1">First object to compare.</param>
         /// <param name="s2">Second object to compare.</param>
         /// <returns></returns>
-        public static bool operator |(Sumador s1, Sumador s2)
-        {
+        public static bool operator |(Sumador s1, Sumador s2) {
             return ((int)s1).Equals((int)s2);
         }
+
+        #endregion
+
+        #region Methods
 
         /// <summary>
         /// Adds two numbers and retirns the sum.
@@ -89,8 +88,7 @@ namespace Suma
         /// <param name="a">a long type number.</param>
         /// <param name="b">another long type number.</param>
         /// <returns>returns the sum of both numbers.</returns>
-        public long Sumar(long a, long b)
-        {
+        public long Sumar(long a, long b) {
             this.cantidadSumas++;
             return a + b;
         }
@@ -101,8 +99,7 @@ namespace Suma
         /// <param name="a">Fisrt string.</param>
         /// <param name="b">Second string.</param>
         /// <returns>Both string concatenateds.</returns>
-        public string Sumar(string a, string b)
-        {
+        public string Sumar(string a, string b) {
             this.cantidadSumas++;
             return a + b;
         }
@@ -111,9 +108,10 @@ namespace Suma
         /// Shows the attribute of the entity.
         /// </summary>
         /// <returns>The value of the attribute.</returns>
-        public int Mostrar()
-        {
-             return this.cantidadSumas;
+        public int Mostrar() {
+            return this.cantidadSumas;
         }
+
+        #endregion
     }
 }

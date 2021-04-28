@@ -24,22 +24,23 @@
 
 using System;
 
-namespace Boligrafo
-{
-    public class Boligrafo
-    {
-        //##### Attributes #####
+namespace Boligrafo {
+    public class Boligrafo {
+        #region Attributes
+
         const short cantidadTintaMaxima = 100;
         ConsoleColor color;
         short tinta;
-        
-        //##### Builders #####
+
+        #endregion
+
+        #region Builders
+
 
         /// <summary>
         /// Builds the entity with default params.
         /// </summary>
-        public Boligrafo()
-        {
+        public Boligrafo() {
             this.color = ConsoleColor.Black;
             this.tinta = cantidadTintaMaxima;
         }
@@ -48,8 +49,7 @@ namespace Boligrafo
         /// Builds the entity with ink level.
         /// </summary>
         /// <param name="tinta">The ink level.</param>
-        public Boligrafo(short tinta):this()
-        {
+        public Boligrafo(short tinta) : this() {
             this.tinta = tinta;
         }
 
@@ -58,47 +58,47 @@ namespace Boligrafo
         /// </summary>
         /// <param name="tinta">The ink level.</param>
         /// <param name="color">The color of the ink.</param>
-        public Boligrafo(short tinta, ConsoleColor color):this(tinta)
-        {
+        public Boligrafo(short tinta, ConsoleColor color) : this(tinta) {
             this.color = color;
         }
 
-        //##### Properties #####
+        #endregion
+
+        #region Properties
+
 
         /// <summary>
         /// Gets the ink's level of the pen.
         /// </summary>
         /// <returns>The ink's level of the pen.</returns>
-        public short GetTinta() 
-        { 
-            return this.tinta; 
+        public short GetTinta() {
+            return this.tinta;
         }
 
         /// <summary>
         /// Gets the color of the pen.
         /// </summary>
         /// <returns>The color of the pen.</returns>
-        public ConsoleColor GetColor() 
-        {
+        public ConsoleColor GetColor() {
             return this.color;
         }
+
+        #endregion
+
+        #region Methods
+
 
         /// <summary>
         /// Sets the ink's level of the pen.
         /// </summary>
         /// <param name="tinta">Ink's level.</param>
-        private void SetTinta(short tinta)
-        {
+        private void SetTinta(short tinta) {
             short actualTinta = (short)(GetTinta() + tinta);
-            if (actualTinta < 0)
-            {
+            if (actualTinta < 0) {
                 this.tinta = 0;
-            }else if (actualTinta >= 0 && actualTinta <= 100)
-            {
+            } else if (actualTinta >= 0 && actualTinta <= 100) {
                 this.tinta = actualTinta;
-            }
-            else
-            {
+            } else {
                 this.tinta = 100;
             }
         }
@@ -106,8 +106,7 @@ namespace Boligrafo
         /// <summary>
         /// Fully fill the amount of ink of the pen.
         /// </summary>
-        public void Recargar()
-        {
+        public void Recargar() {
             SetTinta(cantidadTintaMaxima);
         }
 
@@ -117,21 +116,17 @@ namespace Boligrafo
         /// <param name="gasto">The spending amount of ink.</param>
         /// <param name="dibujo">The draw of the pen.</param>
         /// <returns>True if it can draw, otherwise false.</returns>
-        public bool Pintar(short gasto, out string dibujo)
-        {
+        public bool Pintar(short gasto, out string dibujo) {
             dibujo = "";
             short initInk = GetTinta();
             short actualInk;
 
-            if (gasto < 0)
-            {
-                if (initInk > 0)
-                {
+            if (gasto < 0) {
+                if (initInk > 0) {
                     this.SetTinta(gasto);
                     actualInk = GetTinta();
 
-                    switch (actualInk)
-                    {
+                    switch (actualInk) {
                         case 0:
                             dibujo = Boligrafo.Asterisks(initInk);
                             break;
@@ -140,9 +135,7 @@ namespace Boligrafo
                             break;
                     }
                     return true;
-                }
-                else
-                {
+                } else {
                     Console.WriteLine("Out of Ink! Please Recharge!");
                 }
             }
@@ -155,12 +148,10 @@ namespace Boligrafo
         /// </summary>
         /// <param name="spending">Amount of ink that needs to draw.</param>
         /// <returns>if can, returns the draw of asterisks. Otherwise an empty string.</returns>
-        private static string Asterisks(int spending)
-        {
+        private static string Asterisks(int spending) {
             string draw = "";
 
-            for (int i = 0; i < spending; i++)
-            {
+            for (int i = 0; i < spending; i++) {
                 draw += '*';
             }
             return draw;
@@ -170,11 +161,12 @@ namespace Boligrafo
         /// Draws the line of asterisks.
         /// </summary>
         /// <param name="draw">The string to draw.</param>
-        public void ShowDraw(string draw)
-        {
+        public void ShowDraw(string draw) {
             Console.ForegroundColor = this.GetColor();
             Console.WriteLine(draw);
             Console.ForegroundColor = ConsoleColor.Gray;
         }
+
+        #endregion
     }
 }

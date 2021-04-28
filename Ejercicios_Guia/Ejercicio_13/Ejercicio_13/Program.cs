@@ -24,12 +24,10 @@
 
 using System;
 
-namespace Ejercicio_13
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_13 {
+    class Program {
+
+        static void Main(string[] args) {
             string binary = Conversor.IntegerToBinary(35055007);
             int integerNumber = Conversor.BinaryToDecimal(binary);
             Console.WriteLine(binary);

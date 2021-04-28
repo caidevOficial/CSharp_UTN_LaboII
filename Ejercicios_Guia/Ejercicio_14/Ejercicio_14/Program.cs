@@ -24,12 +24,9 @@
 
 using System;
 
-namespace Ejercicio_14
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_14 {
+    class Program {
+        static void Main(string[] args) {
             Console.Write("Side of the Square: ");
             Double.TryParse(Console.ReadLine(), out double side);
             double areaSquare = CalculoDeArea.CalcularCuadrado(side);

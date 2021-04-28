@@ -25,19 +25,16 @@
 using System;
 using Suma;
 
-namespace Ejercicio_19
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_19 {
+    class Program {
+        static void Main(string[] args) {
             Sumador s1 = new Sumador(10);
             Sumador s2 = new Sumador(12);
             Console.WriteLine(s1.Mostrar());
 
             long longSum = s1.Sumar(10, 15);
             string stringSum = s1.Sumar("10", "15");
-            Console.WriteLine($"Long: {longSum} - String: {stringSum}." );
+            Console.WriteLine($"Long: {longSum} - String: {stringSum}.");
             Console.WriteLine(s1.Mostrar());
 
             int amount = (int)s2;

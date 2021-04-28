@@ -24,20 +24,17 @@
 
 using System;
 
-namespace Ejercicio_12
-{
-    public class ValidarRespuesta
-    {
+namespace Ejercicio_12 {
+    public class ValidarRespuesta {
+
         /// <summary>
         /// Validates if the input is a 'S' or another value.
         /// </summary>
         /// <param name="c">Char to evaluate.</param>
         /// <returns>True if the input is a 'S', otherwise false.</returns>
-        public static bool ValidaS_N(char c)
-        {
+        public static bool ValidaS_N(char c) {
             c = Char.ToUpper(c);
-            if (c.Equals('S'))
-            {
+            if (c.Equals('S')) {
                 return true;
             }
             return false;
@@ -48,13 +45,11 @@ namespace Ejercicio_12
         /// then returns the entire sum.
         /// </summary>
         /// <returns>The final sum of numbers.</returns>
-        public static int SumIntegerNumbers()
-        {
+        public static int SumIntegerNumbers() {
             int sum = 0;
             char answer = 'S';
 
-            do
-            {
+            do {
                 Console.Write("Tell me a number to sum in the stack: ");
                 int.TryParse(Console.ReadLine(), out int actualNumber);
                 sum += actualNumber;
