@@ -1,0 +1,13 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\bin\Debug\PP_Campo.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\bin\Debug\PP_Campo.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\bin\Debug\PP_Campo.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\bin\Debug\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\bin\Debug\Entidades.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\obj\Debug\PP_Campo.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\obj\Debug\PP_Campo.FrmPrincipal.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\obj\Debug\PP_Campo.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\obj\Debug\PP_Campo.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\obj\Debug\PP_Campo.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\obj\Debug\PP_Campo.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\obj\Debug\PP_Campo.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Campo\PP_Campo\obj\Debug\PP_Campo.pdb
