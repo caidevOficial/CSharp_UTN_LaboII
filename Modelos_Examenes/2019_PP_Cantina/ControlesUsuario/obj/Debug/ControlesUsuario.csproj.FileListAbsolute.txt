@@ -1,0 +1,36 @@
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\obj\Debug\ControlCantina.Barra.resources
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.GenerateResource.cache
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.CoreCompileInputs.cache
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\bin\Debug\ControlesUsuario.dll
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\bin\Debug\ControlesUsuario.pdb
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\bin\Debug\Entidades.dll
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\bin\Debug\Entidades.pdb
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\obj\Debug\ControlesUsuario.Properties.Resources.resources
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.CopyComplete
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\obj\Debug\ControlesUsuario.dll
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\obj\Debug\ControlesUsuario.pdb
+D:\Federico\VB .Net\Visual C#\utn\Examenes\20191010-PrimerParcial-2\ControlesUsuario\obj\Debug\ControlesUsuario.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\bin\Debug\ControlesUsuario.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\bin\Debug\ControlesUsuario.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\bin\Debug\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\bin\Debug\Entidades.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\obj\Debug\ControlCantina.Barra.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\bin\Debug\ControlesUsuario.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\bin\Debug\ControlesUsuario.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\bin\Debug\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\bin\Debug\Entidades.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\obj\Debug\ControlCantina.Barra.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Cantina\ControlesUsuario\obj\Debug\ControlesUsuario.pdb
