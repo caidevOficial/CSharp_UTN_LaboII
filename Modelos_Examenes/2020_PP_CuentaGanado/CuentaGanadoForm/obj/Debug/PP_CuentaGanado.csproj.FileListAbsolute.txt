@@ -1,0 +1,15 @@
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\bin\Debug\CuentaGanadoForm.exe.config
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\bin\Debug\CuentaGanadoForm.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\bin\Debug\CuentaGanadoForm.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\bin\Debug\Entidades.dll
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\bin\Debug\Entidades.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\PP_CuentaGanado.csprojAssemblyReference.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.CuentaGanadoForm.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.frmInforme.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.Properties.Resources.resources
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\PP_CuentaGanado.csproj.GenerateResource.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\PP_CuentaGanado.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\PP_CuentaGanado.csproj.CopyComplete
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.exe
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.pdb
+C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\CuentaGanadoForm\CuentaGanadoForm\obj\Debug\CuentaGanadoForm.frmCarga.resources
