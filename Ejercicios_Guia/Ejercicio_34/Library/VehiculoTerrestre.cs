@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Library
-{
-    public abstract class VehiculoTerrestre
-    {
+namespace Library {
+    public abstract class VehiculoTerrestre {
         protected short cantidadRuedas;
         protected short cantidadPuertas;
         protected Colores color;
@@ -35,8 +33,7 @@ namespace Library
         /// <summary>
         /// Enum of colors of the vehicle.
         /// </summary>
-        public enum Colores
-        {
+        public enum Colores {
             Rojo,
             Blanco,
             Azul,
@@ -60,8 +57,7 @@ namespace Library
         /// <param name="cantidadPuertas">Amount of doors.</param>
         /// <param name="color">Color of the vehicle.</param>
         protected VehiculoTerrestre(short cantidadRuedas, short cantidadPuertas, Colores color)
-            : this()
-        {
+            : this() {
             this.cantidadRuedas = cantidadRuedas;
             this.cantidadPuertas = cantidadPuertas;
             this.color = color;
@@ -74,13 +70,10 @@ namespace Library
         /// <summary>
         /// Get: Gets the amount of wheels of the vehicle.
         /// </summary>
-        public short CantidadRuedas
-        {
+        public short CantidadRuedas {
             get { return this.cantidadRuedas; }
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     this.cantidadRuedas = value;
                 }
             }
@@ -89,13 +82,10 @@ namespace Library
         /// <summary>
         /// Get: Gets the amount of doors of the vehicle.
         /// </summary>
-        public short CantidadPuertas
-        {
+        public short CantidadPuertas {
             get { return this.cantidadPuertas; }
-            set
-            {
-                if (value > 1)
-                {
+            set {
+                if (value > 1) {
                     this.cantidadPuertas = value;
                 }
             }
@@ -104,13 +94,10 @@ namespace Library
         /// <summary>
         /// Get: Gets the color of the vehicle.
         /// </summary>
-        public Colores Color
-        {
+        public Colores Color {
             get { return this.color; }
-            set
-            {
-                if (!(value >= 0))
-                {
+            set {
+                if (!(value >= 0)) {
                     this.color = value;
                 }
             }

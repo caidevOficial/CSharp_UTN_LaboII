@@ -24,10 +24,8 @@
 
 using System.Text;
 
-namespace Library
-{
-    public class Automovil : VehiculoTerrestre
-    {
+namespace Library {
+    public sealed class Automovil : VehiculoTerrestre {
         private short cantidadMarchas;
         private int cantidadPasajeros;
 
@@ -42,8 +40,7 @@ namespace Library
         /// <param name="cantidadMarchas">Number of gears of the car.</param>
         /// <param name="cantidadPasajeros">Number f passengers of the car.</param>
         public Automovil(short cantidadRuedas, short cantidadPuertas, Colores color, short cantidadMarchas, int cantidadPasajeros)
-            : base(cantidadRuedas, cantidadPuertas, color)
-        {
+            : base(cantidadRuedas, cantidadPuertas, color) {
             this.CantidadMarchas = cantidadMarchas;
             this.CantidadPasajeros = cantidadPasajeros;
         }
@@ -56,13 +53,10 @@ namespace Library
         /// Get: Gets the amount of gears of the car.
         /// Set: Sets the amount of gears of the car.
         /// </summary>
-        public short CantidadMarchas
-        {
+        public short CantidadMarchas {
             get => cantidadMarchas;
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     cantidadMarchas = value;
                 }
             }
@@ -72,13 +66,10 @@ namespace Library
         /// Get: Gets the amount of passengers of the car.
         /// Set: Sets the amount of passengers of the car.
         /// </summary>
-        public int CantidadPasajeros
-        {
+        public int CantidadPasajeros {
             get => cantidadPasajeros;
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     cantidadPasajeros = value;
                 }
             }
@@ -92,8 +83,7 @@ namespace Library
         /// Shows the info of the car.
         /// </summary>
         /// <returns>Returns the info as a string.</returns>
-        public override string ShowInfo()
-        {
+        public override string ShowInfo() {
             StringBuilder information = new StringBuilder();
             information.Append($"###### Auto ######\nMarchas: {this.CantidadMarchas}\n");
             information.Append($"Puertas: {this.CantidadPuertas}\n");

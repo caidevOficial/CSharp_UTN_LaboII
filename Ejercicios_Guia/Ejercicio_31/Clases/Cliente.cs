@@ -23,10 +23,8 @@
  */
 
 
-namespace Clases
-{
-    public class Cliente
-    {
+namespace Clases {
+    public sealed class Cliente {
         private string nombre;
         private int numero;
 
@@ -36,8 +34,7 @@ namespace Clases
         /// Crea la entidad pasandole un numero.
         /// </summary>
         /// <param name="numero">Numero de orden del cliente.</param>
-        public Cliente(int numero)
-        {
+        public Cliente(int numero) {
             this.numero = numero;
         }
 
@@ -46,8 +43,7 @@ namespace Clases
         /// </summary>
         /// <param name="nombre">Nombre que llevara el cliente.</param>
         /// <param name="numero">Numero de orden que llevara el cliente.</param>
-        public Cliente(string nombre, int numero) : this(numero)
-        {
+        public Cliente(string nombre, int numero) : this(numero) {
             this.Nombre = nombre;
         }
 
@@ -58,10 +54,8 @@ namespace Clases
         /// <summary>
         /// Retorna el numero de orden del cliente.
         /// </summary>
-        public int Numero
-        {
-            get
-            {
+        public int Numero {
+            get {
                 return this.numero;
             }
         }
@@ -70,14 +64,11 @@ namespace Clases
         /// Get: Retorna el nombre del cliente.
         /// Set: Asigna el nombre al cliente.
         /// </summary>
-        public string Nombre
-        {
-            get
-            {
+        public string Nombre {
+            get {
                 return this.nombre;
             }
-            set
-            {
+            set {
                 this.nombre = value;
             }
         }
@@ -92,8 +83,7 @@ namespace Clases
         /// <param name="c1">Primer cliente a comparar</param>
         /// <param name="c2">Segundo cliente a comparar</param>
         /// <returns>Retorna true si ambos tienen el mismo numero.</returns>
-        public static bool operator ==(Cliente c1, Cliente c2)
-        {
+        public static bool operator ==(Cliente c1, Cliente c2) {
             return c1.Numero == c2.Numero;
         }
 
@@ -103,8 +93,7 @@ namespace Clases
         /// <param name="c1">Primer cliente a comparar</param>
         /// <param name="c2">Segundo cliente a comparar</param>
         /// <returns>Retorna true si ambos tienen distinto numero.</returns>
-        public static bool operator !=(Cliente c1, Cliente c2)
-        {
+        public static bool operator !=(Cliente c1, Cliente c2) {
             return !(c1.Numero == c2.Numero);
         }
 

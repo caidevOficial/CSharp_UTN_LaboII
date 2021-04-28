@@ -24,10 +24,8 @@
 
 using System.Text;
 
-namespace Models
-{
-    public class Jugador : Persona
-    {
+namespace Models {
+    public sealed class Jugador : Persona {
         private int partidosJugados;
         private int totalGoles;
 
@@ -48,8 +46,7 @@ namespace Models
         /// <param name="partidosJugados">Games Played of the soccer player.</param>
         /// <param name="totalGoles">Amount of goals of the soccer player.</param>
         public Jugador(int dni, string nombre, int partidosJugados, int totalGoles)
-            : base(dni, nombre)
-        {
+            : base(dni, nombre) {
             this.PartidosJugados = partidosJugados;
             this.TotalGoles = totalGoles;
         }
@@ -62,13 +59,10 @@ namespace Models
         /// GET: gets the amount of games played.
         /// Set: sets the amount of games played.
         /// </summary>
-        public int PartidosJugados
-        {
+        public int PartidosJugados {
             get => partidosJugados;
-            set
-            {
-                if (value >= 0)
-                {
+            set {
+                if (value >= 0) {
                     partidosJugados = value;
                 }
             }
@@ -78,13 +72,10 @@ namespace Models
         /// GET: gets the amount goals.
         /// Set: sets the amount goals.
         /// </summary>
-        public int TotalGoles
-        {
+        public int TotalGoles {
             get => totalGoles;
-            set
-            {
-                if (value >= 0)
-                {
+            set {
+                if (value >= 0) {
                     totalGoles = value;
                 }
             }
@@ -100,8 +91,7 @@ namespace Models
         /// <param name="j1">First entity to compare.</param>
         /// <param name="j2">Second entity to compare.</param>
         /// <returns>True if both have the same pk, otherwise returns false.</returns>
-        public static bool operator ==(Jugador j1, Jugador j2)
-        {
+        public static bool operator ==(Jugador j1, Jugador j2) {
             return j1.dni == j2.dni;
         }
 
@@ -111,8 +101,7 @@ namespace Models
         /// <param name="j1">First entity to compare.</param>
         /// <param name="j2">Second entity to compare.</param>
         /// <returns>True if both have different pk, otherwise returns false.</returns>
-        public static bool operator !=(Jugador j1, Jugador j2)
-        {
+        public static bool operator !=(Jugador j1, Jugador j2) {
             return !(j1.dni == j2.dni);
         }
 
@@ -124,8 +113,7 @@ namespace Models
         /// Shows the data of the soccer player.
         /// </summary>
         /// <returns>The data of the soccer player as a string.</returns>
-        public override string MostrarDatos()
-        {
+        public override string MostrarDatos() {
             StringBuilder data = new StringBuilder();
             data.Append($"######## Soccer Player ########\n");
             data.Append($"Name: {this.Nombre}.\n");

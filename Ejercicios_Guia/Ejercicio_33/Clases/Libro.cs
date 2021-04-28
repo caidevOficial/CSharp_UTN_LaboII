@@ -22,16 +22,10 @@
  * SOFTWARE.
  */
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Clases
-{
-    public class Libro
-    {
+namespace Clases {
+    public class Libro {
         private List<string> paginas = new List<string>();
 
         /// <summary>
@@ -41,28 +35,19 @@ namespace Clases
         /// </summary>
         /// <param name="i"></param>
         /// <returns>La página pedida o un string vacio.</returns>
-        public string this[int i]
-        {
+        public string this[int i] {
 
-            get
-            {
-                if (i < this.paginas.Count)
-                {
+            get {
+                if (i < this.paginas.Count) {
                     return this.paginas[i];
-                }
-                else
-                {
+                } else {
                     return "";
                 }
             }
-            set
-            {
-                if (i < this.paginas.Count)
-                {
+            set {
+                if (i < this.paginas.Count) {
                     this.paginas[i] = value;
-                }
-                else
-                {
+                } else {
                     paginas.Add(value);
                 }
             }

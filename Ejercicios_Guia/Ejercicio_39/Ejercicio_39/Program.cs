@@ -25,12 +25,9 @@
 using Entities;
 using System;
 
-namespace Ejercicio_39
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_39 {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Ejercicio Nº39";
 
             SobreSobreescrito sobrecarga = new SobreSobreescrito();

@@ -25,12 +25,9 @@
 using CentralitaHerencia;
 using System;
 
-namespace Test
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Test {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Ejercicio 37 - Centralita";
             Console.ForegroundColor = ConsoleColor.DarkCyan;
 
@@ -73,7 +70,7 @@ namespace Test
             Console.WriteLine(c.Mostrar());
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("=======================");
-            
+
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("Ordered Calls By Time");
 

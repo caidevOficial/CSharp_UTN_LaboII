@@ -24,21 +24,15 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Models
-{
-    public class Competencia
-    {
+namespace Models {
+    public sealed class Competencia {
         private short cantidadCompetidores;
         private short cantidadVueltas;
         private List<VehiculoCarrera> competidores;
         private TipoCompetencia tipo;
 
-        public enum TipoCompetencia
-        {
+        public enum TipoCompetencia {
             F1,
             MotoCross
         }
@@ -48,8 +42,7 @@ namespace Models
         /// <summary>
         /// Initializes the list of vehicles.
         /// </summary>
-        private Competencia()
-        {
+        private Competencia() {
             competidores = new List<VehiculoCarrera>();
         }
 
@@ -60,8 +53,7 @@ namespace Models
         /// <param name="cantidadVueltas">Number of total laps.</param>
         /// <param name="competenciaDe">Type of competence.</param>
         public Competencia(short cantidadCompetidores, short cantidadVueltas, TipoCompetencia competenciaDe)
-            :this()
-        {
+            : this() {
             this.CantidadCompetidores = cantidadCompetidores;
             this.CantidadVueltas = cantidadVueltas;
             this.Tipo = competenciaDe;
@@ -75,32 +67,26 @@ namespace Models
         /// Get: Gets the amount of competitors.
         /// Set: Sets the amount of competitors.
         /// </summary>
-        public short CantidadCompetidores 
-        { 
+        public short CantidadCompetidores {
             get => cantidadCompetidores;
-            set
-            {
-                if (value > 2)
-                {
+            set {
+                if (value > 2) {
                     cantidadCompetidores = value;
                 }
-            }  
+            }
         }
 
         /// <summary>
         /// Get: Gets the number of laps.
         /// Set: Sets the number of laps.
         /// </summary>
-        public short CantidadVueltas
-        { 
+        public short CantidadVueltas {
             get => cantidadVueltas;
-            set
-            {
-                if (value > 1)
-                {
+            set {
+                if (value > 1) {
                     cantidadVueltas = value;
                 }
-            } 
+            }
         }
 
         /// <summary>
@@ -109,46 +95,34 @@ namespace Models
         /// </summary>
         /// <param name="i"></param>
         /// <returns></returns>
-        public VehiculoCarrera this[int i] 
-        {
-            get 
-            {
-                if (i < this.competidores.Count)
-                {
+        public VehiculoCarrera this[int i] {
+            get {
+                if (i < this.competidores.Count) {
                     return this.competidores[i];
-                }
-                else
-                {
+                } else {
                     return null;
                 }
             }
-            set
-            {
-                if(i < this.competidores.Count)
-                {
+            set {
+                if (i < this.competidores.Count) {
                     this.competidores[i] = value;
-                }
-                else
-                {
+                } else {
                     competidores.Add(value);
                 }
-            } 
+            }
         }
 
         /// <summary>
         /// Get: Gets the type of competence.
         /// Set: Sets the type of competence.
         /// </summary>
-        public TipoCompetencia Tipo 
-        { 
+        public TipoCompetencia Tipo {
             get => tipo;
-            set
-            {
-                if(value >= 0)
-                {
+            set {
+                if (value >= 0) {
                     tipo = value;
                 }
-            } 
+            }
         }
 
         #endregion
@@ -161,18 +135,13 @@ namespace Models
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Vehicle to add into the competence.</param>
         /// <returns>True if can add the Vehicle, otherwise returns false.</returns>
-        public static bool operator +(Competencia c, VehiculoCarrera a)
-        {
+        public static bool operator +(Competencia c, VehiculoCarrera a) {
             Random rdm = new Random();
-            if (!(c is null) && !(a is null))
-            {
-                if ((c.competidores.Count < c.CantidadCompetidores))
-                {
-                    if (!(c == a))
-                    {
-                        if ((c.Tipo == Competencia.TipoCompetencia.F1 && a is AutoF1) || 
-                            (c.Tipo == Competencia.TipoCompetencia.MotoCross && a is MotoCross))
-                        {
+            if (!(c is null) && !(a is null)) {
+                if ((c.competidores.Count < c.CantidadCompetidores)) {
+                    if (!(c == a)) {
+                        if ((c.Tipo == Competencia.TipoCompetencia.F1 && a is AutoF1) ||
+                            (c.Tipo == Competencia.TipoCompetencia.MotoCross && a is MotoCross)) {
                             a.EnCompetencia = true;
                             a.VueltasRestantes = c.CantidadVueltas;
                             a.CantidadCombustible = (short)rdm.Next(15, 100);
@@ -192,12 +161,9 @@ namespace Models
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Vehicle to remove from the competence.</param>
         /// <returns>True if can remove the Vehicle, otherwise returns false.</returns>
-        public static bool operator -(Competencia c, VehiculoCarrera a)
-        {
-            if (!(c is null) && !(a is null))
-            {
-                if (c == a)
-                {
+        public static bool operator -(Competencia c, VehiculoCarrera a) {
+            if (!(c is null) && !(a is null)) {
+                if (c == a) {
                     c.competidores.RemoveAt(c.competidores.IndexOf(a));
                     return true;
                 }
@@ -212,24 +178,16 @@ namespace Models
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Vehicle to verify if is in the competence.</param>
         /// <returns>True if the Vehicle is inside the competence, otherwise returns false.</returns>
-        public static bool operator ==(Competencia c, VehiculoCarrera a)
-        {
-            if (!(c.competidores is null) && !(a is null))
-            {
-                foreach (VehiculoCarrera vehicle in c.competidores)
-                {
-                    if (c.Tipo == Competencia.TipoCompetencia.F1 && a is AutoF1)
-                    {
-                        if ((AutoF1)a == (AutoF1)vehicle)
-                        {
+        public static bool operator ==(Competencia c, VehiculoCarrera a) {
+            if (!(c.competidores is null) && !(a is null)) {
+                foreach (VehiculoCarrera vehicle in c.competidores) {
+                    if (c.Tipo == Competencia.TipoCompetencia.F1 && a is AutoF1) {
+                        if ((AutoF1)a == (AutoF1)vehicle) {
                             return true;
                         }
 
-                    }
-                    else if (c.Tipo == Competencia.TipoCompetencia.MotoCross && a is MotoCross)
-                    {
-                        if ((MotoCross)a == (MotoCross)vehicle)
-                        {
+                    } else if (c.Tipo == Competencia.TipoCompetencia.MotoCross && a is MotoCross) {
+                        if ((MotoCross)a == (MotoCross)vehicle) {
                             return true;
                         }
                     }
@@ -245,8 +203,7 @@ namespace Models
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Vehicle to verify if is not in the competence.</param>
         /// <returns>True if the Vehicle is not inside the competence, otherwise returns false.</returns>
-        public static bool operator !=(Competencia c, VehiculoCarrera a)
-        {
+        public static bool operator !=(Competencia c, VehiculoCarrera a) {
             return !(c == a);
         }
 
@@ -258,11 +215,9 @@ namespace Models
         /// Shows the stats of the competence.
         /// </summary>
         /// <returns>Returns the stats as a string.</returns>
-        public string MostrarDatos()
-        {
+        public string MostrarDatos() {
             string stats = String.Format("Data of Competence:\nCompetitors: {0,2} | remaining Laps: {1,2}\nRegistered Vehicles:\n", this.CantidadCompetidores, this.CantidadVueltas);
-            foreach (VehiculoCarrera vechicle in competidores)
-            {
+            foreach (VehiculoCarrera vechicle in competidores) {
                 stats += vechicle.MostrarDatos();
             }
 

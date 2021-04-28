@@ -25,12 +25,9 @@
 using Models;
 using System;
 
-namespace Ejercicio_35
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_35 {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Ejercicio 35";
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -47,25 +44,19 @@ namespace Ejercicio_35
 
             #region ComparePlayers
 
-            if (j1 == j2)
-            {
+            if (j1 == j2) {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Iguales";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Diferentes";
             }
             Console.WriteLine($"{j1.MostrarDatos()}{j2.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
-            if (j1 == j3)
-            {
+            if (j1 == j3) {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Iguales";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Diferentes";
             }
@@ -75,49 +66,37 @@ namespace Ejercicio_35
 
             #region AddPlayerToTeam
 
-            if (losArgento + j1)
-            {
+            if (losArgento + j1) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Jugador agregado";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Jugador existente o Equipo lleno.";
             }
             Console.WriteLine($"{j1.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
-            if (losArgento + j2)
-            {
+            if (losArgento + j2) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Jugador agregado";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Jugador existente o Equipo lleno.";
             }
             Console.WriteLine($"{j2.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
-            if (losArgento + j3)
-            {
+            if (losArgento + j3) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Jugador agregado";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Jugador existente o Equipo lleno.";
             }
             Console.WriteLine($"{j3.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
-            if (losArgento + j4)
-            {
+            if (losArgento + j4) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Jugador agregado";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Jugador existente o Equipo lleno.";
             }

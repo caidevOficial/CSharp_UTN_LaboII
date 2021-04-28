@@ -25,10 +25,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CentralitaHerencia
-{
-    public class Centralita
-    {
+namespace CentralitaHerencia {
+    public sealed class Centralita {
         private List<Llamada> listaDeLlamadas;
         private string razonSocial;
 
@@ -37,24 +35,21 @@ namespace CentralitaHerencia
         /// <summary>
         /// Get: Gets the profits of the local calls.
         /// </summary>
-        public float GananciasPorLocal
-        {
+        public float GananciasPorLocal {
             get => CalcularGanancias(Llamada.TipoLlamada.Local);
         }
 
         /// <summary>
         /// Get: Gets the profits of the province calls.
         /// </summary>
-        public float GananciasPorProvincial
-        {
+        public float GananciasPorProvincial {
             get => CalcularGanancias(Llamada.TipoLlamada.Provincial);
         }
 
         /// <summary>
         /// Get: Gets the profits of the total calls.
         /// </summary>
-        public float GananciasPorTotal
-        {
+        public float GananciasPorTotal {
             get => CalcularGanancias(Llamada.TipoLlamada.Todas);
         }
 
@@ -70,8 +65,7 @@ namespace CentralitaHerencia
         /// <summary>
         /// Builds and initialize the List of the entity.
         /// </summary>
-        public Centralita()
-        {
+        public Centralita() {
             this.listaDeLlamadas = new List<Llamada>();
         }
 
@@ -80,8 +74,7 @@ namespace CentralitaHerencia
         /// </summary>
         /// <param name="nombreEmpresa">Name of the enterprice</param>
         public Centralita(string nombreEmpresa)
-            : this()
-        {
+            : this() {
             this.razonSocial = nombreEmpresa;
         }
 
@@ -94,32 +87,24 @@ namespace CentralitaHerencia
         /// </summary>
         /// <param name="tipoLlamada">Type of the call.</param>
         /// <returns>Returns the profits of the calls.</returns>
-        private float CalcularGanancias(Llamada.TipoLlamada tipoLlamada)
-        {
+        private float CalcularGanancias(Llamada.TipoLlamada tipoLlamada) {
             float profits = 0;
-            foreach (Llamada call in listaDeLlamadas)
-            {
-                switch (tipoLlamada)
-                {
+            foreach (Llamada call in listaDeLlamadas) {
+                switch (tipoLlamada) {
                     case Llamada.TipoLlamada.Local:
-                        if (call is Local)
-                        {
+                        if (call is Local) {
                             profits += ((Local)call).CostoLlamada;
                         }
                         break;
                     case Llamada.TipoLlamada.Provincial:
-                        if (call is Provincial)
-                        {
+                        if (call is Provincial) {
                             profits += ((Provincial)call).CostoLlamada;
                         }
                         break;
                     case Llamada.TipoLlamada.Todas:
-                        if (call is Provincial)
-                        {
+                        if (call is Provincial) {
                             profits += ((Provincial)call).CostoLlamada;
-                        }
-                        else if (call is Local)
-                        {
+                        } else if (call is Local) {
                             profits += ((Local)call).CostoLlamada;
                         }
                         break;
@@ -133,21 +118,18 @@ namespace CentralitaHerencia
         /// <summary>
         /// Sorts the calls of the list.
         /// </summary>
-        public void OrdenarLlamadas()
-        {
+        public void OrdenarLlamadas() {
             listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
         }
 
-        public string Mostrar()
-        {
+        public string Mostrar() {
             StringBuilder data = new StringBuilder();
             data.Append($"Razon Social: {this.razonSocial}.\n");
             data.Append($"Costo Total Local: {this.GananciasPorLocal}.\n");
             data.Append($"Costo Total Provincial: {this.GananciasPorProvincial}.\n");
             data.Append($"Costo Total Llamadas: {this.GananciasPorTotal}.\n");
             data.Append("Llamadas:\n");
-            foreach (Llamada call in Llamadas)
-            {
+            foreach (Llamada call in Llamadas) {
                 data.Append(call.Mostrar());
                 data.Append("________________________________________________________________\n");
             }

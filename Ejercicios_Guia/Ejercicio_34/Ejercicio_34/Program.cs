@@ -25,12 +25,10 @@
 using Library;
 using System;
 
-namespace Ejercicio_34
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_34 {
+    class Program {
+        static void Main(string[] args) {
+            Console.Title = "Excercise N° 34";
             Automovil toyota = new Automovil(4, 5, VehiculoTerrestre.Colores.Negro, 5, 5);
             Motocicleta harleyDavison = new Motocicleta(2, 0, VehiculoTerrestre.Colores.Gris, 150);
             Camion scania = new Camion(6, 2, VehiculoTerrestre.Colores.Blanco, 12, 15000);

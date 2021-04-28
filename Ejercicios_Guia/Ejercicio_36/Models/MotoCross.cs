@@ -24,10 +24,8 @@
 
 using System;
 
-namespace Models
-{
-    public class MotoCross : VehiculoCarrera
-    {
+namespace Models {
+    public sealed class MotoCross : VehiculoCarrera {
         private short cilindradas;
 
         #region Properties
@@ -36,13 +34,10 @@ namespace Models
         /// Get: Gets the displacement of the moto.
         /// Set: Sets the displacement of the moto.
         /// </summary>
-        public short Cilindradas
-        {
+        public short Cilindradas {
             get => cilindradas;
-            set
-            {
-                if (value > 110)
-                {
+            set {
+                if (value > 110) {
                     cilindradas = value;
                 }
             }
@@ -65,8 +60,7 @@ namespace Models
         /// <param name="number">Number of the moto.</param>
         /// <param name="team">Team of the moto.</param>
         /// <param name="displacement">Displacement of the moto.</param>
-        public MotoCross(short number, string team, short displacement) : base(number, team)
-        {
+        public MotoCross(short number, string team, short displacement) : base(number, team) {
             this.Cilindradas = displacement;
         }
 
@@ -80,10 +74,8 @@ namespace Models
         /// <param name="m1">First MotoCross to compares.</param>
         /// <param name="m2">Second MotoCross to compares.</param>
         /// <returns>True if are equals, otherwise returns false.</returns>
-        public static bool operator ==(MotoCross m1, MotoCross m2)
-        {
-            if (!(m1 is null) && !(m2 is null))
-            {
+        public static bool operator ==(MotoCross m1, MotoCross m2) {
+            if (!(m1 is null) && !(m2 is null)) {
                 bool sameTeam = m1.Escuderia == m2.Escuderia;
                 bool sameNumber = m1.Numero == m2.Numero;
                 bool sameDisp = m1.Cilindradas == m2.Cilindradas;
@@ -100,10 +92,8 @@ namespace Models
         /// <param name="m1">First MotoCross to compares.</param>
         /// <param name="m2">Second MotoCross to compares.</param>
         /// <returns>True if are differents, otherwise returns false.</returns>
-        public static bool operator !=(MotoCross m1, MotoCross m2)
-        {
-            if (!(m1 is null) && !(m2 is null))
-            {
+        public static bool operator !=(MotoCross m1, MotoCross m2) {
+            if (!(m1 is null) && !(m2 is null)) {
                 return !(m1 == m2);
             }
 
@@ -118,8 +108,7 @@ namespace Models
         /// Shows the info of the MotoCross.
         /// </summary>
         /// <returns>The info of the MotoCross as a string.</returns>
-        public override string MostrarDatos()
-        {
+        public override string MostrarDatos() {
             string stats = String.Format("Number: {0,2} | Team: {1,-6} | Comp: {2,-5} | Fuel: {3,3}% | Disp: {4,4}cc | Laps: {5,2}\n",
                this.Numero, this.Escuderia, this.EnCompetencia, this.CantidadCombustible, this.Cilindradas, this.VueltasRestantes);
 

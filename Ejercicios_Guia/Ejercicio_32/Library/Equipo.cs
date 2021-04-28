@@ -24,10 +24,8 @@
 
 using System.Collections.Generic;
 
-namespace Library
-{
-    public class Equipo
-    {
+namespace Library {
+    public sealed class Equipo {
         private short cantidadJugadores;
         private List<Jugador> listaJugadores;
         private string nombre;
@@ -37,8 +35,7 @@ namespace Library
         /// <summary>
         /// Creates the entity initializing the List.
         /// </summary>
-        private Equipo()
-        {
+        private Equipo() {
             listaJugadores = new List<Jugador>();
         }
 
@@ -47,8 +44,7 @@ namespace Library
         /// </summary>
         /// <param name="cantidadJugadores">Amount of players of the team.</param>
         /// <param name="nombre">Name of the team.</param>
-        public Equipo(short cantidadJugadores, string nombre) : this()
-        {
+        public Equipo(short cantidadJugadores, string nombre) : this() {
             this.cantidadJugadores = cantidadJugadores;
             this.nombre = nombre;
         }
@@ -63,14 +59,10 @@ namespace Library
         /// <param name="e">Team to checkout.</param>
         /// <param name="j1">Player to compare between the players of the team.</param>
         /// <returns>True if can add the player, otherwise false.</returns>
-        public static bool operator +(Equipo e, Jugador j1)
-        {
-            if (e.listaJugadores.Count < e.cantidadJugadores)
-            {
-                foreach (Jugador player in e.listaJugadores)
-                {
-                    if (player == j1)
-                    {
+        public static bool operator +(Equipo e, Jugador j1) {
+            if (e.listaJugadores.Count < e.cantidadJugadores) {
+                foreach (Jugador player in e.listaJugadores) {
+                    if (player == j1) {
                         return false;
                     }
                 }

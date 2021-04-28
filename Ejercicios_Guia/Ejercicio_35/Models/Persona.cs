@@ -24,10 +24,8 @@
 
 using System;
 
-namespace Models
-{
-    public abstract class Persona
-    {
+namespace Models {
+    public abstract class Persona {
         protected long dni;
         protected string nombre;
 
@@ -37,13 +35,10 @@ namespace Models
         /// Get: gets the dni of the person.
         /// Set: sets the dni of the person.
         /// </summary>
-        public long DNI
-        {
+        public long DNI {
             get { return this.dni; }
-            set
-            {
-                if (value > 5000000)
-                {
+            set {
+                if (value > 5000000) {
                     this.dni = value;
                 }
             }
@@ -53,13 +48,10 @@ namespace Models
         /// Get: gets the name of the person.
         /// Set: sets the name of the person.
         /// </summary>
-        public string Nombre
-        {
+        public string Nombre {
             get { return this.nombre; }
-            set
-            {
-                if (!String.IsNullOrWhiteSpace(value))
-                {
+            set {
+                if (!String.IsNullOrWhiteSpace(value)) {
                     this.nombre = value;
                 }
             }
@@ -73,8 +65,7 @@ namespace Models
         /// Builds the person with the name.
         /// </summary>
         /// <param name="nombre">Name of the person.</param>
-        public Persona(string nombre)
-        {
+        public Persona(string nombre) {
             this.Nombre = nombre;
         }
 
@@ -84,8 +75,7 @@ namespace Models
         /// <param name="nombre">Name of the person.</param>
         /// <param name="dni">DNI of the person.</param>
         public Persona(long dni, string nombre)
-            : this(nombre)
-        {
+            : this(nombre) {
             this.DNI = dni;
         }
 

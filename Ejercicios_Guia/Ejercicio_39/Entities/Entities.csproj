@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sobreescrito.cs" />
+    <Compile Include="Classes\SuperClass\Sobreescrito.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SobreSobreescrito.cs" />
+    <Compile Include="Classes\SubClass\SobreSobreescrito.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

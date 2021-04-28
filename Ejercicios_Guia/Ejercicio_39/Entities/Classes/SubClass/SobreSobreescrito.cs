@@ -22,10 +22,9 @@
  * SOFTWARE.
  */
 
-namespace Entities
-{
-    public class SobreSobreescrito : Sobreescrito
-    {
+namespace Entities {
+    public class SobreSobreescrito : Sobreescrito {
+
         /// <summary>
         /// Builder of the entity.
         /// </summary>
@@ -40,8 +39,7 @@ namespace Entities
         /// Override implementation of MiMetodo.
         /// </summary>
         /// <returns>The info of MiPropiedad as a string.</returns>
-        public override string MiMetodo()
-        {
+        public override string MiMetodo() {
             return MiPropiedad;
         }
     }

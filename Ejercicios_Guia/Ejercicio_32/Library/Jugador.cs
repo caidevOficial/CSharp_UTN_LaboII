@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Library
-{
-    public class Jugador
-    {
+namespace Library {
+    public sealed class Jugador {
         private int dni;
         private string nombre;
         private readonly int partidosJugados;
@@ -36,8 +34,7 @@ namespace Library
         /// <summary>
         /// Builds the entity with all the stats in 0.
         /// </summary>
-        private Jugador()
-        {
+        private Jugador() {
             this.partidosJugados = 0;
             this.totalGoles = 0;
         }
@@ -47,8 +44,7 @@ namespace Library
         /// </summary>
         /// <param name="dni">[PK] Unique number of the entity.</param>
         /// <param name="nombre">Name of the entity.</param>
-        public Jugador(int dni, string nombre)
-        {
+        public Jugador(int dni, string nombre) {
             this.dni = dni;
             this.nombre = nombre;
         }
@@ -60,8 +56,7 @@ namespace Library
         /// <param name="nombre">Name of the entity.</param>
         /// <param name="partidosJugados">Amount of matchs played by the entity.</param>
         /// <param name="totalGoles">Amount of goals achieved by the entity.</param>
-        public Jugador(int dni, string nombre, int partidosJugados, int totalGoles) : this(dni, nombre)
-        {
+        public Jugador(int dni, string nombre, int partidosJugados, int totalGoles) : this(dni, nombre) {
             this.partidosJugados = partidosJugados;
             this.totalGoles = totalGoles;
         }
@@ -73,11 +68,9 @@ namespace Library
         /// <summary>
         /// Get: Returns the average of goals by matches of the entity.
         /// </summary>
-        public float PromedioDeGoles
-        {
+        public float PromedioDeGoles {
             get {
-                if (this.partidosJugados != 0)
-                {
+                if (this.partidosJugados != 0) {
                     return this.totalGoles / (float)this.partidosJugados;
                 }
                 return 0;
@@ -92,8 +85,7 @@ namespace Library
         /// Shows the stats of the entity.
         /// </summary>
         /// <returns>The stats of the entity.</returns>
-        public string MostrarDatos()
-        {
+        public string MostrarDatos() {
             //StringBuilder fichaTecnica = new StringBuilder();
             string fichaTecnica = string.Format("| Nombre: {0,-6} | DNI: {1,-8} | PJ: {2,3} | Goles: {3,3} | Promedio: {4,4} |\n",
                 this.nombre, this.dni, this.partidosJugados, this.totalGoles, this.PromedioDeGoles);
@@ -111,8 +103,7 @@ namespace Library
         /// <param name="j1">First entity to compare.</param>
         /// <param name="j2">Second entity to compare.</param>
         /// <returns>True if both have the same pk, otherwise returns false.</returns>
-        public static bool operator ==(Jugador j1, Jugador j2)
-        {
+        public static bool operator ==(Jugador j1, Jugador j2) {
             return j1.dni == j2.dni;
         }
 
@@ -122,8 +113,7 @@ namespace Library
         /// <param name="j1">First entity to compare.</param>
         /// <param name="j2">Second entity to compare.</param>
         /// <returns>True if both have different pk, otherwise returns false.</returns>
-        public static bool operator !=(Jugador j1, Jugador j2)
-        {
+        public static bool operator !=(Jugador j1, Jugador j2) {
             return !(j1.dni == j2.dni);
         }
 

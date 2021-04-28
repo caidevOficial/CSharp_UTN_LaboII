@@ -24,10 +24,8 @@
 
 using System.Text;
 
-namespace Library
-{
-    public class Camion : VehiculoTerrestre
-    {
+namespace Library {
+    public sealed class Camion : VehiculoTerrestre {
         private short cantidadMarchas;
         private int pesoCarga;
 
@@ -42,8 +40,7 @@ namespace Library
         /// <param name="cantidadMarchas">Number of gears of the truck.</param>
         /// <param name="pesoCarga">Amount of charge of the truck.</param>
         public Camion(short cantidadRuedas, short cantidadPuertas, Colores color, short cantidadMarchas, int pesoCarga)
-            : base(cantidadRuedas, cantidadPuertas, color)
-        {
+            : base(cantidadRuedas, cantidadPuertas, color) {
             this.CantidadMarchas = cantidadMarchas;
             this.CargaPeso = pesoCarga;
         }
@@ -56,13 +53,10 @@ namespace Library
         /// Get: Gets the amount of gears of the truck.
         /// Set: Sets the amount of gears of the truck.
         /// </summary>
-        public short CantidadMarchas
-        {
+        public short CantidadMarchas {
             get => cantidadMarchas;
-            set
-            {
-                if (value > 0)
-                {
+            set {
+                if (value > 0) {
                     cantidadMarchas = value;
                 }
             }
@@ -72,13 +66,10 @@ namespace Library
         /// Get: Gets the amount of passengers of the truck.
         /// Set: Sets the amount of passengers of the truck.
         /// </summary>
-        public int CargaPeso
-        {
+        public int CargaPeso {
             get => pesoCarga;
-            set
-            {
-                if (value >= 0)
-                {
+            set {
+                if (value >= 0) {
                     pesoCarga = value;
                 }
             }
@@ -92,8 +83,7 @@ namespace Library
         /// Shows the info of the truck.
         /// </summary>
         /// <returns>Returns the info as a string.</returns>
-        public override string ShowInfo()
-        {
+        public override string ShowInfo() {
             StringBuilder information = new StringBuilder();
             information.Append($"###### Camion ######\nMarchas: {this.CantidadMarchas}\n");
             information.Append($"Puertas: {this.CantidadPuertas}\n");

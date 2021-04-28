@@ -25,17 +25,14 @@
 using System;
 using System.Threading;
 
-namespace Clases
-{
-    public class PuestoAtencion
-    {
+namespace Clases {
+    public sealed class PuestoAtencion {
         private static int numeroActual;
         private Puesto puestoAsignado;
 
         #region Enumerators
 
-        public enum Puesto
-        {
+        public enum Puesto {
             Caja1,
             Caja2
         }
@@ -47,10 +44,8 @@ namespace Clases
         /// <summary>
         /// Incrementa en 1 el numero actual y lo retorna.
         /// </summary>
-        public static int NumeroActual
-        {
-            get
-            {
+        public static int NumeroActual {
+            get {
                 numeroActual += 1;
                 return numeroActual;
             }
@@ -63,8 +58,7 @@ namespace Clases
         /// <summary>
         /// Crea la entidad inicializando el atributo 'numeroActual' en 0.
         /// </summary>
-        static PuestoAtencion()
-        {
+        static PuestoAtencion() {
             numeroActual = 0;
         }
 
@@ -72,8 +66,7 @@ namespace Clases
         /// Crea la entidad con el puesto asignado para atencion.
         /// </summary>
         /// <param name="puesto">Enumerador del puesto.</param>
-        public PuestoAtencion(Puesto puesto)
-        {
+        public PuestoAtencion(Puesto puesto) {
             this.puestoAsignado = puesto;
         }
 
@@ -86,8 +79,7 @@ namespace Clases
         /// </summary>
         /// <param name="cli">Cliente que sera atendido.</param>
         /// <returns>True al terminar el tiempo.</returns>
-        public bool Atender(Cliente cli)
-        {
+        public bool Atender(Cliente cli) {
             int siguiente = PuestoAtencion.NumeroActual;
             Console.WriteLine(siguiente);
             Thread.Sleep(500);

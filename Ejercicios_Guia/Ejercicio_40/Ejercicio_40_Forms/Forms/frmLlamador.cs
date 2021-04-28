@@ -27,22 +27,19 @@ using System;
 using System.Media;
 using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms
-{
-    public partial class frmLlamador : Form
-    {
+namespace Ejercicio_40_Forms {
+    public partial class frmLlamador : Form {
         private Centralita myCentral;
         private readonly string pathToMusic = Environment.CurrentDirectory;
         private readonly SoundPlayer myPlayer = new SoundPlayer();
-        
+
         #region Builder
 
         /// <summary>
         /// Builds the entity, initialize it's components and updates it's attribute.
         /// </summary>
         /// <param name="frmMenuCentralita"></param>
-        public frmLlamador(Centralita frmMenuCentralita)
-        {
+        public frmLlamador(Centralita frmMenuCentralita) {
             myCentral = frmMenuCentralita;
             InitializeComponent();
             cmbFranja.Enabled = false;
@@ -55,8 +52,7 @@ namespace Ejercicio_40_Forms
         /// <summary>
         /// Get: Gets the centralita of this form.
         /// </summary>
-        public Centralita FrmLlamadorCentralita
-        {
+        public Centralita FrmLlamadorCentralita {
             get => myCentral;
         }
 
@@ -69,24 +65,19 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnLlamar_Click(object sender, EventArgs e)
-        {
+        private void btnLlamar_Click(object sender, EventArgs e) {
             Random randomNumber = new Random();
             float duration;
             float billing;
-            if (!String.IsNullOrWhiteSpace(txtNroDestino.Text) && !String.IsNullOrWhiteSpace(txtNroOrigen.Text))
-            {
+            if (!String.IsNullOrWhiteSpace(txtNroDestino.Text) && !String.IsNullOrWhiteSpace(txtNroOrigen.Text)) {
                 duration = randomNumber.Next(1, 51);
-                if (txtNroDestino.Text.StartsWith("#"))
-                {
+                if (txtNroDestino.Text.StartsWith("#")) {
                     Provincial myProvinceCall = new Provincial(duration, txtNroOrigen.Text, txtNroDestino.Text, (Provincial.Franja)cmbFranja.SelectedIndex);
                     myCentral = myCentral + myProvinceCall;
                     Notification(myPlayer, "Provincial");
                     MessageBox.Show("Llamada Provincial Generada con exito!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
-                else
-                {
-                    billing = (randomNumber.Next(5,56) / 10);
+                } else {
+                    billing = (randomNumber.Next(5, 56) / 10);
                     Local myLocalCall = new Local(txtNroOrigen.Text, txtNroDestino.Text, duration, billing);
                     myCentral = myCentral + myLocalCall;
                     Notification(myPlayer, "Local");
@@ -105,8 +96,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn1_Click(object sender, EventArgs e)
-        {
+        private void btn1_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "1";
         }
 
@@ -115,8 +105,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn2_Click(object sender, EventArgs e)
-        {
+        private void btn2_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "2";
         }
 
@@ -125,8 +114,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn3_Click(object sender, EventArgs e)
-        {
+        private void btn3_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "3";
         }
 
@@ -135,8 +123,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn4_Click(object sender, EventArgs e)
-        {
+        private void btn4_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "4";
         }
 
@@ -145,8 +132,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn5_Click(object sender, EventArgs e)
-        {
+        private void btn5_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "5";
         }
 
@@ -155,8 +141,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn6_Click(object sender, EventArgs e)
-        {
+        private void btn6_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "6";
         }
 
@@ -165,8 +150,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn7_Click(object sender, EventArgs e)
-        {
+        private void btn7_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "7";
         }
 
@@ -175,8 +159,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn8_Click(object sender, EventArgs e)
-        {
+        private void btn8_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "8";
         }
 
@@ -185,8 +168,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn9_Click(object sender, EventArgs e)
-        {
+        private void btn9_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "9";
         }
 
@@ -195,8 +177,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn0_Click(object sender, EventArgs e)
-        {
+        private void btn0_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "0";
         }
 
@@ -205,8 +186,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAsterisc_Click(object sender, EventArgs e)
-        {
+        private void btnAsterisc_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "*";
         }
 
@@ -215,20 +195,16 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnHashtag_Click(object sender, EventArgs e)
-        {
+        private void btnHashtag_Click(object sender, EventArgs e) {
             txtNroDestino.Text += "#";
-            if (txtNroDestino.Text.StartsWith("#"))
-            {
+            if (txtNroDestino.Text.StartsWith("#")) {
                 cmbFranja.Enabled = true;
                 // Carga
                 cmbFranja.DataSource = Enum.GetValues(typeof(Provincial.Franja));
                 // Lectura
                 Provincial.Franja franjas;
                 Enum.TryParse<Provincial.Franja>(cmbFranja.SelectedValue.ToString(), out franjas);
-            }
-            else
-            {
+            } else {
                 cmbFranja.Enabled = false;
             }
         }
@@ -242,8 +218,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
+        private void btnLimpiar_Click(object sender, EventArgs e) {
             txtNroDestino.Text = String.Empty;
             txtNroOrigen.Text = String.Empty;
             cmbFranja.SelectedIndex = -1;
@@ -260,8 +235,7 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
+        private void btnSalir_Click(object sender, EventArgs e) {
             Dispose();
         }
 
@@ -271,14 +245,10 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void frmLlamador_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Do you want to quit the CallerForm?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
+        private void frmLlamador_FormClosing(object sender, FormClosingEventArgs e) {
+            if (MessageBox.Show("Do you want to quit the CallerForm?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
                 e.Cancel = true;
-            }
-            else
-            {
+            } else {
                 frmMenu.myCentralita = FrmLlamadorCentralita;
                 Dispose();
             }
@@ -291,18 +261,14 @@ namespace Ejercicio_40_Forms
         /// <summary>
         /// Plays an 8-bit audio of Dragon Ball Z in '.wav' format.
         /// </summary>
-        private void Notification(SoundPlayer myPlayer, string typeCall)
-        {
-            if (typeCall.Equals("Provincial"))
-            {
+        private void Notification(SoundPlayer myPlayer, string typeCall) {
+            if (typeCall.Equals("Provincial")) {
                 myPlayer.SoundLocation = this.pathToMusic + "/Media/Hello_Moto_N.wav";
-            }
-            else
-            {
+            } else {
                 myPlayer.SoundLocation = this.pathToMusic + "/Media/Hello_Moto.wav";
             }
             myPlayer.Play();
-            
+
         }
 
         #endregion

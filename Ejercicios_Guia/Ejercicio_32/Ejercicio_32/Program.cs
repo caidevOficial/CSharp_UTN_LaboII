@@ -25,13 +25,10 @@
 using Library;
 using System;
 
-namespace Ejercicio_29
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Title = "Ejercicio 29";
+namespace Ejercicio_29 {
+    class Program {
+        static void Main(string[] args) {
+            Console.Title = "Ejercicio 32";
             Console.ForegroundColor = ConsoleColor.Green;
 
             #region Instances
@@ -47,22 +44,16 @@ namespace Ejercicio_29
 
             #region ComparePlayers
 
-            if (j1 == j2)
-            {
+            if (j1 == j2) {
                 status = "Iguales";
-            }
-            else
-            {
+            } else {
                 status = "Diferentes";
             }
             Console.WriteLine($"{j1.MostrarDatos()}{j2.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
-            if (j1 == j3)
-            {
+            if (j1 == j3) {
                 status = "Iguales";
-            }
-            else
-            {
+            } else {
                 status = "Diferentes";
             }
             Console.WriteLine($"{j1.MostrarDatos()}{j3.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
@@ -71,42 +62,30 @@ namespace Ejercicio_29
 
             #region AddPlayerToTeam
 
-            if (losArgento + j1)
-            {
+            if (losArgento + j1) {
                 status = "Jugador agregado";
-            }
-            else
-            {
+            } else {
                 status = "Jugador existente o Equipo lleno.";
             }
             Console.WriteLine($"{j1.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
-            if (losArgento + j2)
-            {
+            if (losArgento + j2) {
                 status = "Jugador agregado";
-            }
-            else
-            {
+            } else {
                 status = "Jugador existente o Equipo lleno.";
             }
             Console.WriteLine($"{j2.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
-            if (losArgento + j3)
-            {
+            if (losArgento + j3) {
                 status = "Jugador agregado";
-            }
-            else
-            {
+            } else {
                 status = "Jugador existente o Equipo lleno.";
             }
             Console.WriteLine($"{j3.MostrarDatos()}###############\nStatus: {status}.\n###############\n");
 
-            if (losArgento + j4)
-            {
+            if (losArgento + j4) {
                 status = "Jugador agregado";
-            }
-            else
-            {
+            } else {
                 status = "Jugador existente o Equipo lleno.";
             }
             Console.WriteLine($"{j4.MostrarDatos()}###############\nStatus: {status}.\n###############\n");

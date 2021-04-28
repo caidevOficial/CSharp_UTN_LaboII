@@ -26,10 +26,8 @@ using CentralitaHerencia;
 using System;
 using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms
-{
-    public partial class frmMostrar : Form
-    {
+namespace Ejercicio_40_Forms {
+    public partial class frmMostrar : Form {
 
         private Llamada.TipoLlamada callType;
         private Centralita myCentral;
@@ -39,8 +37,7 @@ namespace Ejercicio_40_Forms
         /// <summary>
         /// Builds the entity and initialize it's components.
         /// </summary>
-        public frmMostrar()
-        {
+        public frmMostrar() {
             InitializeComponent();
         }
 
@@ -49,8 +46,7 @@ namespace Ejercicio_40_Forms
         /// of the Phone company.
         /// </summary>
         /// <param name="frmMenuCentralita"></param>
-        public frmMostrar(Centralita frmMenuCentralita):this() 
-        {
+        public frmMostrar(Centralita frmMenuCentralita) : this() {
             myCentral = frmMenuCentralita;
         }
 
@@ -61,10 +57,8 @@ namespace Ejercicio_40_Forms
         /// <summary>
         /// Set: Sets the type of the call.
         /// </summary>
-        public Llamada.TipoLlamada SetCallType
-        {
-            set
-            {
+        public Llamada.TipoLlamada SetCallType {
+            set {
                 callType = value;
             }
         }
@@ -78,18 +72,12 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void frmMostrar_Load(object sender, EventArgs e)
-        {
-            if (callType is Llamada.TipoLlamada.Local)
-            {
+        private void frmMostrar_Load(object sender, EventArgs e) {
+            if (callType is Llamada.TipoLlamada.Local) {
                 richTextBox.Text = "Local: $ " + (Math.Round(myCentral.GananciasPorLocal, 2)).ToString();
-            }
-            else if (callType is Llamada.TipoLlamada.Provincial)
-            {
+            } else if (callType is Llamada.TipoLlamada.Provincial) {
                 richTextBox.Text = "Prov: $ " + (Math.Round(myCentral.GananciasPorProvincial, 2)).ToString();
-            }
-            else
-            {
+            } else {
                 richTextBox.Text = "All: $ " + (Math.Round(myCentral.GananciasPorTotal, 2)).ToString();
             }
         }
@@ -104,14 +92,10 @@ namespace Ejercicio_40_Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void frmMostrar_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Do you want to quit the Billing Screen?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
+        private void frmMostrar_FormClosing(object sender, FormClosingEventArgs e) {
+            if (MessageBox.Show("Do you want to quit the Billing Screen?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
                 e.Cancel = true;
-            }
-            else
-            {
+            } else {
                 Dispose();
             }
         }

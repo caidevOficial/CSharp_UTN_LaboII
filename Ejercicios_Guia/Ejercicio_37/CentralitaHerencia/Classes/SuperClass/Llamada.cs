@@ -22,18 +22,13 @@
  * SOFTWARE.
  */
 
-using System.Text;
-
-namespace CentralitaHerencia
-{
-    public class Llamada
-    {
+namespace CentralitaHerencia {
+    public class Llamada {
         protected float duracion;
         protected string nroOrigen;
         protected string nroDestino;
 
-        public enum TipoLlamada
-        {
+        public enum TipoLlamada {
             Local,
             Provincial,
             Todas
@@ -60,8 +55,7 @@ namespace CentralitaHerencia
 
         #region Builders
 
-        public Llamada(float duracion, string nroOrigen, string nroDestino)
-        {
+        public Llamada(float duracion, string nroOrigen, string nroDestino) {
             this.duracion = duracion;
             this.nroOrigen = nroOrigen;
             this.nroDestino = nroDestino;
@@ -77,8 +71,7 @@ namespace CentralitaHerencia
         /// <param name="call1">First call to compare.</param>
         /// <param name="call2">Second call to compare.</param>
         /// <returns></returns>
-        public static int OrdenarPorDuracion(Llamada call1, Llamada call2)
-        {
+        public static int OrdenarPorDuracion(Llamada call1, Llamada call2) {
             return call1.Duracion.CompareTo(call2.Duracion);
         }
 
@@ -86,8 +79,7 @@ namespace CentralitaHerencia
         /// Shows the data of the call.
         /// </summary>
         /// <returns>The data of the call as a string.</returns>
-        public virtual string Mostrar()
-        {
+        public virtual string Mostrar() {
             string data = string.Format("From: {0,-10} | ", this.NroOrigen);
             data += string.Format("To: {0,-10} | ", this.NroDestino);
             data += string.Format("Time: {0,3}min | ", this.Duracion);

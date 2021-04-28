@@ -22,17 +22,14 @@
  * SOFTWARE.
  */
 
-namespace Entities
-{
-    public abstract class Sobreescrito
-    {
+namespace Entities {
+    public abstract class Sobreescrito {
         protected string miAtributo;
 
         /// <summary>
         /// Builder of the entity.
         /// </summary>
-        public Sobreescrito()
-        {
+        public Sobreescrito() {
             this.miAtributo = "Probar abstractos";
         }
 
@@ -41,14 +38,19 @@ namespace Entities
         /// </summary>
         public abstract string MiPropiedad { get; }
 
+        #region Methods
+
+        /// <summary>
+        /// Abstract method.
+        /// </summary>
+        /// <returns>Returns a string.</returns>
         public abstract string MiMetodo();
 
         /// <summary>
         /// Override of ToString() that returns a new message.
         /// </summary>
         /// <returns>Returns a custom message.</returns>
-        public override string ToString()
-        {
+        public override string ToString() {
             return "¡Este es mi método ToString sobreescrito!";
         }
 
@@ -57,8 +59,7 @@ namespace Entities
         /// </summary>
         /// <param name="obj">Objet to compare with this.</param>
         /// <returns>True if the object is equal of this, otherwise returns false.</returns>
-        public override bool Equals(object obj)
-        {
+        public override bool Equals(object obj) {
             return base.Equals(obj);
         }
 
@@ -66,9 +67,10 @@ namespace Entities
         /// An override implementation of GetHashCode().
         /// </summary>
         /// <returns>Returns an specific number.</returns>
-        public override int GetHashCode()
-        {
+        public override int GetHashCode() {
             return 1142510187;
         }
+
+        #endregion
     }
 }

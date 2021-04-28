@@ -24,10 +24,8 @@
 
 using System;
 
-namespace Models
-{
-    public class AutoF1 : VehiculoCarrera
-    {
+namespace Models {
+    public sealed class AutoF1 : VehiculoCarrera {
         private short caballosFuerza;
 
         #region Properties
@@ -36,13 +34,10 @@ namespace Models
         /// Get: Gets the hp of the vehicle.
         /// Set: Sets the hp of the vehicle.
         /// </summary>
-        public short CaballosFuerza
-        {
+        public short CaballosFuerza {
             get => caballosFuerza;
-            set
-            {
-                if (value > 50)
-                {
+            set {
+                if (value > 50) {
                     caballosFuerza = value;
                 }
             }
@@ -65,8 +60,7 @@ namespace Models
         /// <param name="numero">Number of the car.</param>
         /// <param name="escuderia">Team of the car.</param>
         /// <param name="hp">HorsePower of the car.</param>
-        public AutoF1(short numero, string escuderia, short hp) : base(numero, escuderia)
-        {
+        public AutoF1(short numero, string escuderia, short hp) : base(numero, escuderia) {
             this.CaballosFuerza = hp;
         }
 
@@ -80,10 +74,8 @@ namespace Models
         /// <param name="a1">First Car to compares.</param>
         /// <param name="a2">Second Car to compares.</param>
         /// <returns>True if are equals, otherwise returns false.</returns>
-        public static bool operator ==(AutoF1 a1, AutoF1 a2)
-        {
-            if (!(a1 is null) && !(a2 is null))
-            {
+        public static bool operator ==(AutoF1 a1, AutoF1 a2) {
+            if (!(a1 is null) && !(a2 is null)) {
                 bool sameTeam = a1.Escuderia == a2.Escuderia;
                 bool sameNumber = a1.Numero == a2.Numero;
                 bool sameHP = a1.CaballosFuerza == a2.CaballosFuerza;
@@ -100,10 +92,8 @@ namespace Models
         /// <param name="a1">First Car to compares.</param>
         /// <param name="a2">Second Car to compares.</param>
         /// <returns>True if are different, otherwise returns false.</returns>
-        public static bool operator !=(AutoF1 a1, AutoF1 a2)
-        {
-            if (!(a1 is null) && !(a2 is null))
-            {
+        public static bool operator !=(AutoF1 a1, AutoF1 a2) {
+            if (!(a1 is null) && !(a2 is null)) {
                 return !(a1 == a2);
             }
 
@@ -118,8 +108,7 @@ namespace Models
         /// Shows the info of the car.
         /// </summary>
         /// <returns>The info of the car as a string.</returns>
-        public override string MostrarDatos()
-        {
+        public override string MostrarDatos() {
             string stats = String.Format("Number: {0,2} | Team: {1,-6} | Comp: {2,-5} | Fuel: {3,3}% | HP: {4,4} | Laps: {5,2}\n",
                this.Numero, this.Escuderia, this.EnCompetencia, this.CantidadCombustible, this.CaballosFuerza, this.VueltasRestantes);
 

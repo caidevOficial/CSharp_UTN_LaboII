@@ -24,12 +24,9 @@
 
 using System;
 
-namespace Ejercicio_38
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_38 {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Ejercicio Nº38";
 
             Sobreescrito sobrecarga = new Sobreescrito();

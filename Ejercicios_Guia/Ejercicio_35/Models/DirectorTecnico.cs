@@ -25,10 +25,8 @@
 using System;
 using System.Text;
 
-namespace Models
-{
-    public class DirectorTecnico : Persona
-    {
+namespace Models {
+    public sealed class DirectorTecnico : Persona {
         private DateTime fechaNacimiento;
 
         #region Builders
@@ -44,8 +42,7 @@ namespace Models
         /// </summary>
         /// <param name="nombre">Name of the entity.</param>
         /// <param name="fechaNac">Birthday of the entity.</param>
-        public DirectorTecnico(string nombre, DateTime fechaNac) : base(nombre)
-        {
+        public DirectorTecnico(string nombre, DateTime fechaNac) : base(nombre) {
             this.FechaNacimiento = fechaNac;
         }
 
@@ -57,8 +54,7 @@ namespace Models
         /// Get: gets the birthday of the entity.
         /// Set: Sets the birthday of the entity.
         /// </summary>
-        public DateTime FechaNacimiento
-        {
+        public DateTime FechaNacimiento {
             get => fechaNacimiento;
             set { fechaNacimiento = value; }
         }
@@ -73,8 +69,7 @@ namespace Models
         /// <param name="t1">First entity to compare.</param>
         /// <param name="t2">Second entity to compare.</param>
         /// <returns>True if have the same fields, otherwise returns False.</returns>
-        public static bool operator ==(DirectorTecnico t1, DirectorTecnico t2)
-        {
+        public static bool operator ==(DirectorTecnico t1, DirectorTecnico t2) {
             return (t1.FechaNacimiento == t2.FechaNacimiento && t1.Nombre == t2.Nombre);
         }
 
@@ -84,8 +79,7 @@ namespace Models
         /// <param name="t1">First entity to compare.</param>
         /// <param name="t2">Second entity to compare.</param>
         /// <returns>True if haven't the same fields, otherwise returns False.</returns>
-        public static bool operator !=(DirectorTecnico t1, DirectorTecnico t2)
-        {
+        public static bool operator !=(DirectorTecnico t1, DirectorTecnico t2) {
             return !(t1 == t2);
         }
 
@@ -97,8 +91,7 @@ namespace Models
         /// Shows the data of the Entity.
         /// </summary>
         /// <returns>The data of the Entity as a string.</returns>
-        public override string MostrarDatos()
-        {
+        public override string MostrarDatos() {
             StringBuilder data = new StringBuilder();
             data.Append($"######## Soccer Player ########\n");
             data.Append($"Name: {this.Nombre}.\n");

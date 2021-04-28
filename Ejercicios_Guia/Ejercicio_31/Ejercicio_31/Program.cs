@@ -25,12 +25,10 @@
 using Clases;
 using System;
 
-namespace Ejercicio_31
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_31 {
+    class Program {
+        static void Main(string[] args) {
+            Console.Title = "Excercise N° 31";
             Cliente first = new Cliente("Fatiga", 007);
             Cliente firstError = new Cliente("Pepe", 007);
             Cliente second = new Cliente("Moni", 008);
@@ -42,9 +40,7 @@ namespace Ejercicio_31
             if (first == firstError) // Comparo con un cliente con el mismo numero
             {
                 status = "Igual";
-            }
-            else
-            {
+            } else {
                 status = "Direfente";
             }
             Console.WriteLine($"{first.Nombre} - {firstError.Nombre}: Tienen el {status} numero");
@@ -52,9 +48,7 @@ namespace Ejercicio_31
             if (first == third) // Comparo con un cliente diferente
             {
                 status = "Igual";
-            }
-            else
-            {
+            } else {
                 status = "Direfente";
             }
             Console.WriteLine($"{first.Nombre} - {third.Nombre}: Tienen el {status} numero");
@@ -65,32 +59,23 @@ namespace Ejercicio_31
 
             Negocio tienda = new Negocio("Los Argento");
 
-            if (tienda + first)
-            {
+            if (tienda + first) {
                 status = "Se agrego";
-            }
-            else
-            {
+            } else {
                 status = "No se agrego";
             }
             Console.WriteLine($"{first.Nombre} : {status} a la fila");
 
-            if (tienda + second)
-            {
+            if (tienda + second) {
                 status = "Se agrego";
-            }
-            else
-            {
+            } else {
                 status = "No se agrego";
             }
             Console.WriteLine($"{second.Nombre} : {status} a la fila");
 
-            if (tienda + third)
-            {
+            if (tienda + third) {
                 status = "Se agrego";
-            }
-            else
-            {
+            } else {
                 status = "No se agrego";
             }
             Console.WriteLine($"{third.Nombre} : {status} a la fila");
@@ -98,9 +83,7 @@ namespace Ejercicio_31
             if (tienda + firstError)//no se puede agregar
             {
                 status = "Se agrego";
-            }
-            else
-            {
+            } else {
                 status = "No se agrego";
             }
             Console.WriteLine($"{firstError.Nombre} : {status} a la fila");
@@ -109,12 +92,9 @@ namespace Ejercicio_31
 
             #region CompareCustomersInQueue
 
-            if (tienda == first)
-            {
+            if (tienda == first) {
                 status = "Existe en la fila";
-            }
-            else
-            {
+            } else {
                 status = "No existe en la fila";
             }
             Console.WriteLine($"{first.Nombre} : {status}");
@@ -123,16 +103,13 @@ namespace Ejercicio_31
 
             #region Store
 
-            if (~tienda)
-            {
+            if (~tienda) {
                 Console.WriteLine($"Nro de cliente atendido: {first.Numero}");
             }
-            if (~tienda)
-            {
+            if (~tienda) {
                 Console.WriteLine($"Nro de cliente atendido: {second.Numero}");
             }
-            if (~tienda)
-            {
+            if (~tienda) {
                 Console.WriteLine($"Nro de cliente atendido: {third.Numero}");
             }
 

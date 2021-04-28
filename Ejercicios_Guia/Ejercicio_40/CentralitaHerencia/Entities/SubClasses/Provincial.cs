@@ -22,16 +22,11 @@
  * SOFTWARE.
  */
 
-using System.Text;
-
-namespace CentralitaHerencia
-{
-    public sealed class Provincial : Llamada
-    {
+namespace CentralitaHerencia {
+    public sealed class Provincial : Llamada {
         private Franja franjaHoraria;
 
-        public enum Franja
-        {
+        public enum Franja {
             Franja_01,
             Franja_02,
             Franja_03
@@ -54,8 +49,7 @@ namespace CentralitaHerencia
         /// <param name="call">Llamada-type object.</param>
         /// <param name="franjaHoraria">Time zone of the call.</param>
         public Provincial(Llamada call, Franja franjaHoraria)
-            : base(call.Duracion, call.NroOrigen, call.NroDestino)
-        {
+            : base(call.Duracion, call.NroOrigen, call.NroDestino) {
             this.franjaHoraria = franjaHoraria;
         }
 
@@ -67,8 +61,7 @@ namespace CentralitaHerencia
         /// <param name="destino">Destiny of the call.</param>
         /// <param name="franjaHoraria">Time zone of the call.</param>
         public Provincial(float duracion, string origen, string destino, Franja franjaHoraria)
-            : base(duracion, origen, destino) 
-        {
+            : base(duracion, origen, destino) {
             this.franjaHoraria = franjaHoraria;
         }
 
@@ -80,19 +73,13 @@ namespace CentralitaHerencia
         /// It will caltulate the cost of the call, based in the duration and its price.
         /// </summary>
         /// <returns>The cost of the call.</returns>
-        private float CalcularCostos()
-        {
+        private float CalcularCostos() {
             float price = 0;
-            if (this.franjaHoraria == Franja.Franja_01)
-            {
+            if (this.franjaHoraria == Franja.Franja_01) {
                 price = 0.99F;
-            }
-            else if (this.franjaHoraria == Franja.Franja_02)
-            {
+            } else if (this.franjaHoraria == Franja.Franja_02) {
                 price = 1.25F;
-            }
-            else
-            {
+            } else {
                 price = 0.66F;
             }
 
@@ -103,8 +90,7 @@ namespace CentralitaHerencia
         /// Shows the info of the call.
         /// </summary>
         /// <returns>Returns the info as a string.</returns>
-        protected override string Mostrar()
-        {
+        protected override string Mostrar() {
             string data = string.Format("{0}", base.Mostrar());
             data += string.Format("Costo: ${0,3} | ", this.CostoLlamada);
             data += string.Format("Franja: {0}\n", this.franjaHoraria);
@@ -116,8 +102,7 @@ namespace CentralitaHerencia
         /// Override Implementation of ToString()
         /// </summary>
         /// <returns>Returns the dhata as a string.</returns>
-        public override string ToString()
-        {
+        public override string ToString() {
             return this.Mostrar();
         }
 
@@ -126,8 +111,7 @@ namespace CentralitaHerencia
         /// </summary>
         /// <param name="obj">Objet to compare with this object.</param>
         /// <returns>True if both object are equals, otherwise returns false.</returns>
-        public override bool Equals(object obj)
-        {
+        public override bool Equals(object obj) {
             return (obj is Provincial);
         }
 

@@ -24,10 +24,8 @@
 
 using System.Text;
 
-namespace Library
-{
-    public class Motocicleta : VehiculoTerrestre
-    {
+namespace Library {
+    public sealed class Motocicleta : VehiculoTerrestre {
         private short cilindradas;
 
         #region Builder
@@ -40,8 +38,7 @@ namespace Library
         /// <param name="color">Color of the motorcycle.</param>
         /// <param name="cilindradas">Amount of displacement of the motorcycle.</param>
         public Motocicleta(short cantidadRuedas, short cantidadPuertas, Colores color, short cilindradas)
-            : base(cantidadRuedas, cantidadPuertas, color)
-        {
+            : base(cantidadRuedas, cantidadPuertas, color) {
             this.Cilindradas = cilindradas;
         }
 
@@ -53,13 +50,10 @@ namespace Library
         /// Get: Gets the amount of displacement of the motorcycle.
         /// Set: Sets the amount of displacement of the motorcycle.
         /// </summary>
-        public short Cilindradas
-        {
+        public short Cilindradas {
             get => cilindradas;
-            set
-            {
-                if (value > 50)
-                {
+            set {
+                if (value > 50) {
                     cilindradas = value;
                 }
             }
@@ -73,8 +67,7 @@ namespace Library
         /// Shows the info of the motorcycle.
         /// </summary>
         /// <returns>Returns the info as a string.</returns>
-        public override string ShowInfo()
-        {
+        public override string ShowInfo() {
             StringBuilder information = new StringBuilder();
             information.Append($"###### Motocicleta ######\nCilindradas: {this.Cilindradas}cc\n");
             information.Append($"Puertas: {this.CantidadPuertas}\n");

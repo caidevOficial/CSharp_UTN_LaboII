@@ -22,16 +22,13 @@
  * SOFTWARE.
  */
 
-namespace Ejercicio_38
-{
-    public class Sobreescrito
-    {
+namespace Ejercicio_38 {
+    public class Sobreescrito {
         /// <summary>
         /// Override of ToString() that returns a new message.
         /// </summary>
         /// <returns>Returns a custom message.</returns>
-        public override string ToString()
-        {
+        public override string ToString() {
             return "¡Este es mi método ToString sobreescrito!";
         }
 
@@ -40,8 +37,7 @@ namespace Ejercicio_38
         /// </summary>
         /// <param name="obj">Objet to compare with this.</param>
         /// <returns>True if the object is equal of this, otherwise returns false.</returns>
-        public override bool Equals(object obj)
-        {
+        public override bool Equals(object obj) {
             return base.Equals(obj);
         }
 
@@ -49,8 +45,7 @@ namespace Ejercicio_38
         /// An override implementation of GetHashCode().
         /// </summary>
         /// <returns>Returns an specific number.</returns>
-        public override int GetHashCode()
-        {
+        public override int GetHashCode() {
             return 1142510187;
         }
     }

@@ -24,30 +24,22 @@
 
 using Clases;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Ejercicio_33
-{
-    class Program
-    {
+namespace Ejercicio_33 {
+    class Program {
         /// <summary>
         /// Recorre una clase y muestra lo que contienen sus indices.
         /// </summary>
         /// <param name="indexado"></param>
         /// <param name="cantidadIndices"></param>
-        private static void MostrarIndices(Libro indexado, int cantidadIndices)
-        {
-            for (int i = 0; i < cantidadIndices; i++)
-            {
+        private static void MostrarIndices(Libro indexado, int cantidadIndices) {
+            for (int i = 0; i < cantidadIndices; i++) {
                 Console.WriteLine($"{indexado[i]}");
             }
         }
 
-        static void Main(string[] args)
-        {
+        static void Main(string[] args) {
+            Console.Title = "Excercise N° 33";
             Libro harryPotter = new Libro();
 
             harryPotter[0] = "Capitulo 1";

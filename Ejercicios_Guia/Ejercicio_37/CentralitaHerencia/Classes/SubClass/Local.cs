@@ -22,12 +22,8 @@
  * SOFTWARE.
  */
 
-using System.Text;
-
-namespace CentralitaHerencia
-{
-    public class Local : Llamada
-    {
+namespace CentralitaHerencia {
+    public sealed class Local : Llamada {
         private float costo;
 
         #region Properties
@@ -46,8 +42,7 @@ namespace CentralitaHerencia
         /// </summary>
         /// <param name="call">Object Llamada-type.</param>
         /// <param name="costo">Price of the call.</param>
-        public Local(Llamada call, float costo) : base(call.Duracion, call.NroOrigen, call.NroDestino)
-        {
+        public Local(Llamada call, float costo) : base(call.Duracion, call.NroOrigen, call.NroDestino) {
             this.costo = costo;
         }
 
@@ -59,8 +54,7 @@ namespace CentralitaHerencia
         /// <param name="duracion">Duration of the call.</param>
         /// <param name="costo">Price of the call.</param>
         public Local(string origen, string destino, float duracion, float costo)
-            : this(new Llamada(duracion, origen, destino), costo)
-        {
+            : this(new Llamada(duracion, origen, destino), costo) {
             this.costo = costo;
         }
 
@@ -72,8 +66,7 @@ namespace CentralitaHerencia
         /// It will caltulate the cost of the call, based in the duration and its price.
         /// </summary>
         /// <returns>The cost of the call.</returns>
-        private float CalcularCostos()
-        {
+        private float CalcularCostos() {
             return base.Duracion * this.costo;
         }
 
@@ -81,8 +74,7 @@ namespace CentralitaHerencia
         /// Shows the info of the call.
         /// </summary>
         /// <returns>Returns the info as a string.</returns>
-        public override string Mostrar()
-        {
+        public override string Mostrar() {
             string data = string.Format("{0}", base.Mostrar());
             data += string.Format("Costo: ${0,3}\n", this.CostoLlamada);
 

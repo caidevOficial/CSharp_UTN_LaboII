@@ -24,10 +24,8 @@
 
 using System.Collections.Generic;
 
-namespace Clases
-{
-    public class Negocio
-    {
+namespace Clases {
+    public sealed class Negocio {
         private PuestoAtencion caja;
         private Queue<Cliente> clientes;
         private string nombre;
@@ -37,8 +35,7 @@ namespace Clases
         /// <summary>
         /// 
         /// </summary>
-        public Cliente Clientes
-        {
+        public Cliente Clientes {
             get { return clientes.Dequeue(); }
             set { bool rtn = this + value; }
         }
@@ -50,8 +47,7 @@ namespace Clases
         /// <summary>
         /// 
         /// </summary>
-        private Negocio()
-        {
+        private Negocio() {
             clientes = new Queue<Cliente>();
             this.caja = new PuestoAtencion(PuestoAtencion.Puesto.Caja1);
         }
@@ -60,8 +56,7 @@ namespace Clases
         /// 
         /// </summary>
         /// <param name="nombre"></param>
-        public Negocio(string nombre) : this()
-        {
+        public Negocio(string nombre) : this() {
             this.nombre = nombre;
         }
 
@@ -75,10 +70,8 @@ namespace Clases
         /// <param name="n"></param>
         /// <param name="c"></param>
         /// <returns>True si puede agregarlo, sino false.</returns>
-        public static bool operator +(Negocio n, Cliente c)
-        {
-            if (n != c)
-            {
+        public static bool operator +(Negocio n, Cliente c) {
+            if (n != c) {
                 n.clientes.Enqueue(c);
                 return true;
             }
@@ -92,14 +85,10 @@ namespace Clases
         /// <param name="n"></param>
         /// <param name="c"></param>
         /// <returns>True si ya existe en la fila, sino false.</returns>
-        public static bool operator ==(Negocio n, Cliente c)
-        {
-            if (n.clientes.Count > 0)
-            {
-                foreach (Cliente cliente in n.clientes)
-                {
-                    if (cliente == c)
-                    {
+        public static bool operator ==(Negocio n, Cliente c) {
+            if (n.clientes.Count > 0) {
+                foreach (Cliente cliente in n.clientes) {
+                    if (cliente == c) {
                         return true;
                     }
                 }
@@ -114,8 +103,7 @@ namespace Clases
         /// <param name="n"></param>
         /// <param name="c"></param>
         /// <returns>True si no existe en la fila, sino false.</returns>
-        public static bool operator !=(Negocio n, Cliente c)
-        {
+        public static bool operator !=(Negocio n, Cliente c) {
             return !(n == c);
         }
 
@@ -124,8 +112,7 @@ namespace Clases
         /// </summary>
         /// <param name="n"></param>
         /// <returns>True al terminar el tiempo.</returns>
-        public static bool operator ~(Negocio n)
-        {
+        public static bool operator ~(Negocio n) {
             return n.caja.Atender(n.clientes.Dequeue());
         }
 

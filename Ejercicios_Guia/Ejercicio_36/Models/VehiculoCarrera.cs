@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Models
-{
-    public abstract class VehiculoCarrera
-    {
+namespace Models {
+    public abstract class VehiculoCarrera {
         protected short cantidadCombustible;
         protected bool enCompetencia;
         protected string escuderia;
@@ -38,13 +36,10 @@ namespace Models
         /// Get: The amount of fuel.
         /// Set: The amount of fuel (positive number only).
         /// </summary>
-        public short CantidadCombustible
-        {
+        public short CantidadCombustible {
             get => cantidadCombustible;
-            set
-            {
-                if (value >= 0 && value < 101)
-                {
+            set {
+                if (value >= 0 && value < 101) {
                     cantidadCombustible = value;
 
                 }
@@ -55,13 +50,10 @@ namespace Models
         /// Get: The remaining laps.
         /// Set: The remaining laps (positive number only).
         /// </summary>
-        public short VueltasRestantes
-        {
+        public short VueltasRestantes {
             get => vueltasRestantes;
-            set
-            {
-                if (value >= 0)
-                {
+            set {
+                if (value >= 0) {
                     vueltasRestantes = value;
                 }
             }
@@ -71,8 +63,7 @@ namespace Models
         /// Get: The competition state of the car.
         /// Set: The competition state of the car.
         /// </summary>
-        public bool EnCompetencia
-        {
+        public bool EnCompetencia {
             get => enCompetencia;
             set => enCompetencia = value;
         }
@@ -81,13 +72,10 @@ namespace Models
         /// Get: Gets the Team of the entity.
         /// Set: Sets the Team of the entity.
         /// </summary>
-        public string Escuderia
-        {
+        public string Escuderia {
             get => escuderia;
-            set
-            {
-                if (!(value is null))
-                {
+            set {
+                if (!(value is null)) {
                     escuderia = value;
                 }
             }
@@ -97,13 +85,10 @@ namespace Models
         /// Get: Gets the number of the entity.
         /// Set: Sets the number of the entity.
         /// </summary>
-        public short Numero
-        {
+        public short Numero {
             get => numero;
-            set
-            {
-                if (value >= 0)
-                {
+            set {
+                if (value >= 0) {
                     numero = value;
                 }
             }
@@ -118,8 +103,7 @@ namespace Models
         /// </summary>
         /// <param name="escuderia">Team of the car.</param>
         /// <param name="numero">Number of the car.</param>
-        protected VehiculoCarrera(short numero, string escuderia)
-        {
+        protected VehiculoCarrera(short numero, string escuderia) {
             this.Escuderia = escuderia;
             this.Numero = numero;
             this.CantidadCombustible = 0;

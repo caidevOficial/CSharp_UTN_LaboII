@@ -22,12 +22,8 @@
  * SOFTWARE.
  */
 
-using System.Text;
-
-namespace CentralitaHerencia
-{
-    public sealed class Local : Llamada
-    {
+namespace CentralitaHerencia {
+    public sealed class Local : Llamada {
         private float costo;
 
         #region Properties
@@ -46,9 +42,8 @@ namespace CentralitaHerencia
         /// </summary>
         /// <param name="call">Object Llamada-type.</param>
         /// <param name="costo">Price of the call.</param>
-        public Local(Llamada call, float costo) 
-            : this(call.NroOrigen, call.NroDestino, call.Duracion, costo)
-        {
+        public Local(Llamada call, float costo)
+            : this(call.NroOrigen, call.NroDestino, call.Duracion, costo) {
 
         }
 
@@ -60,8 +55,7 @@ namespace CentralitaHerencia
         /// <param name="duracion">Duration of the call.</param>
         /// <param name="costo">Price of the call.</param>
         public Local(string origen, string destino, float duracion, float costo)
-            :base(duracion, origen, destino)
-        {
+            : base(duracion, origen, destino) {
             this.costo = costo;
         }
 
@@ -73,8 +67,7 @@ namespace CentralitaHerencia
         /// It will caltulate the cost of the call, based in the duration and its price.
         /// </summary>
         /// <returns>The cost of the call.</returns>
-        private float CalcularCostos()
-        {
+        private float CalcularCostos() {
             return base.Duracion * this.costo;
         }
 
@@ -82,8 +75,7 @@ namespace CentralitaHerencia
         /// Shows the info of the call.
         /// </summary>
         /// <returns>Returns the info as a string.</returns>
-        protected override string Mostrar()
-        {
+        protected override string Mostrar() {
             string data = string.Format("{0}", base.Mostrar());
             data += string.Format("Costo: ${0,3}\n", this.CostoLlamada);
 
@@ -94,8 +86,7 @@ namespace CentralitaHerencia
         /// Override Implementation of ToString()
         /// </summary>
         /// <returns>Returns the dhata as a string.</returns>
-        public override string ToString()
-        {
+        public override string ToString() {
             return this.Mostrar();
         }
 
@@ -104,8 +95,7 @@ namespace CentralitaHerencia
         /// </summary>
         /// <param name="obj">Objet to compare with this object.</param>
         /// <returns>True if both object are equals, otherwise returns false.</returns>
-        public override bool Equals(object obj)
-        {
+        public override bool Equals(object obj) {
             return (obj is Local);
         }
 
