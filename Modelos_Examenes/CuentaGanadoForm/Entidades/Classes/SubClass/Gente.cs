@@ -25,53 +25,30 @@
 using System.Text;
 
 namespace Entidades {
-    public class Empleado : Persona {
+    public sealed class Gente : Persona {
 
-        private int dni;
+        #region Buidlers
 
-        #region Builders
-
-        public Empleado(string nombre, short edad)
-            : this(nombre, edad, -1) {
-        }
-
-        public Empleado(string nombre, short edad, int dni)
-            : base(nombre, edad) {
-            this.dni = dni;
-        }
-
-        #endregion
-
-        #region Operators
-
-        public static bool operator ==(Empleado e1, Empleado e2) {
-            return e1.Nombre == e2.Nombre && e1.Edad == e2.Edad;
-        }
-
-        public static bool operator !=(Empleado e1, Empleado e2) {
-            return !(e1 == e2);
-        }
+        public Gente(short edad)
+            : base("Cliente", edad) { }
 
         #endregion
 
         #region Methods
 
-        public override bool Validar() {
-            return this.Edad > 20 && this.Nombre.Length > 1;
+        protected override string Mostrar() {
+            StringBuilder data = new StringBuilder();
+            data.Append($"{base.Mostrar()}\n");
+
+            return data.ToString();
         }
 
         public override string ToString() {
             return this.Mostrar();
         }
 
-        protected override string Mostrar() {
-            StringBuilder data = new StringBuilder();
-            data.AppendLine(base.Mostrar());
-            if (this.dni != -1) {
-                data.AppendLine($"DNI: {this.dni}");
-            }
-
-            return data.ToString();
+        public override bool Validar() {
+            return this.Edad > 17;
         }
 
         #endregion

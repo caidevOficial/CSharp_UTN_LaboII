@@ -26,7 +26,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Entidades {
-    public class Bar {
+    public sealed class Bar {
         private List<Empleado> empleados;
         private List<Gente> gente;
         private static Bar singleton;

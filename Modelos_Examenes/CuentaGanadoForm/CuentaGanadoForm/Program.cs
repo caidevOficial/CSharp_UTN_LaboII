@@ -32,6 +32,7 @@ namespace CuentaGanadoForm {
         /// </summary>
         [STAThread]
         static void Main() {
+            Console.Title = "PP_CuentaGanado";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CuentaGanadoForm());

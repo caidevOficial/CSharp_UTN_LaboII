@@ -34,7 +34,7 @@ using System.Windows.Forms;
 
 namespace CuentaGanadoForm {
     public partial class frmCarga : Form {
-        
+
         public frmCarga() {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace CuentaGanadoForm {
 
         public short DNI {
             get {
-                if(short.TryParse(txtDni.Text, out short validDni)) {
+                if (short.TryParse(txtDni.Text, out short validDni)) {
                     return validDni;
                 } else {
                     return 0;
@@ -64,11 +64,11 @@ namespace CuentaGanadoForm {
         public string Nombre {
             get => txtNombre.Text;
         }
-        
+
         #endregion
 
         private void btnAceptar_Click(object sender, EventArgs e) {
-            if(String.IsNullOrWhiteSpace(txtNombre.Text) || 
+            if (String.IsNullOrWhiteSpace(txtNombre.Text) ||
                 String.IsNullOrWhiteSpace(txtDni.Text) ||
                 String.IsNullOrWhiteSpace(txtEdad.Text)) {
                 this.DialogResult = DialogResult.Cancel;
