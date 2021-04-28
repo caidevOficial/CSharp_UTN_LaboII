@@ -22,12 +22,8 @@
  * SOFTWARE.
  */
 
-using System;
-
-namespace Currency
-{
-    public class Peso
-    {
+namespace Currency {
+    public class Peso {
         private double cantidad;
         private static double cotizRespectoDolar;
 
@@ -36,16 +32,14 @@ namespace Currency
         /// <summary>
         /// Builds the entity with the static value.
         /// </summary>
-        static Peso()
-        {
+        static Peso() {
             Peso.cotizRespectoDolar = 66;
         }
 
         /// <summary>
         /// Builds the entity.
         /// </summary>
-        public Peso()
-        {
+        public Peso() {
 
         }
 
@@ -53,8 +47,7 @@ namespace Currency
         /// Builds the entity with amount parameter.
         /// </summary>
         /// <param name="cantidad">Amount to set to the entity.</param>
-        public Peso(double cantidad)
-        {
+        public Peso(double cantidad) {
             this.cantidad = cantidad;
         }
 
@@ -63,8 +56,7 @@ namespace Currency
         /// </summary>
         /// <param name="cantidad">Amount to set to the entity.</param>
         /// <param name="cotizacion">Cotization to set to the entity.</param>
-        public Peso(double cantidad, double cotizacion) : this(cantidad)
-        {
+        public Peso(double cantidad, double cotizacion) : this(cantidad) {
             Peso.cotizRespectoDolar = cotizacion;
         }
 
@@ -76,8 +68,7 @@ namespace Currency
         /// Gets the amount of the entity.
         /// </summary>
         /// <returns>The actual amount of the entity.</returns>
-        public double GetCantidad()
-        {
+        public double GetCantidad() {
             return this.cantidad;
         }
 
@@ -85,8 +76,7 @@ namespace Currency
         /// Gets the cotization of the class Peso.
         /// </summary>
         /// <returns>Cotizacion of Peso respect the Dolar.</returns>
-        public static double GetCotizacion()
-        {
+        public static double GetCotizacion() {
             return Peso.cotizRespectoDolar;
         }
 
@@ -94,8 +84,7 @@ namespace Currency
         /// Sets the cotization of the Peso respecto the Dolar.
         /// </summary>
         /// <param name="amount"></param>
-        public static void SetCotizacion(double amount)
-        {
+        public static void SetCotizacion(double amount) {
             Peso.cotizRespectoDolar = amount;
         }
         #endregion
@@ -108,8 +97,7 @@ namespace Currency
         /// Explicitly casts an object of type double to an object of type Peso.
         /// </summary>
         /// <param name="amount">Amount to cast to Peso.</param>
-        public static implicit operator Peso(double amount)
-        {
+        public static implicit operator Peso(double amount) {
             return new Peso(amount);
         }
 
@@ -117,8 +105,7 @@ namespace Currency
         /// Explicitly casts an object of type Peso to an object of type Dolar.
         /// </summary>
         /// <param name="thisCurrency">Peso object to cast.</param>
-        public static explicit operator Dolar(Peso pesoCurrency)
-        {
+        public static explicit operator Dolar(Peso pesoCurrency) {
             return new Dolar(pesoCurrency.GetCantidad() / Peso.GetCotizacion());
         }
 
@@ -126,8 +113,7 @@ namespace Currency
         /// Explicitly casts an object of type Peso to an object of type Euro.
         /// </summary>
         /// <param name="pesoCurrency">Peso object to cast.</param>
-        public static explicit operator Euro(Peso pesoCurrency)
-        {
+        public static explicit operator Euro(Peso pesoCurrency) {
             Euro euroCurrency = new Euro(((Dolar)pesoCurrency).GetCantidad() * Euro.GetCotizacion());
             return euroCurrency;
         }
@@ -142,8 +128,7 @@ namespace Currency
         /// <param name="p">Peso to Compare.</param>
         /// <param name="d">Dolar to compare.</param>
         /// <returns>True if are equals, otherwise returns False.</returns>
-        public static bool operator ==(Peso p, Dolar d)
-        {
+        public static bool operator ==(Peso p, Dolar d) {
             return p.GetCantidad() == ((Peso)d).GetCantidad();
         }
 
@@ -153,8 +138,7 @@ namespace Currency
         /// <param name="p">Peso to Compare.</param>
         /// <param name="e">Euro to Compare.</param>
         /// <returns>True if are equals, otherwise returns False.</returns>
-        public static bool operator ==(Peso p, Euro e)
-        {
+        public static bool operator ==(Peso p, Euro e) {
             return p.GetCantidad() == ((Peso)e).GetCantidad();
         }
 
@@ -164,8 +148,7 @@ namespace Currency
         /// <param name="p">Peso to Compare.</param>
         /// <param name="e">Peso to Compare.</param>
         /// <returns>True if are equals, otherwise returns False.</returns>
-        public static bool operator ==(Peso p, Peso e)
-        {
+        public static bool operator ==(Peso p, Peso e) {
             return p.GetCantidad() == e.GetCantidad();
         }
 
@@ -179,8 +162,7 @@ namespace Currency
         /// <param name="p">Peso to Compare.</param>
         /// <param name="d">Dolar to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Peso p, Dolar d)
-        {
+        public static bool operator !=(Peso p, Dolar d) {
             return !(p == d);
         }
 
@@ -190,8 +172,7 @@ namespace Currency
         /// <param name="p">Peso to Compare.</param>
         /// <param name="e">Euro to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Peso p, Euro e)
-        {
+        public static bool operator !=(Peso p, Euro e) {
             return !(p == e);
         }
 
@@ -201,8 +182,7 @@ namespace Currency
         /// <param name="p">Peso to Compare.</param>
         /// <param name="e">Peso to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Peso p, Peso e)
-        {
+        public static bool operator !=(Peso p, Peso e) {
             return !(p == e);
         }
 
@@ -216,8 +196,7 @@ namespace Currency
         /// <param name="p">Peso for sum.</param>
         /// <param name="e">Euro to cast to Peso</param>
         /// <returns>An object type Peso with The sum of Peso and the equivalent in Peso of Euro.</returns>
-        public static Peso operator +(Peso p, Euro e)
-        {
+        public static Peso operator +(Peso p, Euro e) {
             return new Peso(p.GetCantidad() + ((Peso)e).GetCantidad());
         }
 
@@ -227,8 +206,7 @@ namespace Currency
         /// <param name="p">Peso for sum.</param>
         /// <param name="e">Dolar to cast to Peso</param>
         /// <returns>An object type Peso with The sum of Peso and the equivalent in Peso of Dolar.</returns>
-        public static Peso operator +(Peso p, Dolar e)
-        {
+        public static Peso operator +(Peso p, Dolar e) {
             return new Peso(p.GetCantidad() + ((Peso)e).GetCantidad());
         }
 
@@ -242,8 +220,7 @@ namespace Currency
         /// <param name="p"></param>
         /// <param name="e"></param>
         /// <returns>The Peso-type object minus the equivalent in Peso of a Euro-type object.</returns>
-        public static Peso operator -(Peso p, Euro e)
-        {
+        public static Peso operator -(Peso p, Euro e) {
             return new Peso(p.GetCantidad() - ((Peso)e).GetCantidad());
         }
 
@@ -253,8 +230,7 @@ namespace Currency
         /// <param name="p"></param>
         /// <param name="e"></param>
         /// <returns>The Peso-type object minus the equivalent in Peso of a dollar-type object.</returns>
-        public static Peso operator -(Peso p, Dolar e)
-        {
+        public static Peso operator -(Peso p, Dolar e) {
             return new Peso(p.GetCantidad() - ((Peso)e).GetCantidad());
         }
 

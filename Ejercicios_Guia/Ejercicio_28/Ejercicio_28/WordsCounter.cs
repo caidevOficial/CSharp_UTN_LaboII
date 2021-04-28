@@ -26,12 +26,9 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Ejercicio_29
-{
-    public partial class ContadorDePalabras : Form
-    {
-        public ContadorDePalabras()
-        {
+namespace Ejercicio_28 {
+    public partial class ContadorDePalabras : Form {
+        public ContadorDePalabras() {
             InitializeComponent();
         }
 
@@ -40,16 +37,14 @@ namespace Ejercicio_29
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void button1_Click(object sender, EventArgs e) {
             Dictionary<string, int> amountWords = new Dictionary<string, int>();
             List<string> orderedTop = new List<string>();
             string finalMessage = "";
             string keyValue;
             bool first = true;
             int biggerNumber = int.MinValue;
-            if (!String.IsNullOrWhiteSpace(richTextWords.Text))
-            {
+            if (!String.IsNullOrWhiteSpace(richTextWords.Text)) {
                 string words = richTextWords.Text;
                 string[] arrayWords;
                 words.Trim(); // deletes the white spaces at the end & beginning
@@ -58,50 +53,37 @@ namespace Ejercicio_29
                 arrayWords = words.Split(' ');
 
                 // Counts Words
-                foreach (string word in arrayWords)
-                {
-                    if (!amountWords.ContainsKey(word))
-                    {
+                foreach (string word in arrayWords) {
+                    if (!amountWords.ContainsKey(word)) {
                         amountWords.Add(word, 1);
-                    }
-                    else
-                    {
+                    } else {
                         amountWords[word] += 1;
                     }
                 }
 
                 // Obtains the k,v pair and shows into the text box.
-                foreach (KeyValuePair<string, int> row in amountWords)
-                {
+                foreach (KeyValuePair<string, int> row in amountWords) {
                     keyValue = $"{row.Value} - {row.Key}. \n";
-                    if (first || row.Value >= biggerNumber)
-                    {
+                    if (first || row.Value >= biggerNumber) {
                         first = false;
                         biggerNumber = row.Value;
                         orderedTop.Insert(0, keyValue);
-                    }
-                    else
-                    {
+                    } else {
                         orderedTop.Add(keyValue);
                     }
                 }
 
-                for (int i = 0; i < 3; i++)
-                {
+                for (int i = 0; i < 3; i++) {
                     finalMessage += orderedTop[i];
                 }
                 richTextShow.Text = "Top 3 palabras con mas apariciones:\n" + finalMessage;
             }
         }
 
-        private void ContadorDePalabras_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
+        private void ContadorDePalabras_FormClosing(object sender, FormClosingEventArgs e) {
+            if (MessageBox.Show("Do you want to quit this wonderful app?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
                 e.Cancel = true;
-            }
-            else
-            {
+            } else {
                 Dispose();
             }
         }

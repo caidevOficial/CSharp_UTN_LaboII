@@ -24,27 +24,28 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Entities
-{
-    public class Competencia
-    {
+namespace Entities {
+    public sealed class Competencia {
         private short cantidadCompetidores;
         private short cantidadVueltas;
         private List<AutoF1> competidores;
 
         #region Builders
 
-        private Competencia()
-        {
+        /// <summary>
+        /// Builds the instance and the list.
+        /// </summary>
+        private Competencia() {
             competidores = new List<AutoF1>();
         }
 
-        public Competencia(short cantidadCompetidores, short cantidadVueltas):this()
-        {
+        /// <summary>
+        /// Builds the instance with the parameters and initialize the list.
+        /// </summary>
+        /// <param name="cantidadCompetidores">Amount of competitors</param>
+        /// <param name="cantidadVueltas">Amount of laps.</param>
+        public Competencia(short cantidadCompetidores, short cantidadVueltas) : this() {
             this.cantidadCompetidores = cantidadCompetidores;
             this.cantidadVueltas = cantidadVueltas;
         }
@@ -52,22 +53,18 @@ namespace Entities
         #endregion
 
         #region Operators
-        
+
         /// <summary>
         /// Tries to add the car to the competence.
         /// </summary>
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Car to add into the competence.</param>
         /// <returns>True if can add the car, otherwise returns false.</returns>
-        public static bool operator +(Competencia c, AutoF1 a)
-        {
+        public static bool operator +(Competencia c, AutoF1 a) {
             Random rdm = new Random();
-            if(!(c is null) && !(a is null))
-            {
-                if(c.competidores.Count < c.cantidadCompetidores)
-                {
-                    if(!(c == a))
-                    {
+            if (!(c is null) && !(a is null)) {
+                if (c.competidores.Count < c.cantidadCompetidores) {
+                    if (!(c == a)) {
                         a.EnCompetencia = true;
                         a.VueltasRestantes = c.cantidadVueltas;
                         a.CantidadCombustible = (short)rdm.Next(15, 100);
@@ -86,12 +83,9 @@ namespace Entities
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Car to remove from the competence.</param>
         /// <returns>True if can remove the car, otherwise returns false.</returns>
-        public static bool operator -(Competencia c, AutoF1 a)
-        {
-            if (!(c is null) && !(a is null))
-            {
-                if (c == a)
-                {
+        public static bool operator -(Competencia c, AutoF1 a) {
+            if (!(c is null) && !(a is null)) {
+                if (c == a) {
                     c.competidores.RemoveAt(c.competidores.IndexOf(a));
                     return true;
                 }
@@ -106,14 +100,10 @@ namespace Entities
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Car to verify if is in the competence.</param>
         /// <returns>True if the car is inside the competence, otherwise returns false.</returns>
-        public static bool operator ==(Competencia c, AutoF1 a)
-        {
-            if (!(c is null) && !(a is null))
-            {
-                foreach (AutoF1 autoF1 in c.competidores)
-                {
-                    if (a == autoF1)
-                    {
+        public static bool operator ==(Competencia c, AutoF1 a) {
+            if (!(c is null) && !(a is null)) {
+                foreach (AutoF1 autoF1 in c.competidores) {
+                    if (a == autoF1) {
                         return true;
                     }
                 }
@@ -128,24 +118,21 @@ namespace Entities
         /// <param name="c">Competence to check.</param>
         /// <param name="a">Car to verify if is not in the competence.</param>
         /// <returns>True if the car is not inside the competence, otherwise returns false.</returns>
-        public static bool operator !=(Competencia c, AutoF1 a)
-        {
+        public static bool operator !=(Competencia c, AutoF1 a) {
             return !(c == a);
         }
 
         #endregion
 
-        #region ShowStats
+        #region Methods
 
         /// <summary>
         /// Shows the stats of the competence.
         /// </summary>
         /// <returns>Returns the stats as a string.</returns>
-        public string MostrarDatos()
-        {
-            string stats = String.Format("Competitors: {0,2} | remaining Laps: {1,2}\nCars:\n",this.cantidadCompetidores, this.cantidadVueltas);
-            foreach (AutoF1 autoF1 in competidores)
-            {
+        public string MostrarDatos() {
+            string stats = String.Format("Competitors: {0,2} | remaining Laps: {1,2}\nCars:\n", this.cantidadCompetidores, this.cantidadVueltas);
+            foreach (AutoF1 autoF1 in competidores) {
                 stats += autoF1.MostrarDatos();
             }
 

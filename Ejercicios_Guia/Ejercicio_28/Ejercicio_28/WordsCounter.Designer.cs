@@ -1,5 +1,5 @@
 ﻿
-namespace Ejercicio_29
+namespace Ejercicio_28
 {
     partial class ContadorDePalabras
     {

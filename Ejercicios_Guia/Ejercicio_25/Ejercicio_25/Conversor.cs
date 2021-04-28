@@ -22,16 +22,13 @@
  * SOFTWARE.
  */
 
+using Number;
 using System;
 using System.Windows.Forms;
-using Number;
 
-namespace Ejercicio_25
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
+namespace Ejercicio_25 {
+    public partial class Conversor : Form {
+        public Conversor() {
             InitializeComponent();
             grpBoxResult.Enabled = false;
         }
@@ -41,8 +38,7 @@ namespace Ejercicio_25
         /// </summary>
         /// <param name="errorMessage">Large string with the description of the message.</param>
         /// <param name="typeError">Short string with the tipe of the mesage.</param>
-        private static void MessageError(string errorMessage, string typeError)
-        {
+        private static void MessageError(string errorMessage, string typeError) {
             MessageBox.Show(errorMessage, typeError, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
@@ -51,10 +47,8 @@ namespace Ejercicio_25
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtBinario_MouseLeave(object sender, EventArgs e)
-        {
-            if (String.IsNullOrWhiteSpace(txtBinario.Text))
-            {
+        private void txtBinario_MouseLeave(object sender, EventArgs e) {
+            if (String.IsNullOrWhiteSpace(txtBinario.Text)) {
                 MessageError("Valor invalido, por favor modifiquelo.", "Error: Binary");
                 txtBinario.Focus();
             }
@@ -65,10 +59,8 @@ namespace Ejercicio_25
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtDecimal_MouseLeave(object sender, EventArgs e)
-        {
-            if (String.IsNullOrWhiteSpace(txtDecimal.Text))
-            {
+        private void txtDecimal_MouseLeave(object sender, EventArgs e) {
+            if (String.IsNullOrWhiteSpace(txtDecimal.Text)) {
                 MessageError("Valor invalido, por favor modifiquelo.", "Error: Decimal");
                 txtBinario.Focus();
             }
@@ -79,15 +71,11 @@ namespace Ejercicio_25
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnBinToDec_Click(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrWhiteSpace(txtBinario.Text))
-            {
+        private void btnBinToDec_Click(object sender, EventArgs e) {
+            if (!String.IsNullOrWhiteSpace(txtBinario.Text)) {
                 NumeroBinario binaryNumber = (NumeroBinario)txtBinario.Text;
                 txtResultadoDec.Text = ((NumeroDecimal)binaryNumber).GetDecimalNumber().ToString();
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Error while trying to convert the Binary to Decimal.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -97,15 +85,11 @@ namespace Ejercicio_25
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnDecToBin_Click(object sender, EventArgs e)
-        {
-            if(!String.IsNullOrWhiteSpace(txtDecimal.Text) && Double.TryParse(txtDecimal.Text, out Double value))
-            {
+        private void btnDecToBin_Click(object sender, EventArgs e) {
+            if (!String.IsNullOrWhiteSpace(txtDecimal.Text) && Double.TryParse(txtDecimal.Text, out Double value)) {
                 NumeroDecimal decimalNumber = (NumeroDecimal)value;
                 txtResultadoBin.Text = ((NumeroBinario)decimalNumber).GetBinaryNumber();
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Error while trying to convert the Decimal to Binary.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

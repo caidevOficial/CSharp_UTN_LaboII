@@ -25,19 +25,16 @@
 using System;
 
 
-namespace Temperaturas
-{
-    public class Fahrenheit
-    {
+namespace Temperaturas {
+    public class Fahrenheit {
         private double amount;
-        
+
         #region Builders
 
         /// <summary>
         /// Builds the entity.
         /// </summary>
-        public Fahrenheit()
-        {
+        public Fahrenheit() {
 
         }
 
@@ -45,8 +42,7 @@ namespace Temperaturas
         /// Builds the entity with amount parameter.
         /// </summary>
         /// <param name="cantidad">Amount to set to the entity.</param>
-        public Fahrenheit(double amount)
-        {
+        public Fahrenheit(double amount) {
             this.amount = amount;
         }
 
@@ -58,8 +54,7 @@ namespace Temperaturas
         /// Gets the amount of the entity.
         /// </summary>
         /// <returns>The actual amount of the entity.</returns>
-        public double GetAmount()
-        {
+        public double GetAmount() {
             return this.amount;
         }
 
@@ -73,8 +68,7 @@ namespace Temperaturas
         /// Explicitly casts an object of type double to an object of type Fahrenheit.
         /// </summary>
         /// <param name="d">Amount to cast to Fahrenheit.</param>
-        public static implicit operator Fahrenheit(double d)
-        {
+        public static implicit operator Fahrenheit(double d) {
             return new Fahrenheit(d);
         }
 
@@ -82,9 +76,8 @@ namespace Temperaturas
         /// Explicitly casts an object of type Fahrenheit to an object of type Celsius.
         /// </summary>
         /// <param name="fTemperature">Fahrenheit object to cast to Celsius</param>
-        public static explicit operator Celsius(Fahrenheit fTemperature)
-        {
-            Celsius cTemperature = new Celsius((fTemperature.GetAmount()-32)*5/9);
+        public static explicit operator Celsius(Fahrenheit fTemperature) {
+            Celsius cTemperature = new Celsius((fTemperature.GetAmount() - 32) * 5 / 9);
             return cTemperature;
         }
 
@@ -92,8 +85,7 @@ namespace Temperaturas
         /// Explicitly casts an object of type Fahrenheit to an object of type Kelvin.
         /// </summary>
         /// <param name="fTemperature">Fahrenheit object to cast to Kelvin</param>
-        public static explicit operator Kelvin(Fahrenheit fTemperature)
-        {
+        public static explicit operator Kelvin(Fahrenheit fTemperature) {
             Kelvin kTemperature = new Kelvin((fTemperature.GetAmount() + 459.67) * 5 / 9);
             return kTemperature;
         }
@@ -108,8 +100,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit to compare.</param>
         /// <param name="c">Celsius to compare.</param>
         /// <returns>True if are equals, otherwise returns False</returns>
-        public static bool operator ==(Fahrenheit f, Celsius c)
-        {
+        public static bool operator ==(Fahrenheit f, Celsius c) {
             return f.GetAmount() == ((Fahrenheit)c).GetAmount();
         }
 
@@ -119,8 +110,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit to compare.</param>
         /// <param name="k">Kelvin to compare.</param>
         /// <returns>True if are equals, otherwise returns False</returns>
-        public static bool operator ==(Fahrenheit f, Kelvin k)
-        {
+        public static bool operator ==(Fahrenheit f, Kelvin k) {
             return f.GetAmount() == ((Celsius)k).GetAmount();
         }
 
@@ -130,8 +120,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit to compare.</param>
         /// <param name="e">Fahrenheit to compare.</param>
         /// <returns>True if are equals, otherwise returns False</returns>
-        public static bool operator ==(Fahrenheit f, Fahrenheit e)
-        {
+        public static bool operator ==(Fahrenheit f, Fahrenheit e) {
             return f.GetAmount() == e.GetAmount();
         }
 
@@ -145,8 +134,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit to Compare.</param>
         /// <param name="c">Celsius to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Fahrenheit f, Celsius c)
-        {
+        public static bool operator !=(Fahrenheit f, Celsius c) {
             return !(f == c);
         }
 
@@ -156,8 +144,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit to Compare.</param>
         /// <param name="k">Kelvin to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Fahrenheit f, Kelvin k)
-        {
+        public static bool operator !=(Fahrenheit f, Kelvin k) {
             return !(f == k);
         }
 
@@ -167,8 +154,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit to Compare.</param>
         /// <param name="e">Fahrenheit to Compare.</param>
         /// <returns>True if are differents, otherwise returns False.</returns>
-        public static bool operator !=(Fahrenheit f, Fahrenheit e)
-        {
+        public static bool operator !=(Fahrenheit f, Fahrenheit e) {
             return !(f == e);
         }
 
@@ -182,8 +168,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit for sum.</param>
         /// <param name="c">Celsius to cast to Celsius</param>
         /// <returns>An object type Fahrenheit with The sum of the equivalent in Fahrenheit of an object Celsius-type.</returns>
-        public static Fahrenheit operator +(Fahrenheit f, Celsius c)
-        {
+        public static Fahrenheit operator +(Fahrenheit f, Celsius c) {
             return new Fahrenheit(f.GetAmount() + ((Fahrenheit)c).GetAmount());
         }
 
@@ -193,8 +178,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit for sum.</param>
         /// <param name="k">Kelvin to cast to Celsius</param>
         /// <returns>An object type Fahrenheit with The sum of the equivalent in Fahrenheit of an object Kelvin-type.</returns>
-        public static Fahrenheit operator +(Fahrenheit f, Kelvin k)
-        {
+        public static Fahrenheit operator +(Fahrenheit f, Kelvin k) {
             return new Fahrenheit(f.GetAmount() + ((Fahrenheit)k).GetAmount());
         }
 
@@ -208,8 +192,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit for substract.</param>
         /// <param name="c">Celsius to cast to Celsius</param>
         /// <returns>The Fahrenheit-type object minus the equivalent in Fahrenheit of a Celsius-type object.</returns>
-        public static Fahrenheit operator -(Fahrenheit f, Celsius c)
-        {
+        public static Fahrenheit operator -(Fahrenheit f, Celsius c) {
             return new Fahrenheit(f.GetAmount() - ((Fahrenheit)c).GetAmount());
         }
 
@@ -219,8 +202,7 @@ namespace Temperaturas
         /// <param name="f">Fahrenheit for substract.</param>
         /// <param name="k">Kelvin to cast to Celsius</param>
         /// <returns>The Fahrenheit-type object minus the equivalent in Fahrenheit of a Kelvin-type object.</returns>
-        public static Fahrenheit operator -(Fahrenheit f, Kelvin k)
-        {
+        public static Fahrenheit operator -(Fahrenheit f, Kelvin k) {
             return new Fahrenheit(f.GetAmount() - ((Fahrenheit)k).GetAmount());
         }
 

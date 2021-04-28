@@ -25,12 +25,9 @@
 using System;
 using Temperaturas;
 
-namespace Ejercicio_21
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_21 {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Exercise 21°";
 
             Kelvin kTemperature = new Kelvin(298.15);
@@ -73,7 +70,7 @@ namespace Ejercicio_21
             /*Kelvin -> Fahrenheit*/
             fNew = (Fahrenheit)kTemperature;
             fNewDouble = fNew.GetAmount();
-            Console.WriteLine($"Kelvin: {kTemperature.GetAmount()}° - Fahrenheit: {Math.Round(fNewDouble,2)}°\n");
+            Console.WriteLine($"Kelvin: {kTemperature.GetAmount()}° - Fahrenheit: {Math.Round(fNewDouble, 2)}°\n");
 
             Console.WriteLine("########## Temperature Equality ##########");
             /*Equally: Celsius -> Fahrenheit*/

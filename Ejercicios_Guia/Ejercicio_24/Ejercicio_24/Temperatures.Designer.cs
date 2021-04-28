@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Ejercicio_24
-{
-    partial class Form1
-    {
+namespace Ejercicio_24 {
+    partial class Temperatures {
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
@@ -35,10 +33,8 @@ namespace Ejercicio_24
         /// Limpiar los recursos que se estén usando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -50,9 +46,8 @@ namespace Ejercicio_24
         /// Método necesario para admitir el Diseñador. No se puede modificar
         /// el contenido de este método con el editor de código.
         /// </summary>
-        private void InitializeComponent()
-        {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+        private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Temperatures));
             this.btnConvertF = new System.Windows.Forms.Button();
             this.btnConvertC = new System.Windows.Forms.Button();
             this.btnConvertK = new System.Windows.Forms.Button();

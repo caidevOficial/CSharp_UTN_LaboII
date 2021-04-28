@@ -24,23 +24,22 @@
 
 using System;
 
-namespace ConversorApp
-{
-    public class Conversor
-    {
+namespace ConversorApp {
+    public class Conversor {
+
+        #region Methods
+
         /// <summary>
         /// Converts a integer number into a binary string.
         /// </summary>
         /// <param name="integerNumber">The number to convert.</param>
         /// <returns>The binary string.</returns>
-        public static string IntegerToBinary(int integerNumber)
-        {
+        public static string IntegerToBinary(int integerNumber) {
             string reverseBinaryNumber = "";
             string binaryNumber = "";
             char[] listReverseBinaryNumber;
 
-            do
-            {
+            do {
                 reverseBinaryNumber += integerNumber % 2;
                 integerNumber /= 2;
 
@@ -58,8 +57,7 @@ namespace ConversorApp
         /// </summary>
         /// <param name="binary">The binary string to convert</param>
         /// <returns>The integer number of the binary string.</returns>
-        public static int BinaryToDecimal(string binary)
-        {
+        public static int BinaryToDecimal(string binary) {
 
             const int DIV = 10;
             int number = 0;
@@ -68,11 +66,9 @@ namespace ConversorApp
 
             long.TryParse(binary, out binario);
 
-            for (long i = binario, j = 0; i > 0; i /= DIV, j++)
-            {
+            for (long i = binario, j = 0; i > 0; i /= DIV, j++) {
                 digitNumber = (int)i % DIV;
-                if (digitNumber != 1 && digitNumber != 0)
-                {
+                if (digitNumber != 1 && digitNumber != 0) {
                     return -1;
                 }
                 number += digitNumber * (int)Math.Pow(2, j);
@@ -80,5 +76,7 @@ namespace ConversorApp
 
             return number;
         }
+
+        #endregion
     }
 }

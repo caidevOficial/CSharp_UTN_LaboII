@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace Ejercicio_29.Properties
+namespace Ejercicio_28.Properties
 {
     /// <summary>
     ///   Clase de recurso fuertemente tipado para buscar cadenas traducidas, etc.

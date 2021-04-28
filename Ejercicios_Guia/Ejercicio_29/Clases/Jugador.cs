@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace Clases
-{
-    public class Jugador
-    {
+namespace Clases {
+    public class Jugador {
         private int dni;
         private string nombre;
         private int partidosJugados;
@@ -37,8 +35,7 @@ namespace Clases
         /// <summary>
         /// Builds the entity with all the stats in 0.
         /// </summary>
-        private Jugador()
-        {
+        private Jugador() {
             this.partidosJugados = 0;
             this.promedioGoles = 0;
             this.totalGoles = 0;
@@ -49,8 +46,7 @@ namespace Clases
         /// </summary>
         /// <param name="dni">[PK] Unique number of the entity.</param>
         /// <param name="nombre">Name of the entity.</param>
-        public Jugador(int dni, string nombre)
-        {
+        public Jugador(int dni, string nombre) {
             this.dni = dni;
             this.nombre = nombre;
         }
@@ -62,8 +58,7 @@ namespace Clases
         /// <param name="nombre">Name of the entity.</param>
         /// <param name="partidosJugados">Amount of matchs played by the entity.</param>
         /// <param name="totalGoles">Amount of goals achieved by the entity.</param>
-        public Jugador(int dni, string nombre, int partidosJugados, int totalGoles) : this(dni, nombre)
-        {
+        public Jugador(int dni, string nombre, int partidosJugados, int totalGoles) : this(dni, nombre) {
             this.partidosJugados = partidosJugados;
             this.totalGoles = totalGoles;
         }
@@ -76,10 +71,8 @@ namespace Clases
         /// Returns the average of goals by matches of the entity.
         /// </summary>
         /// <returns>The average of goals by matches</returns>
-        public float GetPromedioGoles()
-        {
-            if (this.partidosJugados != 0)
-            {
+        public float GetPromedioGoles() {
+            if (this.partidosJugados != 0) {
                 this.promedioGoles = this.totalGoles / (float)this.partidosJugados;
             }
             return this.promedioGoles;
@@ -93,8 +86,7 @@ namespace Clases
         /// Shows the stats of the entity.
         /// </summary>
         /// <returns>The stats of the entity.</returns>
-        public string MostrarDatos()
-        {
+        public string MostrarDatos() {
             //StringBuilder fichaTecnica = new StringBuilder();
             string fichaTecnica = string.Format("| Nombre: {0,-6} | DNI: {1,-8} | PJ: {2,3} | Goles: {3,3} | Promedio: {4,4} |\n",
                 this.nombre, this.dni, this.partidosJugados, this.totalGoles, this.GetPromedioGoles());
@@ -112,8 +104,7 @@ namespace Clases
         /// <param name="j1">First entity to compare.</param>
         /// <param name="j2">Second entity to compare.</param>
         /// <returns>True if both have the same pk, otherwise returns false.</returns>
-        public static bool operator ==(Jugador j1, Jugador j2)
-        {
+        public static bool operator ==(Jugador j1, Jugador j2) {
             return j1.dni == j2.dni;
         }
 
@@ -123,8 +114,7 @@ namespace Clases
         /// <param name="j1">First entity to compare.</param>
         /// <param name="j2">Second entity to compare.</param>
         /// <returns>True if both have different pk, otherwise returns false.</returns>
-        public static bool operator !=(Jugador j1, Jugador j2)
-        {
+        public static bool operator !=(Jugador j1, Jugador j2) {
             return !(j1.dni == j2.dni);
         }
 

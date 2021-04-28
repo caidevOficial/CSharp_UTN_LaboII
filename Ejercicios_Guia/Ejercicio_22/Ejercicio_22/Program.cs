@@ -25,15 +25,14 @@
 using Number;
 using System;
 
-namespace Ejercicio_22
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_22 {
+    class Program {
+        static void Main(string[] args) {
+            Console.Title = "Excercise N° 22";
+
             NumeroDecimal decimalNumber = (NumeroDecimal)30;
             NumeroBinario binaryNumber = (NumeroBinario)"111001";
-            
+
             Console.WriteLine("########## Convert ##########");
             NumeroDecimal decimalNumber2 = (NumeroDecimal)binaryNumber;
             NumeroBinario binaryNumber2 = (NumeroBinario)decimalNumber;
@@ -42,7 +41,7 @@ namespace Ejercicio_22
             Console.WriteLine($"Decimal: {decimalNumber.GetDecimalNumber()} -> {binaryNumber2.GetBinaryNumber()}");
 
             Console.WriteLine("\n########## Adition ##########");
-            
+
             decimalNumber2 = (NumeroDecimal)((decimalNumber + binaryNumber).GetDecimalNumber());
             binaryNumber2 = (NumeroBinario)((binaryNumber + decimalNumber).GetBinaryNumber());
             Console.WriteLine($"D: {decimalNumber.GetDecimalNumber()} + B: {binaryNumber.GetBinaryNumber()} = {decimalNumber2.GetDecimalNumber()}");

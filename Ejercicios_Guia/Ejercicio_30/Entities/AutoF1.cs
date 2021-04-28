@@ -23,15 +23,9 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Entities
-{
-    public class AutoF1
-    {
+namespace Entities {
+    public sealed class AutoF1 {
         private short cantidadCombustible;
         private bool enCompetencia;
         private string escuderia;
@@ -45,8 +39,7 @@ namespace Entities
         /// </summary>
         /// <param name="escuderia">Team of the car.</param>
         /// <param name="numero">Number of the car.</param>
-        public AutoF1(string escuderia, short numero)
-        {
+        public AutoF1(string escuderia, short numero) {
             this.escuderia = escuderia;
             this.numero = numero;
             this.CantidadCombustible = 0;
@@ -62,13 +55,10 @@ namespace Entities
         /// Get: The amount of fuel.
         /// Set: The amount of fuel (positive number only).
         /// </summary>
-        public short CantidadCombustible
-        {
+        public short CantidadCombustible {
             get => cantidadCombustible;
-            set
-            {
-                if (value >= 0 && value < 101)
-                {
+            set {
+                if (value >= 0 && value < 101) {
                     cantidadCombustible = value;
 
                 }
@@ -79,13 +69,10 @@ namespace Entities
         /// Get: The remaining laps.
         /// Set: The remaining laps (positive number only).
         /// </summary>
-        public short VueltasRestantes
-        {
+        public short VueltasRestantes {
             get => vueltasRestantes;
-            set
-            {
-                if (value >= 0)
-                {
+            set {
+                if (value >= 0) {
                     vueltasRestantes = value;
                 }
             }
@@ -95,10 +82,9 @@ namespace Entities
         /// Get: The competition state of the car.
         /// Set: The competition state of the car.
         /// </summary>
-        public bool EnCompetencia 
-        { 
-            get => enCompetencia; 
-            set => enCompetencia = value; 
+        public bool EnCompetencia {
+            get => enCompetencia;
+            set => enCompetencia = value;
         }
 
         #endregion
@@ -111,12 +97,9 @@ namespace Entities
         /// <param name="a1">First car to compare.</param>
         /// <param name="a2">Second car to compare.</param>
         /// <returns>True if both cars are the same, otherwise false.</returns>
-        public static bool operator ==(AutoF1 a1, AutoF1 a2)
-        {
-            if(!(a1 is null) && !(a2 is null))
-            {
-                if((a1.numero == a2.numero) && (String.Compare(a1.escuderia, a2.escuderia)==0))
-                {
+        public static bool operator ==(AutoF1 a1, AutoF1 a2) {
+            if (!(a1 is null) && !(a2 is null)) {
+                if ((a1.numero == a2.numero) && (String.Compare(a1.escuderia, a2.escuderia) == 0)) {
                     return true;
                 }
             }
@@ -130,9 +113,8 @@ namespace Entities
         /// <param name="a1">First car to compare.</param>
         /// <param name="a2">Second car to compare.</param>
         /// <returns>True if both cars are different, otherwise false.</returns>
-        public static bool operator !=(AutoF1 a1, AutoF1 a2)
-        {
-            return !(a1==a2);
+        public static bool operator !=(AutoF1 a1, AutoF1 a2) {
+            return !(a1 == a2);
         }
 
         #endregion
@@ -143,8 +125,7 @@ namespace Entities
         /// Shows the data of the car.
         /// </summary>
         /// <returns>The data as a string.</returns>
-        public string MostrarDatos()
-        {
+        public string MostrarDatos() {
             string stats = String.Format("Number: {0,2} | Team: {1,-6} | Comp: {2,-5} | Fuel: {3,3}% | Laps: {4,2}",
                 this.numero, this.escuderia, this.EnCompetencia, this.CantidadCombustible, this.VueltasRestantes);
 

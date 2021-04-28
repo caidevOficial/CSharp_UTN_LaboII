@@ -25,10 +25,8 @@
 using C = Conversor;
 using System;
 
-namespace Number
-{
-    public class NumeroDecimal
-    {
+namespace Number {
+    public class NumeroDecimal {
         private double numero;
 
         #region Builders
@@ -37,8 +35,7 @@ namespace Number
         /// Builds the entity with one param.
         /// </summary>
         /// <param name="number">Number for the entity.</param>
-        private NumeroDecimal(double number)
-        {
+        private NumeroDecimal(double number) {
             this.numero = number;
         }
 
@@ -50,8 +47,7 @@ namespace Number
         /// Gets the number of the entity.
         /// </summary>
         /// <returns>The number of the entity.</returns>
-        public double GetDecimalNumber()
-        {
+        public double GetDecimalNumber() {
             return this.numero;
         }
 
@@ -63,8 +59,7 @@ namespace Number
         /// Explicitly casts an object of type double to an object of type NumeroDecimal.
         /// </summary>
         /// <param name="number">double to cast to NumeroDecimal</param>
-        public static implicit operator NumeroDecimal(double number)
-        {
+        public static implicit operator NumeroDecimal(double number) {
             return new NumeroDecimal(number);
         }
 
@@ -72,8 +67,7 @@ namespace Number
         /// Explicitly casts an object of type NumeroBinario to an object of type NumeroDecimal.
         /// </summary>
         /// <param name="binary">NumeroBinario object to cast to NumeroDecimal</param>
-        public static explicit operator NumeroDecimal(NumeroBinario binary)
-        {
+        public static explicit operator NumeroDecimal(NumeroBinario binary) {
             NumeroDecimal decimalNumber = new NumeroDecimal(C.Conversor.BinaryToDecimal(binary.GetBinaryNumber()));
             return decimalNumber;
         }
@@ -88,8 +82,7 @@ namespace Number
         /// <param name="n">NumeroDecimal to compare.</param>
         /// <param name="b">NumeroBinario to compare.</param>
         /// <returns>True if are equals, otherwise returns False</returns>
-        public static bool operator ==(NumeroDecimal n, NumeroBinario b)
-        {
+        public static bool operator ==(NumeroDecimal n, NumeroBinario b) {
             return n.GetDecimalNumber() == ((NumeroDecimal)b).GetDecimalNumber();
         }
 
@@ -99,8 +92,7 @@ namespace Number
         /// <param name="n">NumeroDecimal to compare.</param>
         /// <param name="b">NumeroBinario to compare.</param>
         /// <returns>True if are differents, otherwise returns False</returns>
-        public static bool operator !=(NumeroDecimal n, NumeroBinario b)
-        {
+        public static bool operator !=(NumeroDecimal n, NumeroBinario b) {
             return !(n == b);
         }
 
@@ -114,8 +106,7 @@ namespace Number
         /// <param name="n"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static NumeroDecimal operator +(NumeroDecimal n, NumeroBinario b)
-        {
+        public static NumeroDecimal operator +(NumeroDecimal n, NumeroBinario b) {
             return new NumeroDecimal(n.GetDecimalNumber() + ((NumeroDecimal)b).GetDecimalNumber());
         }
 
@@ -125,8 +116,7 @@ namespace Number
         /// <param name="n"></param>
         /// <param name="b"></param>
         /// <returns></returns>
-        public static NumeroDecimal operator -(NumeroDecimal n, NumeroBinario b)
-        {
+        public static NumeroDecimal operator -(NumeroDecimal n, NumeroBinario b) {
             return new NumeroDecimal(n.GetDecimalNumber() - ((NumeroDecimal)b).GetDecimalNumber());
         }
 

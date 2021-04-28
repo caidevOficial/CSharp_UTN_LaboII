@@ -26,14 +26,11 @@ using Currency;
 using System;
 using System.Windows.Forms;
 
-namespace Ejercicio_23
-{
-    public partial class Conversor : Form
-    {
+namespace Ejercicio_23 {
+    public partial class Conversor : Form {
         private bool locked;
         private bool lockedOK;
-        public Conversor()
-        {
+        public Conversor() {
             InitializeComponent();
             locked = false;
             lockedOK = false;
@@ -47,10 +44,8 @@ namespace Ejercicio_23
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnCotizacion_Click(object sender, EventArgs e)
-        {
-            if (!(String.IsNullOrWhiteSpace(txtBoxEuro.Text)) && !(String.IsNullOrWhiteSpace(txtBoxPeso.Text)) && !locked)
-            {
+        private void btnCotizacion_Click(object sender, EventArgs e) {
+            if (!(String.IsNullOrWhiteSpace(txtBoxEuro.Text)) && !(String.IsNullOrWhiteSpace(txtBoxPeso.Text)) && !locked) {
                 btnCotizacion.ImageIndex = 1; //Unlocked
                 txtBoxPeso.Enabled = false;
                 txtBoxEuro.Enabled = false;
@@ -60,9 +55,7 @@ namespace Ejercicio_23
                 btnConvertPeso.Enabled = true;
                 groupBoxCurrency.Enabled = true;
                 lockedOK = true;
-            }
-            else
-            {
+            } else {
                 btnCotizacion.ImageIndex = 0; //Locked
                 txtBoxPeso.Enabled = true;
                 txtBoxEuro.Enabled = true;
@@ -75,8 +68,7 @@ namespace Ejercicio_23
             locked = !locked;
         }
 
-        private static void MessageError(string errorMessage, string typeError)
-        {
+        private static void MessageError(string errorMessage, string typeError) {
             MessageBox.Show(errorMessage, typeError, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
@@ -85,8 +77,7 @@ namespace Ejercicio_23
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Conversor_Load(object sender, EventArgs e)
-        {
+        private void Conversor_Load(object sender, EventArgs e) {
             txtBoxDolar.Text = Dolar.GetCotizacion().ToString();
             txtBoxDolar.Enabled = false;
             groupBoxConvertions.Enabled = false;
@@ -98,18 +89,13 @@ namespace Ejercicio_23
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnConvertEuro_Click(object sender, EventArgs e)
-        {
-            
-            if(!lockedOK)
-            {
+        private void btnConvertEuro_Click(object sender, EventArgs e) {
+
+            if (!lockedOK) {
                 MessageError("You need to complete al the cotizations boxes", "Error");
-            }
-            else
-            {
-                
-                if (Double.TryParse(txtEuro.Text, out double equivalentEuro))
-                {
+            } else {
+
+                if (Double.TryParse(txtEuro.Text, out double equivalentEuro)) {
                     Euro myEuro = new Euro(equivalentEuro);
                     txtEuroAEuro.Text = myEuro.GetCantidad().ToString();
                     txtEuroADolar.Text = ((Dolar)myEuro).GetCantidad().ToString();
@@ -123,16 +109,11 @@ namespace Ejercicio_23
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnConvertDolar_Click(object sender, EventArgs e)
-        {
-            if (!lockedOK)
-            {
+        private void btnConvertDolar_Click(object sender, EventArgs e) {
+            if (!lockedOK) {
                 MessageError("You need to complete al the cotizations boxes", "Error");
-            }
-            else
-            {
-                if (Double.TryParse(txtDolar.Text, out double equivalentDolar))
-                {
+            } else {
+                if (Double.TryParse(txtDolar.Text, out double equivalentDolar)) {
                     Dolar myDolar = new Dolar(equivalentDolar);
                     txtDolarADolar.Text = myDolar.GetCantidad().ToString();
                     txtDolarAEuro.Text = ((Euro)myDolar).GetCantidad().ToString();
@@ -146,16 +127,11 @@ namespace Ejercicio_23
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnConvertPeso_Click(object sender, EventArgs e)
-        {
-            if (!lockedOK)
-            {
+        private void btnConvertPeso_Click(object sender, EventArgs e) {
+            if (!lockedOK) {
                 MessageError("You need to complete al the cotizations boxes", "Error");
-            }
-            else
-            {
-                if (Double.TryParse(txtPeso.Text, out double equivalentPeso))
-                {
+            } else {
+                if (Double.TryParse(txtPeso.Text, out double equivalentPeso)) {
                     Peso myPeso = new Peso(equivalentPeso);
                     txtPesosAEuro.Text = ((Euro)myPeso).GetCantidad().ToString();
                     txtPesosADolar.Text = ((Dolar)myPeso).GetCantidad().ToString();
@@ -169,14 +145,10 @@ namespace Ejercicio_23
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtBoxEuro_MouseLeave(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrWhiteSpace(txtBoxEuro.Text) && Double.TryParse(txtBoxEuro.Text, out double equivalentEuro))
-            {
+        private void txtBoxEuro_MouseLeave(object sender, EventArgs e) {
+            if (!String.IsNullOrWhiteSpace(txtBoxEuro.Text) && Double.TryParse(txtBoxEuro.Text, out double equivalentEuro)) {
                 Euro.SetCotizacion(equivalentEuro);
-            }
-            else
-            {
+            } else {
                 txtBoxEuro.Focus();
                 MessageError("Monto en Euros Invalido", "Error");
             }
@@ -187,14 +159,10 @@ namespace Ejercicio_23
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtBoxPeso_MouseLeave(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrWhiteSpace(txtBoxPeso.Text) && Double.TryParse(txtBoxPeso.Text, out double equivalentPeso))
-            {
+        private void txtBoxPeso_MouseLeave(object sender, EventArgs e) {
+            if (!String.IsNullOrWhiteSpace(txtBoxPeso.Text) && Double.TryParse(txtBoxPeso.Text, out double equivalentPeso)) {
                 Peso.SetCotizacion(equivalentPeso);
-            }
-            else
-            {
+            } else {
                 txtBoxPeso.Focus();
                 MessageError("Monto en Pesos Invalido", "Error");
             }

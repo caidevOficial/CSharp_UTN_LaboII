@@ -1,8 +1,6 @@
 ﻿
-namespace Ejercicio_25
-{
-    partial class Form1
-    {
+namespace Ejercicio_25 {
+    partial class Conversor {
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
@@ -12,10 +10,8 @@ namespace Ejercicio_25
         /// Limpiar los recursos que se estén usando.
         /// </summary>
         /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -27,9 +23,8 @@ namespace Ejercicio_25
         /// Método necesario para admitir el Diseñador. No se puede modificar
         /// el contenido de este método con el editor de código.
         /// </summary>
-        private void InitializeComponent()
-        {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+        private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Conversor));
             this.btnBinToDec = new System.Windows.Forms.Button();
             this.btnDecToBin = new System.Windows.Forms.Button();
             this.grpBoxResult = new System.Windows.Forms.GroupBox();

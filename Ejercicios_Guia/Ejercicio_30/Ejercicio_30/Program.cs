@@ -24,17 +24,10 @@
 
 using Entities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Ejercicio_30
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_30 {
+    class Program {
+        static void Main(string[] args) {
             Console.Title = "Ejercicio 30";
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -51,25 +44,19 @@ namespace Ejercicio_30
 
             #region CompareCars
 
-            if (car1 == car2)
-            {
+            if (car1 == car2) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Iguales";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Diferentes";
             }
             Console.WriteLine($"{car1.MostrarDatos()} \n{car2.MostrarDatos()} \n##########\nStatus: {status}\n##########\n");
 
-            if (car1 == car3)
-            {
+            if (car1 == car3) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Iguales";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Diferentes";
             }
@@ -79,25 +66,19 @@ namespace Ejercicio_30
 
             #region Competence
 
-            if (granTurismo + car1)
-            {
+            if (granTurismo + car1) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Agregado a la competencia";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Auto existente";
             }
             Console.WriteLine($"{granTurismo.MostrarDatos()} \n{car1.MostrarDatos()} \n##########\nStatus: {status}\n##########\n");
 
-            if (granTurismo + car2)
-            {
+            if (granTurismo + car2) {
                 Console.ForegroundColor = ConsoleColor.Green;
                 status = "Agregado a la competencia";
-            }
-            else
-            {
+            } else {
                 Console.ForegroundColor = ConsoleColor.Red;
                 status = "Auto existente";
             }
