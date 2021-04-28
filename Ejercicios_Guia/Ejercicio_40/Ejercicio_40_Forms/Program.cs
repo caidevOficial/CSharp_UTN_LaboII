@@ -32,7 +32,7 @@ namespace Ejercicio_40_Forms {
         /// </summary>
         [STAThread]
         static void Main() {
-            Console.Title = "Excercise N° 40";
+            //Console.Title = "Excercise N° 40";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMenu());

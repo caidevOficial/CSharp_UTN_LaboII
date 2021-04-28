@@ -38,7 +38,7 @@ namespace Ejercicio_24
         [STAThread]
         static void Main()
         {
-            Console.Title = "Excercise N° 24";
+            //Console.Title = "Excercise N° 24";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Temperatures());

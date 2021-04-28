@@ -32,7 +32,7 @@ namespace Ejercicio_28 {
         /// </summary>
         [STAThread]
         static void Main() {
-            Console.Title = "Excercise N° 28";
+            //Console.Title = "Excercise N° 28";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ContadorDePalabras());

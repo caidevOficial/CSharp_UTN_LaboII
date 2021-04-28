@@ -32,7 +32,7 @@ namespace Ejercicio_23 {
         /// </summary>
         [STAThread]
         static void Main() {
-            Console.Title = "Excercise N° 23";
+            //Console.Title = "Excercise N° 23";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Conversor());
