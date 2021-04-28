@@ -24,12 +24,9 @@
 
 using DL = AmountOfDaysLived;
 
-namespace Ejercicio_07
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_07 {
+    class Program {
+        static void Main(string[] args) {
             DL.AmountOfDaysLived.CalculatesDaysLived();
         }
     }

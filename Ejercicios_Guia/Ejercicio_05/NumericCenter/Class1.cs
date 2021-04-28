@@ -24,15 +24,12 @@
 
 using System;
 
-namespace NumericCenter
-{
-    public class NumericCenter
-    {
+namespace NumericCenter {
+    public class NumericCenter {
         /// <summary>
         /// Searchs for numeric centers till' the number that the user enters.
         /// </summary>
-        public static void CheckNumericCenter()
-        {
+        public static void CheckNumericCenter() {
             Console.Title = "Ejercicio Nro 05";
 
             int numberTillCheck;
@@ -46,23 +43,19 @@ namespace NumericCenter
 
             Console.WriteLine("Buscando centros numéricos:\n");
 
-            for (int i = 2; i < numberTillCheck; i++)
-            {
+            for (int i = 2; i < numberTillCheck; i++) {
                 sumOfFollowing = i + 1;
                 sumOfAbove = 0;
                 sumTotal = 0;
 
-                for (int y = i - 1; y > 0; y--)
-                {
+                for (int y = i - 1; y > 0; y--) {
                     sumOfAbove += y;
                 }
 
-                while (sumTotal <= sumOfAbove)
-                {
+                while (sumTotal <= sumOfAbove) {
 
                     sumTotal += sumOfFollowing;
-                    if (sumTotal == sumOfAbove)
-                    {
+                    if (sumTotal == sumOfAbove) {
                         Console.WriteLine($"Centro encontrado: {i}");
                         flag = true;
 
@@ -71,8 +64,7 @@ namespace NumericCenter
 
                 }
             }
-            if (!flag)
-            {
+            if (!flag) {
                 Console.WriteLine("Sin centros numéricos");
             }
             Console.WriteLine("\nProgram Terminated!");

@@ -24,15 +24,13 @@
 
 using System;
 
-namespace AuxiliarLibrary
-{
-    public class AuxiliarLibrary
-    {
+namespace AuxiliarLibrary {
+    public class AuxiliarLibrary {
+
         /// <summary>
         /// Displays prime numbers up to the number that the user has specified.
         /// </summary>
-        public static void Ejercicio3()
-        {
+        public static void Ejercicio3() {
             int num = 2, divisor, primeTo;
             bool isPrimeNumber;
 
@@ -40,23 +38,18 @@ namespace AuxiliarLibrary
             Console.Write("Mostrar primos hasta el: ");
             primeTo = int.Parse(Console.ReadLine());
 
-            if (primeTo > 1)
-            {
+            if (primeTo > 1) {
 
-                for (num = 2; num <= primeTo; num++)
-                {
+                for (num = 2; num <= primeTo; num++) {
                     isPrimeNumber = true;
-                    for (divisor = 2; divisor < num; divisor++)
-                    {
+                    for (divisor = 2; divisor < num; divisor++) {
 
-                        if ((num % divisor) == 0)
-                        {
+                        if ((num % divisor) == 0) {
                             isPrimeNumber = false;
                             break;
                         }
                     }
-                    if (isPrimeNumber)
-                    {
+                    if (isPrimeNumber) {
                         Console.WriteLine($"{num}: es numero primo.");
                     }
                 }

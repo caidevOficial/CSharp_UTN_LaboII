@@ -24,38 +24,31 @@
 
 using System;
 
-namespace PerfectNumber
-{
-    public class PerfectNumber
-    {
+namespace PerfectNumber {
+    public class PerfectNumber {
         /// <summary>
         /// Searches the first 4 perfect numbers and shows them in the console.
         /// </summary>
-        public static void SearchPerfectNumber()
-        {
+        public static void SearchPerfectNumber() {
             int divisor;
             int sumOfDivisors;
             int amountPerfects = 0;
             Console.Title = "Ejercicio 4";
 
             // I check that i have 4 PerfNumbers.
-            for (int numero = 1; amountPerfects < 4; numero++)
-            {
+            for (int numero = 1; amountPerfects < 4; numero++) {
                 sumOfDivisors = 0;
 
                 // go througth the divisors of the number.
-                for (divisor = 1; divisor <= (numero / 2); divisor++)
-                {
+                for (divisor = 1; divisor <= (numero / 2); divisor++) {
                     // if is a divisor of the number, i'll add it.
-                    if ((numero % divisor) == 0)
-                    {
+                    if ((numero % divisor) == 0) {
                         sumOfDivisors += divisor;
                     }
                 }
 
                 //if the sum is equal to the iterated number, IT'S PERFECT PERRI!.
-                if (sumOfDivisors == numero)
-                {
+                if (sumOfDivisors == numero) {
                     Console.WriteLine("El numero " + numero + " es perfecto");
                     amountPerfects++; //Update the perfect's amount.
                 }

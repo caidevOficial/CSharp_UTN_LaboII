@@ -24,15 +24,13 @@
 
 using System;
 
-namespace LeapYear
-{
-    public class LeapYear
-    {
+namespace LeapYear {
+    public class LeapYear {
+
         /// <summary>
         /// Prints to the console all leap years between the beginning year and the ending year that the user enters.
         /// </summary>
-        public static void CheckLeapYear()
-        {
+        public static void CheckLeapYear() {
 
             int begginingYear;
             int endYear;
@@ -43,12 +41,9 @@ namespace LeapYear
             Console.WriteLine("Ingrese año de fin: ");
             int.TryParse(Console.ReadLine(), out endYear);
 
-            for (int init = begginingYear; init <= endYear; init++)
-            {
-                if ((init % 4) == 0)
-                {
-                    if ((init % 100) != 0 || (init % 400) == 0)
-                    {
+            for (int init = begginingYear; init <= endYear; init++) {
+                if ((init % 4) == 0) {
+                    if ((init % 100) != 0 || (init % 400) == 0) {
                         Console.WriteLine($"Es bisiesto el año {init}.");
                     }
                 }

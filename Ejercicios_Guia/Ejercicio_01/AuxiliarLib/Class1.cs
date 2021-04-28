@@ -24,18 +24,15 @@
 
 using System;
 
-namespace AuxiliarLib
-{
-    public class AuxiliarLib
-    {
+namespace AuxiliarLib {
+    public class AuxiliarLib {
         /// <summary>
         /// Shows the minimun, maximun and average values in console.
         /// </summary>
         /// <param name="minimun">Minimun value to show.</param>
         /// <param name="maximun">Maximun value to show.</param>
         /// <param name="average">Average value to show.</param>
-        private static void ShowMessage(int minimun, int maximun, float average)
-        {
+        private static void ShowMessage(int minimun, int maximun, float average) {
             Console.WriteLine($"El promedio es: {average}.\n" +
                 $"El Maximo es: {maximun}.\n" +
                 $"El Minimo es: {minimun}.\n");
@@ -45,8 +42,7 @@ namespace AuxiliarLib
         /// <summary>
         /// Calculates and shows the minimun value, maximun value and average of 5 numbers.
         /// </summary>
-        public static void Exercise_01()
-        {
+        public static void Exercise_01() {
             sbyte index;
             byte sumNumbers = 0;
             byte number;
@@ -55,23 +51,18 @@ namespace AuxiliarLib
             float average = float.MinValue;
 
             Console.Title = "Ejercicio 1";
-            for (index = 0; index < 5; index++)
-            {
+            for (index = 0; index < 5; index++) {
                 Console.Write("Ingrese el " + (index + 1) + "° numero: ");
                 byte.TryParse(Console.ReadLine(), out number);
 
-                while (!byte.TryParse(Console.ReadLine(), out number))
-                {
+                while (!byte.TryParse(Console.ReadLine(), out number)) {
                     Console.Write("Ingrese el " + (index + 1) + "° numero: ");
                     byte.TryParse(Console.ReadLine(), out number);
                 }
 
-                if (number < minimunNumber)
-                {
+                if (number < minimunNumber) {
                     minimunNumber = number;
-                }
-                else if (number > maximunNumber)
-                {
+                } else if (number > maximunNumber) {
                     maximunNumber = number;
                 }
                 sumNumbers += number;

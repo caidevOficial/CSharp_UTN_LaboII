@@ -24,21 +24,17 @@
 
 using System;
 
-namespace AmountOfDaysLived
-{
-    public class AmountOfDaysLived
-    {
+namespace AmountOfDaysLived {
+    public class AmountOfDaysLived {
+
         /// <summary>
         /// Checks if the year is Leap or not.
         /// </summary>
         /// <param name="year">Year to check.</param>
         /// <returns>True if is a leap year, otherwise returns false.</returns>
-        private static bool isLeapYear(int year)
-        {
-            if ((year % 4) == 0)
-            {
-                if ((year % 100) != 0 || (year % 400) == 0)
-                {
+        private static bool isLeapYear(int year) {
+            if ((year % 4) == 0) {
+                if ((year % 100) != 0 || (year % 400) == 0) {
                     return true;
                 }
             }
@@ -48,8 +44,7 @@ namespace AmountOfDaysLived
         /// <summary>
         /// Calculates the amount of days lived since the birthday of the user till' now.
         /// </summary>
-        public static void CalculatesDaysLived()
-        {
+        public static void CalculatesDaysLived() {
             int year;
             int amountOfDays = 0;
             DateTime actualTime = DateTime.Now;
@@ -58,14 +53,10 @@ namespace AmountOfDaysLived
             Console.WriteLine("Indicame el año: ");
             int.TryParse(Console.ReadLine(), out year);
 
-            for (int actualYear = year; actualYear < actualTime.Year; actualYear++)
-            {
-                if (isLeapYear(actualYear))
-                {
+            for (int actualYear = year; actualYear < actualTime.Year; actualYear++) {
+                if (isLeapYear(actualYear)) {
                     amountOfDays += 366;
-                }
-                else
-                {
+                } else {
                     amountOfDays += 365;
                 }
             }

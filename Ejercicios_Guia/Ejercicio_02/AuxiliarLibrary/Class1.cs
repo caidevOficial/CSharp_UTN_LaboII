@@ -24,16 +24,13 @@
 
 using System;
 
-namespace AuxiliarLibrary
-{
-    public class AuxiliarLibrary
-    {
+namespace AuxiliarLibrary {
+    public class AuxiliarLibrary {
 
         /// <summary>
         /// Shows the cube and square of a number if it is greater than 0, otherwise shows an error message.
         /// </summary>
-        public static void Exercise_02()
-        {
+        public static void Exercise_02() {
             int number;
             double quadra = 0;
             double cube = 0;
@@ -41,12 +38,9 @@ namespace AuxiliarLibrary
             Console.Title = "Ejercicio 2";
             Console.WriteLine("Ingrese un numero y te mostrare su cuadrado y cubo: ");
             int.TryParse(Console.ReadLine(), out number);
-            if (number < 0)
-            {
+            if (number < 0) {
                 Console.WriteLine("ERROR. ¡Reingresar número!");
-            }
-            else
-            {
+            } else {
                 quadra = Math.Pow(number, 2);
                 cube = Math.Pow(number, 3);
             }

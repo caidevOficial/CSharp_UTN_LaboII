@@ -24,12 +24,9 @@
 
 using LY = LeapYear;
 
-namespace Ejercicio_06
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_06 {
+    class Program {
+        static void Main(string[] args) {
             LY.LeapYear.CheckLeapYear();
         }
     }

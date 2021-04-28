@@ -24,12 +24,9 @@
 
 using PF = PerfectNumber;
 
-namespace Ejercicio_04
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_04 {
+    class Program {
+        static void Main(string[] args) {
             PF.PerfectNumber.SearchPerfectNumber();
         }
     }

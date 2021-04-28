@@ -25,12 +25,9 @@
 using System;
 using R = Receipt;
 
-namespace Ejercicio_08
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_08 {
+    class Program {
+        static void Main(string[] args) {
             R.Receipt.CalculateReceipt();
             Console.ReadKey();
         }

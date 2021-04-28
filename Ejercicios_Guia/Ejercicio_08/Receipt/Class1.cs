@@ -24,10 +24,9 @@
 
 using System;
 
-namespace Receipt
-{
-    public class Receipt
-    {
+namespace Receipt {
+    public class Receipt {
+
         /// <summary>
         /// Shows the info of the employee.
         /// </summary>
@@ -35,8 +34,7 @@ namespace Receipt
         /// <param name="yearsWorked">Total of years worked.</param>
         /// <param name="amountPerHour">Salary per hour.</param>
         /// <param name="finalAmount">Final Salary.</param>
-        private static void ShowInfo(string name, int yearsWorked, double amountPerHour, double finalAmount)
-        {
+        private static void ShowInfo(string name, int yearsWorked, double amountPerHour, double finalAmount) {
             Console.WriteLine($"##############\n" +
                                 $"Name: {name}.\n" +
                                 $"Years Worked: {yearsWorked}.\n" +
@@ -48,11 +46,10 @@ namespace Receipt
         /// <summary>
         /// Calculates the salary of employees and prints in console the receipt.
         /// </summary>
-        public static void CalculateReceipt()
-        {
+        public static void CalculateReceipt() {
             const int BASE = 150;
             const double DISCOUNT = 0.87;
-            
+
             string name = "";
             int employeesChargeds = 0;
             int amountEmployees = 0;
@@ -63,35 +60,29 @@ namespace Receipt
             double finalAmount = 0;
 
             Console.Write("How many employees do you wanna charge?: ");
-            if (int.TryParse(Console.ReadLine(), out amountEmployees))
-            {
-                do
-                {
-                    Console.Write($"Tell me the name of the {employeesChargeds+1}° employee: ");
+            if (int.TryParse(Console.ReadLine(), out amountEmployees)) {
+                do {
+                    Console.Write($"Tell me the name of the {employeesChargeds + 1}° employee: ");
                     name = Console.ReadLine();
 
                     Console.Write("Tell me the Price-Per-Hour: ");
-                    if (double.TryParse(Console.ReadLine(), out pricePerHour))
-                    {
+                    if (double.TryParse(Console.ReadLine(), out pricePerHour)) {
                         Console.Write("How many hours worked per month?: ");
                         int.TryParse(Console.ReadLine(), out int amountHoursInMonth);
                         monthlySalary = amountHoursInMonth * pricePerHour;
                     }
 
                     Console.Write("How many years worked?: ");
-                    if (int.TryParse(Console.ReadLine(), out yearsWorked))
-                    {
+                    if (int.TryParse(Console.ReadLine(), out yearsWorked)) {
                         finalAmount = (monthlySalary) + (yearsWorked * BASE);
                         finalAmount *= DISCOUNT;
                     }
                     ShowInfo(name, yearsWorked, pricePerHour, finalAmount);
-                    
+
                     employeesChargeds++;
                 } while (employeesChargeds < amountEmployees);
                 Console.WriteLine("All operations has been done!.");
-            }
-            else
-            {
+            } else {
                 Console.WriteLine("Something went wrong, please try again.");
             }
         }

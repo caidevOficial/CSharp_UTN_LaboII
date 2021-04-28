@@ -24,12 +24,9 @@
 
 using AL = AuxiliarLib;
 
-namespace Ejercicio_01
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Ejercicio_01 {
+    class Program {
+        static void Main(string[] args) {
             AL.AuxiliarLib.Exercise_01();
         }
     }
