@@ -34,6 +34,9 @@ namespace Ejercicio_40_Forms.Forms {
             DateTime dt = DateTime.Now;
             StringBuilder data = new StringBuilder();
             data.AppendLine($"Error: {ex.Message} producido en {ex.NombreClase} al usar {ex.NombreMetodo}.");
+            data.AppendLine($"Source: {ex.Source}");
+            data.AppendLine($"Method: {ex.TargetSite}");
+
             rtbExceptionDescription.Text = data.ToString();
             lblRealDateException.Text = dt.ToString();
         }
