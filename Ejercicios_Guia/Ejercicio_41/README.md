@@ -21,7 +21,7 @@
 <th><center>UML Diagrams</center></th>
   <tr>
     <td>
-      <img alt"UML" src="Media/40_UML.png" width="700px"></img>
+      <img alt"UML" src="Media/41_UML.png" width="700px"></img>
     </td>
   </tr>
 </table>

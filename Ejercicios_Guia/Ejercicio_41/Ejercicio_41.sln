@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaHerencia", "CentralitaHerencia\CentralitaHerencia.csproj", "{B9B502F8-DB4C-4C0B-9C5E-7E7DA8C972E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_41_Forms", "Ejercicio_40_Forms\Ejercicio_41_Forms.csproj", "{4EEC6E0A-C2B0-4089-8E50-FDB8C523A733}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_41_Forms", "Ejercicio_41_Forms\Ejercicio_41_Forms.csproj", "{4EEC6E0A-C2B0-4089-8E50-FDB8C523A733}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaHerencia_Console", "CentralitaHerencia_Console\CentralitaHerencia_Console.csproj", "{E0255D15-23AD-43BD-974B-521C8583607A}"
 EndProject

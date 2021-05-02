@@ -4,7 +4,7 @@
     <Position X="8.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>BAAAAACAAAQAAAAMQAAAAAIQIABAQAAAAIAAAAAAAiA=</HashCode>
-      <FileName>Centralita.cs</FileName>
+      <FileName>Entities\Centralita.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CentralitaHerencia.Llamada">
@@ -21,14 +21,14 @@
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAACAgAAAQAAAAAAAAACAgAAAABAAAAAQAAgAgAAiA=</HashCode>
-      <FileName>Llamada.cs</FileName>
+      <FileName>Entities\Abstract\Llamada.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CentralitaHerencia.Local">
     <Position X="6" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAIAQAAAAEgAAAAAAAAAAAAAAAAAAIgAAAAAA=</HashCode>
-      <FileName>Local.cs</FileName>
+      <FileName>Entities\SubClasses\Local.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CentralitaHerencia.Provincial">
@@ -45,7 +45,14 @@
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAEoAAAAAAAAAAAAAAAAAAIgAAAAAA=</HashCode>
-      <FileName>Provincial.cs</FileName>
+      <FileName>Entities\SubClasses\Provincial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CentralitaHerencia.Entities.Exceptions.CentralitaException">
+    <Position X="10.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAEAAAQAAAAEAAAAAAA=</HashCode>
+      <FileName>Entities\Exceptions\CentralitaException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
