@@ -330,6 +330,7 @@ namespace Ejercicio_40_Forms
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.grpPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
