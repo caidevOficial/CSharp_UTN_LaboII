@@ -28,3 +28,4 @@ E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_41_Fo
 E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_41_Forms\obj\Debug\Ejercicio_41_Forms.csproj.CopyComplete
 E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_41_Forms\obj\Debug\Ejercicio_40_Forms.exe
 E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_41_Forms\obj\Debug\Ejercicio_40_Forms.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\Ejercicio_41_Forms\obj\Debug\Ejercicio_40_Forms.Forms.frmException.resources

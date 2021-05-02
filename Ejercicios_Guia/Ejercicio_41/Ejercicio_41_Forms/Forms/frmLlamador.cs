@@ -24,6 +24,7 @@
 
 using CentralitaHerencia;
 using CentralitaHerencia.Entities.Exceptions;
+using Ejercicio_40_Forms.Forms;
 using System;
 using System.Media;
 using System.Windows.Forms;
@@ -86,8 +87,11 @@ namespace Ejercicio_40_Forms {
                         MessageBox.Show("Llamada Local Generada con exito!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                 } catch (CentralitaException ce) {
+                    frmException fExcp = new frmException(ce);
+                    fExcp.Location = this.Location;
+                    MessageBox.Show($"Error: Exception.", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    fExcp.ShowDialog();
 
-                    MessageBox.Show($"Error: {ce.Message} producido en {ce.NombreClase} al usar {ce.NombreMetodo}.");
                 }
 
                 btnLimpiar_Click(sender, e);
