@@ -1,0 +1,10 @@
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\bin\Debug\CentralitaHerencia_Console.exe.config
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\bin\Debug\CentralitaHerencia_Console.exe
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\bin\Debug\CentralitaHerencia_Console.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\bin\Debug\CentralitaHerencia.dll
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\bin\Debug\CentralitaHerencia.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\obj\Debug\CentralitaHerencia_Console.csprojAssemblyReference.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\obj\Debug\CentralitaHerencia_Console.csproj.CoreCompileInputs.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\obj\Debug\CentralitaHerencia_Console.csproj.CopyComplete
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\obj\Debug\CentralitaHerencia_Console.exe
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_41\CentralitaHerencia_Console\obj\Debug\CentralitaHerencia_Console.pdb

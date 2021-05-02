@@ -22,13 +22,12 @@
  * SOFTWARE.
  */
 
+using CentralitaHerencia.Entities.Exceptions;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CentralitaHerencia
-{
-    public sealed class Centralita
-    {
+namespace CentralitaHerencia {
+    public sealed class Centralita {
         private List<Llamada> listaDeLlamadas;
         private string razonSocial;
 
@@ -37,24 +36,21 @@ namespace CentralitaHerencia
         /// <summary>
         /// Get: Gets the profits of the local calls.
         /// </summary>
-        public float GananciasPorLocal
-        {
+        public float GananciasPorLocal {
             get => CalcularGanancias(Llamada.TipoLlamada.Local);
         }
 
         /// <summary>
         /// Get: Gets the profits of the province calls.
         /// </summary>
-        public float GananciasPorProvincial
-        {
+        public float GananciasPorProvincial {
             get => CalcularGanancias(Llamada.TipoLlamada.Provincial);
         }
 
         /// <summary>
         /// Get: Gets the profits of the total calls.
         /// </summary>
-        public float GananciasPorTotal
-        {
+        public float GananciasPorTotal {
             get => CalcularGanancias(Llamada.TipoLlamada.Todas);
         }
 
@@ -70,8 +66,7 @@ namespace CentralitaHerencia
         /// <summary>
         /// Builds and initialize the List of the entity.
         /// </summary>
-        public Centralita()
-        {
+        public Centralita() {
             this.listaDeLlamadas = new List<Llamada>();
         }
 
@@ -80,8 +75,7 @@ namespace CentralitaHerencia
         /// </summary>
         /// <param name="nombreEmpresa">Name of the enterprice</param>
         public Centralita(string nombreEmpresa)
-            : this()
-        {
+            : this() {
             this.razonSocial = nombreEmpresa;
         }
 
@@ -94,32 +88,24 @@ namespace CentralitaHerencia
         /// </summary>
         /// <param name="tipoLlamada">Type of the call.</param>
         /// <returns>Returns the profits of the calls.</returns>
-        private float CalcularGanancias(Llamada.TipoLlamada tipoLlamada)
-        {
+        private float CalcularGanancias(Llamada.TipoLlamada tipoLlamada) {
             float profits = 0;
-            foreach (Llamada call in listaDeLlamadas)
-            {
-                switch (tipoLlamada)
-                {
+            foreach (Llamada call in listaDeLlamadas) {
+                switch (tipoLlamada) {
                     case Llamada.TipoLlamada.Local:
-                        if (call is Local)
-                        {
+                        if (call is Local) {
                             profits += ((Local)call).CostoLlamada;
                         }
                         break;
                     case Llamada.TipoLlamada.Provincial:
-                        if (call is Provincial)
-                        {
+                        if (call is Provincial) {
                             profits += ((Provincial)call).CostoLlamada;
                         }
                         break;
                     case Llamada.TipoLlamada.Todas:
-                        if (call is Provincial)
-                        {
+                        if (call is Provincial) {
                             profits += ((Provincial)call).CostoLlamada;
-                        }
-                        else if (call is Local)
-                        {
+                        } else if (call is Local) {
                             profits += ((Local)call).CostoLlamada;
                         }
                         break;
@@ -133,8 +119,7 @@ namespace CentralitaHerencia
         /// <summary>
         /// Sorts the calls of the list.
         /// </summary>
-        public void OrdenarLlamadas()
-        {
+        public void OrdenarLlamadas() {
             listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
         }
 
@@ -142,16 +127,14 @@ namespace CentralitaHerencia
         /// Shows the info of the Centralita.
         /// </summary>
         /// <returns>The info of centralita as a string.</returns>
-        private string Mostrar()
-        {
+        private string Mostrar() {
             StringBuilder data = new StringBuilder();
             data.Append($"Razon Social: {this.razonSocial}.\n");
             data.Append($"Costo Total Local: {this.GananciasPorLocal}.\n");
             data.Append($"Costo Total Provincial: {this.GananciasPorProvincial}.\n");
             data.Append($"Costo Total Llamadas: {this.GananciasPorTotal}.\n");
             data.Append("Llamadas:\n");
-            foreach (Llamada call in Llamadas)
-            {
+            foreach (Llamada call in Llamadas) {
                 data.Append(call.ToString());
                 data.Append("________________________________________________________________\n");
             }
@@ -164,8 +147,7 @@ namespace CentralitaHerencia
         /// Adds the call into the list of the centralita.
         /// </summary>
         /// <param name="l1">Call to add into the list.</param>
-        private void AgregarLlamada(Llamada l1)
-        {
+        private void AgregarLlamada(Llamada l1) {
             this.listaDeLlamadas.Add(l1);
         }
 
@@ -173,8 +155,7 @@ namespace CentralitaHerencia
         /// Shows the info of the Centralita.
         /// </summary>
         /// <returns>The info of centralita as a string.</returns>
-        public override string ToString()
-        {
+        public override string ToString() {
             return this.Mostrar();
         }
 
@@ -188,14 +169,10 @@ namespace CentralitaHerencia
         /// <param name="c">Centralita</param>
         /// <param name="l1">Call to check.</param>
         /// <returns>True if the call is in the list, otherwise returns false.</returns>
-        public static bool operator ==(Centralita c, Llamada l1)
-        {
-            if(!(c is null) && !(l1 is null))
-            {
-                foreach (Llamada call in c.listaDeLlamadas)
-                {
-                    if(call == l1)
-                    {
+        public static bool operator ==(Centralita c, Llamada l1) {
+            if (!(c is null) && !(l1 is null)) {
+                foreach (Llamada call in c.listaDeLlamadas) {
+                    if (call == l1) {
                         return true;
                     }
                 }
@@ -210,8 +187,7 @@ namespace CentralitaHerencia
         /// <param name="c">Centralita</param>
         /// <param name="l1">Call to check.</param>
         /// <returns>True if the call isn't in the list, otherwise returns false.</returns>
-        public static bool operator !=(Centralita c, Llamada l1)
-        {
+        public static bool operator !=(Centralita c, Llamada l1) {
             return !(c == l1);
         }
 
@@ -221,17 +197,14 @@ namespace CentralitaHerencia
         /// <param name="c">Centralita with the list of calls.</param>
         /// <param name="l1">Call to try to add.</param>
         /// <returns></returns>
-        public static Centralita operator +(Centralita c, Llamada l1)
-        {
-            if (!(c is null) && !(l1 is null))
-            {
-                if (c != l1)
-                {
-                    if ((l1 is Local) || (l1 is Provincial))
-                    {
+        public static Centralita operator +(Centralita c, Llamada l1) {
+            if (!(c is null) && !(l1 is null)) {
+                if (c != l1) {
+                    if ((l1 is Local) || (l1 is Provincial)) {
                         c.AgregarLlamada(l1);
-                        return c;
                     }
+                } else {
+                    throw new CentralitaException("Llamada existente", "Centralita", "Agregar llamada a Centralita");
                 }
             }
 
