@@ -3,7 +3,7 @@
   <Class Name="Ejercicio_40_Forms.frmLlamador">
     <Position X="3" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAACAPA/ECAABAAAAACCQADCAgIAQABSAAGQAAIw8E8=</HashCode>
+      <HashCode>AAACAPA/ECAAFAAAAACCQADCAgIAQABSAAGQAAIw8E8=</HashCode>
       <FileName>Forms\frmLlamador.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -22,22 +22,29 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Ejercicio_40_Forms.Program">
-    <Position X="5.25" Y="5.25" Width="1.5" />
+    <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Ejercicio_40_Forms.Properties.Resources">
-    <Position X="5.25" Y="0.5" Width="1.75" />
+    <Position X="7.5" Y="1.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="Ejercicio_40_Forms.Properties.Settings">
-    <Position X="5.25" Y="3.25" Width="1.5" />
+    <Position X="5.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ejercicio_40_Forms.Forms.frmException">
+    <Position X="5.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACQAQAAAACCAAAACEBEAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Forms\frmException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
