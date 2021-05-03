@@ -24,3 +24,16 @@ C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_Vendedor
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\VistaForm.csproj.CopyComplete
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\Falcone.Facundo.2D.exe
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\Falcone.Facundo.2D.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\bin\Debug\Falcone.Facundo.2D.exe.config
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\bin\Debug\Falcone.Facundo.2D.exe
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\bin\Debug\Falcone.Facundo.2D.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\bin\Debug\Entidades.dll
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\bin\Debug\Entidades.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\VistaForm.csprojAssemblyReference.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\Falcone.Facundo._2D.FrmTest.resources
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\Falcone.Facundo._2D.Properties.Resources.resources
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\VistaForm.csproj.GenerateResource.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\VistaForm.csproj.CoreCompileInputs.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\VistaForm.csproj.CopyComplete
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\Falcone.Facundo.2D.exe
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2021_PP_VendedorLibreria\VistaForm\obj\Debug\Falcone.Facundo.2D.pdb
