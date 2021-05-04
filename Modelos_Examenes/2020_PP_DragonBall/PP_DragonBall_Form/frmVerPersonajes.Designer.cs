@@ -104,13 +104,13 @@ namespace PP_DragonBall_Form
             this.cmbPersonajeDeLista.TabIndex = 1;
             this.cmbPersonajeDeLista.SelectedIndexChanged += new System.EventHandler(this.cmbPersonajeDeLista_SelectedIndexChanged);
             // 
-            // label1
+            // lblSelectCharacter
             // 
             this.lblSelectCharacter.AutoSize = true;
             this.lblSelectCharacter.Font = new System.Drawing.Font("Gabriola", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblSelectCharacter.ForeColor = System.Drawing.Color.Tomato;
             this.lblSelectCharacter.Location = new System.Drawing.Point(44, 44);
-            this.lblSelectCharacter.Name = "label1";
+            this.lblSelectCharacter.Name = "lblSelectCharacter";
             this.lblSelectCharacter.Size = new System.Drawing.Size(155, 35);
             this.lblSelectCharacter.TabIndex = 2;
             this.lblSelectCharacter.Text = "Selecciona Personaje";
@@ -129,13 +129,13 @@ namespace PP_DragonBall_Form
             this.btnTransformar.UseVisualStyleBackColor = false;
             this.btnTransformar.Click += new System.EventHandler(this.btnTransform_Click);
             // 
-            // label2
+            // lblTransform
             // 
             this.lblTransform.AutoSize = true;
             this.lblTransform.Font = new System.Drawing.Font("Gabriola", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblTransform.ForeColor = System.Drawing.Color.Tomato;
             this.lblTransform.Location = new System.Drawing.Point(70, 143);
-            this.lblTransform.Name = "label2";
+            this.lblTransform.Name = "lblTransform";
             this.lblTransform.Size = new System.Drawing.Size(101, 35);
             this.lblTransform.TabIndex = 4;
             this.lblTransform.Text = "Transformar";
