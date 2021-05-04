@@ -26,3 +26,17 @@ C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBa
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.csproj.CopyComplete
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.exe
 C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\bin\Debug\PP_DragonBall_Form.exe.config
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\bin\Debug\PP_DragonBall_Form.exe
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\bin\Debug\PP_DragonBall_Form.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\bin\Debug\Entities.dll
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\bin\Debug\Entities.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.csprojAssemblyReference.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.frmPrincipal.resources
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.frmVerPersonajes.resources
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.Properties.Resources.resources
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.csproj.GenerateResource.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.csproj.CoreCompileInputs.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.csproj.CopyComplete
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.exe
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2020_PP_DragonBall\PP_DragonBall_Form\obj\Debug\PP_DragonBall_Form.pdb
