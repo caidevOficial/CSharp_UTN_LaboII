@@ -26,7 +26,12 @@ using System;
 
 namespace Models {
     public sealed class AutoF1 : VehiculoCarrera {
+
+        #region Attributes
+
         private short caballosFuerza;
+
+        #endregion
 
         #region Properties
 

@@ -88,7 +88,7 @@ namespace Models {
         public override string ToString() {
             StringBuilder data = new StringBuilder();
             data.AppendFormat("Excepcion en el metodo {0} de la clase {1}\n", this.NombreMetodo, this.NombreClase);
-            data.AppendLine("Algo salio mal, revisa los detalles listados debajo.");
+            data.AppendLine("Algo salio mal, revisa los detalles.");
             data.AppendLine($"Details: {this.InnerException}");
 
             return data.ToString(); ;

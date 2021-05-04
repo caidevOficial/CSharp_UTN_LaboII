@@ -24,11 +24,16 @@
 
 namespace Models {
     public abstract class VehiculoCarrera {
+
+        #region Attributes
+
         protected short cantidadCombustible;
         protected bool enCompetencia;
         protected string escuderia;
         protected short numero;
         protected short vueltasRestantes;
+
+        #endregion
 
         #region Properties
 

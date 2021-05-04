@@ -22,7 +22,6 @@
  * SOFTWARE.
  */
 
-using Models;
 using System;
 using System.Collections.Generic;
 
@@ -35,7 +34,7 @@ namespace Models {
         private short cantidadVueltas;
         private List<VehiculoCarrera> competidores;
         private TipoCompetencia tipo;
-       
+
         #endregion
 
         public enum TipoCompetencia {
@@ -157,7 +156,6 @@ namespace Models {
                 } catch (CompetenciaNoDisponibleException ce) {
                     throw new CompetenciaNoDisponibleException("Competencia incorrecta", "Competencia.cs", "Operador +", ce);
                 }
-
             }
 
             return false;
@@ -188,8 +186,8 @@ namespace Models {
         /// <returns>True if the Vehicle is inside the competence, otherwise returns false.</returns>
         public static bool operator ==(Competencia c, VehiculoCarrera a) {
             if (!(c.competidores is null) && !(a is null)) {
-                if (c.Tipo == Competencia.TipoCompetencia.F1 && !(a is AutoF1) ||
-                    c.Tipo == Competencia.TipoCompetencia.MotoCross && !(a is MotoCross)) {
+                if (c.Tipo == Competencia.TipoCompetencia.F1 && a.GetType() != typeof(AutoF1) ||
+                    c.Tipo == Competencia.TipoCompetencia.MotoCross && a.GetType() != typeof(MotoCross)) {
                     throw new CompetenciaNoDisponibleException("El vehiculo no corresponde a la competencia", "Competencia.cs", "Validacion ==");
                 }
             } else {
@@ -216,7 +214,7 @@ namespace Models {
 
         #endregion
 
-        #region ShowStats
+        #region Methods
 
         /// <summary>
         /// Shows the stats of the competence.

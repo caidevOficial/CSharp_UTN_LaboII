@@ -26,7 +26,12 @@ using System;
 
 namespace Models {
     public sealed class MotoCross : VehiculoCarrera {
+
+        #region Attributes
+
         private short cilindradas;
+
+        #endregion
 
         #region Properties
 
