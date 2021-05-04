@@ -28,7 +28,7 @@ using System;
 namespace Ejercicio_43 {
     class Program {
         static void Main(string[] args) {
-            Console.Title = "Excercise N° 36";
+            Console.Title = "Excercise N° 43";
             #region Instances
 
             Competencia granTurismo = new Competencia(5, 20, Competencia.TipoCompetencia.F1);
