@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Comiqueria.cs" />
-    <Compile Include="Class\Comprobante.cs" />
-    <Compile Include="Class\Factura.cs" />
+    <Compile Include="Class\SuperClass\Comprobante.cs" />
+    <Compile Include="Class\SubClass\Factura.cs" />
     <Compile Include="Class\SubClass\Comic.cs" />
     <Compile Include="Class\SubClass\Figura.cs" />
     <Compile Include="Class\SuperClass\Producto.cs" />

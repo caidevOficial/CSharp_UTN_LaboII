@@ -70,7 +70,7 @@ namespace ComiqueriaLogic {
         public double Precio {
             get => precio;
             set {
-                if(value > 0) {
+                if (value > 0) {
                     this.precio = value;
                 }
             }

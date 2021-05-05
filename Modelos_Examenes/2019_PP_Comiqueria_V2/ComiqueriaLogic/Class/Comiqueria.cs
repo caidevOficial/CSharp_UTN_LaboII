@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+using ComprobantesLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,10 +35,15 @@ namespace ComiqueriaLogic {
 
         private List<Producto> productos;
         private List<Venta> ventas;
+        static Stack<Comprobante> comprobantes;
 
         #endregion
 
         #region Builders
+
+        static Comiqueria() {
+            comprobantes = new Stack<Comprobante>();
+        }
 
         /// <summary>
         /// Initialices both list.
@@ -64,6 +70,28 @@ namespace ComiqueriaLogic {
                     }
                 }
                 return null;
+            }
+        }
+
+        /// <summary>
+        /// It will return a list of Comprobantes of the product passed
+        /// by parameter.
+        /// </summary>
+        /// <param name="p">Product to search its Comprobante</param>
+        /// <param name="ordenar">Boolear for sort or not.</param>
+        /// <returns>A list of Comprobantes of the product</returns>
+        public List<Comprobante> this[Producto p, bool ordenar] {
+            get {
+                List<Comprobante> boletas = new List<Comprobante>();
+                foreach (Comprobante item in comprobantes) {
+                    if (((Producto)(item.Venta)) == p) {
+                        boletas.Add(item);
+                    }
+                }
+                if (ordenar) {
+                    boletas.OrderBy(item => item.Venta.Fecha);
+                }
+                return boletas;
             }
         }
 
@@ -96,6 +124,33 @@ namespace ComiqueriaLogic {
         /// <returns>True if the product not exist in the list of products, otherwise returns false</returns>
         public static bool operator !=(Comiqueria c, Producto p) {
             return !(c == p);
+        }
+
+        /// <summary>
+        /// Cheks if the Comprobante is in the list of the comiqueria.
+        /// </summary>
+        /// <param name="c">Comiqueria instance</param>
+        /// <param name="co">Comprobante to search for</param>
+        /// <returns>True if the Comprobante exist in the list of Comprobante, otherwise returns false</returns>
+        public static bool operator ==(Comiqueria c, Comprobante co) {
+            if (!(c is null) && !(co is null)) {
+                foreach (Comprobante item in Comiqueria.comprobantes) {
+                    if (item == co) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Cheks if the Comprobante isn't in the list of the comiqueria.
+        /// </summary>
+        /// <param name="c">Comiqueria instance</param>
+        /// <param name="co">Comprobante to search for</param>
+        /// <returns>True if the Comprobante not exist in the list of Comprobante, otherwise returns false</returns>
+        public static bool operator !=(Comiqueria c, Comprobante co) {
+            return !(c == co);
         }
 
         /// <summary>
@@ -160,6 +215,34 @@ namespace ComiqueriaLogic {
             }
 
             return prodToDict;
+        }
+
+        /// <summary>
+        /// Adds a Comprobante into the list of comprobantes if not exist.
+        /// </summary>
+        /// <param name="c">Comiqueria instance</param>
+        /// <param name="co">Comprobante instance</param>
+        /// <returns>True if can add the comprobante, otherwise returns false.</returns>
+        public bool AgregarComprobante(Comprobante co) {
+            if (this != co) {
+                Comiqueria.comprobantes.Push(co);
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Adds the Comprobante of the sale into the list of comprobantes if not exist.
+        /// </summary>
+        /// <param name="v">Sale instance</param>
+        /// <returns>True if can add the comprobante, otherwise returns false.</returns>
+        private bool AgregarComprobante(Venta v) {
+            if (this.AgregarComprobante(new Factura(v, Factura.TipoFactura.B))) {
+                return true;
+            }
+
+            return false;
         }
 
         #endregion

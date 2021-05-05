@@ -36,6 +36,7 @@
             this.richTextBoxDetalle = new System.Windows.Forms.RichTextBox();
             this.lblVentas = new System.Windows.Forms.Label();
             this.lblProductos = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.groupBoxAcciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             // groupBoxAcciones
             // 
             this.groupBoxAcciones.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxAcciones.Controls.Add(this.btnModificar);
             this.groupBoxAcciones.Controls.Add(this.btnVender);
             this.groupBoxAcciones.Location = new System.Drawing.Point(448, 30);
             this.groupBoxAcciones.Name = "groupBoxAcciones";
@@ -117,6 +119,16 @@
             this.lblProductos.TabIndex = 5;
             this.lblProductos.Text = "Lista de Productos:";
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(113, 34);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 1;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxDetalle;
         private System.Windows.Forms.Label lblVentas;
         private System.Windows.Forms.Label lblProductos;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

@@ -24,10 +24,7 @@
 
 using ComiqueriaLogic;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ComprobantesLogic {
     public class Factura : Comprobante {
@@ -55,7 +52,7 @@ namespace ComprobantesLogic {
         /// <param name="venta">Sale to add in the instance.</param>
         /// <param name="tf">Type of instance.</param>
         public Factura(Venta venta, TipoFactura tf)
-            :this(venta, 15, tf) { }
+            : this(venta, 15, tf) { }
 
         /// <summary>
         /// Creates the instance of Factura with all its parameters.
@@ -92,7 +89,7 @@ namespace ComprobantesLogic {
             StringBuilder data = new StringBuilder();
             double unitPrice = Math.Round(((Producto)this.Venta).Precio, 2);
             double subTotal = unitPrice * this.Venta.Cantidad;
-            double iva = (subTotal * 21/100);
+            double iva = (subTotal * 21 / 100);
             data.AppendLine($"Factura: {this.tipoFactura.ToString()}");
             data.AppendLine($"Fecha Emision: {this.fechaEmision.ToString()}");
             data.AppendLine($"Fecha Vencimiento: {this.fechaVencimiento.ToString()}");
