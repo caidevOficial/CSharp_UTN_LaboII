@@ -78,9 +78,7 @@ namespace Falcone.Facundo._2D {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e) {
-            if (MessageBox.Show("Desea Salir?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) {
-                this.Dispose();
-            }
+            this.Close();
         }
 
         /// <summary>
