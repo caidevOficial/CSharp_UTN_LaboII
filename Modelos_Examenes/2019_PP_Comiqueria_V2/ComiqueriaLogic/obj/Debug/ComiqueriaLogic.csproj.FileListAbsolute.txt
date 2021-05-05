@@ -4,3 +4,9 @@ E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria\Comiquer
 E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria\ComiqueriaLogic\obj\Debug\ComiqueriaLogic.csproj.CoreCompileInputs.cache
 E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria\ComiqueriaLogic\obj\Debug\ComiqueriaLogic.dll
 E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria\ComiqueriaLogic\obj\Debug\ComiqueriaLogic.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria_V2\ComiqueriaLogic\bin\Debug\ComiqueriaLogic.dll
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria_V2\ComiqueriaLogic\bin\Debug\ComiqueriaLogic.pdb
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria_V2\ComiqueriaLogic\obj\Debug\ComiqueriaLogic.csprojAssemblyReference.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria_V2\ComiqueriaLogic\obj\Debug\ComiqueriaLogic.csproj.CoreCompileInputs.cache
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria_V2\ComiqueriaLogic\obj\Debug\ComiqueriaLogic.dll
+E:\Git_UTN\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\2019_PP_Comiqueria_V2\ComiqueriaLogic\obj\Debug\ComiqueriaLogic.pdb

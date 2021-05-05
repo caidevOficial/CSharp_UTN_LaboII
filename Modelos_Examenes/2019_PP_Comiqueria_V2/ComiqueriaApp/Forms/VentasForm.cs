@@ -29,33 +29,77 @@ using System.Windows.Forms;
 namespace ComiqueriaApp {
     public partial class VentasForm : Form {
 
+        #region Attributes
+
         private Comiqueria thisComiqueria;
         private Producto selectedProd;
 
+        #endregion
+
+        #region Builders
+
+        /// <summary>
+        /// Constructor por defecto
+        /// </summary>
         public VentasForm() {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructor que recibe una comiqueria y un producto.
+        /// </summary>
+        /// <param name="c">Instancia de comiqueria.</param>
+        /// <param name="p">Instancia de producto.</param>
         public VentasForm(Comiqueria c, Producto p)
             : this() {
             this.thisComiqueria = c;
             this.selectedProd = p;
         }
 
+        #endregion
+
+        #region EventLoad
+
+        /// <summary>
+        /// Manejador de evento Load del form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void VentasForm_Load(object sender, EventArgs e) {
             lblDescripcion.Text = selectedProd.Descripcion;
             this.UpdatePrice();
         }
 
+        /// <summary>
+        /// Actualiza el precio del producto en el form.
+        /// </summary>
         private void UpdatePrice() {
             double finalPrice = Venta.CalcularPrecioFinal(selectedProd.Precio, (int)numCantidad.Value);
             lblPrecio.Text = $"Precio: ${Math.Round(finalPrice, 2)}";
         }
 
+        #endregion
+
+        #region EventValueChange
+
+        /// <summary>
+        /// Manejador del evento ValueChanged del numCantidad.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void numCantidad_ValueChanged(object sender, EventArgs e) {
             this.UpdatePrice();
         }
 
+        #endregion
+
+        #region EventButtons
+
+        /// <summary>
+        /// Manejador de evento click de btnVender.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnVender_Click(object sender, EventArgs e) {
             if ((int)numCantidad.Value <= selectedProd.Stock) {
                 thisComiqueria.Vender(selectedProd, (int)numCantidad.Value);
@@ -67,10 +111,17 @@ namespace ComiqueriaApp {
             }
         }
 
+        /// <summary>
+        /// Manejador del evento click del btnCancelar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e) {
             if (MessageBox.Show("Seguro que desea cancelar?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) {
                 this.Close();
             }
         }
+
+        #endregion
     }
 }

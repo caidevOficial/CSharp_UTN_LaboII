@@ -29,10 +29,17 @@ using System.Windows.Forms;
 
 namespace ComiqueriaApp {
     public partial class PrincipalForm : Form {
+
+        #region Attributes
+
         private Comiqueria comiqueria;
         private Dictionary<Guid, string> listaProductos;
         //Utilice este campo para acceder al producto seleccionado actualmente. 
-        private Producto productoSeleccionado;
+        public static Producto productoSeleccionado;
+
+        #endregion
+
+        #region Builder
 
         /// <summary>
         /// Constructor. No modificar el código. 
@@ -67,6 +74,10 @@ namespace ComiqueriaApp {
             this.richTextBoxVentas.Text = this.comiqueria.ListarVentas();
         }
 
+        #endregion
+
+        #region EventLoad
+
         /// <summary>
         /// Manejador del evento Load del formulario. Inicializará el list box de productos. NO MODIFICAR.
         /// </summary>
@@ -78,18 +89,9 @@ namespace ComiqueriaApp {
             this.listBoxProductos.ValueMember = "Key";
         }
 
-        /// <summary>
-        /// Manejador del evento SelectedIndexChanged del ListBox de productos. NO MODIFICAR EL CÓDIGO. 
-        /// Mantendrá el campo "productoSeleccionado" actualizado con el producto seleccionado actualmente por el usuario.
-        /// Y actualizará el texto del richTextBox de detalle. 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ListBoxProductos_SelectedIndexChanged(object sender, EventArgs e) {
-            Guid codigoProducto = ((KeyValuePair<Guid, string>)this.listBoxProductos.SelectedItem).Key;
-            this.productoSeleccionado = this.comiqueria[codigoProducto];
-            this.richTextBoxDetalle.Text = this.productoSeleccionado.ToString();
-        }
+        #endregion
+
+        #region EventButtons
 
         /// <summary>
         /// Manejador del evento click del botón vender. 
@@ -107,8 +109,40 @@ namespace ComiqueriaApp {
             }
         }
 
+        /// <summary>
+        /// Manejador del evento click del boton Modificar.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificar_Click(object sender, EventArgs e) {
 
+            ModificarProductoForm mp = new ModificarProductoForm(productoSeleccionado);
+            mp.Location = this.Location;
+            mp.Show();
+            if (mp.DialogResult == DialogResult.OK) {
+
+            }
         }
+
+        #endregion
+
+        #region EventChange
+
+        /// <summary>
+        /// Manejador del evento SelectedIndexChanged del ListBox de productos. NO MODIFICAR EL CÓDIGO. 
+        /// Mantendrá el campo "productoSeleccionado" actualizado con el producto seleccionado actualmente por el usuario.
+        /// Y actualizará el texto del richTextBox de detalle. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ListBoxProductos_SelectedIndexChanged(object sender, EventArgs e) {
+            Guid codigoProducto = ((KeyValuePair<Guid, string>)this.listBoxProductos.SelectedItem).Key;
+            productoSeleccionado = this.comiqueria[codigoProducto];
+            this.richTextBoxDetalle.Text = productoSeleccionado.ToString();
+        }
+
+        #endregion
+
+
     }
 }
