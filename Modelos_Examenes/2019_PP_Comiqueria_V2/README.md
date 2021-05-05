@@ -18,7 +18,7 @@
 ---
 
 <table>
-  <th><center>Comiquería</center></th>
+  <th><center>Comiquería V2</center></th>
   <tr>
     <td>
       <img src="Media/sample1.png">
@@ -27,6 +27,11 @@
   <tr>
     <td>
       <img src="Media/sample2_1.png">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="Media/sample2_2.png">
     </td>
   </tr>
 </table>
