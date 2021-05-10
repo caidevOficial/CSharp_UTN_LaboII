@@ -26,9 +26,14 @@ using System.Text;
 
 namespace Entidades {
     public abstract class Publicacion {
+
+        #region Attributes
+
         protected float importe;
         protected string nombre;
         protected int stock;
+
+        #endregion
 
         #region Builders
 
@@ -75,7 +80,7 @@ namespace Entidades {
         /// </summary>
         public virtual bool HayStock {
             get {
-                if (this.stock > 0 && this.Importe > 0) {
+                if (this.Stock > 0 && this.Importe >= 0) {
                     return true;
                 } else {
                     return false;

@@ -25,7 +25,11 @@
 namespace Entidades {
     public class Comic : Publicacion {
 
+        #region Attributes
+
         private bool esColor;
+
+        #endregion
 
         #region Builders
 
