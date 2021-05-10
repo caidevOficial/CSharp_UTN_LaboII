@@ -22,41 +22,45 @@
  * SOFTWARE.
  */
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace Entidades {
-    public class Comic : Publicacion {
-
-        #region Attributes
-
-        private bool esColor;
-
-        #endregion
+    public sealed class DirectorTecnico : Persona {
 
         #region Builders
 
         /// <summary>
-        /// Crea una instancia de comic con todos sus parametros
+        /// Builds the entity with name and surname.
         /// </summary>
-        /// <param name="nombre">nombre de la instancia</param>
-        /// <param name="esColor"></param>
-        /// <param name="stock">Stock de la instancia</param>
-        /// <param name="valor">importe de la instancia</param>
-        public Comic(string nombre, bool esColor, int stock, float valor)
-            : base(nombre, stock, valor) {
-            this.esColor = esColor;
-        }
+        /// <param name="nombre">Name of the entity.</param>
+        /// <param name="apellido">Surname of the entity.</param>
+        public DirectorTecnico(string nombre, string apellido)
+            :base(nombre, apellido) { }
 
         #endregion
 
-        #region Properties
+        #region Methods
 
         /// <summary>
-        /// Retorna si el comic es de color o no.
+        /// Gets the fulldata of the entity.
         /// </summary>
-        protected override bool EsColor {
-            get => this.esColor;
+        /// <returns>the fulldata of the entity as a string.</returns>
+        protected override string FichaTecnica() {
+            return base.NombreCompleto();
+        }
+
+        /// <summary>
+        /// Gets the fulldata of the entity.
+        /// </summary>
+        /// <returns>the fulldata of the entity as a string.</returns>
+        public override string ToString() {
+            return this.FichaTecnica();
         }
 
         #endregion
-
     }
 }
