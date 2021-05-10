@@ -22,27 +22,34 @@
  * SOFTWARE.
  */
 
-namespace Entidades {
-    public class Comic : Publicacion {
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entidades
+{
+    public abstract class Persona
+    {
 
         #region Attributes
 
-        private bool esColor;
+        private string apellido;
+        private string nombre;
 
         #endregion
 
         #region Builders
 
         /// <summary>
-        /// Crea una instancia de comic con todos sus parametros
+        /// Builds the entity with the name and surname.
         /// </summary>
-        /// <param name="nombre">nombre de la instancia</param>
-        /// <param name="esColor"></param>
-        /// <param name="stock">Stock de la instancia</param>
-        /// <param name="valor">importe de la instancia</param>
-        public Comic(string nombre, bool esColor, int stock, float valor)
-            : base(nombre, stock, valor) {
-            this.esColor = esColor;
+        /// <param name="nombre">Name of the entity.</param>
+        /// <param name="apellido">Surname of the entity.</param>
+        public Persona(string nombre, string apellido) {
+            this.nombre = nombre;
+            this.apellido = apellido;
         }
 
         #endregion
@@ -50,13 +57,37 @@ namespace Entidades {
         #region Properties
 
         /// <summary>
-        /// Retorna si el comic es de color o no.
+        /// ReadOnly: Gets the surname.
         /// </summary>
-        protected override bool EsColor {
-            get => this.esColor;
+        public string Apellido {
+            get => this.apellido;
+        }
+
+        /// <summary>
+        /// ReadOnly: Gets the name.
+        /// </summary>
+        public string Nombre {
+            get => this.nombre;
         }
 
         #endregion
 
+        #region Methods
+
+        /// <summary>
+        /// Gets all the info of the entity.
+        /// </summary>
+        /// <returns>All the info of the entity as a string.</returns>
+        protected abstract string FichaTecnica();
+
+        /// <summary>
+        /// Gets the fullname of the entity.
+        /// </summary>
+        /// <returns>fullname of the entity as a string.</returns>
+        protected virtual string NombreCompleto() {
+            return String.Format("{0} {1}", this.Nombre, this.Apellido);
+        }
+
+        #endregion
     }
 }

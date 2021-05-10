@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Entidades.Biografia">
-    <Position X="3" Y="0.5" Width="2.25" />
+    <Position X="5.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAACAAAAAABAAAAA=</HashCode>
       <FileName>Clases\Subclases\Biografia.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Comic">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Clases\Subclases\Comic.cs</FileName>
@@ -24,7 +24,7 @@
   <Class Name="Entidades.Vendedor">
     <Position X="3" Y="2.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAACAQAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAAAAACAQAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Clases\Vendedor.cs</FileName>
     </TypeIdentifier>
   </Class>

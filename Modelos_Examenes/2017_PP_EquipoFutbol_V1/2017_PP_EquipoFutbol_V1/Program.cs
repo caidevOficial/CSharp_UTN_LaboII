@@ -22,41 +22,26 @@
  * SOFTWARE.
  */
 
-namespace Entidades {
-    public class Comic : Publicacion {
+using Entidades;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        #region Attributes
+namespace _2017_PP_EquipoFutbol_V1 {
+    class Program {
+        static void Main(string[] args) {
 
-        private bool esColor;
-
-        #endregion
-
-        #region Builders
-
-        /// <summary>
-        /// Crea una instancia de comic con todos sus parametros
-        /// </summary>
-        /// <param name="nombre">nombre de la instancia</param>
-        /// <param name="esColor"></param>
-        /// <param name="stock">Stock de la instancia</param>
-        /// <param name="valor">importe de la instancia</param>
-        public Comic(string nombre, bool esColor, int stock, float valor)
-            : base(nombre, stock, valor) {
-            this.esColor = esColor;
+            Equipo elRojo = new Equipo("Huracan de San Rafael", new DirectorTecnico("Jorge", "Habberger"), Equipo.Deportes.Futbol);
+            elRojo += new Jugador("Fernando", "Pandolfi", 11, false);
+            elRojo += new Jugador("Julio", "Marchant", 8, false);
+            elRojo += new Jugador("Ezequiel", "Medran", 12, false);
+            elRojo += new Jugador("José", "Pereda", 24, false);
+            elRojo += new Jugador("Hernán", "Florentin", 6, false);
+            elRojo += new Jugador("Fernando", "Navas", 10, true);
+            Console.WriteLine((string)elRojo);
+            Console.ReadKey();
         }
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        /// Retorna si el comic es de color o no.
-        /// </summary>
-        protected override bool EsColor {
-            get => this.esColor;
-        }
-
-        #endregion
-
     }
 }

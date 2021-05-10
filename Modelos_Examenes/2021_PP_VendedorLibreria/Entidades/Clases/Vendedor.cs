@@ -28,8 +28,12 @@ using System.Text;
 namespace Entidades {
     public class Vendedor {
 
+        #region Attributes
+
         private string nombre;
         private List<Publicacion> ventas;
+
+        #endregion
 
         #region Builders
 
@@ -62,7 +66,7 @@ namespace Entidades {
         /// <returns>True si pudo vender, caso contrario sera false.</returns>
         public static bool operator +(Vendedor v, Publicacion p) {
             if (!(v is null) && !(p is null)) {
-                if (p.Stock > 0) {
+                if (p.HayStock) {
                     p.Stock--;
                     v.ventas.Add(p);
                     return true;
