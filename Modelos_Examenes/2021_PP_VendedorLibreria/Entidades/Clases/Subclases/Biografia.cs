@@ -29,18 +29,20 @@ namespace Entidades {
 
         /// <summary>
         /// Crea la instancia de Biografia con parametro nombre
+        /// Seteando su stock por default en 1 y precio en 0.
         /// </summary>
         /// <param name="nombre">nombre de la instancia</param>
         public Biografia(string nombre)
-            : base(nombre) { }
+            : this(nombre, 1, 0) { }
 
         /// <summary>
-        /// Crea la instancia de Biografia con nombre y stock
+        /// Crea la instancia de Biografia con nombre, stock
+        /// y precio por default en 0.
         /// </summary>
         /// <param name="nombre">nombre de la instancia</param>
         /// <param name="stock">Stock de la instancia</param>
         public Biografia(string nombre, int stock)
-            : base(nombre, stock) { }
+            : this(nombre, stock, 0) { }
 
         /// <summary>
         /// Crea la instancia de Biografia con nombre, stock y precio
@@ -78,9 +80,7 @@ namespace Entidades {
         /// </summary>
         /// <param name="nombre">una instancia de biografia con el nombre.</param>
         public static explicit operator Biografia(string nombre) {
-            Biografia bio = new Biografia(nombre);
-            bio.Stock += 1;
-            return bio;
+            return new Biografia(nombre);
         }
 
         #endregion
