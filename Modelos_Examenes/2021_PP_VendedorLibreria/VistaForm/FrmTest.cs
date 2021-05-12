@@ -115,7 +115,7 @@ namespace Falcone.Facundo._2D {
         private void btnVender_Click(object sender, EventArgs e) {
             if(!(lstStock.SelectedItem is null)) {
                 Publicacion nuevaVenta = (Publicacion)lstStock.SelectedItem;
-                if (nuevaVenta.HayStock && elSujetoDeLasHistorietas + nuevaVenta) {
+                if (elSujetoDeLasHistorietas + nuevaVenta) {
                     MessageBox.Show($"Venta Exitosa de {nuevaVenta.ToString()}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 } else {
                     MessageBox.Show("Out Of Stock", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

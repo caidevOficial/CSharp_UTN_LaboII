@@ -121,9 +121,9 @@ namespace Entidades {
             data.AppendFormat("Nombre: {0}\n", this.nombre);
             data.Append($"Stock: {this.Stock}\n");
             if (this.EsColor) {
-                data.AppendLine($"Color: SI");
+                data.AppendLine("Color: SI");
             } else {
-                data.AppendLine($"Color: NO");
+                data.AppendLine("Color: NO");
             }
             data.AppendLine($"Valor: ${this.Importe}");
 
