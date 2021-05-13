@@ -69,6 +69,22 @@ namespace ComprobantesLogic {
 
         #endregion
 
+        #region Properties_Only_For_Form
+
+        public DateTime InitDate {
+            get => this.fechaEmision;
+        }
+
+        public DateTime DueDate {
+            get => this.fechaVencimiento;
+        }
+
+        public TipoFactura TipoDeFactura {
+            get => this.tipoFactura;
+        }
+
+        #endregion
+
         #region Methods
 
         /// <summary>
