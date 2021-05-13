@@ -52,7 +52,7 @@ namespace ComiqueriaLogic {
         /// </summary>
         /// <param name="producto">Product's entity to sell.</param>
         /// <param name="cantidad">Amount of product.</param>
-        internal Venta(Producto producto, int cantidad) {
+        public Venta(Producto producto, int cantidad) {
             this.producto = producto;
             this.cantidad = cantidad;
             Vender(cantidad);
