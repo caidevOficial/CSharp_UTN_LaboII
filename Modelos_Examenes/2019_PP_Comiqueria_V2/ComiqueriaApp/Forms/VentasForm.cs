@@ -106,7 +106,7 @@ namespace ComiqueriaApp {
         private void btnVender_Click(object sender, EventArgs e) {
             if ((int)numCantidad.Value <= selectedProd.Stock) {
                 thisVenta = new Venta(selectedProd, (int)numCantidad.Value);
-                thisFactura = new Factura(thisVenta, Factura.TipoFactura.B);
+                thisFactura = new Factura(thisVenta, Factura.TipoFactura.A);
                 thisComiqueria.Vender(selectedProd, (int)numCantidad.Value);
 
                 this.DialogResult = DialogResult.OK;

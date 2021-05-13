@@ -321,7 +321,7 @@ namespace ComiqueriaApp {
             this.Controls.Add(this.grpDetalles);
             this.Controls.Add(this.grpFechas);
             this.Controls.Add(this.lblNombreComiqueria);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
