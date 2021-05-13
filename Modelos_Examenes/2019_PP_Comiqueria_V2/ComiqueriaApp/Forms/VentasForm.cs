@@ -23,6 +23,7 @@
  */
 
 using ComiqueriaLogic;
+using ComprobantesLogic;
 using System;
 using System.Windows.Forms;
 
@@ -33,6 +34,8 @@ namespace ComiqueriaApp {
 
         private Comiqueria thisComiqueria;
         private Producto selectedProd;
+        private Venta thisVenta;
+        private Factura thisFactura;
 
         #endregion
 
@@ -102,9 +105,14 @@ namespace ComiqueriaApp {
         /// <param name="e"></param>
         private void btnVender_Click(object sender, EventArgs e) {
             if ((int)numCantidad.Value <= selectedProd.Stock) {
+                thisVenta = new Venta(selectedProd, (int)numCantidad.Value);
+                thisFactura = new Factura(thisVenta, Factura.TipoFactura.A);
                 thisComiqueria.Vender(selectedProd, (int)numCantidad.Value);
+
                 this.DialogResult = DialogResult.OK;
-                MessageBox.Show($"Venta Exitosa de {selectedProd.Descripcion}", "Cash", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmFactura boleta = new FrmFactura(thisFactura);
+                boleta.ShowDialog();
+                //MessageBox.Show($"Venta Exitosa de {selectedProd.Descripcion}\n\n{thisFactura.GenerarComprobante()}", "Cash", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
             } else {
                 MessageBox.Show("Stock Limit Exceeded", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
