@@ -24,14 +24,19 @@
       <img src="Media/sample1.png">
     </td>
   </tr>
+  <th><center>Ventas Form</center></th><th><center>Modificar Form</center></th>
   <tr>
     <td>
       <img src="Media/sample2_1.png">
     </td>
-  </tr>
-  <tr>
     <td>
       <img src="Media/sample2_2.png">
+    </td>
+  </tr>
+  <th><center>Factura Form</center></th>
+  <tr>
+    <td>
+      <img src="Media/sample3_1.png">
     </td>
   </tr>
 </table>
@@ -52,7 +57,7 @@
 
 ```C#
 public static void ShowNewSkill(){
-    string message = "Upgrading my skills [C# Version!]";
+    string message = "Learning C#";
     Console.WriteLine(message);
 }
 ```

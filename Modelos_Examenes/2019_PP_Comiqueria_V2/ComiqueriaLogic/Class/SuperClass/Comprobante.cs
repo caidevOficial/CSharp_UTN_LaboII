@@ -53,7 +53,7 @@ namespace ComprobantesLogic {
         /// <summary>
         /// Gets the sale of the entity.
         /// </summary>
-        internal Venta Venta {
+        public Venta Venta {
             get => this.venta;
         }
 
