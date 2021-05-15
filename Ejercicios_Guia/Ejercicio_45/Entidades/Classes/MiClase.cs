@@ -22,29 +22,48 @@
  * SOFTWARE.
  */
 
-using CentralitaHerencia.Entities.Exceptions;
 using System;
-using System.Text;
-using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms.Forms {
-    public partial class frmException : Form {
-        public frmException(CentralitaException ex) {
-            InitializeComponent();
-            DateTime dt = DateTime.Now;
-            StringBuilder data = new StringBuilder();
-            data.AppendLine($"Error: {ex.Message} producido en {ex.NombreClase} al usar {ex.NombreMetodo}.");
-            data.AppendLine($"Source: {ex.Source}");
-            data.AppendLine($"Method: {ex.TargetSite}");
-            data.AppendLine($"InnerException: {ex.InnerException}");
+namespace Entidades {
+    public class MiClase {
+        private int primerAtributo;
 
-            rtbExceptionDescription.Text = data.ToString();
-            lblRealDateException.Text = dt.ToString();
+        #region Builders
+
+        /// <summary>
+        /// Creo una instancia arrojando un DBZ Excp
+        /// </summary>
+        public MiClase() {
+            try {
+                MostrarAtributo();
+            } catch (DivideByZeroException e) {
+                throw new UnaExcepcion("UnaException: desde MiClase.cs", e);
+            }
         }
 
-        private void btnExceptionOK_Click(object sender, EventArgs e) {
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="primerAtributo"></param>
+        public MiClase(int primerAtributo) {
+            this.primerAtributo = primerAtributo;
+            try {
+                new MiClase();
+            } catch (UnaExcepcion e) {
+                throw new UnaExcepcion("Una Exception_2: Desde MiClase.cs", e);
+            }
         }
+
+        #endregion
+
+        #region Methods
+
+        public static void MostrarAtributo() {
+
+            throw new DivideByZeroException();
+        }
+
+        #endregion
+
     }
 }

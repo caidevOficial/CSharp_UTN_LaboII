@@ -22,29 +22,66 @@
  * SOFTWARE.
  */
 
-using CentralitaHerencia.Entities.Exceptions;
+using Entidades;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Text;
-using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms.Forms {
-    public partial class frmException : Form {
-        public frmException(CentralitaException ex) {
-            InitializeComponent();
-            DateTime dt = DateTime.Now;
-            StringBuilder data = new StringBuilder();
-            data.AppendLine($"Error: {ex.Message} producido en {ex.NombreClase} al usar {ex.NombreMetodo}.");
-            data.AppendLine($"Source: {ex.Source}");
-            data.AppendLine($"Method: {ex.TargetSite}");
-            data.AppendLine($"InnerException: {ex.InnerException}");
+namespace UnitTestProject {
+    [TestClass]
+    public class UnitTest1 {
+        
+        [TestMethod]
+        [ExpectedException(typeof(UnaExcepcion))]
+        public void Test_01_MiClase_E1() {
 
-            rtbExceptionDescription.Text = data.ToString();
-            lblRealDateException.Text = dt.ToString();
+            #region Arrange
+
+            MiClase mc = new MiClase();
+
+            #endregion
+
         }
 
-        private void btnExceptionOK_Click(object sender, EventArgs e) {
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
+        [TestMethod]
+        [ExpectedException(typeof(UnaExcepcion))]
+        public void Test_02_MiClase_E2() {
+
+            #region Arrange
+
+            MiClase mc = new MiClase(7);
+
+            #endregion
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(DivideByZeroException))]
+        public void Test_03_MiClase_E3() {
+
+            #region Arrange
+
+            MiClase.MostrarAtributo();
+
+            #endregion
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(MiExcepcion))]
+        public void Test_04_OtraClase_E1() {
+
+            #region Arrange
+
+            OtraClase oc = new OtraClase();
+
+            #endregion
+
+            #region Act
+
+            oc.OtroMetodoInstancia();
+
+            #endregion
+
         }
     }
 }

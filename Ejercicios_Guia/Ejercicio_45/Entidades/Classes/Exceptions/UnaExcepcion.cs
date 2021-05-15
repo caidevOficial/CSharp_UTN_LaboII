@@ -22,29 +22,32 @@
  * SOFTWARE.
  */
 
-using CentralitaHerencia.Entities.Exceptions;
 using System;
 using System.Text;
-using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms.Forms {
-    public partial class frmException : Form {
-        public frmException(CentralitaException ex) {
-            InitializeComponent();
-            DateTime dt = DateTime.Now;
+namespace Entidades {
+    public class UnaExcepcion : Exception {
+
+        #region Builders
+
+        public UnaExcepcion(string mensaje)
+            : this(mensaje, null) { }
+
+        public UnaExcepcion(string mensaje, Exception innerException)
+            : base(mensaje, innerException) { }
+
+        #endregion
+
+        #region Methods
+
+        public override string ToString() {
             StringBuilder data = new StringBuilder();
-            data.AppendLine($"Error: {ex.Message} producido en {ex.NombreClase} al usar {ex.NombreMetodo}.");
-            data.AppendLine($"Source: {ex.Source}");
-            data.AppendLine($"Method: {ex.TargetSite}");
-            data.AppendLine($"InnerException: {ex.InnerException}");
+            data.AppendLine($"Mensaje: {this.Message}");
 
-            rtbExceptionDescription.Text = data.ToString();
-            lblRealDateException.Text = dt.ToString();
+            return data.ToString();
         }
 
-        private void btnExceptionOK_Click(object sender, EventArgs e) {
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
-        }
+        #endregion
+
     }
 }
