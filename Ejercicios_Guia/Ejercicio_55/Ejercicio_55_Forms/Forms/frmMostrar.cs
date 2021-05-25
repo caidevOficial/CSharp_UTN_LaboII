@@ -26,7 +26,7 @@ using CentralitaHerencia;
 using System;
 using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms {
+namespace Ejercicio_55_Forms {
     public partial class frmMostrar : Form {
 
         private Llamada.TipoLlamada callType;
@@ -96,7 +96,7 @@ namespace Ejercicio_40_Forms {
             if (MessageBox.Show("Do you want to quit the Billing Screen?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
                 e.Cancel = true;
             } else {
-                Dispose();
+                this.Dispose();
             }
         }
 

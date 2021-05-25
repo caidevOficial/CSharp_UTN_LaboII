@@ -1,5 +1,5 @@
 ﻿
-namespace Ejercicio_40_Forms.Forms {
+namespace Ejercicio_55_Forms.Forms {
     partial class frmException {
         /// <summary>
         /// Required designer variable.

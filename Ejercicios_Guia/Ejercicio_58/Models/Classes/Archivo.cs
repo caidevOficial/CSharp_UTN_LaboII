@@ -22,29 +22,34 @@
  * SOFTWARE.
  */
 
-using CentralitaHerencia;
-using System;
-using System.Text;
-using System.Windows.Forms;
+using System.IO;
 
-namespace Ejercicio_55_Forms.Forms {
-    public partial class frmException : Form {
-        public frmException(CentralitaException ex) {
-            InitializeComponent();
-            DateTime dt = DateTime.Now;
-            StringBuilder data = new StringBuilder();
-            data.AppendLine($"Error: {ex.Message} producido en {ex.NombreClase} al usar {ex.NombreMetodo}.");
-            data.AppendLine($"Source: {ex.Source}");
-            data.AppendLine($"Method: {ex.TargetSite}");
-            data.AppendLine($"InnerException: {ex.InnerException}");
+namespace Models {
+    public abstract class Archivo {
 
-            rtbExceptionDescription.Text = data.ToString();
-            lblRealDateException.Text = dt.ToString();
+        #region Methods
+
+        /// <summary>
+        /// It will validate that the file exist only if 'calidateExistence' is true
+        /// otherwise will throw an exception.
+        /// </summary>
+        /// <param name="path">Path to verify if the file exist.</param>
+        /// <param name="validateExistence">Boolean state that indicates fi the method need to validate the existence of the file.</param>
+        /// <returns>True if is a valid file, othewise returns false</returns>
+        protected virtual bool ValidarArchivo(string path, bool validateExistence) {
+            if (validateExistence) {
+                if (!File.Exists(path)) {
+                    File.Create(path);
+                    return true;
+                } else {
+                    throw new FileNotFoundException("File not found");
+                }
+            }
+
+            return false;
         }
 
-        private void btnExceptionOK_Click(object sender, EventArgs e) {
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
-        }
+        #endregion
+
     }
 }

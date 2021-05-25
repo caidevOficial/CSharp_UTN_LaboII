@@ -26,7 +26,7 @@ using CentralitaHerencia;
 using System;
 using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms {
+namespace Ejercicio_55_Forms {
     public partial class frmMenu : Form {
 
         public static Centralita myCentralita;
@@ -55,7 +55,7 @@ namespace Ejercicio_40_Forms {
             if (MessageBox.Show($"Do you want to quit the CentralitApp?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) {
                 e.Cancel = true;
             } else {
-                Dispose();
+                this.Dispose();
             }
         }
 
@@ -67,8 +67,7 @@ namespace Ejercicio_40_Forms {
         /// <param name="e"></param>
         private void btnSalir_Click(object sender, EventArgs e) {
             if (MessageBox.Show("Do you want to quit the CentralitApp?", "Choose wisely", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-                Dispose();
-                Close();
+                this.Close();
             }
         }
 

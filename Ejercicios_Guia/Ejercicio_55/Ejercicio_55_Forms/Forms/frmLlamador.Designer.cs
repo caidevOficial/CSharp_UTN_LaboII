@@ -1,5 +1,5 @@
 ﻿
-namespace Ejercicio_40_Forms {
+namespace Ejercicio_55_Forms {
     partial class frmLlamador {
         /// <summary>
         /// Required designer variable.
