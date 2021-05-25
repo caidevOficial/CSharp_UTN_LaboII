@@ -22,29 +22,30 @@
  * SOFTWARE.
  */
 
-using CentralitaHerencia;
 using System;
-using System.Text;
-using System.Windows.Forms;
 
-namespace Ejercicio_55_Forms.Forms {
-    public partial class frmException : Form {
-        public frmException(CentralitaException ex) {
-            InitializeComponent();
-            DateTime dt = DateTime.Now;
-            StringBuilder data = new StringBuilder();
-            data.AppendLine($"Error: {ex.Message} producido en {ex.NombreClase} al usar {ex.NombreMetodo}.");
-            data.AppendLine($"Source: {ex.Source}");
-            data.AppendLine($"Method: {ex.TargetSite}");
-            data.AppendLine($"InnerException: {ex.InnerException}");
+namespace Exceptions {
+    public class ArchivoIncorrectoException : Exception {
 
-            rtbExceptionDescription.Text = data.ToString();
-            lblRealDateException.Text = dt.ToString();
-        }
 
-        private void btnExceptionOK_Click(object sender, EventArgs e) {
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
-        }
+        #region Builders
+
+        /// <summary>
+        /// Creates the entity with a message.
+        /// </summary>
+        /// <param name="message">Message of the exception.</param>
+        public ArchivoIncorrectoException(string message)
+            : this(message, null) { }
+
+        /// <summary>
+        /// Creates the entity with a message and the innerException.
+        /// </summary>
+        /// <param name="message">Message of the exception.</param>
+        /// <param name="innerException">InnerException of the exception.</param>
+        public ArchivoIncorrectoException(string message, Exception innerException)
+            : base(message, innerException) { }
+
+        #endregion
+
     }
 }

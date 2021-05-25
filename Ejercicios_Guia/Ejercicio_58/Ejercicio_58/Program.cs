@@ -22,29 +22,19 @@
  * SOFTWARE.
  */
 
-using CentralitaHerencia;
 using System;
-using System.Text;
 using System.Windows.Forms;
 
-namespace Ejercicio_55_Forms.Forms {
-    public partial class frmException : Form {
-        public frmException(CentralitaException ex) {
-            InitializeComponent();
-            DateTime dt = DateTime.Now;
-            StringBuilder data = new StringBuilder();
-            data.AppendLine($"Error: {ex.Message} producido en {ex.NombreClase} al usar {ex.NombreMetodo}.");
-            data.AppendLine($"Source: {ex.Source}");
-            data.AppendLine($"Method: {ex.TargetSite}");
-            data.AppendLine($"InnerException: {ex.InnerException}");
-
-            rtbExceptionDescription.Text = data.ToString();
-            lblRealDateException.Text = dt.ToString();
-        }
-
-        private void btnExceptionOK_Click(object sender, EventArgs e) {
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
+namespace Ejercicio_56 {
+    static class Program {
+        /// <summary>
+        /// Punto de entrada principal para la aplicación.
+        /// </summary>
+        [STAThread]
+        static void Main() {
+            //Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new frmNoteSharp());
         }
     }
 }

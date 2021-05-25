@@ -23,12 +23,12 @@
  */
 
 using CentralitaHerencia;
-using Ejercicio_40_Forms.Forms;
+using Ejercicio_55_Forms.Forms;
 using System;
 using System.Media;
 using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms {
+namespace Ejercicio_55_Forms {
     public partial class frmLlamador : Form {
         private Centralita myCentral;
         private readonly string pathToMusic = Environment.CurrentDirectory;

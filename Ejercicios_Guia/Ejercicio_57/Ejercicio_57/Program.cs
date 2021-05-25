@@ -22,29 +22,49 @@
  * SOFTWARE.
  */
 
-using CentralitaHerencia;
+using Models;
 using System;
-using System.Text;
-using System.Windows.Forms;
+using System.IO;
 
-namespace Ejercicio_55_Forms.Forms {
-    public partial class frmException : Form {
-        public frmException(CentralitaException ex) {
-            InitializeComponent();
-            DateTime dt = DateTime.Now;
-            StringBuilder data = new StringBuilder();
-            data.AppendLine($"Error: {ex.Message} producido en {ex.NombreClase} al usar {ex.NombreMetodo}.");
-            data.AppendLine($"Source: {ex.Source}");
-            data.AppendLine($"Method: {ex.TargetSite}");
-            data.AppendLine($"InnerException: {ex.InnerException}");
+namespace Ejercicio_57 {
+    class Program {
+        static void Main(string[] args) {
 
-            rtbExceptionDescription.Text = data.ToString();
-            lblRealDateException.Text = dt.ToString();
-        }
+            #region Instances
 
-        private void btnExceptionOK_Click(object sender, EventArgs e) {
-            this.DialogResult = DialogResult.OK;
-            this.Dispose();
+            string path = $"{Environment.CurrentDirectory}\\Serializable";
+            string fileName = "Persona.xml";
+            string fullPath = $"{path}\\{fileName}";
+            Persona aPerson = new Persona("Hero", "Shazam");
+            Persona anotherPerson;
+
+            #endregion
+
+            #region CreateSerial
+
+            try {
+                if (!Directory.Exists(path)) {
+                    Directory.CreateDirectory(path);
+                }
+                Persona.Guardar(fullPath, aPerson);
+            } catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
+
+            #endregion
+
+            #region ReadSerial
+
+            try {
+                anotherPerson = Persona.Leer(fullPath);
+                Console.WriteLine(anotherPerson);
+            } catch (Exception e) {
+                Console.WriteLine(e.Message);
+            }
+
+            #endregion
+
+            Console.ReadKey();
         }
     }
 }
