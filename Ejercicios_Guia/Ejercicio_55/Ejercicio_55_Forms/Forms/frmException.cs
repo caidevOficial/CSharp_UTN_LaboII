@@ -22,11 +22,12 @@
  * SOFTWARE.
  */
 
+using CentralitaHerencia;
 using System;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms.Forms {
+namespace Ejercicio_55_Forms.Forms {
     public partial class frmException : Form {
         public frmException(CentralitaException ex) {
             InitializeComponent();

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Ejercicio_40_Forms {
+namespace Ejercicio_55_Forms {
     static class Program {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
