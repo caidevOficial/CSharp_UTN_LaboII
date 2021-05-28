@@ -97,7 +97,7 @@ namespace EntidadesRPP {
         /// <returns>The surname, docket number, speciality and jornal salary  of the entity as a string.</returns>
         protected override string ArmarInfo() {
             StringBuilder data = new StringBuilder();
-            data.Append($"{base.ArmarInfo()}, Especialidad: {this.especialidad} - JORNAL: ${Math.Round(this.Jornal, 2)}");
+            data.Append($"{base.ArmarInfo()} - JORNAL: ${Math.Round(this.Jornal, 2)}");
 
             return data.ToString();
         }
