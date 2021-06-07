@@ -41,7 +41,6 @@ namespace Application.DataAcces {
         public List<Customer> Read(string path) {
             List<Customer> customers = new List<Customer>();
 
-
             if (!base.Read(path, out customers)) {
                 throw new TechnicalException("No se pudo abrir el archivo");
             }
