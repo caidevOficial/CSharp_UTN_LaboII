@@ -54,7 +54,6 @@ namespace WindowsFormsApp1 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void FrmCostumerVisualizer_Load(object sender, EventArgs e) {
-            //this.RefreshDataGrid();
             this.RefreshGridFromDB();
         }
 
@@ -70,7 +69,6 @@ namespace WindowsFormsApp1 {
             frm.ShowDialog();
 
             if (frm.DialogResult == DialogResult.OK) {
-                //this.RefreshDataGrid();
                 this.RefreshGridFromDB();
             }
         }
@@ -87,7 +85,6 @@ namespace WindowsFormsApp1 {
             frm.ShowDialog();
 
             if (frm.DialogResult == DialogResult.OK) {
-                //this.RefreshDataGrid();
                 this.RefreshGridFromDB();
             }
         }
@@ -106,17 +103,12 @@ namespace WindowsFormsApp1 {
 
         }
 
-        private void RefreshGridFromDB() {
-            dtgCustomer.DataSource = null;
-            dtgCustomer.DataSource = DataAccess.GetCustomers();
-        }
-
         /// <summary>
         /// Refresh the visual of the data grid.
         /// </summary>
-        private void RefreshDataGrid() {
+        private void RefreshGridFromDB() {
             dtgCustomer.DataSource = null;
-            dtgCustomer.DataSource = this.customerRepository.GetAll();
+            dtgCustomer.DataSource = DataAccess.GetCustomers();
         }
 
         #endregion

@@ -30,6 +30,7 @@ using Application.DAO;
 
 namespace WindowsFormsApp1 {
     public partial class FrmCustomerUpdate : FrmCustomer {
+        
         #region Attribute
 
         Customer auxCustomer;
@@ -66,7 +67,6 @@ namespace WindowsFormsApp1 {
                 Age = Convert.ToInt32(this.txtAge.Text)
             };
             DataAccess.UpdateCustomer(newCustomer);
-            //this.customerRepository.Update(newCustomer);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

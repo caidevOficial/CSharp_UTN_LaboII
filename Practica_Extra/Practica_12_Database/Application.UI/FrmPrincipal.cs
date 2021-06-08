@@ -75,9 +75,7 @@ namespace WindowsFormsApp1 {
         /// <param name="e"></param>
         private void visualizerToolStripMenuItem_Click(object sender, EventArgs e) {
             FrmCustomerVisualizer frm = new FrmCustomerVisualizer(this.customerRepository);
-
             frm.StartPosition = FormStartPosition.CenterScreen;
-
             frm.Show();
         }
 

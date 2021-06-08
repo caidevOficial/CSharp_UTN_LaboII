@@ -30,6 +30,7 @@ using System.Data;
 using System.Data.SqlClient;
 
 namespace Application.DAO {
+
     public static class DataAccess {
 
         #region Attributes
@@ -39,6 +40,9 @@ namespace Application.DAO {
         private static SqlCommand myCommand;
 
         #endregion
+
+        #region Builder
+
         static DataAccess() {
             connString = " Server = localhost ; Database = RepasoBD; Trusted_Connection = true ; ";
             myConnection = new SqlConnection(connString);
@@ -47,14 +51,20 @@ namespace Application.DAO {
             myCommand.CommandType = CommandType.Text;
         }
 
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Gets all the customers from the DB.
+        /// </summary>
+        /// <returns>A list of customers.</returns>
         public static List<Customer> GetCustomers() {
 
             List<Customer> customers = new List<Customer>();
             Customer actualCustomer;
             myCommand.CommandText = "Select * from Customers";
-
             myConnection.Open();
-
             SqlDataReader myReader = myCommand.ExecuteReader();
             while (myReader.Read()) {
                 actualCustomer = new Customer(myReader["Name"].ToString(), myReader["Surname"].ToString(), Convert.ToInt32(myReader["Age"]));
@@ -67,23 +77,30 @@ namespace Application.DAO {
             return customers;
         }
 
+        /// <summary>
+        /// Gets a customer from the DB by its ID.
+        /// </summary>
+        /// <param name="idCustomer">ID of the customer to get.</param>
+        /// <returns>A customer.</returns>
         public static Customer GetCustomerByID(int idCustomer) {
             Customer theCustomer = null;
             myCommand.CommandText = $"Select * from Customers WHERE id=@id";
             myCommand.Parameters.AddWithValue("@id", idCustomer);
             myConnection.Open();
-
             SqlDataReader myReader = myCommand.ExecuteReader();
             while (myReader.Read()) {
                 theCustomer = new Customer(myReader["Name"].ToString(), myReader["Surname"].ToString(), Convert.ToInt32(myReader["Age"]));
             }
-
             myReader.Close();
             myConnection.Close();
 
             return theCustomer;
         }
 
+        /// <summary>
+        /// Inserts a customer into the DB.
+        /// </summary>
+        /// <param name="entity">Customer to insert into the DB.</param>
         public static void InsertCustomer(Customer entity) {
             List<Customer> customers = GetCustomers();
             try {
@@ -105,6 +122,10 @@ namespace Application.DAO {
 
         }
 
+        /// <summary>
+        /// Updates a customer from the DB.
+        /// </summary>
+        /// <param name="entity">Customer to update.</param>
         public static void UpdateCustomer(Customer entity) {
             try {
                 myConnection.Open();
@@ -123,6 +144,10 @@ namespace Application.DAO {
             }
         }
 
+        /// <summary>
+        /// Deletes a customer from the DB.
+        /// </summary>
+        /// <param name="idCustomer">ID of the customer to delete.</param>
         public static void DeleteCustomer(int idCustomer) {
             try {
                 myConnection.Open();
@@ -135,5 +160,8 @@ namespace Application.DAO {
                 myConnection.Close();
             }
         }
+
+        #endregion
+
     }
 }

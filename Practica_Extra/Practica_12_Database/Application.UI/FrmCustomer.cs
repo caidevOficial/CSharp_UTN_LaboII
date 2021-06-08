@@ -70,7 +70,6 @@ namespace WindowsFormsApp1 {
             Customer customer = new Customer(txtName.Text, txtLastName.Text, Convert.ToInt32(txtAge.Text));
             try {
                 DataAccess.InsertCustomer(customer);
-                //this.customerRepository.Create(customer);
                 MessageBox.Show("Cliente Crado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
