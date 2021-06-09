@@ -23,10 +23,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Models {
 
@@ -53,36 +49,48 @@ namespace Models {
 
         #region Properties
 
-        public string Apellido { 
+        /// <summary>
+        /// Gets/Sets: The Surname.
+        /// </summary>
+        public string Apellido {
             get => this.apellido;
             set {
-                if (!String.IsNullOrWhiteSpace(value)) {
+                if (!String.IsNullOrWhiteSpace(value) && !value.Equals(this.apellido)) {
                     this.apellido = value;
                     this.EventoString.Invoke(this.Mostrar());
                 }
-            } 
+            }
         }
 
-        public string Nombre { 
-            get => this.nombre; 
+        /// <summary>
+        /// Gets/Sets: The Name.
+        /// </summary>
+        public string Nombre {
+            get => this.nombre;
             set {
-                if (!String.IsNullOrWhiteSpace(value)) {
+                if (!String.IsNullOrWhiteSpace(value) && !value.Equals(this.nombre)) {
                     this.nombre = value;
                     this.EventoString.Invoke(this.Mostrar());
                 }
             }
         }
 
+        /// <summary>
+        /// Delegate, IDK what do this!
+        /// </summary>
         public event DelegadoString EventoString;
 
         #endregion
 
         #region Methods
 
+        /// <summary>
+        /// Returns a string with name and surname.
+        /// </summary>
+        /// <returns>A string with name and surname.</returns>
         public string Mostrar() {
             return $"{this.Nombre} {this.Apellido}";
         }
-
 
         #endregion
     }

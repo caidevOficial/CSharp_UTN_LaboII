@@ -24,13 +24,6 @@
 
 using Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ejercicio_68 {
@@ -42,12 +35,16 @@ namespace Ejercicio_68 {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Notifies all the changes.
+        /// </summary>
+        /// <param name="cambio">Change occurred.</param>
         public static void NotificarCambio(string cambio) {
             MessageBox.Show($"{cambio}");
         }
 
         /// <summary>
-        /// 
+        /// EventHandler of Button 'Crear'
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -56,11 +53,9 @@ namespace Ejercicio_68 {
                 btnCrear.Text = "Actualizar";
                 persona = new Persona();
                 persona.EventoString += NotificarCambio;
-                persona.Apellido = txtApellido.Text;
-                persona.Nombre = txtNombre.Text;
-            } else {
-                if(persona.Apellido)
             }
+            persona.Apellido = txtApellido.Text;
+            persona.Nombre = txtNombre.Text;
         }
     }
 }
