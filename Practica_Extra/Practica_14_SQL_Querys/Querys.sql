@@ -24,7 +24,6 @@ INSERT INTO Productos (pNumero, pNombre, Precio, Tamanio) VALUES (2, 'Cigarrillo
 INSERT INTO Productos (pNumero, pNombre, Precio, Tamanio) VALUES (3, 'Gaseosa', 15.8, 'Grande');
 
 -- Envios
-
 INSERT INTO Envios (Numero, pNumero, Cantidad) VALUES (100, 1, 500);
 INSERT INTO Envios (Numero, pNumero, Cantidad) VALUES (100, 2, 1500);
 INSERT INTO Envios (Numero, pNumero, Cantidad) VALUES (100, 3, 100);
@@ -36,11 +35,31 @@ INSERT INTO Envios (Numero, pNumero, Cantidad) VALUES (102, 3, 300);
 -- Querys
 -- 1. Obtener los detalles completos de todos los productos, ordenados alfabéticamente.
 SELECT * FROM productos ORDER BY pNombre;
+
 -- 2. Obtener los detalles completos de todos los proveedores de ‘Quilmes’.
 SELECT * FROM Proveedores WHERE Localidad='Quilmes';
+
 -- 3. Obtener todos los envíos en los cuales la cantidad este entre 200 y 300 inclusive.
 SELECT * FROM Envios WHERE Cantidad BETWEEN 200 AND 300;
+
 -- 4. Obtener la cantidad total de todos los productos enviados.
 SELECT SUM(Cantidad) FROM Envios;
+
 -- 5. Mostrar los primeros 3 números de productos que se han enviado.
 SELECT TOP 3 Numero FROM Envios;
+
+-- 6. Mostrar los nombres de proveedores y los nombres de los productos enviados.
+SELECT P.Nombre, Pr.pNombre from Proveedores AS P, Productos AS Pr, Envios AS E WHERE Pr.pNumero = E.pNumero AND P.Numero = E.Numero;
+
+-- 7. Indicar el monto (cantidad * precio) de todos los envíos.
+
+-- 8. Obtener la cantidad total del producto 1 enviado por el proveedor 102.
+-- 9. Obtener todos los números de los productos suministrados por algún proveedor de ‘Avellaneda’.
+-- 10.Obtener los domicilios y localidades de los proveedores cuyos nombres contengan la letra ‘I’.
+-- 11.Agregar el producto numero 4, llamado ‘Chocolate’, de tamaño chico y con un precio de 25,35.
+-- 12.Insertar un nuevo proveedor (únicamente con los campos obligatorios).
+-- 13.Insertar un nuevo proveedor (107), donde el nombre y la localidad son ‘Rosales’ y ‘La Plata’.
+-- 14.Cambiar los precios de los productos de tamaño ‘grande’ a 97,50.
+-- 15.Cambiar el tamaño de ‘Chico’ a ‘Mediano’ de todos los productos cuyas cantidades sean mayores a 300 inclusive.
+-- 16.Eliminar el producto número 1.
+-- 17.Eliminar a todos los proveedores que no han enviado productos.
