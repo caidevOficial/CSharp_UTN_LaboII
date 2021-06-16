@@ -32,9 +32,9 @@ DROP TABLE Localidad;
 DROP TABLE Provincia;
 
 -- Creates
-CREATE TABLE Customers(	id bigint IDENTITY(1,1) NOT NULL,	Name varchar(50) NULL,	Surname varchar(50) NULL,	Age int NOT NULL, CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED (id ASC) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]) ON [PRIMARY]
-CREATE TABLE Localidad(id numeric(18, 0) IDENTITY(1,1) NOT NULL, idProvincia numeric(18, 0) NOT NULL, Nombre varchar(100) NOT NULL) ON [PRIMARY]
-CREATE TABLE [dbo].[Provincia](id numeric(18, 0) NOT NULL,	descripcion varchar(100) NULL) ON [PRIMARY]
+CREATE TABLE Customers(	id bigint IDENTITY(1,1) NOT NULL,	Name varchar(50) NULL,	Surname varchar(50) NULL,	Age int NOT NULL, CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED (id ASC) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]) ON [PRIMARY];
+CREATE TABLE Localidad(id numeric(18, 0) IDENTITY(1,1) NOT NULL, idProvincia numeric(18, 0) NOT NULL, Nombre varchar(100) NOT NULL) ON [PRIMARY];
+CREATE TABLE [dbo].[Provincia](id numeric(18, 0) NOT NULL,	descripcion varchar(100) NULL) ON [PRIMARY];
 
 -- Inserts
 insert into Customers (Name, Surname, Age) values ('Stacy', 'Loachhead', 33); 
