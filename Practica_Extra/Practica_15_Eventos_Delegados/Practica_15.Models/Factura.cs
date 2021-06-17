@@ -22,12 +22,6 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Models {
     public class Factura {
 
@@ -49,24 +43,17 @@ namespace Models {
 
         #region Properties
 
-        public float Precio { 
-            get => precio; 
-            set => precio = value; 
+        public float Precio {
+            get => precio;
+            set => precio = value;
         }
 
-        public int Numero { 
-            get => numero; 
-            set => numero = value; 
+        public int Numero {
+            get => numero;
+            set => numero = value;
         }
 
         #endregion
 
-        #region Operators
-
-        #endregion
-
-        #region Methods
-
-        #endregion
     }
 }

@@ -30,7 +30,7 @@ DROP TABLE Envios;
 DROP TABLE Productos;
 
 -- Create Tables
-CREATE TABLE Envios(Numero int NOT NULL, pNumero int NOT NULL, Cantidad int NOT NULL) ON [PRIMARY];
+IF NOT EXISTS CREATE TABLE Envios(Numero int NOT NULL, pNumero int NOT NULL, Cantidad int NOT NULL) ON [PRIMARY];
 CREATE TABLE Productos(pNumero int NOT NULL,pNombre varchar(30) NULL,Precio float NOT NULL,Tamanio varchar(20) NOT NULL, CONSTRAINT PK_Productos PRIMARY KEY CLUSTERED (pNumero ASC) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]) ON [PRIMARY];
 CREATE TABLE Proveedores(Numero int NOT NULL, Nombre varchar(30) NULL, Domicilio varchar(50) NULL, Localidad varchar(80) NULL, CONSTRAINT [PK_Proveedores] PRIMARY KEY CLUSTERED (Numero ASC)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]) ON [PRIMARY];
 
@@ -77,7 +77,7 @@ SELECT P.Nombre, Pr.pNombre from Proveedores AS P, Productos AS Pr, Envios AS E 
 SELECT E.Numero as ENVIO, (E.Cantidad*P.Precio) AS PRECIO FROM Envios AS E, Productos AS P WHERE E.pNumero = P.pNumero;
 
 -- 8. Obtener la cantidad total del producto 1 enviado por el proveedor 102.
-SELECT SUM(Cantidad) AS Cantidad_Producto_1 FROM Envios WHERE pNumero = 1;
+SELECT SUM(Cantidad) AS Cantidad_Producto_1 FROM Envios AS E WHERE pNumero = 1 AND E.Numero = 102;
 
 -- 9. Obtener todos los números de los productos suministrados por algún proveedor de ‘Avellaneda’.
 SELECT pNumero AS De_Avellaneda FROM Envios AS E, Proveedores AS P WHERE E.Numero = P.Numero AND P.Localidad = 'Avellaneda';

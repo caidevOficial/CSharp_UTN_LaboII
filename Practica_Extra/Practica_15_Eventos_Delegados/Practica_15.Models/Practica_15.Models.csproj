@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archivos.cs" />
     <Compile Include="Cajero.cs" />
+    <Compile Include="Factura.cs" />
     <Compile Include="Persona.cs" />
+    <Compile Include="PersonaDAO.cs" />
     <Compile Include="Serializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
