@@ -24,16 +24,14 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Models {
     public class Persona {
 
         #region Attributes
-        
+
         private List<Factura> facturas;
         private string codigoPersona;
         private EEstado estado;
@@ -49,7 +47,11 @@ namespace Models {
 
         #region Builders
 
-        public Persona(string codigoPersona) {
+        public Persona() {
+
+        }
+
+        public Persona(string codigoPersona) : this() {
             this.Facturas = new List<Factura>();
             this.CodigoPersona = codigoPersona;
             this.Estado = EEstado.Ingresando;
@@ -59,24 +61,24 @@ namespace Models {
 
         #region Properties
 
-        internal List<Factura> Facturas { 
-            get => this.facturas; 
-            set => this.facturas = value; 
+        internal List<Factura> Facturas {
+            get => this.facturas;
+            set => this.facturas = value;
         }
 
-        public string CodigoPersona { 
-            get => this.codigoPersona; 
-            set => this.codigoPersona = value; 
+        public string CodigoPersona {
+            get => this.codigoPersona;
+            set => this.codigoPersona = value;
         }
 
-        public EEstado Estado { 
-            get => this.estado; 
-            set => this.estado = value; 
+        public EEstado Estado {
+            get => this.estado;
+            set => this.estado = value;
         }
 
-        public float MontoTotal { 
-            get => montoTotal; 
-            set => montoTotal = value; 
+        public float MontoTotal {
+            get => montoTotal;
+            set => montoTotal = value;
         }
 
         #endregion
@@ -96,7 +98,7 @@ namespace Models {
         public static Persona HarcoPersona() {
             Random rd = new Random(DateTime.Now.Millisecond);
             Persona persona = new Persona(rd.Next().ToString());
-            for (int i = 0; i < rd.Next(1,10) ; i++) {
+            for (int i = 0; i < rd.Next(1, 10); i++) {
                 Factura fatura = new Factura(rd.Next(1000, 10000) / 100, rd.Next());
                 persona.Facturas.Add(fatura);
             }
@@ -111,12 +113,12 @@ namespace Models {
                     case EEstado.Ingresando:
                         Thread.Sleep(2000);
                         this.Estado = EEstado.Cobrando;
-                        this.informaEstado(this, EventArgs.Empty); // Lanza al evento
+                        this.informaEstado.Invoke(this, EventArgs.Empty); // Lanza al evento
                         break;
                     case EEstado.Cobrando:
                         Thread.Sleep(2000);
                         this.Estado = EEstado.Atendido;
-                        this.informaEstado(this, EventArgs.Empty); // Lanza al evento
+                        this.informaEstado.Invoke(this, EventArgs.Empty); // Lanza al evento
                         break;
                     default:
                         break;

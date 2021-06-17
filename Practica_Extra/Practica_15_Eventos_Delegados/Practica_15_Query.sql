@@ -1,4 +1,4 @@
-﻿/*
+/*
  * MIT License
  * 
  * Copyright (c) 2021 [FacuFalcone]
@@ -22,36 +22,8 @@
  * SOFTWARE.
  */
 
-using System;
-using System.IO;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
+-- Using
+ USE [EjerciciosUTN]
 
-namespace Models {
-    public class Serializer {
-
-        #region Methods
-
-        public static bool Guardar(Persona persona) {
-            try {
-                string path = $"{Environment.CurrentDirectory}\\Log";
-                string fileName = "Persona.xml";
-                if (!Directory.Exists(path)) {
-                    Directory.CreateDirectory(path);
-                }
-                using (XmlTextWriter writer = new XmlTextWriter($"{path}\\{fileName}", Encoding.UTF8)) {
-                    XmlSerializer anotherWriter = new XmlSerializer(typeof(Persona));
-                    anotherWriter.Serialize(writer, persona);
-                    return true;
-                }
-            } catch (Exception exe) {
-
-                throw new Exception(exe.Message);
-            }
-        }
-
-        #endregion
-
-    }
-}
+ -- Create
+ CREATE TABLE Clientes_Facturacion (codigoCliente varchar(50) NULL,	facturacionTotal float NOT NULL) ON [PRIMARY]

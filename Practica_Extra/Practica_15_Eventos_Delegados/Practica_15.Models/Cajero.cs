@@ -22,12 +22,8 @@
  * SOFTWARE.
  */
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Models {
     public delegate bool DelegadoCajero(Persona persona);
@@ -36,7 +32,7 @@ namespace Models {
         #region Attributes
 
         private List<Thread> hiloCajas;
-        private static List<Persona> personas;
+        private static Queue<Persona> personas;
 
         #endregion
 
@@ -44,12 +40,16 @@ namespace Models {
 
         public Cajero() {
             this.hiloCajas = new List<Thread>();
-            personas = new List<Persona>();
+            personas = new Queue<Persona>();
         }
 
         #endregion
 
         #region Properties
+
+        public static Queue<Persona> Personas {
+            get => personas;
+        }
 
         #endregion
 
