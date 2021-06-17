@@ -23,43 +23,24 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
 namespace Models {
     public class Serializer {
 
-        #region Attributes
-
-        #endregion
-
-        #region Builders
-
-        #endregion
-
-        #region Properties
-
-        #endregion
-
-        #region Operators
-
-        #endregion
-
         #region Methods
 
-        public bool Guardar(Persona persona) {
+        public static bool Guardar(Persona persona) {
             try {
                 string path = $"{Environment.CurrentDirectory}\\Log";
-                string fileName = "File.xml";
+                string fileName = "Persona.xml";
                 if (!Directory.Exists(path)) {
                     Directory.CreateDirectory(path);
                 }
-                using(XmlTextWriter writer = new XmlTextWriter($"{path}\\{fileName}", Encoding.UTF8)) {
+                using (XmlTextWriter writer = new XmlTextWriter($"{path}\\{fileName}", Encoding.UTF8)) {
                     XmlSerializer anotherWriter = new XmlSerializer(typeof(Persona));
                     anotherWriter.Serialize(writer, persona);
                     return true;
@@ -71,5 +52,6 @@ namespace Models {
         }
 
         #endregion
+
     }
 }
