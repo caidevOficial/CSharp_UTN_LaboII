@@ -98,7 +98,7 @@ INSERT INTO Proveedores (Numero, Nombre, Domicilio, Localidad) VALUES (107, 'Ros
 UPDATE Productos SET Precio = 97.5 WHERE Tamanio = 'Grande';
 
 -- 15.Cambiar el tamaño de ‘Chico’ a ‘Mediano’ de todos los productos cuyas cantidades sean mayores a 300 inclusive.
-UPDATE Productos SET Tamanio = 'Mediano' WHERE Tamanio = 'Chico';
+UPDATE Productos SET Tamanio = 'Mediano' WHERE EXISTS (Select * from Envios as E WHERE Productos.Numero = e.pNumero AND Productos.Tamanio = 'Chico' AND e.Cantidad > 299);
 
 -- 16.Eliminar el producto número 1.
 DELETE FROM Productos WHERE pNumero = 1;
