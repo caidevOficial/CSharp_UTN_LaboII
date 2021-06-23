@@ -31,7 +31,7 @@ namespace Practica_16_MetodoExtension {
             DateTime date = DateTime.Now;
             Console.Title = "Metodo de Extension.";
             Console.BackgroundColor = ConsoleColor.Red;
-            Console.WriteLine(date.ObtenerPlacaCronica(Seasons.Verano));
+            Console.WriteLine(date.ObtenerPlacaCronica(Seasons.Invierno));
             Console.ReadKey();
         }
     }
