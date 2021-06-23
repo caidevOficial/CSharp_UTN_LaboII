@@ -67,7 +67,7 @@ namespace Practica_16.Models {
             StringBuilder data = new StringBuilder();
             
             if (timeTo < timeFrom) {
-                timeTo.AddYears(1);
+                timeTo = timeTo.AddYears(1);
             }
             int daysLeft = (timeTo - timeFrom).Days;
 
