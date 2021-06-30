@@ -22,19 +22,34 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Windows.Forms;
+using Audio;
+using System.Threading;
 
-namespace Ejercicio_63 {
-    static class Program {
+namespace Entidades {
+    public class GolDelSiglo {
+
+        private Thread hiloRelato;
+
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Cierra la app y termina los hilos en caso de estar activos.
         /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEjer63());
-            //Application.Run(new frmEjer63_2());
+        public void CerrarApp() {
+            if (!(hiloRelato is null) && hiloRelato.IsAlive) {
+                hiloRelato.Abort();
+            }
+        }
+
+        /// <summary>
+        /// Inicia la app y el hilo de audio en caso de no estar activos, 
+        /// sino tira una excepcion.
+        /// </summary>
+        public void IniciarJugada() {
+            if (!(hiloRelato is null) && hiloRelato.IsAlive) {
+                throw new JugadaActivaException();
+            } else {
+                hiloRelato = new Thread(Relato.VictorHugoMorales);
+                hiloRelato.Start();
+            }
         }
     }
 }

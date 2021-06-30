@@ -84,5 +84,10 @@ namespace Ejercicio_63 {
                 myThread.Abort();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            frmEjer63_2 part2 = new frmEjer63_2();
+            part2.ShowDialog();
+        }
     }
 }

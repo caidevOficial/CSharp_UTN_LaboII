@@ -22,19 +22,39 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Windows.Forms;
+namespace Audio {
+    public delegate void AvanceRelato();
 
-namespace Ejercicio_63 {
-    static class Program {
+    public static class Relato {
+
+        public static event AvanceRelato Avanzar;
+
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Reproduce audio.
         /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEjer63());
-            //Application.Run(new frmEjer63_2());
+        public static void VictorHugoMorales() {
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            wplayer.URL = "gol-del-siglo-relatado.mp3";
+            wplayer.controls.play();
+
+            // Agregar invocación al evento
+            if (!(Relato.Avanzar is null)) {
+                Relato.Avanzar.Invoke();
+            }
+
+            System.Threading.Thread.Sleep(1000);
+            do {
+                // Agregar invocación al evento
+                if (!(Relato.Avanzar is null)) {
+                    Relato.Avanzar.Invoke();
+                }
+                System.Threading.Thread.Sleep(1800);
+            } while (wplayer.playState != WMPLib.WMPPlayState.wmppsStopped);
+            System.Threading.Thread.Sleep(2000);
+            // Agregar invocación al evento
+            if (!(Relato.Avanzar is null)) {
+                Relato.Avanzar.Invoke();
+            }
         }
     }
 }
