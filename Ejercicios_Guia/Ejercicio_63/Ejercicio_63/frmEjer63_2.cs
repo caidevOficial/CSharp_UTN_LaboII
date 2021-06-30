@@ -42,7 +42,7 @@ namespace Ejercicio_63 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnMainThread_Click(object sender, EventArgs e) {
-            if (myThread is null) {
+            if (myThread is null || !myThread.IsAlive) {
                 this.myThread = new Thread(new ThreadStart(this.AumentaHora)); // Receives the method's reference and it saves in the thread to execute.
                 this.myThread.Start(); // invokes the raiseHour in a secondary thread
                 MessageBox.Show("Main Thread Suscribed", "Suscribed", MessageBoxButtons.OK, MessageBoxIcon.Information);

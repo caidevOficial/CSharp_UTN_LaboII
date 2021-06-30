@@ -33,8 +33,8 @@ namespace Ejercicio_63 {
         [STAThread]
         static void Main() {
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmEjer63());
-            Application.Run(new frmEjer63_2());
+            Application.Run(new frmEjer63());
+            //Application.Run(new frmEjer63_2());
         }
     }
 }
