@@ -23,18 +23,14 @@
  */
 
 using System;
-using System.Windows.Forms;
 
-namespace Ejercicio_63 {
-    static class Program {
+namespace Entidades {
+    public class JugadaActivaException : Exception {
+
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Constructor por defecto de la excepcion.
         /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEjer63());
-            //Application.Run(new frmEjer63_2());
-        }
+        public JugadaActivaException()
+            : base("El gol ya está ocurriendo. Disfrutelo", null) { }
     }
 }

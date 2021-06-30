@@ -22,19 +22,22 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Windows.Forms;
+namespace Entidades {
+    public interface IFile {
 
-namespace Ejercicio_63 {
-    static class Program {
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Guarda un archivo txt en escritorio.
         /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEjer63());
-            //Application.Run(new frmEjer63_2());
-        }
+        /// <param name="message">Mensaje a guardar en el archivo.</param>
+        /// <returns>True si pudo guardarlo, sino false.</returns>
+        bool Guardar(string message);
+
+        /// <summary>
+        /// Lee un archivo en escritorio.
+        /// </summary>
+        /// <param name="file">Ruta de donde se leera el archivo.</param>
+        /// <param name="data">Data que se sacara del archivo.</param>
+        /// <returns>True si pudo leer, sino false.</returns>
+        bool Leer(string file, out string data);
     }
 }

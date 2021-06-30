@@ -22,19 +22,18 @@
  * SOFTWARE.
  */
 
-using System;
 using System.Windows.Forms;
 
-namespace Ejercicio_63 {
-    static class Program {
+namespace Entidades {
+    public static class PictureBoxExtension {
+
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Retorna el ultimo caracter del nombre de un picture box.
         /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEjer63());
-            //Application.Run(new frmEjer63_2());
+        /// <param name="thisPB">Picture box para retornar su nombre.</param>
+        /// <returns>el ultimo caracter del nombre</returns>
+        public static string ExtensionPB(this PictureBox thisPB) {
+            return thisPB.Name.Substring(thisPB.Name.Length - 1);
         }
     }
 }

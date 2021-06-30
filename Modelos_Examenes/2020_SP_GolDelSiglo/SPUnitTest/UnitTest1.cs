@@ -22,19 +22,55 @@
  * SOFTWARE.
  */
 
-using System;
+using Entidades;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Windows.Forms;
 
-namespace Ejercicio_63 {
-    static class Program {
+namespace SPUnitTest {
+    [TestClass]
+    public class UnitTest1 {
+
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Testea que funcione la JugadaActivaException.
         /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEjer63());
-            //Application.Run(new frmEjer63_2());
+        [TestMethod]
+        [ExpectedException(typeof(JugadaActivaException))]
+        public void Test01_JugadaActivaException() {
+
+            #region Arrange
+            GolDelSiglo gds = new GolDelSiglo();
+            #endregion
+
+            #region Act
+            gds.IniciarJugada();
+            gds.IniciarJugada();
+            #endregion
+        }
+
+        /// <summary>
+        /// Verifica que el metodo de extension retorne la ultima 
+        /// letra del nombre de un picture box.
+        /// </summary>
+        [TestMethod]
+        public void Test02_ExtensionMethod() {
+            #region Arrange
+
+            PictureBox myPB = new PictureBox();
+            myPB.Name = "My Box";
+
+            #endregion
+
+            #region Act
+
+            string lastChar = myPB.ExtensionPB();
+
+            #endregion
+
+            #region Assert
+
+            Assert.AreEqual("x", lastChar);
+
+            #endregion
         }
     }
 }

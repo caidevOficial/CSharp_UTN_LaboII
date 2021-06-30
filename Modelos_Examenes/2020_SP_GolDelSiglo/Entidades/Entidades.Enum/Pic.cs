@@ -22,19 +22,16 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Windows.Forms;
 
-namespace Ejercicio_63 {
-    static class Program {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEjer63());
-            //Application.Run(new frmEjer63_2());
-        }
+namespace Entidades {
+    public enum Pic {
+        SePrepara,
+        LaTieneMaradona,
+        PisaLaPelota,
+        ArrancaConLaPelota,
+        DejaElTendal,
+        VaATocarPara,
+        Gooool,
+        Festeja
     }
 }
