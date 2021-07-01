@@ -22,12 +22,8 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ComiqueriaLogic {
     public class ArchivoTexto {
@@ -39,16 +35,9 @@ namespace ComiqueriaLogic {
         /// <param name="append">Append text or replaces it.</param>
         /// <returns>True if can write, otherwise returns false.</returns>
         public static bool Escribir(ComiqueriaException myObject, bool append) {
-            if (append) {
-                using (StreamWriter sw = File.AppendText(myObject.Ruta)) {
-                    sw.WriteLine(myObject.Texto);
-                    return true;
-                }
-            } else {
-                using (StreamWriter sw = new StreamWriter(myObject.Ruta)) {
-                    sw.WriteLine(myObject.Texto);
-                    return true;
-                }
+            using (StreamWriter sw = new StreamWriter(myObject.Ruta, append, Encoding.UTF8)) {
+                sw.WriteLine(myObject.Texto);
+                return true;
             }
         }
 

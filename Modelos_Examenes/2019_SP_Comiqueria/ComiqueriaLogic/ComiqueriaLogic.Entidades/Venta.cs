@@ -25,7 +25,7 @@
 using System;
 
 namespace ComiqueriaLogic {
-    
+
     [Serializable]
     public sealed class Venta {
 

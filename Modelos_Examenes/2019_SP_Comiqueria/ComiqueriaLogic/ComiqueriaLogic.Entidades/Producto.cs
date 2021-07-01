@@ -26,7 +26,7 @@ using System;
 using System.Text;
 
 namespace ComiqueriaLogic {
-    
+
     [Serializable]
     public class Producto {
 
@@ -51,25 +51,15 @@ namespace ComiqueriaLogic {
         /// <summary>
         /// Constructor. Inicializa los atributos del producto. 
         /// </summary>
-        /// <param name="descripcion">Descripción del producto.</param>
-        /// <param name="stock">Stock disponible del producto.</param>
-        /// <param name="precio">Precio del producto.</param>
-        public Producto(string descripcion, int stock, double precio) : this() {
-            this.Stock = stock;
-            this.Precio = precio;
-            this.Descripcion = descripcion;
-        }
-
-        /// <summary>
-        /// Constructor. Inicializa los atributos del producto. 
-        /// </summary>
         /// <param name="codigo">Codigo único (PK) del producto en la base de datos.</param>
         /// <param name="descripcion">Descripción del producto.</param>
         /// <param name="stock">Stock disponible del producto.</param>
         /// <param name="precio">Precio del producto.</param>
-        public Producto(int codigo, string descripcion, int stock, double precio)
-            : this(descripcion, stock, precio) {
+        public Producto(int codigo, string descripcion, int stock, double precio) {
             this.codigo = codigo;
+            this.Stock = stock;
+            this.Precio = precio;
+            this.Descripcion = descripcion;
         }
 
         #endregion
@@ -116,7 +106,7 @@ namespace ComiqueriaLogic {
         public int Codigo {
             get => this.codigo;
             set {
-                if(value > 0) {
+                if (value > 0) {
                     this.codigo = value;
                 }
             }

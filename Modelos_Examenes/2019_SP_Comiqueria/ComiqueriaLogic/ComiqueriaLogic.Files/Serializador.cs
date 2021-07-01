@@ -23,17 +23,14 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
 namespace ComiqueriaLogic {
     public static class Serializador<T>
-        where T: class, new() {
+        where T : class, new() {
 
         /// <summary>
         /// Saves a data into a binnary File. 
@@ -43,7 +40,7 @@ namespace ComiqueriaLogic {
         /// <returns>True if can save the data, otherwise returns false.</returns>
         public static bool BinnarySave(string path, T data) {
             try {
-                using(BinaryWriter writer = new BinaryWriter(File.OpenWrite(path))) {
+                using (BinaryWriter writer = new BinaryWriter(File.OpenWrite(path))) {
                     writer.Write(data.ToString());
                     return true;
                 }

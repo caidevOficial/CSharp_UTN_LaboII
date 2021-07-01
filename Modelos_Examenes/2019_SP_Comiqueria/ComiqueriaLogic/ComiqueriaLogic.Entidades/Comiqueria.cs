@@ -50,9 +50,9 @@ namespace ComiqueriaLogic {
              * Cree también un método que retorne la lista de productos (List<Producto>) almacenada en la tabla de productos. 
              * Utilice este método para cargar la lista de productos en la clase Comiqueria cuando se instancie una nueva comiquería.  
              */
-            this.ventas = new List<Venta>();
             this.productos = ConnectionDAO.GetProducts();
-            ConnectionDAO.eventConDel += Actualizar;
+            ConnectionDAO.EventChanged += Actualizar;
+            this.ventas = new List<Venta>();
         }
 
         #endregion
@@ -147,7 +147,7 @@ namespace ComiqueriaLogic {
                 case AccionesDB.Insert:
                 case AccionesDB.Update:
                 case AccionesDB.Delete:
-                    productos = ConnectionDAO.GetProducts();
+                    this.productos = ConnectionDAO.GetProducts();
                     break;
                 default:
                     break;
