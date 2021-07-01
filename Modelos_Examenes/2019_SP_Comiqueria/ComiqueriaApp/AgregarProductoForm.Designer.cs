@@ -43,6 +43,8 @@
             // 
             // txtPrecio
             // 
+            this.txtPrecio.BackColor = System.Drawing.Color.MidnightBlue;
+            this.txtPrecio.ForeColor = System.Drawing.Color.OrangeRed;
             this.txtPrecio.Location = new System.Drawing.Point(16, 96);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(139, 20);
@@ -51,6 +53,8 @@
             // 
             // txtStock
             // 
+            this.txtStock.BackColor = System.Drawing.Color.MidnightBlue;
+            this.txtStock.ForeColor = System.Drawing.Color.OrangeRed;
             this.txtStock.Location = new System.Drawing.Point(184, 96);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(120, 20);
@@ -78,6 +82,8 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BackColor = System.Drawing.Color.MidnightBlue;
+            this.txtDescripcion.ForeColor = System.Drawing.Color.OrangeRed;
             this.txtDescripcion.Location = new System.Drawing.Point(16, 40);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(288, 20);
@@ -95,22 +101,24 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnAgregar.Location = new System.Drawing.Point(16, 151);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(139, 23);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.Location = new System.Drawing.Point(174, 151);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(139, 23);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblError
@@ -127,6 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(325, 186);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnCancelar);
@@ -137,7 +146,8 @@
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.txtPrecio);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ForeColor = System.Drawing.Color.OrangeRed;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

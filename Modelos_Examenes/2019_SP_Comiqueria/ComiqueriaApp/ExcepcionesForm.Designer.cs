@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcepcionesForm));
             this.btnOk = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
             this.btnDetalles = new System.Windows.Forms.Button();
@@ -35,13 +36,14 @@
             // 
             // btnOk
             // 
+            this.btnOk.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnOk.Location = new System.Drawing.Point(12, 48);
             this.btnOk.Name = "btnOk";
             this.btnOk.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 0;
             this.btnOk.Text = "OK";
-            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // lblMessage
@@ -54,12 +56,13 @@
             // 
             // btnDetalles
             // 
+            this.btnDetalles.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnDetalles.Location = new System.Drawing.Point(104, 48);
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(75, 23);
             this.btnDetalles.TabIndex = 1;
             this.btnDetalles.Text = "Ver Detalles";
-            this.btnDetalles.UseVisualStyleBackColor = true;
+            this.btnDetalles.UseVisualStyleBackColor = false;
             this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // ExcepcionesForm
@@ -67,11 +70,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(209, 86);
             this.Controls.Add(this.btnDetalles);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btnOk);
+            this.ForeColor = System.Drawing.Color.OrangeRed;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ExcepcionesForm";

@@ -48,15 +48,21 @@
             this.listBoxProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxProductos.BackColor = System.Drawing.Color.MidnightBlue;
+            this.listBoxProductos.Font = new System.Drawing.Font("Saiyan Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxProductos.ForeColor = System.Drawing.Color.OrangeRed;
             this.listBoxProductos.FormattingEnabled = true;
+            this.listBoxProductos.ItemHeight = 16;
             this.listBoxProductos.Location = new System.Drawing.Point(13, 43);
             this.listBoxProductos.Name = "listBoxProductos";
-            this.listBoxProductos.Size = new System.Drawing.Size(426, 225);
+            this.listBoxProductos.Size = new System.Drawing.Size(426, 212);
             this.listBoxProductos.TabIndex = 0;
             this.listBoxProductos.SelectedIndexChanged += new System.EventHandler(this.ListBoxProductos_SelectedIndexChanged);
             // 
             // richTextBoxVentas
             // 
+            this.richTextBoxVentas.BackColor = System.Drawing.Color.MidnightBlue;
+            this.richTextBoxVentas.ForeColor = System.Drawing.Color.OrangeRed;
             this.richTextBoxVentas.Location = new System.Drawing.Point(13, 290);
             this.richTextBoxVentas.Name = "richTextBoxVentas";
             this.richTextBoxVentas.Size = new System.Drawing.Size(746, 128);
@@ -69,6 +75,7 @@
             this.groupBoxAcciones.Controls.Add(this.btnAgregar);
             this.groupBoxAcciones.Controls.Add(this.btnModificar);
             this.groupBoxAcciones.Controls.Add(this.btnVender);
+            this.groupBoxAcciones.ForeColor = System.Drawing.Color.OrangeRed;
             this.groupBoxAcciones.Location = new System.Drawing.Point(448, 30);
             this.groupBoxAcciones.Name = "groupBoxAcciones";
             this.groupBoxAcciones.Size = new System.Drawing.Size(311, 97);
@@ -78,46 +85,55 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnEliminar.Location = new System.Drawing.Point(263, 34);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(31, 23);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "X";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnAgregar.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnAgregar.Location = new System.Drawing.Point(101, 34);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnModificar.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnModificar.Location = new System.Drawing.Point(182, 34);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnVender
             // 
+            this.btnVender.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnVender.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnVender.Location = new System.Drawing.Point(20, 34);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(75, 23);
             this.btnVender.TabIndex = 1;
             this.btnVender.Text = "Vender";
-            this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.UseVisualStyleBackColor = false;
             this.btnVender.Click += new System.EventHandler(this.OnVenderClick);
             // 
             // richTextBoxDetalle
             // 
+            this.richTextBoxDetalle.BackColor = System.Drawing.Color.MidnightBlue;
+            this.richTextBoxDetalle.ForeColor = System.Drawing.Color.OrangeRed;
             this.richTextBoxDetalle.Location = new System.Drawing.Point(448, 133);
             this.richTextBoxDetalle.Name = "richTextBoxDetalle";
             this.richTextBoxDetalle.Size = new System.Drawing.Size(311, 135);
@@ -128,6 +144,7 @@
             // 
             this.lblVentas.AutoSize = true;
             this.lblVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentas.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblVentas.Location = new System.Drawing.Point(12, 274);
             this.lblVentas.Name = "lblVentas";
             this.lblVentas.Size = new System.Drawing.Size(103, 13);
@@ -138,6 +155,7 @@
             // 
             this.lblProductos.AutoSize = true;
             this.lblProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductos.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblProductos.Location = new System.Drawing.Point(12, 27);
             this.lblProductos.Name = "lblProductos";
             this.lblProductos.Size = new System.Drawing.Size(117, 13);
@@ -156,6 +174,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(771, 430);
             this.Controls.Add(this.lblFechaHora);
             this.Controls.Add(this.lblProductos);
@@ -164,7 +184,7 @@
             this.Controls.Add(this.groupBoxAcciones);
             this.Controls.Add(this.richTextBoxVentas);
             this.Controls.Add(this.listBoxProductos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

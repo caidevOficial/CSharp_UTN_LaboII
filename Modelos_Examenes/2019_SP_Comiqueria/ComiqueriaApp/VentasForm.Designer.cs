@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentasForm));
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.numericUpDownCantidad = new System.Windows.Forms.NumericUpDown();
@@ -58,6 +59,8 @@
             // 
             // numericUpDownCantidad
             // 
+            this.numericUpDownCantidad.BackColor = System.Drawing.Color.MidnightBlue;
+            this.numericUpDownCantidad.ForeColor = System.Drawing.Color.OrangeRed;
             this.numericUpDownCantidad.Location = new System.Drawing.Point(12, 53);
             this.numericUpDownCantidad.Minimum = new decimal(new int[] {
             1,
@@ -85,28 +88,31 @@
             // 
             // btnVender
             // 
+            this.btnVender.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnVender.Location = new System.Drawing.Point(12, 91);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(99, 27);
             this.btnVender.TabIndex = 4;
             this.btnVender.Text = "Vender";
-            this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.UseVisualStyleBackColor = false;
             this.btnVender.Click += new System.EventHandler(this.OnVenderClick);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.Location = new System.Drawing.Point(131, 91);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 27);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.OnCancelarClick);
             // 
             // VentasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(250, 136);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnVender);
@@ -115,7 +121,9 @@
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblDescripcion);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.OrangeRed;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VentasForm";

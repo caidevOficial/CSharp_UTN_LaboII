@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarProductoForm));
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblPrecioActual = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -59,26 +60,30 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnModificar.Location = new System.Drawing.Point(12, 151);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(99, 27);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.OnModificarClick);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnCancelar.Location = new System.Drawing.Point(126, 151);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 27);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.OnCancelarClick);
             // 
             // txtPrecioActual
             // 
+            this.txtPrecioActual.BackColor = System.Drawing.Color.MidnightBlue;
+            this.txtPrecioActual.ForeColor = System.Drawing.Color.OrangeRed;
             this.txtPrecioActual.Location = new System.Drawing.Point(15, 53);
             this.txtPrecioActual.Name = "txtPrecioActual";
             this.txtPrecioActual.ReadOnly = true;
@@ -96,6 +101,8 @@
             // 
             // txtNuevoPrecio
             // 
+            this.txtNuevoPrecio.BackColor = System.Drawing.Color.MidnightBlue;
+            this.txtNuevoPrecio.ForeColor = System.Drawing.Color.OrangeRed;
             this.txtNuevoPrecio.Location = new System.Drawing.Point(15, 99);
             this.txtNuevoPrecio.Name = "txtNuevoPrecio";
             this.txtNuevoPrecio.Size = new System.Drawing.Size(198, 20);
@@ -116,6 +123,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(242, 190);
             this.Controls.Add(this.txtNuevoPrecio);
             this.Controls.Add(this.lblNuevoPrecio);
@@ -126,7 +134,9 @@
             this.Controls.Add(this.lblPrecioActual);
             this.Controls.Add(this.lblDescripcion);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.OrangeRed;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ModificarProductoForm";
