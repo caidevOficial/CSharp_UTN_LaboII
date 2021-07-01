@@ -22,10 +22,8 @@
  * SOFTWARE.
  */
 
-namespace ComiqueriaLogic
-{
-    public enum AccionesDB
-    {
+namespace ComiqueriaLogic {
+    public enum AccionesDB {
         Insert,
         Update,
         Delete

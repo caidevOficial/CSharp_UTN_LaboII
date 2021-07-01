@@ -23,10 +23,7 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ComiqueriaLogic {
     public class ComiqueriaException : Exception, IArchivoTexto {
@@ -43,7 +40,7 @@ namespace ComiqueriaLogic {
         /// Gets the path of the file Log.txt
         /// </summary>
         public string Ruta {
-            get => $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\log.txt";
+            get => $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\ExeLog.txt";
         }
 
         /// <summary>
@@ -56,11 +53,12 @@ namespace ComiqueriaLogic {
                 if (!(this.InnerException is null)) {
                     Exception anExe = this.InnerException;
                     data.AppendLine($" {anExe.Message}");
-                    while(!(anExe is null)) {
+                    while (!(anExe is null)) {
                         anExe = anExe.InnerException;
                         data.AppendLine($" {anExe.Message}");
                     }
                 }
+
                 return data.ToString();
             }
         }

@@ -29,14 +29,14 @@ using System.Windows.Forms;
 
 namespace ComiqueriaApp {
     public partial class PrincipalForm : Form {
+
         private Comiqueria comiqueria;
         //Utilice este campo para acceder al producto seleccionado actualmente. 
         private Producto productoSeleccionado;
         private Thread timeThread;
-        public delegate void DelegadoHora(string dato);
-        public event DelegadoHora myEvent;
 
         #region No modificar este código
+
         /// <summary>
         /// Constructor. 
         /// </summary>
@@ -149,6 +149,7 @@ namespace ComiqueriaApp {
             ExcepcionesForm form = new ExcepcionesForm(ex);
             form.ShowDialog();
         }
+
         #endregion
 
         /// <summary>
@@ -161,13 +162,11 @@ namespace ComiqueriaApp {
             try {
                 if (!(listBoxProductos.SelectedItem is null)) {
                     DialogResult result = MessageBox.Show("¿Seguro desea eliminar el producto?", "Eliminar Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
                     if (result == DialogResult.Yes) {
                         // 4B - Realizar una baja física del producto seleccionado en la tabla de productos. 
-
                         productoSeleccionado = (Producto)listBoxProductos.SelectedItem;
                         ConnectionDAO.DeleteProduct(productoSeleccionado.Codigo);
-                    } 
+                    }
                 } else {
                     MessageBox.Show("Ningun Producto Seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -177,25 +176,19 @@ namespace ComiqueriaApp {
         }
 
         /// <summary>
-        /// Assign the time to the label.
+        /// Updates the DateTime in the form every second.
         /// </summary>
-        /// <param name="dato">Time in string formato to assign.</param>
-        private void AsignarHora(string dato) {
-            if (this.lblFechaHora.InvokeRequired) {
-                DelegadoHora dh = new DelegadoHora(AsignarHora);
-                object[] objs = new object[] { dato };
-                this.Invoke(dh, objs);
-            } else {
-                this.lblFechaHora.Text = dato;
-            }
-        }
+        private void ActualizarFechaHora() {
+            while (true) {
+                if (this.lblFechaHora.InvokeRequired) {
+                    this.lblFechaHora.BeginInvoke((MethodInvoker)delegate () {
+                        this.lblFechaHora.Text = DateTime.Now.ToString();
+                    });
+                } else {
+                    this.lblFechaHora.Text = DateTime.Now.ToString();
+                }
 
-        /// <summary>
-        /// Initializes the time.
-        /// </summary>
-        private void IniciarHora() {
-            for (; ; ) {
-                myEvent.Invoke(DateTime.Now.ToString());
+                Thread.Sleep(1000);
             }
         }
 
@@ -205,8 +198,8 @@ namespace ComiqueriaApp {
         private void InicializarFechaHora() {
             // Punto 9. Instanciar y correr un nuevo hilo que ejecute un método que actualice el “lblFechaHora” cada 1 segundo con la fecha y la hora actual. 
             if ((timeThread is null)) {
-                timeThread = new Thread(IniciarHora);
-                myEvent += AsignarHora;
+                timeThread = new Thread(ActualizarFechaHora);
+                timeThread.Start();
             }
         }
 

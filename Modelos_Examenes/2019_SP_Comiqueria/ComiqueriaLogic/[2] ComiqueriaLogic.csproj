@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComiqueriaLogic.DAO\AbstractDAO.cs" />
     <Compile Include="ComiqueriaLogic.Exception\ComiqueriaException.cs" />
     <Compile Include="ComiqueriaLogic.Entidades\Comiqueria.cs" />
     <Compile Include="ComiqueriaLogic.Comun\Enumerados.cs" />

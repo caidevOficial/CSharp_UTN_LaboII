@@ -2,10 +2,8 @@
 using System;
 using System.Windows.Forms;
 
-namespace ComiqueriaApp
-{
-    public partial class VentasForm : Form
-    {
+namespace ComiqueriaApp {
+    public partial class VentasForm : Form {
         private Producto productoSeleccionado;
         private Comiqueria comiqueria;
 
@@ -14,8 +12,7 @@ namespace ComiqueriaApp
         /// </summary>
         /// <param name="comiqueria">Instancia de la comiqueria.</param>
         /// <param name="productoSeleccionado">Producto seleccionado por el usuario en el PrincipalForm.</param>
-        public VentasForm(Comiqueria comiqueria, Producto productoSeleccionado)
-        {
+        public VentasForm(Comiqueria comiqueria, Producto productoSeleccionado) {
             InitializeComponent();
             this.comiqueria = comiqueria;
             this.productoSeleccionado = productoSeleccionado;
@@ -27,8 +24,7 @@ namespace ComiqueriaApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void VentasForm_Load(object sender, EventArgs e)
-        {
+        private void VentasForm_Load(object sender, EventArgs e) {
             this.lblDescripcion.Text = this.productoSeleccionado.Descripcion;
             ActualizarPrecio();
         }
@@ -39,16 +35,14 @@ namespace ComiqueriaApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnCantidadChanged(object sender, EventArgs e)
-        {
+        private void OnCantidadChanged(object sender, EventArgs e) {
             ActualizarPrecio();
         }
 
         /// <summary>
         /// Actualiza el lblPrecioFinal de acuerdo a la cantidad seleccionada del producto.
         /// </summary>
-        private void ActualizarPrecio()
-        {
+        private void ActualizarPrecio() {
             int cantidadSeleccionada = Convert.ToInt32(this.numericUpDownCantidad.Value);
             double nuevoPrecioFinal = Venta.CalcularPrecioFinal(this.productoSeleccionado.Precio, cantidadSeleccionada);
             this.lblPrecioFinal.Text = String.Format("Precio Final: ${0:0.00}", nuevoPrecioFinal);
@@ -60,22 +54,18 @@ namespace ComiqueriaApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnVenderClick(object sender, EventArgs e)
-        {
+        private void OnVenderClick(object sender, EventArgs e) {
             int cantidadSeleccionada = Convert.ToInt32(this.numericUpDownCantidad.Value);
 
-            if (productoSeleccionado.Stock >= cantidadSeleccionada)
-            {
+            if (productoSeleccionado.Stock >= cantidadSeleccionada) {
                 this.comiqueria.Vender(this.productoSeleccionado, cantidadSeleccionada);
-                productoSeleccionado.Stock -= cantidadSeleccionada;
+                //productoSeleccionado.Stock -= cantidadSeleccionada;
                 ConnectionDAO.UpdateData(productoSeleccionado);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("La cantidad indicada supera el stock disponible. Por favor, disminuya la cantidad.", "Stock Superado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
+            }
         }
 
         /// <summary>
@@ -84,8 +74,7 @@ namespace ComiqueriaApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnCancelarClick(object sender, EventArgs e)
-        {
+        private void OnCancelarClick(object sender, EventArgs e) {
             this.Close();
         }
     }

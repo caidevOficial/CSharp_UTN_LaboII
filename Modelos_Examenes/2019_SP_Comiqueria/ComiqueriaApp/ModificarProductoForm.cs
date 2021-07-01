@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace ComiqueriaApp {
     public partial class ModificarProductoForm : Form {
-        
+
         private Producto productoSeleccionado;
 
         /// <summary>

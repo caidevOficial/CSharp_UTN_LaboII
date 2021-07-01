@@ -23,10 +23,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ComiqueriaLogic {
     public static class Extension {
@@ -38,7 +34,7 @@ namespace ComiqueriaLogic {
         /// <param name="myVariable">mariable to format.</param>
         /// <returns>a string with the symbol $ before the number and formatted with 2 decimals.</returns>
         public static string FormatearPrecio(this double myVariable) {
-            return $"{Math.Round(myVariable, 2)}";
+            return $"${Math.Round(myVariable, 2)}";
         }
     }
 }

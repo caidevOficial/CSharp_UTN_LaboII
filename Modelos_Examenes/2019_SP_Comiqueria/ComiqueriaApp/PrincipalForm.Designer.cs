@@ -169,6 +169,7 @@
             this.lblFechaHora.Name = "lblFechaHora";
             this.lblFechaHora.Size = new System.Drawing.Size(0, 13);
             this.lblFechaHora.TabIndex = 6;
+            this.lblFechaHora.ForeColor = System.Drawing.Color.OrangeRed;
             // 
             // PrincipalForm
             // 
