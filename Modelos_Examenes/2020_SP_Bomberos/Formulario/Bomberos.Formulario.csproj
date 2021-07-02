@@ -93,5 +93,11 @@
   <ItemGroup>
     <Content Include="iconApp.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bomberos.Entidades\Bomberos.Entidades.csproj">
+      <Project>{2179d0ac-3d48-45c7-93af-256f1fd0db13}</Project>
+      <Name>Bomberos.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
