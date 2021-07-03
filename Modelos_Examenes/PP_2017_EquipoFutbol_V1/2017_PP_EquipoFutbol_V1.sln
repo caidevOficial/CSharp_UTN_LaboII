@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquipoFutbol.GUI", "EquipoFutbol.GUI\EquipoFutbol.GUI.csproj", "{78844922-208D-4C36-A527-E8CE04441597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquipoFutbol.Entidades", "EquipoFutbol.Entidades\EquipoFutbol.Entidades.csproj", "{42C33DBD-D7B8-414F-9BE1-869D04184DB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78844922-208D-4C36-A527-E8CE04441597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78844922-208D-4C36-A527-E8CE04441597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78844922-208D-4C36-A527-E8CE04441597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78844922-208D-4C36-A527-E8CE04441597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C33DBD-D7B8-414F-9BE1-869D04184DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C33DBD-D7B8-414F-9BE1-869D04184DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C33DBD-D7B8-414F-9BE1-869D04184DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C33DBD-D7B8-414F-9BE1-869D04184DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82F03B00-F271-43EB-A9E2-A87F2094E52F}
+	EndGlobalSection
+EndGlobal
