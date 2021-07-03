@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deposito.GUI", "Deposito.GUI\2021_PP_DepositoElectro.csproj", "{60E2FEE3-519C-44B4-B335-A76A84DB688A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deposito.Models", "Deposito.Models\Models.csproj", "{2D9A668B-4D1A-4FCF-8AA4-C6279B041F77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60E2FEE3-519C-44B4-B335-A76A84DB688A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E2FEE3-519C-44B4-B335-A76A84DB688A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E2FEE3-519C-44B4-B335-A76A84DB688A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E2FEE3-519C-44B4-B335-A76A84DB688A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D9A668B-4D1A-4FCF-8AA4-C6279B041F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D9A668B-4D1A-4FCF-8AA4-C6279B041F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D9A668B-4D1A-4FCF-8AA4-C6279B041F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D9A668B-4D1A-4FCF-8AA4-C6279B041F77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E49D593-66E4-45DF-80F2-F0850B104976}
+	EndGlobalSection
+EndGlobal

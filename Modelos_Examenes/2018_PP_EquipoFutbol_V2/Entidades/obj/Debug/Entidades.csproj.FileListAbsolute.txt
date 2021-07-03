@@ -1,5 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\Entidades\bin\Debug\Entidades.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\Entidades\bin\Debug\Entidades.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\Entidades\obj\Debug\Entidades.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Modelos_Examenes\PP_EquipoFutbol_V2\Entidades\obj\Debug\Entidades.pdb
