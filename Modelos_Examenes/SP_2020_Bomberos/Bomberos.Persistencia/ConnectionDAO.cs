@@ -32,6 +32,7 @@ using System.Threading.Tasks;
 
 namespace Bomberos.Persistencia {
     public abstract class ConnectionDAO {
+        
         #region Attributes
 
         private static SqlConnection myConnection;
