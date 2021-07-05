@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bomberos.Formulario", "Bomberos.Formulario\Bomberos.Formulario.csproj", "{81C16670-D522-4503-9A27-FCB8E014CCC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bomberos.GUI", "Bomberos.GUI\Bomberos.Formulario.csproj", "{81C16670-D522-4503-9A27-FCB8E014CCC1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bomberos.Entidades", "Bomberos.Entidades\Bomberos.Entidades.csproj", "{2179D0AC-3D48-45C7-93AF-256F1FD0DB13}"
 EndProject
