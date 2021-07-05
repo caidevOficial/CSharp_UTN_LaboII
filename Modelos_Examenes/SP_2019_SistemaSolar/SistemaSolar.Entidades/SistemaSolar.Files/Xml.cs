@@ -76,7 +76,8 @@ namespace SistemaSolar.Entidades {
         /// <param name="encoding">Type of encoding.</param>
         public void Guardar(string nombreArchivo, T objeto, Encoding encoding) {
             try {
-                using (XmlTextWriter writer = new XmlTextWriter($"{this.GetDirectoryPath}{nombreArchivo}", encoding)) {
+                string absPath = $"{this.GetDirectoryPath}{nombreArchivo}";
+                using (XmlTextWriter writer = new XmlTextWriter(absPath, encoding)) {
                     XmlSerializer serial = new XmlSerializer(typeof(T));
                     serial.Serialize(writer, objeto);
                 }
@@ -103,6 +104,7 @@ namespace SistemaSolar.Entidades {
         /// <param name="encoding">Type of encoding.</param>
         /// <returns>True if can read the file, otherwise returns false.</returns>
         public bool Leer(string nombreArchivo, out T objeto, Encoding encoding) {
+            objeto = default(T);
             try {
                 if (FileExists(nombreArchivo)) {
                     using (XmlTextReader reader = new XmlTextReader($"{this.GetDirectoryPath}{nombreArchivo}")) {
@@ -114,7 +116,6 @@ namespace SistemaSolar.Entidades {
             } catch (Exception exe) {
                 throw new ErrorArchivosException(exe.Message, exe);
             }
-            objeto = default(T);
             return false;
         }
 

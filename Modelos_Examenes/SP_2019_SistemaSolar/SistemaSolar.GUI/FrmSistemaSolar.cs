@@ -37,15 +37,22 @@ using System.Windows.Forms;
 
 namespace _20191121_SP {
     public partial class FrmSistemaSolar : Form {
-        
+
+        #region Attributes
+
         private System.Windows.Forms.PictureBox picPlaneta1;
         private System.Windows.Forms.PictureBox picPlaneta2;
-
+        private System.Windows.Forms.PictureBox picPlaneta3;
         private const string archivoPlanetas = "planetas.xml";
         private List<Planeta> planetas;
         private List<Thread> animaciones;
         Xml<List<Planeta>> xml;
 
+        #endregion
+
+        /// <summary>
+        /// Basic Constructor
+        /// </summary>
         public FrmSistemaSolar() {
             InitializeComponent();
             animaciones = new List<Thread>();
@@ -53,6 +60,11 @@ namespace _20191121_SP {
             planetas = new List<Planeta>();
         }
 
+        /// <summary>
+        /// EventHandler of the Form Load.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmSistemaSolar_Load(object sender, EventArgs e) {
             if (this.xml.FileExists(archivoPlanetas)) {
                 // Leo mis planetas del archivo binario
@@ -60,8 +72,8 @@ namespace _20191121_SP {
             }
             this.InitializePlanets();
             foreach (Planeta p in this.planetas) {
-                // Asociar Evento
-                p.InformarAvance += P_InformarAvance;
+                // Asociar Evento. Asocio metodo al manejador.
+                p.InformarAvance += DibujarAvancePlaneta;
                 PictureBox pic = (PictureBox)p.ObjetoAsociado;
                 pic.Location = this.CalcularUbicacion(pic.Location, p.PosicionActual, p.RadioRespectoSol);
                 this.Controls.Add(pic);
@@ -77,6 +89,7 @@ namespace _20191121_SP {
 
             this.picPlaneta1 = new System.Windows.Forms.PictureBox();
             this.picPlaneta2 = new System.Windows.Forms.PictureBox();
+            this.picPlaneta3 = new System.Windows.Forms.PictureBox();
             // 
             // picPlaneta1
             // 
@@ -95,18 +108,29 @@ namespace _20191121_SP {
             this.picPlaneta2.Size = new System.Drawing.Size(64, 64);
             this.picPlaneta2.TabIndex = 3;
             this.picPlaneta2.TabStop = false;
-
-
+            // 
+            // picPlaneta3
+            // 
+            this.picPlaneta3.Image = ((System.Drawing.Image)(resources.GetObject("picPlaneta2.Image")));
+            this.picPlaneta3.Location = new System.Drawing.Point(406, 194);
+            this.picPlaneta3.Name = "picPlaneta3";
+            this.picPlaneta3.Size = new System.Drawing.Size(64, 64);
+            this.picPlaneta3.TabIndex = 4;
+            this.picPlaneta3.TabStop = false;
+            
             // Creo mis planetas
             if (this.planetas.Count == 0) {
-                Planeta planeta1 = new Planeta(12, 0, 150, this.picPlaneta1);
-                Planeta planeta2 = new Planeta(8, 0, 250, this.picPlaneta2);
+                Planeta planeta1 = new Planeta(14, 0, 150, this.picPlaneta1);
+                Planeta planeta2 = new Planeta(10, 0, 250, this.picPlaneta2);
+                Planeta planeta3 = new Planeta(8, 0, 250, this.picPlaneta3);
 
                 this.planetas.Add(planeta1);
                 this.planetas.Add(planeta2);
+                this.planetas.Add(planeta3);
             } else {
                 this.planetas[0].ObjetoAsociado = this.picPlaneta1;
                 this.planetas[1].ObjetoAsociado = this.picPlaneta2;
+                this.planetas[2].ObjetoAsociado = this.picPlaneta3;
             }
         }
 
@@ -136,10 +160,23 @@ namespace _20191121_SP {
             return new Point(x, y);
         }
 
+        /// <summary>
+        /// Init a thread for each planet and add it in the list of animations
+        /// then it will start every thread.
+        /// </summary>
+        private void InitThreads() {
+            foreach (Planeta item in this.planetas) {
+                Thread planetThread = new Thread(item.AnimarSistemaSolar);
+                planetThread.Name = $"Planeta {this.planetas.IndexOf(item)+1}";
+                planetThread.Start();
+                animaciones.Add(planetThread);
+            }
+        }
+
         private void btnSimular_Click(object sender, EventArgs e) {
             if (this.animaciones.Count == 0) {
                 // Iniciar hilos
-                //animaciones.Add(new Thread(new ParameterizedThreadStart()));
+                this.InitThreads();
                 this.btnSimular.Text = "Detener";
             } else {
                 this.LimpiarAnimaciones();
@@ -147,12 +184,19 @@ namespace _20191121_SP {
             }
         }
 
+        /// <summary>
+        /// EventHandler of the formClosing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmSistemaSolar_FormClosing(object sender, FormClosingEventArgs e) {
+            this.xml.Guardar(FrmSistemaSolar.archivoPlanetas, this.planetas, Encoding.UTF8);
             this.LimpiarAnimaciones();
-
-            xml.Guardar(FrmSistemaSolar.archivoPlanetas, this.planetas);
         }
 
+        /// <summary>
+        /// Cancels all the active threads in the list.
+        /// </summary>
         private void CancelThreads() {
             foreach (Thread item in animaciones) {
                 if (item.IsAlive) {
@@ -161,6 +205,9 @@ namespace _20191121_SP {
             }
         }
 
+        /// <summary>
+        /// Stops and Cleans the list of threads
+        /// </summary>
         private void LimpiarAnimaciones() {
             // Cancelar hilos
             CancelThreads();
@@ -177,7 +224,7 @@ namespace _20191121_SP {
             // Invocación del hilo principal
             if (pic.InvokeRequired) {
                 InformacionDeAvance info = new InformacionDeAvance(this.DibujarAvancePlaneta);
-                this.BeginInvoke(info, new object[] { sender, e });
+                this.Invoke(info, new object[] { sender, e });
             } else {
                 pic.Location = this.CalcularUbicacion(pic.Location, e.Avance, e.RadioRespectoSol);
             }

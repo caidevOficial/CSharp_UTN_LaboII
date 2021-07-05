@@ -31,6 +31,8 @@ using SistemaSolar.Events;
 
 namespace SistemaSolar.Entidades {
 
+    public delegate void InformacionDeAvance(object sender, PlanetaEventArgs e);
+
     public class Planeta {
 
 
@@ -58,8 +60,8 @@ namespace SistemaSolar.Entidades {
         /// <param name="radioRespectoSol">Radius respect the sun of the planet.</param>
         /// <param name="objetoVisual">Something of the planet.</param>
         public Planeta(short velocidad, short posicion, short radioRespectoSol, object objetoVisual): this() {
-            this.velocidadTraslacion = velocidad;
-            this.PosicionActual = posicion;
+            this.VelocidadTraslacion = velocidad;
+            this.posicionActual = posicion;
             this.objetoAsociado = objetoVisual;
             this.radioRespectoSol = radioRespectoSol;
         }
@@ -67,6 +69,26 @@ namespace SistemaSolar.Entidades {
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// Gets/Sets: the actual position of the planet.
+        /// </summary>
+        public short PosicionActual { 
+            get => this.posicionActual;
+            set => this.posicionActual = value;
+        }
+
+        /// <summary>
+        /// Gets/Sets: the radius respect the sun.
+        /// </summary>
+        public short RadioRespectoSol {
+            get => this.radioRespectoSol;
+            set {
+                if(value.GetType() == typeof(short)) {
+                    this.radioRespectoSol = value;
+                }
+            }
+        }
 
         /// <summary>
         /// PictureBox u objeto gráfico asociado al planeta.
@@ -80,27 +102,15 @@ namespace SistemaSolar.Entidades {
         }
 
         /// <summary>
-        /// Gets/Sets: the actual position of the planet.
+        /// Gets/Sets: the Traslation speed of the planet.
         /// </summary>
-        public short PosicionActual { 
-            get => this.posicionActual; 
+        public short VelocidadTraslacion { 
+            get => velocidadTraslacion; 
             set {
                 if(value.GetType() == typeof(short)) {
-                    this.posicionActual = value;
+                    velocidadTraslacion = value;
                 }
             } 
-        }
-
-        /// <summary>
-        /// Gets/Sets: the radius respect the sun.
-        /// </summary>
-        public short RadioRespectoSol {
-            get => this.radioRespectoSol;
-            set {
-                if (value.GetType() == typeof(short)) {
-                    this.radioRespectoSol = value;
-                }
-            }
         }
 
         #endregion
@@ -111,8 +121,8 @@ namespace SistemaSolar.Entidades {
         /// Avance del planeta según su velocidad
         /// </summary>
         public short Avanzar() {
-            this.PosicionActual += velocidadTraslacion;
-            return this.PosicionActual;
+            this.posicionActual += VelocidadTraslacion;
+            return this.posicionActual;
         }
 
         /// <summary>
@@ -120,7 +130,8 @@ namespace SistemaSolar.Entidades {
         /// </summary>
         public void AnimarSistemaSolar() {
             do {
-                System.Threading.Thread.Sleep(60 + this.velocidadTraslacion);
+                System.Threading.Thread.Sleep(60 + this.VelocidadTraslacion);
+                // Dispara evento y manejador asociado a este planeta.
                 InformarAvance.Invoke(this, new PlanetaEventArgs(this.Avanzar(), this.RadioRespectoSol));
             } while (true);
         }

@@ -30,8 +30,6 @@ using System.Threading.Tasks;
 
 namespace SistemaSolar.Events {
 
-    public delegate void InformacionDeAvance(object sender, PlanetaEventArgs e);
-
     public class PlanetaEventArgs : EventArgs {
 
         #region Attributes
