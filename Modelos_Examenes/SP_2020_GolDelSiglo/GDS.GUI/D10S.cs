@@ -43,43 +43,57 @@ namespace _20201203 {
         }
 
         /// <summary>
+        /// Invokes the delegate.
+        /// </summary>
+        private void InvokeDelegate() {
+            AvanceRelato relato = new AvanceRelato(MostrarGrafico);
+            this.Invoke(relato);
+        }
+
+        /// <summary>
+        /// Change the state of the Pic.
+        /// </summary>
+        private void ChangeState() {
+            switch (estado) {
+                case Pic.SePrepara:
+                    this.picFondo.Visible = false;
+                    break;
+                case Pic.LaTieneMaradona:
+                    pic1.Visible = true;
+                    break;
+                case Pic.ArrancaConLaPelota:
+                    pic1.Visible = false;
+                    pic2.Visible = true;
+                    break;
+                case Pic.DejaElTendal:
+                    pic2.Visible = false;
+                    pic3.Visible = true;
+                    break;
+                case Pic.VaATocarPara:
+                    pic3.Visible = false;
+                    pic4.Visible = true;
+                    break;
+                case Pic.Gooool:
+                    pic4.Visible = false;
+                    pic5.Visible = true;
+                    break;
+                case Pic.Festeja:
+                    pic5.Visible = false;
+                    this.picFondo.Visible = true;
+                    this.picFondo.Visible = true;
+                    estado--;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Muestra el grafico segun corresponda la imagen.
         /// </summary>
         private void MostrarGrafico() {
             if (this.InvokeRequired) {
-                AvanceRelato relato = new AvanceRelato(MostrarGrafico);
-                this.Invoke(relato);
+                this.InvokeDelegate();
             } else {
-                switch (estado) {
-                    case Pic.SePrepara:
-                        this.picFondo.Visible = false;
-                        break;
-                    case Pic.LaTieneMaradona:
-                        pic1.Visible = true;
-                        break;
-                    case Pic.ArrancaConLaPelota:
-                        pic1.Visible = false;
-                        pic2.Visible = true;
-                        break;
-                    case Pic.DejaElTendal:
-                        pic2.Visible = false;
-                        pic3.Visible = true;
-                        break;
-                    case Pic.VaATocarPara:
-                        pic3.Visible = false;
-                        pic4.Visible = true;
-                        break;
-                    case Pic.Gooool:
-                        pic4.Visible = false;
-                        pic5.Visible = true;
-                        break;
-                    case Pic.Festeja:
-                        pic5.Visible = false;
-                        this.picFondo.Visible = true;
-                        this.picFondo.Visible = true;
-                        estado--;
-                        break;
-                }
+                this.ChangeState();
                 estado++;
             }
         }
