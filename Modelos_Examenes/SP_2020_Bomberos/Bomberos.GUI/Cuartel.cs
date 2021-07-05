@@ -27,7 +27,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Windows.Forms;
 using Bomberos.Entidades;
-
+using Bomberos.Exceptions;
 
 namespace Formulario {
     public partial class Cuartel : Form {
@@ -167,8 +167,29 @@ namespace Formulario {
         /// </summary>
         /// <param name="index">Index of the firefighter in service.</param>
         private void DespacharServicio(int index) {
-            this.fuegos[index].Visible = true;
-            this.bomberos[index].AtenderSalida(index);
+            try {
+                if (this.fuegos[index].Visible) {
+                    throw new BomberoOcupadoException("El bombero ya esta en una salida");
+                } else {
+                    this.fuegos[index].Visible = true;
+                    Thread newSalida = new Thread(new ParameterizedThreadStart(this.bomberos[index].AtenderSalida));
+                    newSalida.Start(index);
+                    salidasEnAccion.Add(newSalida);
+                }
+            } catch (Exception exe) {
+                string message = $"Salida bombero {bomberos[index].Nombre} no concretada";
+                this.bomberos[index].Guardar(message);
+                MessageBox.Show(exe.Message);
+            }
+        }
+
+        /// <summary>
+        /// Creates and Invokes a delegate.
+        /// </summary>
+        /// <param name="bomberoIndex">Index of the firefighter in to finish the service.</param>
+        private void InvokeDelegate(int bomberoIndex) {
+            FinDeSalida fSalida = new FinDeSalida(this.FinalDeSalida);
+            this.Invoke(fSalida, new object[] { bomberoIndex });
         }
 
         /// <summary>
@@ -177,8 +198,7 @@ namespace Formulario {
         /// <param name="index">Index of the firefighter in to finish the service.</param>
         private void FinalDeSalida(int bomberoIndex) {
             if (this.fuegos[bomberoIndex].InvokeRequired) {
-                FinDeSalida fSalida = new FinDeSalida(this.FinalDeSalida);
-                this.BeginInvoke(fSalida, new object[] { bomberoIndex });
+                this.InvokeDelegate(bomberoIndex);
             } else {
                 this.fuegos[bomberoIndex].Visible = false;
             }

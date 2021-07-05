@@ -32,6 +32,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Bomberos.Interface;
 using Bomberos.Persistencia;
+using Bomberos.Exceptions;
 
 namespace Bomberos.Entidades {
 
@@ -63,7 +64,23 @@ namespace Bomberos.Entidades {
         /// </summary>
         /// <param name="nombre">Name of the firefighter.</param>
         public Bombero(string nombre) : this() {
-            this.nombre = nombre;
+            this.Nombre = nombre;
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Gets/Sets: the name of the entity.
+        /// </summary>
+        public string Nombre { 
+            get => this.nombre; 
+            set {
+                if (!String.IsNullOrWhiteSpace(value)) {
+                    this.nombre = value;
+                }
+            } 
         }
 
         #endregion
@@ -79,7 +96,7 @@ namespace Bomberos.Entidades {
             salidas.Add(salida);
             Thread.Sleep(3000);
             salidas[salidas.Count - 1].FinalizarSalida();
-            string message = $"{this.nombre} - {salidas[salidas.Count-1].ToString()}";
+            string message = $"{this.Nombre} - {salidas[salidas.Count - 1].ToString()}";
             this.Guardar(message);
             this.MarcarFin((int)bomberoIndex);
         }
@@ -90,7 +107,7 @@ namespace Bomberos.Entidades {
         /// <param name="info"></param>
         public void Guardar(Bombero info) {
             try {
-                string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), String.Format(@"Bombero_{0}.bin", info.nombre));
+                string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), String.Format(@"Bombero_{0}.bin", info.Nombre));
                 BinaryFormatter formatter = new BinaryFormatter();
                 using (Stream myStream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None)) {
                     formatter.Serialize(myStream, info);
@@ -118,7 +135,7 @@ namespace Bomberos.Entidades {
         /// <returns></returns>
         public Bombero Leer() {
             Bombero fireFighter = null;
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), String.Format(@"Bombero_{0}.bin", fireFighter.nombre));
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), String.Format(@"Bombero_{0}.bin", fireFighter.Nombre));
             try {
                 BinaryFormatter formatter = new BinaryFormatter();
                 using (Stream myStream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None)) {
@@ -152,7 +169,7 @@ namespace Bomberos.Entidades {
         /// <returns>His info as a string.</returns>
         public override string ToString() {
             StringBuilder data = new StringBuilder();
-            data.AppendLine($"Name: {this.nombre}");
+            data.AppendLine($"Name: {this.Nombre}");
             foreach (Salidas item in this.salidas) {
                 data.AppendLine(item.ToString());
                 data.AppendLine("______________");
