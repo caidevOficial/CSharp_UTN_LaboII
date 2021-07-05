@@ -41,7 +41,7 @@ namespace Entidades {
 
         /// <summary>
         /// Inicia la app y el hilo de audio en caso de no estar activos, 
-        /// sino tira una excepcion.
+        /// sino tirará una excepcion.
         /// </summary>
         public void IniciarJugada() {
             if (!(hiloRelato is null) && hiloRelato.IsAlive) {

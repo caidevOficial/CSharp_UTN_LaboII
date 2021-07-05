@@ -23,6 +23,7 @@
  */
 
 namespace Audio {
+
     public delegate void AvanceRelato();
 
     public static class Relato {
