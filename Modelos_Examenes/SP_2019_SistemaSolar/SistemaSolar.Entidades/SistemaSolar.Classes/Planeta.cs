@@ -22,11 +22,6 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SistemaSolar.Events;
 
 namespace SistemaSolar.Entidades {
@@ -59,7 +54,7 @@ namespace SistemaSolar.Entidades {
         /// <param name="posicion">Position of the planet.</param>
         /// <param name="radioRespectoSol">Radius respect the sun of the planet.</param>
         /// <param name="objetoVisual">Something of the planet.</param>
-        public Planeta(short velocidad, short posicion, short radioRespectoSol, object objetoVisual): this() {
+        public Planeta(short velocidad, short posicion, short radioRespectoSol, object objetoVisual) : this() {
             this.VelocidadTraslacion = velocidad;
             this.posicionActual = posicion;
             this.objetoAsociado = objetoVisual;
@@ -73,7 +68,7 @@ namespace SistemaSolar.Entidades {
         /// <summary>
         /// Gets/Sets: the actual position of the planet.
         /// </summary>
-        public short PosicionActual { 
+        public short PosicionActual {
             get => this.posicionActual;
             set => this.posicionActual = value;
         }
@@ -84,7 +79,7 @@ namespace SistemaSolar.Entidades {
         public short RadioRespectoSol {
             get => this.radioRespectoSol;
             set {
-                if(value.GetType() == typeof(short)) {
+                if (value.GetType() == typeof(short)) {
                     this.radioRespectoSol = value;
                 }
             }
@@ -104,13 +99,13 @@ namespace SistemaSolar.Entidades {
         /// <summary>
         /// Gets/Sets: the Traslation speed of the planet.
         /// </summary>
-        public short VelocidadTraslacion { 
-            get => velocidadTraslacion; 
+        public short VelocidadTraslacion {
+            get => velocidadTraslacion;
             set {
-                if(value.GetType() == typeof(short)) {
+                if (value.GetType() == typeof(short)) {
                     velocidadTraslacion = value;
                 }
-            } 
+            }
         }
 
         #endregion

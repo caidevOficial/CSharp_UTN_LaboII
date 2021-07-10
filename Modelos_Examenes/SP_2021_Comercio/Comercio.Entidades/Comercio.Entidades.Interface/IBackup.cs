@@ -22,18 +22,9 @@
  * SOFTWARE.
  */
 
-using System;
-using System.Windows.Forms;
-
-namespace _20191121_SP {
-    static class Program {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSistemaSolar());
-        }
+namespace Entidades {
+    public interface IBackup {
+        void LoadBackup(string path);
+        void SaveBackup(string path);
     }
 }

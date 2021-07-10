@@ -23,17 +23,15 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using SistemaSolar.Interfaces;
-using SistemaSolar.Exceptions;
 using System.Xml;
 using System.Xml.Serialization;
+using SistemaSolar.Exceptions;
+using SistemaSolar.Interfaces;
 
 namespace SistemaSolar.Entidades {
+
     public class Xml<T> : IFiles<T> {
 
         #region Properties

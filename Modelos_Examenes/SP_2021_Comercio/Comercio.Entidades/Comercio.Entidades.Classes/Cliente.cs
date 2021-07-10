@@ -23,17 +23,63 @@
  */
 
 using System;
-using System.Windows.Forms;
 
-namespace _20191121_SP {
-    static class Program {
+namespace Entidades {
+    public class Cliente {
+
+        #region Attributes
+
+        private string nombre;
+        private int numero;
+
+        #endregion
+
+        #region Builders
+
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Default builder.
         /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSistemaSolar());
+        public Cliente() {
+
         }
+
+        /// <summary>
+        /// Creates the customer with name.
+        /// </summary>
+        /// <param name="nombre">Name of the customer.</param>
+        public Cliente(string nombre) : this() {
+            this.Nombre = nombre;
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Sets:Gets the name of the entity.
+        /// </summary>
+        public string Nombre {
+            get => this.nombre;
+            set {
+                if (!String.IsNullOrWhiteSpace(value)) {
+                    this.nombre = value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sets:Gets the number of the entity.
+        /// </summary>
+        public int Numero {
+            get => this.numero;
+            set {
+                if (value > 0) {
+                    this.numero = value;
+                }
+            }
+        }
+
+        #endregion
+
     }
 }

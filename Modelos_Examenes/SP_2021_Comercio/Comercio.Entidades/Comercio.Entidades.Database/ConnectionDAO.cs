@@ -23,17 +23,34 @@
  */
 
 using System;
-using System.Windows.Forms;
 
-namespace _20191121_SP {
-    static class Program {
+namespace Entidades {
+    public class ConnectionDAO : AbstractDAO {
+
+        #region Methods
+
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Adds a register in the db.
         /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSistemaSolar());
+        /// <param name="myProduct">atentions to add into the db.</param>
+        /// <returns>True if can add the atentions, otherwise returns false.</returns>
+        public static bool InsertData(int atendidos, int noAtendidos) {
+            bool success = false;
+            try {
+                ConnectionDAO.MyCommand.CommandText = $"INSERT INTO atenciones Values(@Atendidos, @NoAtendidos, @Alumno);";
+                ConnectionDAO.MyCommand.Parameters.AddWithValue("@Atendidos", atendidos);
+                ConnectionDAO.MyCommand.Parameters.AddWithValue("@NoAtendidos", noAtendidos);
+                ConnectionDAO.MyCommand.Parameters.AddWithValue("@Alumno", "FacuFalcone");
+                ConnectionDAO.Execute();
+                success = true;
+                ConnectionDAO.MyCommand.Parameters.Clear();
+            } catch (Exception exe) {
+                throw new Exception("Error While insert a atentions into the DB.", exe);
+            }
+
+            return success;
         }
+
+        #endregion
     }
 }

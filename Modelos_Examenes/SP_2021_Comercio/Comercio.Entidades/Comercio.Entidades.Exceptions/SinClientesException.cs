@@ -23,17 +23,15 @@
  */
 
 using System;
-using System.Windows.Forms;
 
-namespace _20191121_SP {
-    static class Program {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSistemaSolar());
-        }
+namespace Entidades {
+    public class SinClientesException : Exception {
+
+        public SinClientesException() : this(string.Empty) { }
+
+        public SinClientesException(string message) : this(message, null) { }
+
+        public SinClientesException(string message, Exception innerException)
+            : base(message, innerException) { }
     }
 }
