@@ -23,10 +23,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SistemaSolar.Exceptions {
     public class ErrorArchivosException : Exception {
@@ -35,7 +31,7 @@ namespace SistemaSolar.Exceptions {
         /// ErrorArchivosException with message.
         /// </summary>
         /// <param name="message">Message of the ErrorArchivosException.</param>
-        public ErrorArchivosException(string message):this(message, null) { }
+        public ErrorArchivosException(string message) : this(message, null) { }
 
         /// <summary>
         /// ErrorArchivosException with message and inner.
@@ -43,6 +39,6 @@ namespace SistemaSolar.Exceptions {
         /// <param name="message">Message of the ErrorArchivosException.</param>
         /// <param name="inner">Inner of the ErrorArchivosException.</param>
         public ErrorArchivosException(string message, Exception inner)
-            :base(message, inner) {}
+            : base(message, inner) { }
     }
 }

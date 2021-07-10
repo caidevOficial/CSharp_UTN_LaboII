@@ -23,10 +23,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SistemaSolar.Events {
 
@@ -46,7 +42,7 @@ namespace SistemaSolar.Events {
         /// </summary>
         /// <param name="avance">Advance of the Event.</param>
         /// <param name="radioRespectoAlSol">Radius respect the sun of the Event.</param>
-        public PlanetaEventArgs(short avance, short radioRespectoAlSol) :base() {
+        public PlanetaEventArgs(short avance, short radioRespectoAlSol) : base() {
             this.avance = avance;
             this.radioRespectoAlSol = radioRespectoAlSol;
         }
