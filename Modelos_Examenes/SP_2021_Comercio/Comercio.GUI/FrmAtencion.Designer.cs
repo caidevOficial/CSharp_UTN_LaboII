@@ -47,26 +47,31 @@ namespace Formularios
             // 
             // btnAgregarCliente
             // 
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.Black;
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.Location = new System.Drawing.Point(12, 54);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(297, 102);
             this.btnAgregarCliente.TabIndex = 0;
             this.btnAgregarCliente.Text = "&Agregar Cliente";
-            this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregarCliente.UseVisualStyleBackColor = false;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
             // btnSimular
             // 
+            this.btnSimular.BackColor = System.Drawing.Color.Black;
+            this.btnSimular.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimular.Location = new System.Drawing.Point(12, 162);
             this.btnSimular.Name = "btnSimular";
             this.btnSimular.Size = new System.Drawing.Size(297, 102);
             this.btnSimular.TabIndex = 1;
             this.btnSimular.Text = "&Simular";
-            this.btnSimular.UseVisualStyleBackColor = true;
+            this.btnSimular.UseVisualStyleBackColor = false;
             this.btnSimular.Click += new System.EventHandler(this.btnSimular_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Black;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -77,38 +82,46 @@ namespace Formularios
             // 
             // archivoToolStripMenuItem
             // 
+            this.archivoToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importarToolStripMenuItem,
             this.exportarToolStripMenuItem,
             this.toolStripSeparator1,
             this.abrirRecienteToolStripMenuItem});
+            this.archivoToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // importarToolStripMenuItem
             // 
+            this.importarToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.importarToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importarToolStripMenuItem.Text = "Importar";
             this.importarToolStripMenuItem.Click += new System.EventHandler(this.importarToolStripMenuItem_Click);
             // 
             // exportarToolStripMenuItem
             // 
+            this.exportarToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.exportarToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportarToolStripMenuItem.Text = "Exportar";
             this.exportarToolStripMenuItem.Click += new System.EventHandler(this.exportarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(151, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // abrirRecienteToolStripMenuItem
             // 
+            this.abrirRecienteToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.abrirRecienteToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.abrirRecienteToolStripMenuItem.Name = "abrirRecienteToolStripMenuItem";
-            this.abrirRecienteToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.abrirRecienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.abrirRecienteToolStripMenuItem.Text = "Abrir reciente...";
             this.abrirRecienteToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.abrirRecienteToolStripMenuItem_DropDownItemClicked);
             // 
@@ -132,10 +145,12 @@ namespace Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(321, 276);
             this.Controls.Add(this.btnSimular);
             this.Controls.Add(this.btnAgregarCliente);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.Color.OrangeRed;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;

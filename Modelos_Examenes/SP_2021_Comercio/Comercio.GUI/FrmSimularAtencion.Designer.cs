@@ -31,7 +31,7 @@ namespace Formularios {
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.ForeColor = System.Drawing.Color.White;
+            this.lblCliente.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblCliente.Location = new System.Drawing.Point(12, 9);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(553, 39);

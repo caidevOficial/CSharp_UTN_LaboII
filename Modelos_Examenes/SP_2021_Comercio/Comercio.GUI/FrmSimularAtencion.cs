@@ -70,8 +70,8 @@ namespace Formularios {
                 this.lblCliente.BeginInvoke(
                     (MethodInvoker)delegate () {
                         //try {
-                        this.lblCliente.ForeColor = Color.Azure;
-                        this.lblCliente.Text = $"{cliente.Numero} - {cliente.Nombre}";
+                            this.lblCliente.ForeColor = Color.OrangeRed;
+                            this.lblCliente.Text = $"{cliente.Numero} - {cliente.Nombre}";
                         //} catch (SinClientesException exe) {
                         //    this.lblCliente.ForeColor = Color.Red;
                         //    this.lblCliente.Text = exe.Message;
@@ -102,11 +102,11 @@ namespace Formularios {
                 if (ConnectionDAO.InsertData(this.simulador.GetAtendidos(), this.simulador.GetSinAtender())) {
                     MessageBox.Show("Datos insertados en la tabla");
                 }
+                this.simulador.SimularAtencion -= VerCliente;
                 if (this.simulador.SimuThread().IsAlive) {
                     this.simulador.SimuThread().Abort();
                 }
             } catch (Exception exc) {
-
                 MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
