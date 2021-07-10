@@ -25,9 +25,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -56,9 +54,9 @@ namespace Entidades {
         /// <summary>
         /// Gets/Sets the list of customers.
         /// </summary>
-        public List<Cliente> Clientes { 
-            get => this.clientes; 
-            set => this.clientes = value; 
+        public List<Cliente> Clientes {
+            get => this.clientes;
+            set => this.clientes = value;
         }
 
         #endregion
@@ -73,9 +71,9 @@ namespace Entidades {
         /// <returns>Tye bussines with the customer inside.</returns>
         public static Comercio operator +(Comercio comercio, Cliente cliente) {
             int nextNumber = 1;
-            if(!(comercio is null) && !(cliente is null)) {
-                if(comercio.clientes.Count > 0) {
-                    nextNumber = (comercio.clientes.Count+1);
+            if (!(comercio is null) && !(cliente is null)) {
+                if (comercio.clientes.Count > 0) {
+                    nextNumber = (comercio.clientes.Count + 1);
                 }
                 cliente.Numero = nextNumber;
                 comercio.clientes.Add(cliente);

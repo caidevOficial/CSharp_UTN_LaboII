@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Entidades;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests {
     [TestClass]
@@ -58,9 +58,9 @@ namespace Tests {
         /// </summary>
         [TestMethod]
         public void Test02_SaveAndLoadSame() {
-            
+
             #region Arrange
-            
+
             myCom = new Comercio();
             myCom2 = new Comercio();
             string path = $"{Environment.CurrentDirectory}\\Customers.xml";
@@ -68,14 +68,14 @@ namespace Tests {
             #endregion
 
             #region Act
-            
+
             myCom += new Cliente("Test1");
             myCom += new Cliente("Test2");
             myCom.SaveBackup(path);
             myCom2.LoadBackup(path);
 
             #endregion
-            
+
             #region Assert
 
             Assert.AreEqual(myCom.Clientes.Count, myCom2.Clientes.Count);

@@ -22,17 +22,10 @@
  * SOFTWARE.
  */
 
-using Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Formularios {
     public partial class FrmSimularAtencion : Form {
@@ -77,8 +70,8 @@ namespace Formularios {
                 this.lblCliente.BeginInvoke(
                     (MethodInvoker)delegate () {
                         //try {
-                            this.lblCliente.ForeColor = Color.Azure;
-                            this.lblCliente.Text = $"{cliente.Numero} - {cliente.Nombre}";
+                        this.lblCliente.ForeColor = Color.Azure;
+                        this.lblCliente.Text = $"{cliente.Numero} - {cliente.Nombre}";
                         //} catch (SinClientesException exe) {
                         //    this.lblCliente.ForeColor = Color.Red;
                         //    this.lblCliente.Text = exe.Message;
