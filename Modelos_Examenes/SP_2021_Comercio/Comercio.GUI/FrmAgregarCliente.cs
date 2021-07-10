@@ -25,15 +25,27 @@
 using System;
 using System.Windows.Forms;
 
-namespace _20191121_SP {
-    static class Program {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
-        [STAThread]
-        static void Main() {
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSistemaSolar());
+namespace Formularios {
+    public partial class FrmAgregarCliente : Form {
+        private string clienteNombre;
+
+        public FrmAgregarCliente() {
+            InitializeComponent();
+        }
+
+        public string GetCliente() {
+            return this.clienteNombre;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e) {
+            if (!String.IsNullOrWhiteSpace(this.txtCliente.Text)) {
+                this.DialogResult = DialogResult.OK;
+                this.clienteNombre = this.txtCliente.Text;
+                MessageBox.Show("Cliente Agregado", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            } else {
+                MessageBox.Show("El nombre no puede estar vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

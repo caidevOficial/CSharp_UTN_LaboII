@@ -22,18 +22,14 @@
  * SOFTWARE.
  */
 
-using SistemaSolar.Entidades;
-using SistemaSolar.Events;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaSolar.Entidades;
+using SistemaSolar.Events;
 
 namespace _20191121_SP {
     public partial class FrmSistemaSolar : Form {
@@ -117,7 +113,7 @@ namespace _20191121_SP {
             this.picPlaneta3.Size = new System.Drawing.Size(64, 64);
             this.picPlaneta3.TabIndex = 4;
             this.picPlaneta3.TabStop = false;
-            
+
             // Creo mis planetas
             if (this.planetas.Count == 0) {
                 Planeta planeta1 = new Planeta(14, 0, 150, this.picPlaneta1);
@@ -167,7 +163,7 @@ namespace _20191121_SP {
         private void InitThreads() {
             foreach (Planeta item in this.planetas) {
                 Thread planetThread = new Thread(item.AnimarSistemaSolar);
-                planetThread.Name = $"Planeta {this.planetas.IndexOf(item)+1}";
+                planetThread.Name = $"Planeta {this.planetas.IndexOf(item) + 1}";
                 planetThread.Start();
                 animaciones.Add(planetThread);
             }
