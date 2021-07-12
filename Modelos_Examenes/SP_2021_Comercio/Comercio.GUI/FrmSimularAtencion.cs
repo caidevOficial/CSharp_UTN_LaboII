@@ -69,13 +69,8 @@ namespace Formularios {
             if (this.lblCliente.InvokeRequired) {
                 this.lblCliente.BeginInvoke(
                     (MethodInvoker)delegate () {
-                        //try {
                             this.lblCliente.ForeColor = Color.OrangeRed;
                             this.lblCliente.Text = $"{cliente.Numero} - {cliente.Nombre}";
-                        //} catch (SinClientesException exe) {
-                        //    this.lblCliente.ForeColor = Color.Red;
-                        //    this.lblCliente.Text = exe.Message;
-                        //}
                     }
                 );
             }

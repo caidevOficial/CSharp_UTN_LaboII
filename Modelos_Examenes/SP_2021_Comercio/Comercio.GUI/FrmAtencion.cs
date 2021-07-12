@@ -110,13 +110,19 @@ namespace Formularios {
         /// Loads the last path.
         /// </summary>
         private void LoadTool() {
-            ToolStripItem aux = new ToolStripMenuItem();
+            ToolStripItem aux;
             foreach (string item in recientes) {
+                aux = new ToolStripMenuItem();
                 aux.Text = item;
                 abrirRecienteToolStripMenuItem.DropDownItems.Add(aux);
             }
         }
 
+        /// <summary>
+        /// EventHandler of the open recent menu tool.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void abrirRecienteToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
             string path = e.ClickedItem.Text;
             try {
@@ -137,7 +143,9 @@ namespace Formularios {
             try {
                 if (File.Exists(pathToSave)) {
                     using (StreamReader sr = new StreamReader(pathToSave)) {
-                        lineas = sr.ReadToEnd().Trim();
+                        for (int i = 0; i < 9; i++) {
+                            lineas += $"{sr.ReadLine().Trim()}\n";
+                        }
                     }
                 }
 
@@ -149,16 +157,16 @@ namespace Formularios {
         }
 
         /// <summary>
-        /// Saves the historial of paths.
+        /// Saves the historial of paths max 10 lines.
         /// </summary>
-        /// <param name="text"></param>
+        /// <param name="text">Text to add in the historial.</param>
         private void SavePath(string text) {
             List<string> lineas = new List<string>();
             string temp = string.Empty;
             try {
                 temp += $"{text}\n";
                 temp += this.ReadPath();
-                using (FileStream fs = new FileStream(pathToSave, FileMode.Open, FileAccess.ReadWrite)) {
+                using (FileStream fs = new FileStream(pathToSave, FileMode.Truncate, FileAccess.Write)) {
                     StreamWriter sw = new StreamWriter(fs);
                     fs.Seek(0, SeekOrigin.Begin);
                     sw.WriteLine(temp);
@@ -170,6 +178,11 @@ namespace Formularios {
             }
         }
 
+        /// <summary>
+        /// EventHandler of the form load.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmAtencion_Load(object sender, EventArgs e) {
             List<string> lineas = new List<string>();
             lineas = this.ReadPath().Split('\n').ToList();
