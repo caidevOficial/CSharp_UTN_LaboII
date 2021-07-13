@@ -1,6 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Models\bin\Debug\Models.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Models\bin\Debug\Models.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Models\obj\Debug\Models.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Models\obj\Debug\Models.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Practica_Extra\Practica_03_OOP\Models\obj\Debug\Models.csprojAssemblyReference.cache

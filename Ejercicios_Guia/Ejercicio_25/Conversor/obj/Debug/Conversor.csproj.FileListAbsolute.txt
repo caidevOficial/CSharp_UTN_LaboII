@@ -1,6 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_25\Conversor\bin\Debug\Conversor.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_25\Conversor\bin\Debug\Conversor.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_25\Conversor\obj\Debug\Conversor.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_25\Conversor\obj\Debug\Conversor.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_25\Conversor\obj\Debug\Conversor.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_25\Conversor\obj\Debug\Conversor.pdb

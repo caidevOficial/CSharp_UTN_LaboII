@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPatente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Patente>
+    <CodigoPatente>ASD123</CodigoPatente>
+    <TipoCodigo>Vieja</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>AS123GH</CodigoPatente>
+    <TipoCodigo>Mercosur</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>FUT952</CodigoPatente>
+    <TipoCodigo>Vieja</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>GAG005</CodigoPatente>
+    <TipoCodigo>Vieja</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>DIB009</CodigoPatente>
+    <TipoCodigo>Vieja</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>CP709WA</CodigoPatente>
+    <TipoCodigo>Mercosur</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>TEV032</CodigoPatente>
+    <TipoCodigo>Vieja</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>RV003BJ</CodigoPatente>
+    <TipoCodigo>Mercosur</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>PP805FG</CodigoPatente>
+    <TipoCodigo>Mercosur</TipoCodigo>
+  </Patente>
+  <Patente>
+    <CodigoPatente>MUT315</CodigoPatente>
+    <TipoCodigo>Vieja</TipoCodigo>
+  </Patente>
+</ArrayOfPatente>
