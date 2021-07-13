@@ -1,7 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_38\Ejercicio_38\bin\Debug\Ejercicio_38.exe.config
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_38\Ejercicio_38\bin\Debug\Ejercicio_38.exe
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_38\Ejercicio_38\bin\Debug\Ejercicio_38.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_38\Ejercicio_38\obj\Debug\Ejercicio_38.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_38\Ejercicio_38\obj\Debug\Ejercicio_38.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_38\Ejercicio_38\obj\Debug\Ejercicio_38.exe
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicios_Guia\Ejercicio_38\Ejercicio_38\obj\Debug\Ejercicio_38.pdb
