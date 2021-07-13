@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchivoLocoForm", "ArchivoLocoForm\ArchivoLocoForm.csproj", "{50D6E563-3B39-4866-B1CF-AEA9B7A87932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{2FC9200A-4CF0-4D0B-B07C-2EEB4CB0083C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50D6E563-3B39-4866-B1CF-AEA9B7A87932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D6E563-3B39-4866-B1CF-AEA9B7A87932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D6E563-3B39-4866-B1CF-AEA9B7A87932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D6E563-3B39-4866-B1CF-AEA9B7A87932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC9200A-4CF0-4D0B-B07C-2EEB4CB0083C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC9200A-4CF0-4D0B-B07C-2EEB4CB0083C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC9200A-4CF0-4D0B-B07C-2EEB4CB0083C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC9200A-4CF0-4D0B-B07C-2EEB4CB0083C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {956F955C-6171-47F0-9147-280A8827AAB7}
+	EndGlobalSection
+EndGlobal
