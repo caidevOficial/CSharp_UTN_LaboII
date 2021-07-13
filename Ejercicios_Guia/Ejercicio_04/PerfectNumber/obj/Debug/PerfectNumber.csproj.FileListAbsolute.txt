@@ -1,6 +1,0 @@
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\PerfectNumber\bin\Debug\PerfectNumber.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\PerfectNumber\bin\Debug\PerfectNumber.pdb
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\PerfectNumber\obj\Debug\PerfectNumber.csprojAssemblyReference.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\PerfectNumber\obj\Debug\PerfectNumber.csproj.CoreCompileInputs.cache
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\PerfectNumber\obj\Debug\PerfectNumber.dll
-C:\Users\Facu\Desktop\GitHub\CSharp_UTN_LaboII\Ejercicio_04\PerfectNumber\obj\Debug\PerfectNumber.pdb
