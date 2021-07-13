@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entidades.Grupo">
+    <Position X="6.25" Y="0.5" Width="2" />
+    <NestedTypes>
+      <Enum Name="Entidades.Grupo.TipoManada" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Classes\Grupo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAJAAAAAAAAgCAQAEAAAAAAAAAAAAAAAAAAAAAAiQ=</HashCode>
+      <FileName>Classes\Grupo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Gato">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAQAiA=</HashCode>
+      <FileName>Classes\SubClass\Gato.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Perro">
+    <Position X="4" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAEgAAAAAAAAAAQAgAAEAIAAAAQAiA=</HashCode>
+      <FileName>Classes\SubClass\Perro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Mascota">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAACAAAAAgAAAAAAAAAAABAAAAAAQAAA=</HashCode>
+      <FileName>Classes\SuperClass\Mascota.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

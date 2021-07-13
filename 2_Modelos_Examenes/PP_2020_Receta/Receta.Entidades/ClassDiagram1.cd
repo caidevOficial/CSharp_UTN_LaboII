@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entidades.Ingrediente">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAAoAAAAAEAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ingrediente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Pera">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAoAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.QuesoAzul">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Entidades.QuesoAzul.Procedencia">
+        <TypeIdentifier>
+          <NewMemberFileName>QuesoAzul.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAoAAAAAgAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>QuesoAzul.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Receta">
+    <Position X="7.25" Y="0.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Entidades.Receta.Tipo">
+        <TypeIdentifier>
+          <NewMemberFileName>Receta.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAEQAAAQAAAAgAAAwAAAAAAAAAAAAA=</HashCode>
+      <FileName>Receta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Rucula">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rucula.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
