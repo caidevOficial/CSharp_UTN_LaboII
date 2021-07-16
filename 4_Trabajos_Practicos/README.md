@@ -41,10 +41,10 @@ _For the TP's C#! [Windows]!_
 
 _Update [Date]:_
 
-* [TP1_Calculadora](https://github.com/caidevOficial/tp_laboratorio_2/tree/prd_TP_LaboII/TP_01_FacundoFalcone)
-* [TP2_Taller](https://github.com/caidevOficial/tp_laboratorio_2/tree/prd_TP_LaboII/TP_02_FacundoFalcone)
-* [TP3_Fabrica_P1](https://github.com/caidevOficial/tp_laboratorio_2/tree/prd_TP_LaboII/TP_03_FacundoFalcone)
-* [TP4_Fabrica_P2](https://github.com/caidevOficial/tp_laboratorio_2/tree/prd_TP_LaboII/TP_04_FacundoFalcone)
+* [TP1_Calculadora](https://github.com/caidevOficial/CSharp_UTN_LaboII/tree/prd_CSsharp_UTN_LaboII/4_Trabajos_Practicos/TP_01_FacundoFalcone)
+* [TP2_Taller](https://github.com/caidevOficial/CSharp_UTN_LaboII/tree/prd_CSsharp_UTN_LaboII/4_Trabajos_Practicos/TP_02_FacundoFalcone)
+* [TP3_Fabrica_P1](https://github.com/caidevOficial/CSharp_UTN_LaboII/tree/prd_CSsharp_UTN_LaboII/4_Trabajos_Practicos/TP_03_FacundoFalcone)
+* [TP4_Fabrica_P2](https://github.com/caidevOficial/CSharp_UTN_LaboII/tree/prd_CSsharp_UTN_LaboII/4_Trabajos_Practicos/TP_04_FacundoFalcone)
 
 ## Built with Visual Studio Community [2019]🛠️
 
