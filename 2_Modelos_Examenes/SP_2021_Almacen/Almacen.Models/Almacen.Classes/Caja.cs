@@ -102,12 +102,11 @@ namespace Models {
         public static Caja<T> operator +(Caja<T> caja, Producto p) {
             const int LIMIT_PRICE = 120;
             if (!(caja is null) && !(p is null)) {
-                if (caja.PrecioTotal > LIMIT_PRICE && !(caja.EventoPrecio is null)) {
-                    caja.EventoPrecio.Invoke(caja, EventArgs.Empty);
-                }
                 if (caja.capacidad > caja.Elementos.Count) {
                     caja.Elementos.Add((T)p);
-
+                    if (caja.PrecioTotal > LIMIT_PRICE && !(caja.EventoPrecio is null)) {
+                        caja.EventoPrecio.Invoke(caja, EventArgs.Empty);
+                    }
                     return caja;
                 } else {
                     throw new CajaLlenaException("La caja no puede recibir mas productos");
