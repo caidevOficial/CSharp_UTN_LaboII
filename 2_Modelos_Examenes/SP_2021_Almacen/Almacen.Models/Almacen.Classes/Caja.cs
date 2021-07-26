@@ -105,7 +105,7 @@ namespace Models {
                 if (caja.capacidad > caja.Elementos.Count) {
                     caja.Elementos.Add((T)p);
                     if (caja.PrecioTotal > LIMIT_PRICE && !(caja.EventoPrecio is null)) {
-                        caja.EventoPrecio.Invoke(caja, EventArgs.Empty);
+                        caja.EventoPrecio.Invoke(caja, new EventArgs());
                     }
                     return caja;
                 } else {
