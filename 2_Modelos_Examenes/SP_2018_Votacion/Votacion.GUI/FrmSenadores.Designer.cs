@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSenadores));
             this.gpbSenado = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblEsperando = new System.Windows.Forms.Label();
@@ -160,16 +161,22 @@
             // 
             // btnSimular
             // 
+            this.btnSimular.BackColor = System.Drawing.Color.Black;
+            this.btnSimular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimular.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnSimular.Location = new System.Drawing.Point(506, 408);
             this.btnSimular.Name = "btnSimular";
             this.btnSimular.Size = new System.Drawing.Size(147, 36);
             this.btnSimular.TabIndex = 2;
             this.btnSimular.Text = "&Simular";
-            this.btnSimular.UseVisualStyleBackColor = true;
+            this.btnSimular.UseVisualStyleBackColor = false;
             this.btnSimular.Click += new System.EventHandler(this.btnSimular_Click);
             // 
             // txtLeyNombre
             // 
+            this.txtLeyNombre.BackColor = System.Drawing.Color.Black;
+            this.txtLeyNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLeyNombre.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txtLeyNombre.Location = new System.Drawing.Point(25, 12);
             this.txtLeyNombre.Name = "txtLeyNombre";
             this.txtLeyNombre.Size = new System.Drawing.Size(616, 20);
@@ -186,10 +193,14 @@
             this.Controls.Add(this.btnSimular);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gpbSenado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmSenadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nombre Apellido 2ºC";
+            this.Text = "Facundo Falcone";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSenadores_FormClosing);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);

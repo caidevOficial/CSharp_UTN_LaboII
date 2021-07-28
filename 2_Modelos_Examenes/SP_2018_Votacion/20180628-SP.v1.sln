@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20180628-SP.Alumno", "20180628-SP.v1\20180628-SP.Alumno.csproj", "{28C748DA-E056-4201-87AC-D6C5FE82D35E}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votacion.GUI", "Votacion.GUI\Votacion.GUI.csproj", "{28C748DA-E056-4201-87AC-D6C5FE82D35E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{2721927A-E946-40D8-AB29-7053C0AC7CD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votacion.Entidades", "Votacion.Entidades\Votacion.Entidades.csproj", "{2721927A-E946-40D8-AB29-7053C0AC7CD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votacion.Excepciones", "Votacion.Excepciones\Votacion.Excepciones.csproj", "{C22CE693-2715-404E-A790-B4C44B874DC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Votacion.Tests", "Votacion.Tests\Votacion.Tests.csproj", "{9EBE401D-3716-4CEC-9779-1DBFF39E0A13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,8 +25,19 @@ Global
 		{2721927A-E946-40D8-AB29-7053C0AC7CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2721927A-E946-40D8-AB29-7053C0AC7CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2721927A-E946-40D8-AB29-7053C0AC7CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C22CE693-2715-404E-A790-B4C44B874DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22CE693-2715-404E-A790-B4C44B874DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22CE693-2715-404E-A790-B4C44B874DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22CE693-2715-404E-A790-B4C44B874DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBE401D-3716-4CEC-9779-1DBFF39E0A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBE401D-3716-4CEC-9779-1DBFF39E0A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBE401D-3716-4CEC-9779-1DBFF39E0A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBE401D-3716-4CEC-9779-1DBFF39E0A13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0F5AC48-7FFA-4EDA-A69E-AC0BCD90CD60}
 	EndGlobalSection
 EndGlobal
