@@ -80,15 +80,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Archivos\Archivos.csproj">
+    <ProjectReference Include="..\Patentes.Archivos\Patentes.Archivos.csproj">
       <Project>{f3fa12db-4d22-4921-ab68-c97723dc20f3}</Project>
       <Name>Archivos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
+    <ProjectReference Include="..\Patentes.Entidades\Patentes.Entidades.csproj">
       <Project>{36b7803f-a3fc-4914-8284-16b603062f47}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VistaPatentes\VistaPatentes.csproj">
+    <ProjectReference Include="..\Patentes.VistaPatentes\Patentes.VistaPatentes.csproj">
       <Project>{25725883-BE90-47AA-B01C-B213EC1EF8D1}</Project>
       <Name>VistaPatentes</Name>
     </ProjectReference>
