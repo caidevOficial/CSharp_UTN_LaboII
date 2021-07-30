@@ -23,13 +23,13 @@
  */
 
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Entidades;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Testing {
     [TestClass]
     public class GestorArchivo_Test {
-        
+
         /// <summary>
         /// Checks the exception when trying to read an incorreect or inexistent file.
         /// </summary>

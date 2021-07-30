@@ -30,17 +30,24 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Tests {
     [TestClass]
     public class UnitTest1 {
-
-        Votacion myVote;
+        private readonly Votacion myVote;
 
         [TestMethod]
         [ExpectedException(typeof(ErrorArchivoException))]
         public void Test01_Error_When_Serialize() {
+            #region Arrange
+            string path = $"{Environment.CurrentDirectory}\\File.jpg";
+            SerializarXML<Votacion> sManager = new SerializarXML<Votacion>();
 
+            #endregion
+
+            #region Act
+            sManager.Guardar(path, myVote);
+            #endregion
         }
 
         [TestMethod]
-        public void Test01_Check_Event_Many_Times() {
+        public void Test02_Check_Event_Many_Times() {
 
         }
     }

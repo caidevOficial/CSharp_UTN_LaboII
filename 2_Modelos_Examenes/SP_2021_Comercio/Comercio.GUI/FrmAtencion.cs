@@ -31,6 +31,7 @@ using Entidades;
 
 namespace Formularios {
     public partial class FrmAtencion : Form {
+
         private Comercio myComercio;
         private List<string> recientes;
         private static string initialPath = Environment.CurrentDirectory;
@@ -119,22 +120,6 @@ namespace Formularios {
         }
 
         /// <summary>
-        /// EventHandler of the open recent menu tool.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void abrirRecienteToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
-            string path = e.ClickedItem.Text;
-            try {
-                if (MessageBox.Show("Seguro que desea abrir?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-                    myComercio.LoadBackup(path);
-                }
-            } catch (Exception exe) {
-                MessageBox.Show(exe.Message);
-            }
-        }
-
-        /// <summary>
         /// Reads a text file from a path.
         /// </summary>
         /// <returns></returns>
@@ -197,6 +182,22 @@ namespace Formularios {
             }
 
             LoadTool();
+        }
+
+        /// <summary>
+        /// EventHandler of the open recent menu tool.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void abrirRecienteToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+            string path = e.ClickedItem.Text;
+            try {
+                //if (MessageBox.Show("Seguro que desea abrir?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                    myComercio.LoadBackup(path);
+                //}
+            } catch (Exception exe) {
+                MessageBox.Show(exe.Message);
+            }
         }
     }
 }

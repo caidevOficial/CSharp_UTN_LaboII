@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArchivoException.cs" />
-    <Compile Include="AutoF1.cs" />
-    <Compile Include="Carrera.cs" />
-    <Compile Include="GestorBaseDeDatos.cs" />
-    <Compile Include="GestorDeArchivos.cs" />
-    <Compile Include="IGuardar.cs" />
+    <Compile Include="Carrera.Entidades.Exceptions\ArchivoException.cs" />
+    <Compile Include="Carrera.Entidades.Classes\AutoF1.cs" />
+    <Compile Include="Carrera.Entidades.Classes\Carrera.cs" />
+    <Compile Include="Carrera.Entidades.Classes.DAO\GestorBaseDeDatos.cs" />
+    <Compile Include="Carrera.Entidades.Classes.FilesManager\GestorDeArchivos.cs" />
+    <Compile Include="Carrera.Entidades.Interfaces\IGuardar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

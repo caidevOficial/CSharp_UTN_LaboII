@@ -24,10 +24,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Entidades {
 
@@ -48,25 +45,25 @@ namespace Entidades {
         /// <summary>
         /// Get/Set: Lista de autos.
         /// </summary>
-        public List<AutoF1> Autos { 
-            get => this.autos; 
+        public List<AutoF1> Autos {
+            get => this.autos;
             set {
-                if(value.GetType() == typeof(List<AutoF1>)) {
+                if (value.GetType() == typeof(List<AutoF1>)) {
                     this.autos = value;
                 }
-            } 
+            }
         }
 
         /// <summary>
         /// Get/Set: Kilometros de la pista.
         /// </summary>
-        public int Kms { 
-            get => this.kms; 
+        public int Kms {
+            get => this.kms;
             set {
-                if(value.GetType() == typeof(int) && value > 0) {
+                if (value.GetType() == typeof(int) && value > 0) {
                     this.kms = value;
                 }
-            } 
+            }
         }
 
         /// <summary>
@@ -80,7 +77,7 @@ namespace Entidades {
         /// Builder for the entity with kms.
         /// </summary>
         /// <param name="kms">distance of the race.</param>
-        public Carrera(int kms): this() {
+        public Carrera(int kms) : this() {
             this.Kms = kms;
         }
 
@@ -91,12 +88,12 @@ namespace Entidades {
         /// <param name="auto">auto de la carrera.</param>
         /// <returns>carrera con el auto atroden</returns>
         public static Carrera operator +(Carrera carrera, AutoF1 auto) {
-            if(!(carrera is null) && !(auto is null)) {
+            if (!(carrera is null) && !(auto is null)) {
                 carrera.autos.Add(auto);
             }
 
             return carrera;
-        } 
+        }
 
         /// <summary>
         /// Initializes the race.
