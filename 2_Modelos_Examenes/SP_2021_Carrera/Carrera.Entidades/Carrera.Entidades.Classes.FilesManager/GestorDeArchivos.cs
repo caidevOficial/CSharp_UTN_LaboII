@@ -23,18 +23,15 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Entidades{
+namespace Entidades {
     public class GestorDeArchivos : IGuardar<Carrera>, IGuardar<AutoF1> {
 
-        private string ruta;
+        private readonly string ruta;
 
         /// <summary>
         /// Builder with path of the file to read or save.
@@ -43,7 +40,7 @@ namespace Entidades{
         public GestorDeArchivos(string ruta) {
             this.ruta = ruta;
         }
-        
+
         /// <summary>
         /// Serializes a race.
         /// </summary>

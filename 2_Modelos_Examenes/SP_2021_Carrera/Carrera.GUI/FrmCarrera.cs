@@ -23,15 +23,8 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Media;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 
@@ -77,7 +70,7 @@ namespace _20210717_RSP___alumno {
         /// </summary>
         private void AvanzarAuto() {
             //Alumno:Metodo que maneja el evento InformarAvance
-            if(this.InvokeRequired) {
+            if (this.InvokeRequired) {
                 this.pcbAutoUno.BeginInvoke(
                     (MethodInvoker)delegate {
                         this.pcbAutoUno.Location = new Point(this.v1.UbicacionEnPista, this.pcbAutoUno.Location.Y);
@@ -123,7 +116,7 @@ namespace _20210717_RSP___alumno {
             GestorDeArchivos gestor = new GestorDeArchivos(path);
             this.DialogResult = DialogResult.OK; //Establezco el resultado en OK para finalizar el primer FORM
             try {
-                if(!(this.thread is null) && this.thread.IsAlive) {
+                if (!(this.thread is null) && this.thread.IsAlive) {
                     this.thread.Abort();
                 }
                 this.carrera.InformarAvance -= AvanzarAuto;

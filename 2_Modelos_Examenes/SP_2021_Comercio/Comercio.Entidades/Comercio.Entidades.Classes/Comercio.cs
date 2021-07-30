@@ -126,7 +126,7 @@ namespace Entidades {
         public Cliente LlamarCliente() {
             Cliente myCliente = new Cliente();
             if (this.clientes.Count == 0) {
-                throw new SinClientesException();
+                throw new SinClientesException("Error");
             } else {
                 myCliente.Nombre = this.clientes[0].Nombre;
                 myCliente.Numero = this.clientes[0].Numero;

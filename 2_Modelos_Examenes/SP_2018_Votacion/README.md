@@ -14,14 +14,14 @@
 
 ---
 
-# C# Segundo Parcial 2020 -  Gol Del Siglo. 👨‍💻
+# C# Segundo Parcial 2018 -  Votación. 👨‍💻
 ---
 
 <table>
-  <th><center>Librería</center></th>
+  <th><center>Panel</center></th>
   <tr>
   <td>
-    <img src="GDS.Media/Sample.png">
+    <img src="Votacion.Media/Sample.png">
   </td>
   </tr>
 </table>

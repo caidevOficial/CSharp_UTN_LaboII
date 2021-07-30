@@ -23,7 +23,7 @@
  */
 
 namespace Entidades {
-    interface IArchivos<T> {
+    internal interface IArchivos<T> {
 
         /// <summary>
         /// Read a file and convert into an object

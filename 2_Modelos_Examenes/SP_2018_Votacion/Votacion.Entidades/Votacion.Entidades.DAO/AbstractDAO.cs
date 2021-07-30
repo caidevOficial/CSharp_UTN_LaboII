@@ -31,12 +31,12 @@ namespace Entidades {
 
         #region Attributes
 
-        private static SqlConnection myConnection;
-        private static SqlCommand myCommand;
-        private static string connString;
-        private static bool trustedConnection = true;
-        private static string serverName = "localhost";
-        private static string dbName = "votacion-sp-2018";
+        private static readonly SqlConnection myConnection;
+        private static readonly SqlCommand myCommand;
+        private static readonly string connString;
+        private static readonly bool trustedConnection = true;
+        private static readonly string serverName = "localhost";
+        private static readonly string dbName = "votacion-sp-2018";
 
         #endregion
 
@@ -48,9 +48,10 @@ namespace Entidades {
         static AbstractDAO() {
             AbstractDAO.connString = $"Server = {serverName} ; Database = {dbName}; Trusted_Connection = {trustedConnection} ; ";
             AbstractDAO.myConnection = new SqlConnection(connString);
-            AbstractDAO.myCommand = new SqlCommand();
-            AbstractDAO.myCommand.Connection = myConnection;
-            AbstractDAO.myCommand.CommandType = CommandType.Text;
+            AbstractDAO.myCommand = new SqlCommand {
+                Connection = myConnection,
+                CommandType = CommandType.Text
+            };
         }
 
         #endregion

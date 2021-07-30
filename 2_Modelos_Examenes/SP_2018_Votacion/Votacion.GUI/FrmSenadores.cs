@@ -38,11 +38,11 @@ namespace _20180628_SP.v1 {
 
         private Thread myThread;
         private Votacion votacion;
-        private DAO dbManager;
-        private SerializarXML<Votacion> serializator;
-        private Dictionary<string, Votacion.EVoto> participantes;
-        private List<PictureBox> graficos;
-        private static string path = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\Votation.xml";
+        private readonly DAO dbManager;
+        private readonly SerializarXML<Votacion> serializator;
+        private readonly Dictionary<string, Votacion.EVoto> participantes;
+        private readonly List<PictureBox> graficos;
+        private static readonly string path = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}\\Votation.xml";
 
         #endregion
 
@@ -63,10 +63,11 @@ namespace _20180628_SP.v1 {
             int y = 20;
             for (int i = 1; i <= 72; i++) {
                 this.participantes.Add(i.ToString(), Votacion.EVoto.Esperando);
-                PictureBox p = new PictureBox();
-                p.BackColor = Color.White;
-                p.Size = new Size(20, 20);
-                p.Location = new Point(x, y);
+                PictureBox p = new PictureBox {
+                    BackColor = Color.White,
+                    Size = new Size(20, 20),
+                    Location = new Point(x, y)
+                };
                 x += 25;
                 if (x > 595) {
                     x = 20;

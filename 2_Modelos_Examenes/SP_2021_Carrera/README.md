@@ -14,15 +14,15 @@
 
 ---
 
-# C# Segundo Parcial 2020 -  Gol Del Siglo. 👨‍💻
+# C# Segundo Parcial 2021 -  Carreras. 👨‍💻
 ---
 
 <table>
-  <th><center>Librería</center></th>
+  <th><center>Pista</center></th>
   <tr>
-  <td>
-    <img src="GDS.Media/Sample.png">
-  </td>
+    <td>
+      <img src="Carrera.Media/img/track.png">
+    </td>
   </tr>
 </table>
 
