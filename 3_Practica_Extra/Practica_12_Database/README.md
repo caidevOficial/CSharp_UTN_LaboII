@@ -44,6 +44,7 @@ public static string ShowNewSkill() {
 ## Technologies used. 📌
 |<a href="https://docs.microsoft.com/es-es/dotnet/csharp/"><img align="center" alt="C#" src="https://github.com/devicons/devicon/raw/master/icons/csharp/csharp-original.svg" width="50px" height="50px" />|<h3>C#</h3>|
 |--------|----------|
+|<a href="https://www.microsoft.com/es-es/sql-server/sql-server-downloads/"><img align="center" alt="MSSQL" src="https://caidevoficial.github.io/Resume/media/icons/mssql/microsoft-sql-server.svg?raw=true" width="50px" height="50px" />|<h3>MS SQL</h3>|
 
 ---
 
