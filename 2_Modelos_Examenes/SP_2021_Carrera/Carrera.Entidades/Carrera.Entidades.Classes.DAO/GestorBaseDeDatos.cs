@@ -23,17 +23,13 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades {
     public class GestorBaseDeDatos : IGuardar<AutoF1> {
 
-        private string cadenaConexion;
+        private readonly string cadenaConexion;
 
         /// <summary>
         /// Default builder of the entity.
@@ -48,9 +44,10 @@ namespace Entidades {
         /// <param name="auto">Car to save into the DB.</param>
         public void Guardar(AutoF1 auto) {
             SqlConnection myConnection = new SqlConnection(cadenaConexion);
-            SqlCommand myCommand = new SqlCommand();
-            myCommand.Connection = myConnection;
-            myCommand.CommandType = CommandType.Text;
+            SqlCommand myCommand = new SqlCommand {
+                Connection = myConnection,
+                CommandType = CommandType.Text
+            };
             try {
                 myConnection.Open();
                 myCommand.CommandText = $"INSERT INTO resultados Values(@escuderia, @posicion, @horaLlegada);";

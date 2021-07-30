@@ -7,7 +7,7 @@
     <ProjectGuid>{ADFE758C-B60A-4BE1-A701-DEC7203049C4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>_20210717_RSP___alumno</RootNamespace>
-    <AssemblyName>20210717-RSP - alumno</AssemblyName>
+    <AssemblyName>Carrera</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconApp.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -121,6 +124,9 @@
       <Project>{93016b84-d94c-4345-89ba-ab95bde61b91}</Project>
       <Name>Carrera.Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconApp.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

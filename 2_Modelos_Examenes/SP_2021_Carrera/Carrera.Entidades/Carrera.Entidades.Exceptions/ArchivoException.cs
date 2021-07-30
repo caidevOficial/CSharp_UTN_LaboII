@@ -23,19 +23,15 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades {
-    public class ArchivoException : Exception{
+    public class ArchivoException : Exception {
 
         /// <summary>
         /// ArchivoException with only a mesage.
         /// </summary>
         /// <param name="message">Message of the exception.</param>
-        public ArchivoException(string message): this(message, null) { }
+        public ArchivoException(string message) : this(message, null) { }
 
         /// <summary>
         /// ArchivoException with message and inner Exception.
