@@ -1,7 +1,18 @@
 <table>
   <tr>
-  <td><a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/" target="_blank"><img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/raw/master/Instituciones/logo-utn_black_white.png?raw=true" height="150px" /></td>
-  <td><img align="center" alt="C#" src="https://github.com/devicons/devicon/raw/master/icons/csharp/csharp-original.svg" width="150px" height="150px" /></td>
+    <tr colspan=2>
+      <img align="center" alt="Personal Logo" src="https://github.com/caidevOficial/Logos/blob/master/Personales/Personal_Logo_Gif.gif?raw=true" height="150px" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/caidevOficial/CSharp_UTN_LaboII/" target="_blank">
+        <img alt="Universidad Tecnológica Nacional" src="https://github.com/caidevOficial/Logos/raw/master/Instituciones/logo-utn_black_white.png?raw=true" height="150px" />
+      </a>
+    </td>
+    <td>
+      <img align="center" alt="C#" src="https://github.com/devicons/devicon/raw/master/icons/csharp/csharp-original.svg" width="150px" height="150px" />
+    </td>
   </tr>
 </table></br>
 
