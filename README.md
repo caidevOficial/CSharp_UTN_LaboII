@@ -41,6 +41,9 @@
 ---
 
 ```C#
+/// <summary>
+/// A simply method to print a string with a message.
+/// </summary>
 public static void ShowNewSkill(){
     string message = "Upgrading my skills [C# Version!]";
     Console.WriteLine(message);
